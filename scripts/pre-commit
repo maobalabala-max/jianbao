@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+# Pre-commit guard for the briefing site.
+# Install: cp scripts/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
+#
+# Rejects a commit when:
+#   1. any staged path is a research draft (research-*.md);
+#   2. the author or committer email is not a @users.noreply.github.com address;
+#   3. staged HTML/XML content matches a private blocked pattern.
+# Private patterns (personal name / email) are NOT stored in this repo; they live
+# in .git/info/blocked-patterns, one case-insensitive extended regex per line.
+set -u
+fail=0
+err() { printf 'pre-commit: %s\n' "$*" >&2; fail=1; }
+
+# 1. research drafts
+drafts=$(git diff --cached --name-only --diff-filter=ACMR | grep -E '(^|/)research-[^/]*\.md$' || true)
+if [ -n "$drafts" ]; then
+  err "research drafts must not be committed:"
+  printf '    %s\n' $drafts >&2
+fi
+
+# 2. author / committer email must be a GitHub noreply address
+for who in GIT_AUTHOR_IDENT GIT_COMMITTER_IDENT; do
+  ident=$(git var "$who" 2>/dev/null || true)
+  email=$(printf '%s' "$ident" | sed -n 's/.*<\([^>]*\)>.*/\1/p')
+  case "$email" in
+    *@users.noreply.github.com) ;;
+    *) err "$who email '<$email>' is not a @users.noreply.github.com address (use git -c user.email=...)" ;;
+  esac
+done
+
+# 3. private patterns in staged HTML/XML
+pat_file="$(git rev-parse --git-dir)/info/blocked-patterns"
+if [ -s "$pat_file" ]; then
+  while IFS= read -r -d '' f; do
+    case "$f" in *.html|*.htm|*.xml) ;; *) continue ;; esac
+    if git show ":$f" 2>/dev/null | grep -qiE -f <(grep -v '^[[:space:]]*\(#\|$\)' "$pat_file"); then
+      err "staged file '$f' contains blocked personal info (see .git/info/blocked-patterns)"
+    fi
+  done < <(git diff --cached --name-only -z --diff-filter=ACMR)
+else
+  printf 'pre-commit: warning: %s missing; personal-info check skipped\n' "$pat_file" >&2
+fi
+
+if [ "$fail" -ne 0 ]; then
+  echo "pre-commit: commit rejected." >&2
+  exit 1
+fi
+exit 0

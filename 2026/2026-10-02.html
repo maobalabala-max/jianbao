@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日简报 · 2026年10月2日</title>
+  <!-- site-meta:start -->
+  <meta name="description" content="周五主线：OpenAI 公开「对抗蒸馏」拦截叙事并归因 Moonshot 相关集群，同日研究者称 Azure 伙伴云上同类推理提取仍可复现数周；Artificial Analysis 将 Gemini 4 Argon 指数与 GPT-6…">
+  <link rel="canonical" href="https://jianbao.space/2026/2026-10-02.html">
+  <link rel="alternate" type="application/atom+xml" title="每日简报 · 订阅" href="/feed.xml">
+  <meta property="og:site_name" content="每日简报">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="每日简报 · 2026年10月2日">
+  <meta property="og:description" content="周五主线：OpenAI 公开「对抗蒸馏」拦截叙事并归因 Moonshot 相关集群，同日研究者称 Azure 伙伴云上同类推理提取仍可复现数周；Artificial Analysis 将 Gemini 4 Argon 指数与 GPT-6…">
+  <meta property="og:url" content="https://jianbao.space/2026/2026-10-02.html">
+  <meta property="og:image" content="https://jianbao.space/icon-512.png">
+  <meta property="article:published_time" content="2026-10-02T08:00:00+08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="每日简报 · 2026年10月2日">
+  <meta name="twitter:description" content="周五主线：OpenAI 公开「对抗蒸馏」拦截叙事并归因 Moonshot 相关集群，同日研究者称 Azure 伙伴云上同类推理提取仍可复现数周；Artificial Analysis 将 Gemini 4 Argon 指数与 GPT-6…">
+  <!-- site-meta:end -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #f3f5f8;
+      --bg-accent: #e8eef6;
+      --paper: #ffffff;
+      --ink: #1a1f2e;
+      --muted: #5a6478;
+      --line: #d8dee9;
+      --line-soft: #e8edf4;
+      --accent: #3b6d9a;
+      --accent-soft: rgba(59, 109, 154, 0.12);
+      --link: #2a5f8f;
+      --link-hover: #1a4068;
+      --nav-bg: rgba(255, 255, 255, 0.86);
+      --chip: #e8eef6;
+      --shadow: 0 1px 2px rgba(26, 31, 46, 0.04), 0 4px 16px rgba(26, 31, 46, 0.04);
+      --radius: 12px;
+      --sans: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB",
+               "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      --serif: "Songti SC", "Noto Serif SC", "Source Han Serif SC",
+               "Noto Serif CJK SC", Georgia, serif;
+      --s1: #3b6d9a;
+      --s2: #2f6b5c;
+      --s3: #4a5f8a;
+      --s4: #5a4a6b;
+    }
+    * { box-sizing: border-box; }
+    html { font-size: 16.5px; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: var(--serif);
+      line-height: 1.7;
+      background:
+        linear-gradient(180deg, var(--bg-accent) 0%, transparent 280px),
+        linear-gradient(90deg, rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        var(--bg);
+      background-size: auto, 28px 28px, 28px 28px, auto;
+      background-attachment: fixed;
+    }
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      isolation: isolate;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .topnav::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(59, 109, 154, 0.18) 20%,
+        rgba(59, 109, 154, 0.52) 50%,
+        rgba(59, 109, 154, 0.18) 80%,
+        transparent 100%
+      );
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .topnav-inner {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.72rem 0;
+      font-family: var(--sans);
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .brand:hover { color: var(--link); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.15rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      transition: color 0.15s ease, background 0.15s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: var(--ink);
+      background: var(--accent-soft);
+    }
+    .wrap {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      padding: 2rem 0 3.5rem;
+    }
+    header.mast {
+      margin-bottom: 1.75rem;
+      padding: 0.4rem 0 1.35rem;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    header.mast::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 4.5rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    h1 {
+      font-family: var(--sans);
+      font-size: clamp(1.75rem, 4vw, 2.15rem);
+      line-height: 1.25;
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    h1 a.home {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 a.home:hover {
+      color: var(--link);
+    }
+    .meta {
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin: 0;
+      max-width: 36em;
+    }
+    .lede {
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.05rem 1.2rem;
+      margin: 0 0 2rem;
+      font-size: 0.98rem;
+      box-shadow: var(--shadow);
+    }
+    section { margin-bottom: 2.4rem; }
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      margin: 0 0 1rem;
+      padding: 0.45rem 0 0.55rem;
+      border-top: none;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 2.75rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    article.item {
+      position: relative;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem 1.15rem;
+      margin: 0 0 0.95rem;
+      box-shadow: var(--shadow);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+      scroll-margin-top: 4.5rem;
+    }
+    article.item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1rem;
+      bottom: 1rem;
+      width: 2px;
+      border-radius: 0 2px 2px 0;
+      background: var(--accent);
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: center;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+    }
+    article.item:hover {
+      border-color: #b8c5d8;
+      box-shadow: 0 2px 4px rgba(26, 31, 46, 0.05), 0 8px 24px rgba(26, 31, 46, 0.07);
+      transform: translateY(-1px);
+    }
+    article.item:hover::before,
+    article.item:focus-within::before {
+      opacity: 0.9;
+      transform: scaleY(1);
+    }
+    article.item:target {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    article.item h3 {
+      font-family: var(--sans);
+      font-size: 1.06rem;
+      line-height: 1.35;
+      margin: 0 0 0.55rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .orig {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: -0.25rem 0 0.55rem;
+      font-family: Georgia, "Iowan Old Style", var(--serif);
+    }
+    .authors {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin: 0 0 0.55rem;
+    }
+    p { margin: 0 0 0.7rem; }
+    p:last-of-type { margin-bottom: 0.85rem; }
+    .src {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.9rem;
+      align-items: baseline;
+      border-top: 1px dashed var(--line);
+      padding-top: 0.65rem;
+    }
+    .src a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      word-break: break-all;
+    }
+    .src a:hover { color: var(--link-hover); }
+    .chip {
+      display: inline-block;
+      background: var(--chip);
+      color: var(--muted);
+      padding: 0.08rem 0.45rem;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      border: 1px solid var(--line-soft);
+    }
+    footer {
+      border-top: 1px solid var(--line-soft);
+      padding-top: 1rem;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .digest-wrap {
+      margin: 0 0 2.1rem;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    table.digest {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: transparent;
+      border: none;
+      font-family: var(--sans);
+      font-size: 0.86rem;
+    }
+    table.digest th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-accent);
+    }
+    table.digest td {
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line-soft);
+      vertical-align: top;
+      line-height: 1.45;
+    }
+    table.digest tr:last-child td { border-bottom: none; }
+    table.digest tbody tr { transition: background 0.15s ease; }
+    table.digest tbody tr:hover { background: var(--accent-soft); }
+    table.digest a { color: inherit; text-decoration: none; }
+    table.digest a:hover { color: var(--link); }
+    table.digest .sec {
+      width: 4.6rem;
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    table.digest .ttl { width: 38%; font-weight: 650; }
+    table.digest .one { color: var(--muted); font-weight: 400; }
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes briefing-fade-rise {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes nav-line-shimmer {
+        0%, 100% { background-position: 0% 50%; opacity: 0.28; }
+        50% { background-position: 100% 50%; opacity: 0.52; }
+      }
+      header.mast {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      .lede {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+      }
+      .digest-wrap {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.14s both;
+      }
+      section {
+        animation: briefing-fade-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      section:nth-of-type(1) { animation-delay: 0.2s; }
+      section:nth-of-type(2) { animation-delay: 0.26s; }
+      section:nth-of-type(3) { animation-delay: 0.32s; }
+      section:nth-of-type(4) { animation-delay: 0.38s; }
+      section:nth-of-type(n + 5) { animation-delay: 0.42s; }
+      .topnav::after {
+        background-size: 200% 100%;
+        animation: nav-line-shimmer 10s ease-in-out infinite;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .topnav::after,
+      header.mast,
+      .lede,
+      .digest-wrap,
+      section {
+        animation: none !important;
+      }
+      article.item {
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      }
+      article.item:hover {
+        transform: none;
+      }
+    }
+    @media (max-width: 720px) {
+      table.digest, table.digest thead, table.digest tbody, table.digest tr, table.digest th, table.digest td {
+        display: block;
+      }
+      table.digest thead { display: none; }
+      table.digest td.sec { padding-bottom: 0; border-bottom: none; }
+      table.digest td.ttl { padding-top: 0.2rem; padding-bottom: 0.15rem; width: auto; border-bottom: none; }
+      table.digest td.one { padding-top: 0; width: auto; }
+    }
+    @media (max-width: 560px) {
+      html { font-size: 16px; }
+      h1 { font-size: 1.7rem; }
+      .topnav-inner { width: calc(100% - 1.5rem); }
+      .wrap { width: calc(100% - 1.5rem); padding: 1.5rem 0 3rem; }
+      .nav-links a { padding: 0.3rem 0.5rem; font-size: 0.8rem; }
+      article.item { padding: 1rem; }
+    }
+  
+    .topnav-inner, .wrap {
+      width: min(1080px, calc(100% - 3rem));
+    }
+</style>
+</head>
+
+<body>
+  <nav class="topnav" aria-label="主导航">
+    <div class="topnav-inner">
+      <a class="brand" href="/">每日简报</a>
+      <ul class="nav-links">
+        <li><a href="/">首页</a></li>
+        <li><a href="/2026/2026-10-02.html">最新一期</a></li>
+        <li><a href="/ai/">AI 日报</a></li>
+        <li><a href="/">归档</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <header class="mast">
+      <h1><a class="home" href="/">每日简报</a></h1>
+      <p class="meta">2026年10月2日（周五）· 亚洲/上海</p>
+    </header>
+
+    <p class="lede">周五主线：OpenAI 公开「对抗蒸馏」拦截叙事并归因 Moonshot 相关集群，同日研究者称 Azure 伙伴云上同类推理提取仍可复现数周；Artificial Analysis 将 Gemini 4 Argon 指数与 GPT-6 Astra 并列。科学侧用渗流/刚性渗流定义「充分发展」活性湍流，Science 给出「适度无序可促网络稳定」框架，PRL 则警告慢快系统中的「奇异漏斗」会让简化韧性模型失灵。科技有 Tesla Supercharger「紧急驶离」、Apple 缺席白宫 AI 午餐与 10/13 智能家居三件套传闻，以及微软 MAI 流式转写/语音模型。抗衰见晚龄司美格鲁肽延寿（雌鼠）、NKX2-5 视觉韧性因子与卵母细胞核糖体功能衰退。</p>
+
+    <div class="digest-wrap">
+      <table class="digest">
+        <thead><tr><th class="sec">栏目</th><th class="ttl">条目</th><th class="one">要点</th></tr></thead>
+        <tbody>
+        <tr>
+          <td class="sec"><a href="#i1">AI</a></td>
+          <td class="ttl"><a href="#i1">OpenAI：打断对抗蒸馏协同行动</a></td>
+          <td class="one"><a href="#i1">核心集群归因 Moonshot 相关人员</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i2">AI</a></td>
+          <td class="ttl"><a href="#i2">Azure 上推理提取仍可复现数周</a></td>
+          <td class="one"><a href="#i2">同模型、不同托管面、不同防护</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i3">AI</a></td>
+          <td class="ttl"><a href="#i3">AA：Argon 指数并列 Astra</a></td>
+          <td class="one"><a href="#i3">幻觉更低；介绍价任务成本更低</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i4">科学</a></td>
+          <td class="ttl"><a href="#i4">活性湍流：活动驱动的相变定义</a></td>
+          <td class="one"><a href="#i4">涡量节点线渗流 + 涡核刚性渗流</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i5">科学</a></td>
+          <td class="ttl"><a href="#i5">适度无序可促进复杂网络稳定</a></td>
+          <td class="one"><a href="#i5">Science；非厄米雅可比是关键</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i6">科学</a></td>
+          <td class="ttl"><a href="#i6">多尺度熵：非平衡相变的序参量</a></td>
+          <td class="one"><a href="#i6">小波条件重整化；总熵看不清</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i7">科学</a></td>
+          <td class="ttl"><a href="#i7">奇异漏斗：慢快系统的隐秘通道</a></td>
+          <td class="one"><a href="#i7">PRL；简化降维会抹掉韧性细节</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i8">科技</a></td>
+          <td class="ttl"><a href="#i8">Tesla：Supercharger 紧急驶离</a></td>
+          <td class="one"><a href="#i8">插电可挂 D；损车损桩；仅美国</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i9">科技</a></td>
+          <td class="ttl"><a href="#i9">Apple 缺席白宫 AI 午餐</a></td>
+          <td class="one"><a href="#i9">自愿超级智能协议；Cook/Ternus 未到</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i10">科技</a></td>
+          <td class="ttl"><a href="#i10">微软 MAI：流式转写 + 语音 2.1</a></td>
+          <td class="one"><a href="#i10">Foundry；Flash ~150 ms / $15</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i11">科技</a></td>
+          <td class="ttl"><a href="#i11">传闻：Apple 10/13 智能家居三件套</a></td>
+          <td class="one"><a href="#i11">中枢 + HomePod mini + Apple TV</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i12">科技</a></td>
+          <td class="ttl"><a href="#i12">AI 业界：蒸馏 / Azure / Argon</a></td>
+          <td class="one"><a href="#i12">详见完整 AI 日报，本栏不展开</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i13">抗衰</a></td>
+          <td class="ttl"><a href="#i13">晚龄司美格鲁肽延寿（雌鼠）</a></td>
+          <td class="one"><a href="#i13">Nature；CR 模拟物 + 额外获益</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i14">抗衰</a></td>
+          <td class="ttl"><a href="#i14">ORF 筛选：NKX2-5 护 RPE、复视力</a></td>
+          <td class="one"><a href="#i14">bioRxiv；ΔHD 变体；中老龄小鼠</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i15">抗衰</a></td>
+          <td class="ttl"><a href="#i15">核糖体功能衰退限制卵母细胞寿命</a></td>
+          <td class="one"><a href="#i15">bioRxiv；果蝇/小鼠；因果证据</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i16">抗衰</a></td>
+          <td class="ttl"><a href="#i16">SEP 与表观遗传衰老：NHANES</a></td>
+          <td class="one"><a href="#i16">GeroScience；GrimAge 等；细胞比例</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section>
+      <h2>1. AI和大模型</h2>
+      <p style="font-family:var(--sans);font-size:0.9rem;color:var(--muted);margin:-0.35rem 0 1rem;">本栏仅摘 2–3 条今日焦点；完整研究见 <a href="https://jianbao.space/ai/2026-10-02.html">完整 AI 日报 · 2026-10-02</a>。</p>
+
+    <article class="item" id="i1">
+      <h3>OpenAI 披露打断「对抗蒸馏」协同行动；核心集群归因 Moonshot 相关人员</h3>
+<p class="orig">OpenAI disrupts coordinated adversarial distillation campaign</p>
+<p>OpenAI 安全博客（页面日期 2026-09-30；CNBC 等进入本窗口）称：最早自 7 月第一周观察到以提取受保护推理轨迹（protected reasoning）为目标的协同活动；7 月 24–25 日高峰逾 4,000 用户、约 16,000 次相关请求，并关联到逾 15,000 用户集群，称于 7 月 28 日完全打断。手法定性为 <strong>adversarial distillation</strong>：系统化、未经授权地利用他方模型输出/推理以训练或复现另一模型——并非破解加密或入侵数据库。</p>
+<p>官方写明「不清楚观察期内全部操作者是否来自单一主体」，但将「核心集群」归因于与 <strong>Moonshot AI（Kimi）</strong> 相关的个人；已封禁欺诈账户、强化注册与跨用户推理防护，并经 Frontier Model Forum 与政府渠道共享。Moonshot 对 CNBC 请求评论未立即回应。完整时间线与疑点见 AI 日报。</p>
+      <div class="src"><span class="chip">AI</span> <a href="https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/">OpenAI 官方</a> <a href="https://www.cnbc.com/2026/10/01/openai-chinas-moonshot-ai-kimi.html">CNBC</a> <a href="https://thehackernews.com/2026/10/openai-disrupts-reasoning-extraction.html">The Hacker News</a></div>
+    </article>
+
+    <article class="item" id="i2">
+      <h3>研究者：第一方已挡，Azure 上同类推理提取仍可复现数周</h3>
+<p class="orig">“We stole reasoning. Again” — Azure lag after first-party patches</p>
+<p>THE DECODER（2026-10-01）报道：与 OpenAI 披露同日，Joachim Schaeffer 等更新称「We stole reasoning. Again」。9 月 13 日复测时，OpenAI 与 Anthropic 自有 API 上攻击已被阻断；但在 <strong>Microsoft Azure</strong> 上，对所测全部 OpenAI 模型（含 GPT-6 Astra）以及 Anthropic 至 Sonnet 5 的模型，单次尝试即可 verbatim 拉出推理——「同模型、不同平台、不同防护」。</p>
+<p>媒体转述：Astra 上架第三方云时一度未带齐防护；OpenAI 对 Azure 端点的相关保障约至 9 月 27 日才加上；Anthropic 模型在 Azure 上约自 9 月 28 日起无法再复现。支撑论文 arXiv:2608.09867。OpenAI 博客亦承认伙伴托管需与第一方同等防护，「工作尚未完成」。</p>
+      <div class="src"><span class="chip">AI</span> <a href="https://the-decoder.com/openai-says-it-stopped-a-campaign-to-steal-its-models-reasoning-but-the-trick-still-worked-on-azure/">THE DECODER</a> <a href="https://arxiv.org/abs/2608.09867">arXiv:2608.09867</a></div>
+    </article>
+
+    <article class="item" id="i3">
+      <h3>Artificial Analysis：Gemini 4 Argon 指数并列 Astra，介绍价下任务成本更低</h3>
+<p class="orig">AA Intelligence Index: Argon High = Astra 53; lower hallucination, lower task $</p>
+<p>继 9 月 30 日 Google 经 Fairwind 有限放行 Argon 后，多家媒体转述 Artificial Analysis：Gemini 4 Argon（High）在 Intelligence Index 取得 <strong>53</strong> 分，与 GPT-6 Astra 并列，略高于 GPT-6.1 Sol（52）。AA-Omniscience 幻觉率报道约 15%（Astra 约 51%）；AutomationBench-AA 约 77.5%。介绍价口径下每 Index 任务约 <strong>$1.99</strong>（Astra 约 $3.26）；标准价后可升至约 $3.98。</p>
+<p>公开 API / Ultra 仍未对开发者默认开放。指数≠业务工作流，但为 Fairwind 之外的采购预研提供可引用第三方对照。完整条目见 AI 日报。</p>
+      <div class="src"><span class="chip">AI</span> <a href="https://beincrypto.com/google-gemini-4-argon-benchmark-cost/">BeInCrypto</a> <a href="https://www.engadget.com/2274263/google-gemini-4-model-argon/">Engadget</a> <a href="https://artificialanalysis.ai/models/comparisons/gemini-4-argon-vs-claude-opus-5-5-high">Artificial Analysis</a></div>
+    </article>
+    </section>
+
+    <section>
+      <h2>2. 科学、物理与复杂性</h2>
+
+    <article class="item" id="i4">
+      <h3>充分发展的活性湍流：用非平衡相变划定「活动阈值」</h3>
+<p class="orig">Fully developed active turbulence defined through a non-equilibrium phase transition</p>
+<p class="authors">Bonn, Ma, Bantysh, Feng, Pedersen, Jing, Ignés-Mullol, Sagués, Araujo, Doostmohammadi · Nature Physics · 2026-09-30</p>
+<p>活性流体的「湍流样」集体流动长期缺少可操作的「充分发展」判据。本文结合微管–驱动蛋白主动向列与稠密游动细菌两类实验，以及大尺度主动向列/涨落向列流体动力学模拟，表明存在<strong>活动驱动的临界阈值</strong>：之下涡量结构碎片化、涡核只形成有限「软」网络；之上涡量<strong>节点线渗流</strong>（临界渗流/SLE₆ 统计）且涡核发生<strong>刚性渗流</strong>，形成系统尺度刚性簇。</p>
+<p>两类转变在服从细致平衡的平衡对照中均缺席——说明其为本质非平衡现象。为活性湍流提供可实验检验的几何–力学定义，把微观活动与宏观连通性、力传递连在一起。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://www.nature.com/articles/s41567-026-03408-y">Nature Physics</a> <a href="https://doi.org/10.1038/s41567-026-03408-y">DOI</a></div>
+    </article>
+
+    <article class="item" id="i5">
+      <h3>Science：适度无序可促进复杂网络稳定——简化模型曾系统性漏掉</h3>
+<p class="orig">Disorder-promoted stability</p>
+<p class="authors">Montanari, Zanin, Motter · Science · DOI 10.1126/science.aeg3946 · arXiv:2609.25226</p>
+<p>网络动力学长期默认「节点越同质越稳」；现实电网、神经、生态与材料网络却普遍异质。Northwestern 团队给出一般框架：当节点动力学维数较高、雅可比<strong>非厄米</strong>时，优化稳定性的问题变为非凸，异质（甚至随机无序）参数配置可比最佳同质配置更稳；非互惠连边亦可在一维节点动力学下带来类似效应。</p>
+<p>电网、神经元、集群、建筑材料与生态网络模型均见「适度无序优、过度无序伤」窗口；互利型生态网络中，复杂度越高，无序促稳越常见——为 May 复杂性–稳定性悖论提供新视角。故意设计差异或可成为工程稳妥策略。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://www.science.org/doi/10.1126/science.aeg3946">Science</a> <a href="https://arxiv.org/abs/2609.25226">arXiv</a> <a href="https://news.weinberg.northwestern.edu/2026/09/29/why-a-little-disorder-can-make-complex-networks-more-stable/">Northwestern 新闻</a></div>
+    </article>
+
+    <article class="item" id="i6">
+      <h3>多尺度熵：把总熵拆成「尺度序参量」，照亮非平衡相变</h3>
+<p class="orig">Multiscale Entropies as Order Parameters for Nonequilibrium Phase Transitions</p>
+<p class="authors">Jung, Ozawa · arXiv:2609.27705 · 2026-09-23</p>
+<p>总 Shannon 熵往往平滑地随控制参量变化，难以标出临界或图案形成。作者基于<strong>小波条件重整化群（WCRG）</strong>，把概率分布按尺度分解，用生成模型估计各尺度条件熵；得到多尺度熵与条件熵作为尺度依赖序参量。</p>
+<p>在平衡 φ⁴ 与非平衡 Active Model B+ 上，粗尺度熵峰值/跳跃可揭示临界与渗流畴–气泡转变的不对称空间组织——而这些在总熵曲线上几乎不可见。方法不预设序参量，适用于分布未知的稳态快照。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://arxiv.org/abs/2609.27705">arXiv</a></div>
+    </article>
+
+    <article class="item" id="i7">
+      <h3>奇异吸引域：慢快系统中的「漏斗」让简化韧性模型失灵</h3>
+<p class="orig">Singular basins in multiscale systems: tunneling between stable states</p>
+<p class="authors">Yanchuk, Wieczorek, Jardón-Kojakhmetov, Alkhayuon · Physical Review Letters · arXiv:2601.02001</p>
+<p>多稳态系统的韧性常靠吸引域体积/形状判断；慢快系统中，吸引域可含狭窄<strong>奇异漏斗（singular funnels）</strong>——随时间尺度比增大而指数变窄，却能延伸到相空间远端，使扰动经「隧道」切到另一稳态。</p>
+<p>准静态近似、绝热消去与对快变量平均会抹掉这些结构，从而高估或错估韧性与 tipping。作者在带慢适应的 pitchfork、自适应相位转子及耦合网络中展示普适性，并对气候等「省略快变量」的模型发出警示。phys.org 2026-10-01 有通俗综述。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://arxiv.org/abs/2601.02001">arXiv</a> <a href="https://doi.org/10.1103/jtkh-9lz5">PRL DOI</a> <a href="https://phys.org/news/2026-09-hidden-funnels-complex-stable-states.html">phys.org</a></div>
+    </article>
+    </section>
+
+    <section>
+      <h2>3. 互联网产品与科技产业</h2>
+
+    <article class="item" id="i8">
+      <h3>Tesla：Supercharger「紧急驶离」——插电亦可挂 D，但会损车损桩</h3>
+<p class="orig">Emergency Drive Away at US Superchargers (2026.38.3)</p>
+<p>2026-10-01，Tesla 充电团队宣布 <strong>Emergency Drive Away</strong>：车辆仍插着 Supercharger 时即可挂入 Drive 驶离。此前须先解锁充电口并等待卡扣释放。公司明确警告「使用将损坏车辆与充电桩」，仅限紧急情况，故意滥用另有处罚（细节未披露）。</p>
+<p>需软件 <strong>2026.38.3</strong>；2021 年前 Model S/X 不支持；称适用于美国全部 Supercharger，「暂时」仅美国。背景为 8 月爱达荷 Twin Falls Supercharger 枪击案后车主对「被锁在桩上」的诉求；属安全响应型产品改动，并非舒适性功能。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://electrek.co/2026/10/01/tesla-emergency-drive-away-supercharger-shooting/">Electrek</a></div>
+    </article>
+
+    <article class="item" id="i9">
+      <h3>Apple 缺席白宫 AI 午餐：Cook 与 Ternus 均未到场</h3>
+<p class="orig">Apple absent from White House AI lunch / voluntary superintelligence accord</p>
+<p>CNBC / Quartz（约 9/30–10/1）：特朗普召集的前沿 AI 午餐上，Meta、Google、Nvidia、OpenAI、Anthropic、Amazon、Palantir 等均有代表，唯独 <strong>Apple</strong> 缺席——执行董事长 Tim Cook 与现任 CEO John Ternus 均未出席。与会者签署自愿「White House Accord on Superintelligence」类文件（白宫称「道德上有约束力」，无强制力）。</p>
+<p>评论指出 Apple 更偏消费端本地小模型、与 Google 合作、资本开支远低于云巨头。与 FTC 调查、自愿协议同属监管叙事窗口；AI 细则见完整 AI 日报。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://www.cnbc.com/2026/09/30/trumps-ai-lunch-included-everyone-but-apple.html">CNBC</a> <a href="https://qz.com/apple-missing-trump-white-house-ai-lunch-100126">Quartz</a></div>
+    </article>
+
+    <article class="item" id="i10">
+      <h3>微软 MAI：首个流式转写模型 + Voice 2.1 / Flash 上线 Foundry</h3>
+<p class="orig">MAI-Transcribe-2-Streaming + MAI-Voice-2.1 / Flash</p>
+<p>2026-10-01，Microsoft AI 发布 <strong>MAI-Transcribe-2-Streaming</strong>（首个流式转写模型）与文本转语音 <strong>MAI-Voice-2.1</strong>、<strong>MAI-Voice-2.1-Flash</strong>，经 Microsoft Foundry 等渠道提供。Voice 2.1 强调跨语言保持说话人身份；Flash 面向低延迟高吞吐，报道称端到端延迟约 <strong>150 ms</strong>、单次可生成约 45 秒音频，价约 <strong>$15 / 百万字符</strong>（Voice 2.1 约 $22）。</p>
+<p>MAI Playground 演示「Chatter」把转写与语音串成实时语音助手。属微软自研语音栈产品化一步，与 Azure 上第三方前沿模型托管叙事并行。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://www.unite.ai/microsoft-launches-mai-transcribe-2-streaming-and-two-mai-voice-models/">Unite.AI</a></div>
+    </article>
+
+    <article class="item" id="i11">
+      <h3>传闻加码：Apple 拟 10 月 13 日推智能家居中枢 + 新 HomePod mini + Apple TV</h3>
+<p class="orig">Three smart-home products — Oct 13 (Bloomberg / MacRumors)</p>
+<p>MacRumors（2026-10-01）综合 Bloomberg：除昨日已传的约 <strong>6 英寸</strong>方形智能家居中枢（台面/壁挂、FaceTime、Siri AI、菜谱/照片信息中枢）外，同日窗口还拟更新 <strong>HomePod mini</strong>（新芯片、更好音质、N1/Wi-Fi 7、第二代 UWB、Siri AI）与 <strong>Apple TV 4K</strong>（或 A19 系、内存升至约 12GB、N1/Wi-Fi 7、新 Siri Remote）。</p>
+<p>发布日指向 <strong>10 月 13 日（周二）</strong>。仍为未证实产品情报，以正式发布为准。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://www.macrumors.com/2026/10/01/apple-launch-new-smart-home-devices-this-month/">MacRumors</a> <a href="https://www.macrumors.com/2026/09/30/apple-home-hub-imac-g4-style-design/">中枢造型报道</a></div>
+    </article>
+
+    <article class="item" id="i12">
+      <h3>AI 业界同日三线：对抗蒸馏、Azure 防护差、Argon 指数——详见完整 AI 日报</h3>
+<p class="orig">Cross-link: OpenAI distillation / Azure lag / Argon AA scores</p>
+<p>本日 AI 产品与安全主线已在独立 AI 日报展开：OpenAI 对抗蒸馏披露与 Moonshot 归因、伙伴云防护滞后、Artificial Analysis 对 Gemini 4 Argon 的指数与成本对照。本栏不重复长述，以免与第 1 栏及 <a href="https://jianbao.space/ai/2026-10-02.html">完整 AI 日报 · 2026-10-02</a> 叠床架屋。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://jianbao.space/ai/2026-10-02.html">AI 日报</a></div>
+    </article>
+    </section>
+
+    <section>
+      <h2>4. 抗衰老与长寿（新论文）</h2>
+
+    <article class="item" id="i13">
+      <h3>晚龄启动司美格鲁肽：雌鼠延寿、缓衰老表型，并与热量限制对照</h3>
+<p class="orig">Late-life semaglutide treatment slows ageing and extends lifespan in female mice</p>
+<p class="authors">Feng, Barthez, Wang 等 · Nature · 2026-09-02 · OA</p>
+<p>20 月龄雌性 C57BL/6 每日皮下司美格鲁肽：3 个月即改善运动/认知/肌力与糖耐量，并减轻干细胞耗竭、炎症、衰老、基因组不稳、线粒体与蛋白稳态等衰老标志；持续给药中位寿命由约 <strong>742</strong> 天延至约 <strong>834</strong> 天。转录与营养传感改变（NAD⁺、sirtuins、IGF1 等）与热量限制（CR）高度重叠。</p>
+<p>与匹配 24% CR 纵向对照：许多功能轨迹相当，但探索行为、空间记忆与糖控制上司美格鲁肽可超基线且优于 CR——提示除减摄入外的额外通路。人类老年结局仍需专设长期临床研究；UC 已就 GLP-1R 激动剂健康衰老申请专利。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://www.nature.com/articles/s41586-026-10940-7">Nature</a> <a href="https://doi.org/10.1038/s41586-026-10940-7">DOI</a></div>
+    </article>
+
+    <article class="item" id="i14">
+      <h3>全基因组 ORF 筛选：NKX2-5 等韧性因子护 RPE，中老龄小鼠复视力</h3>
+<p class="orig">Genome-scale ORF screen for RPE resilience; NKX2-5ΔHD restores vision</p>
+<p class="authors">Lu, Shen, Kajderowicz, Weissman 等 · bioRxiv · 2026-09-30</p>
+<p>针对易受氧化损伤的视网膜色素上皮（RPE），作者做全基因组 ORF 增益筛选，得到 9 个保护性 ORF；其中心脏转录因子 <strong>NKX2-5</strong> 可降低转录组年龄并赋予强氧化韧性。结构拆解显示同源域可去除：<strong>NKX2-5ΔHD</strong> 保留保护活性且 14 个月未见明显毒性。</p>
+<p>中年小鼠视网膜下递送可恢复视觉与电生理；全身递送改善老龄握力并降低衰弱。强调「他组织语境因子可改造为抗衰工具」的无偏筛选价值。预印本；作者声明相关专利与权益。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://www.biorxiv.org/content/10.64898/2026.09.29.755187v1">bioRxiv</a> <a href="https://doi.org/10.64898/2026.09.29.755187">DOI</a></div>
+    </article>
+
+    <article class="item" id="i15">
+      <h3>核糖体功能衰退是卵母细胞寿命的因果限制因素</h3>
+<p class="orig">Declining ribosome function limits oocyte longevity</p>
+<p class="authors">Judson, Danielson, Tang, Greenblatt 等 · bioRxiv · 2026-09-30</p>
+<p>多组织蛋白合成随龄下降，是否<strong>主动</strong>推动生理衰老仍不清。卵母细胞依赖生长期装配、长期维持而少更新的核糖体，可能特别脆弱。无偏遗传筛选把核糖体剂量定为核心决定因素；实验降低核糖体丰度即可加速发育能力丧失，并提前重现自然衰老的减数分裂缺陷与早期胚胎问题。</p>
+<p>老龄果蝇卵母细胞核糖体翻译活性约降 <strong>50%</strong>（丰度仅轻度下降、结构大体保留）；小鼠中期 I 卵母细胞蛋白合成亦显著下降。把长寿命翻译机器定位为生殖衰老的内在脆弱点。预印本。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://www.biorxiv.org/content/10.64898/2026.09.29.755503v1">bioRxiv</a> <a href="https://doi.org/10.64898/2026.09.29.755503">DOI</a></div>
+    </article>
+
+    <article class="item" id="i16">
+      <h3>NHANES：综合社会经济地位（SEP）与表观遗传衰老时钟</h3>
+<p class="orig">SEP index and epigenetic aging in NHANES</p>
+<p class="authors">Caunca, Kezios, Schneider 等 · GeroScience · 2026-09-30 · OA</p>
+<p>在 NHANES 1999–2002（n≈2532）构建纳入收入、住房、职业与教育的三分 SEP 指数，关联 13 种表观遗传时钟与端粒。全调整后，高 vs 低 SEP 与更低的 <strong>GrimAgeMort / GrimAge2Mort</strong> 及更高 HorvathTelo 相关；收入似为主要驱动，男性效应幅度更大。</p>
+<p>再调血细胞比例后多数置信区间含零——提示细胞组成可能部分中介。横断面、相关而非因果；作者呼吁纵向与干预研究。为「社会分层→分子衰老」提供全国代表性证据。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://link.springer.com/article/10.1007/s11357-026-02565-5">GeroScience</a> <a href="https://doi.org/10.1007/s11357-026-02565-5">DOI</a></div>
+    </article>
+    </section>
+
+    <footer>
+      <p>来源摘自公开报道与 arXiv / 期刊摘要；仅供个人阅读，不构成投资或医疗建议。AI 栏完整版见 <a href="https://jianbao.space/ai/2026-10-02.html">AI 前沿情报日报</a>。</p>
+    </footer>
+  </div>
+</body>
+</html>

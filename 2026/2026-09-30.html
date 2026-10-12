@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日简报 · 2026年9月30日</title>
+  <!-- site-meta:start -->
+  <meta name="description" content="周三主线是 OpenAI DevDay：用已上线的 GPT-6 Astra 驱动常驻代理 Dots，同时放出近旗舰、约 1/5 标价的 GPT-6.1 Sol；Anthropic 机密招股书把存在风险措辞与近半收入经 Amazon/Goo…">
+  <link rel="canonical" href="https://jianbao.space/2026/2026-09-30.html">
+  <link rel="alternate" type="application/atom+xml" title="每日简报 · 订阅" href="/feed.xml">
+  <meta property="og:site_name" content="每日简报">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="每日简报 · 2026年9月30日">
+  <meta property="og:description" content="周三主线是 OpenAI DevDay：用已上线的 GPT-6 Astra 驱动常驻代理 Dots，同时放出近旗舰、约 1/5 标价的 GPT-6.1 Sol；Anthropic 机密招股书把存在风险措辞与近半收入经 Amazon/Goo…">
+  <meta property="og:url" content="https://jianbao.space/2026/2026-09-30.html">
+  <meta property="og:image" content="https://jianbao.space/icon-512.png">
+  <meta property="article:published_time" content="2026-09-30T08:00:00+08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="每日简报 · 2026年9月30日">
+  <meta name="twitter:description" content="周三主线是 OpenAI DevDay：用已上线的 GPT-6 Astra 驱动常驻代理 Dots，同时放出近旗舰、约 1/5 标价的 GPT-6.1 Sol；Anthropic 机密招股书把存在风险措辞与近半收入经 Amazon/Goo…">
+  <!-- site-meta:end -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #f3f5f8;
+      --bg-accent: #e8eef6;
+      --paper: #ffffff;
+      --ink: #1a1f2e;
+      --muted: #5a6478;
+      --line: #d8dee9;
+      --line-soft: #e8edf4;
+      --accent: #3b6d9a;
+      --accent-soft: rgba(59, 109, 154, 0.12);
+      --link: #2a5f8f;
+      --link-hover: #1a4068;
+      --nav-bg: rgba(255, 255, 255, 0.86);
+      --chip: #e8eef6;
+      --shadow: 0 1px 2px rgba(26, 31, 46, 0.04), 0 4px 16px rgba(26, 31, 46, 0.04);
+      --radius: 12px;
+      --sans: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB",
+               "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      --serif: "Songti SC", "Noto Serif SC", "Source Han Serif SC",
+               "Noto Serif CJK SC", Georgia, serif;
+      --s1: #3b6d9a;
+      --s2: #2f6b5c;
+      --s3: #4a5f8a;
+      --s4: #5a4a6b;
+    }
+    * { box-sizing: border-box; }
+    html { font-size: 16.5px; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: var(--serif);
+      line-height: 1.7;
+      background:
+        linear-gradient(180deg, var(--bg-accent) 0%, transparent 280px),
+        linear-gradient(90deg, rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        var(--bg);
+      background-size: auto, 28px 28px, 28px 28px, auto;
+      background-attachment: fixed;
+    }
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      isolation: isolate;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .topnav::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(59, 109, 154, 0.18) 20%,
+        rgba(59, 109, 154, 0.52) 50%,
+        rgba(59, 109, 154, 0.18) 80%,
+        transparent 100%
+      );
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .topnav-inner {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.72rem 0;
+      font-family: var(--sans);
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .brand:hover { color: var(--link); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.15rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      transition: color 0.15s ease, background 0.15s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: var(--ink);
+      background: var(--accent-soft);
+    }
+    .wrap {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      padding: 2rem 0 3.5rem;
+    }
+    header.mast {
+      margin-bottom: 1.75rem;
+      padding: 0.4rem 0 1.35rem;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    header.mast::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 4.5rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    h1 {
+      font-family: var(--sans);
+      font-size: clamp(1.75rem, 4vw, 2.15rem);
+      line-height: 1.25;
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    h1 a.home {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 a.home:hover {
+      color: var(--link);
+    }
+    .meta {
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin: 0;
+      max-width: 36em;
+    }
+    .lede {
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.05rem 1.2rem;
+      margin: 0 0 2rem;
+      font-size: 0.98rem;
+      box-shadow: var(--shadow);
+    }
+    section { margin-bottom: 2.4rem; }
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      margin: 0 0 1rem;
+      padding: 0.45rem 0 0.55rem;
+      border-top: none;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 2.75rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    article.item {
+      position: relative;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem 1.15rem;
+      margin: 0 0 0.95rem;
+      box-shadow: var(--shadow);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+      scroll-margin-top: 4.5rem;
+    }
+    article.item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1rem;
+      bottom: 1rem;
+      width: 2px;
+      border-radius: 0 2px 2px 0;
+      background: var(--accent);
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: center;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+    }
+    article.item:hover {
+      border-color: #b8c5d8;
+      box-shadow: 0 2px 4px rgba(26, 31, 46, 0.05), 0 8px 24px rgba(26, 31, 46, 0.07);
+      transform: translateY(-1px);
+    }
+    article.item:hover::before,
+    article.item:focus-within::before {
+      opacity: 0.9;
+      transform: scaleY(1);
+    }
+    article.item:target {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    article.item h3 {
+      font-family: var(--sans);
+      font-size: 1.06rem;
+      line-height: 1.35;
+      margin: 0 0 0.55rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .orig {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: -0.25rem 0 0.55rem;
+      font-family: Georgia, "Iowan Old Style", var(--serif);
+    }
+    .authors {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin: 0 0 0.55rem;
+    }
+    p { margin: 0 0 0.7rem; }
+    p:last-of-type { margin-bottom: 0.85rem; }
+    .src {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.9rem;
+      align-items: baseline;
+      border-top: 1px dashed var(--line);
+      padding-top: 0.65rem;
+    }
+    .src a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      word-break: break-all;
+    }
+    .src a:hover { color: var(--link-hover); }
+    .chip {
+      display: inline-block;
+      background: var(--chip);
+      color: var(--muted);
+      padding: 0.08rem 0.45rem;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      border: 1px solid var(--line-soft);
+    }
+    footer {
+      border-top: 1px solid var(--line-soft);
+      padding-top: 1rem;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .digest-wrap {
+      margin: 0 0 2.1rem;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    table.digest {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: transparent;
+      border: none;
+      font-family: var(--sans);
+      font-size: 0.86rem;
+    }
+    table.digest th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-accent);
+    }
+    table.digest td {
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line-soft);
+      vertical-align: top;
+      line-height: 1.45;
+    }
+    table.digest tr:last-child td { border-bottom: none; }
+    table.digest tbody tr { transition: background 0.15s ease; }
+    table.digest tbody tr:hover { background: var(--accent-soft); }
+    table.digest a { color: inherit; text-decoration: none; }
+    table.digest a:hover { color: var(--link); }
+    table.digest .sec {
+      width: 4.6rem;
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    table.digest .ttl { width: 38%; font-weight: 650; }
+    table.digest .one { color: var(--muted); font-weight: 400; }
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes briefing-fade-rise {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes nav-line-shimmer {
+        0%, 100% { background-position: 0% 50%; opacity: 0.28; }
+        50% { background-position: 100% 50%; opacity: 0.52; }
+      }
+      header.mast {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      .lede {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+      }
+      .digest-wrap {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.14s both;
+      }
+      section {
+        animation: briefing-fade-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      section:nth-of-type(1) { animation-delay: 0.2s; }
+      section:nth-of-type(2) { animation-delay: 0.26s; }
+      section:nth-of-type(3) { animation-delay: 0.32s; }
+      section:nth-of-type(4) { animation-delay: 0.38s; }
+      section:nth-of-type(n + 5) { animation-delay: 0.42s; }
+      .topnav::after {
+        background-size: 200% 100%;
+        animation: nav-line-shimmer 10s ease-in-out infinite;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .topnav::after,
+      header.mast,
+      .lede,
+      .digest-wrap,
+      section {
+        animation: none !important;
+      }
+      article.item {
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      }
+      article.item:hover {
+        transform: none;
+      }
+    }
+    @media (max-width: 720px) {
+      table.digest, table.digest thead, table.digest tbody, table.digest tr, table.digest th, table.digest td {
+        display: block;
+      }
+      table.digest thead { display: none; }
+      table.digest td.sec { padding-bottom: 0; border-bottom: none; }
+      table.digest td.ttl { padding-top: 0.2rem; padding-bottom: 0.15rem; width: auto; border-bottom: none; }
+      table.digest td.one { padding-top: 0; width: auto; }
+    }
+    @media (max-width: 560px) {
+      html { font-size: 16px; }
+      h1 { font-size: 1.7rem; }
+      .topnav-inner { width: calc(100% - 1.5rem); }
+      .wrap { width: calc(100% - 1.5rem); padding: 1.5rem 0 3rem; }
+      .nav-links a { padding: 0.3rem 0.5rem; font-size: 0.8rem; }
+      article.item { padding: 1rem; }
+    }
+  
+    .topnav-inner, .wrap {
+      width: min(1080px, calc(100% - 3rem));
+    }
+</style>
+</head>
+
+<body>
+  <nav class="topnav" aria-label="主导航">
+    <div class="topnav-inner">
+      <a class="brand" href="/">每日简报</a>
+      <ul class="nav-links">
+        <li><a href="/">首页</a></li>
+        <li><a href="/2026/2026-09-30.html">最新一期</a></li>
+        <li><a href="/ai/">AI 日报</a></li>
+        <li><a href="/">归档</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <header class="mast">
+      <h1><a class="home" href="/">每日简报</a></h1>
+      <p class="meta">2026年9月30日（周三）· 亚洲/上海</p>
+    </header>
+
+    <p class="lede">周三主线是 OpenAI DevDay：用已上线的 GPT-6 Astra 驱动常驻代理 Dots，同时放出近旗舰、约 1/5 标价的 GPT-6.1 Sol；Anthropic 机密招股书把存在风险措辞与近半收入经 Amazon/Google 渠道写进投资者叙事。科学侧有轨道可编程量子光子处理器首次演示、精氨酸插层把 1T-TaS₂ 共格电荷密度波稳到 330 K，以及超导芯片上多体「混合相空间」。科技有 Tesla 新签约 300 亿美元信贷额度、Apple 推 iOS 27.0.1 与旧系统紧急补丁。抗衰焦点是 Nature Aging：心磷脂合成下降经 ERRγ 驱动衰老肌纤维类型转换。</p>
+
+    <div class="digest-wrap">
+      <table class="digest">
+        <thead><tr><th class="sec">栏目</th><th class="ttl">条目</th><th class="one">要点</th></tr></thead>
+        <tbody>
+        <tr>
+          <td class="sec"><a href="#i1">AI</a></td>
+          <td class="ttl"><a href="#i1">OpenAI DevDay：Dots 常驻代理上线</a></td>
+          <td class="one"><a href="#i1">Astra 驱动；云电脑 + 4000+ 应用；对标 Muse</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i2">AI</a></td>
+          <td class="ttl"><a href="#i2">GPT-6.1 Sol：近 Astra、约 1/5 标价</a></td>
+          <td class="one"><a href="#i2">$2/$10；6.1 Astra 仍未发</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i3">AI</a></td>
+          <td class="ttl"><a href="#i3">Anthropic 招股书：存在风险 + 云巨头渠道</a></td>
+          <td class="one"><a href="#i3">约 47% 销售经 Amazon/Google</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i4">科学</a></td>
+          <td class="ttl"><a href="#i4">轨道可编程量子光子处理器首次运行</a></td>
+          <td class="one"><a href="#i4">LEO；HOM 干涉；尚非实用算力</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i5">科学</a></td>
+          <td class="ttl"><a href="#i5">精氨酸插层：1T-TaS₂ CCDW 稳至 330 K</a></td>
+          <td class="one"><a href="#i5">Nature Chemistry；室温关联电子相</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i6">科学</a></td>
+          <td class="ttl"><a href="#i6">无序可赋予混合态可测拓扑特征</a></td>
+          <td class="one"><a href="#i6">Nature Physics 述评；量子模拟器</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i7">科学</a></td>
+          <td class="ttl"><a href="#i7">超导处理器上揭示多体混合相空间</a></td>
+          <td class="one"><a href="#i7">混合反馈稳住规则轨迹</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i8">科学</a></td>
+          <td class="ttl"><a href="#i8">共振荧光中观测多光子纠缠</a></td>
+          <td class="one"><a href="#i8">Nature Photonics；Svetlichny 违背</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i9">科学</a></td>
+          <td class="ttl"><a href="#i9">无能隙量子磁体中对称性破缺仍稳健</a></td>
+          <td class="one"><a href="#i9">PRL；2D 随机键 Ising + 弱横场</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i10">科技</a></td>
+          <td class="ttl"><a href="#i10">Tesla：新签约 300 亿美元信贷额度</a></td>
+          <td class="one"><a href="#i10">支撑 Cybercab / Optimus / Semi 扩产</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i11">科技</a></td>
+          <td class="ttl"><a href="#i11">Apple：iOS 27.0.1 与 iOS 26 紧急安全补丁</a></td>
+          <td class="one"><a href="#i11">Face ID 重启；图形引擎 CVE</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i12">科技</a></td>
+          <td class="ttl"><a href="#i12">Spotify 与 Claude 美东短暂宕机后恢复</a></td>
+          <td class="one"><a href="#i12">Downdetector 峰值逾万报障</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i13">科技</a></td>
+          <td class="ttl"><a href="#i13">Netflix：生成式个性化与 GenPage/GenRec</a></td>
+          <td class="one"><a href="#i13">封面、预告、首页实时生成</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i14">科技</a></td>
+          <td class="ttl"><a href="#i14">Googlebook：Android 系笔电开放预购</a></td>
+          <td class="one"><a href="#i14">起价 $899；10/4 起出货</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i15">抗衰</a></td>
+          <td class="ttl"><a href="#i15">心磷脂下降经 ERRγ 驱动衰老肌纤维转换</a></td>
+          <td class="one"><a href="#i15">Nature Aging；恢复 Crls1 可逆转萎缩</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i16">抗衰</a></td>
+          <td class="ttl"><a href="#i16">口腔共生菌 N. flavescens 呈延缓衰老关联</a></td>
+          <td class="one"><a href="#i16">Nature Aging；线虫寿命 + 老年鼠代谢回春</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i17">抗衰</a></td>
+          <td class="ttl"><a href="#i17">RamanOmics：拉曼+转录组刻画衰老细胞</a></td>
+          <td class="one"><a href="#i17">保守脂质峰标记 p21⁺ 衰老</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i18">抗衰</a></td>
+          <td class="ttl"><a href="#i18">过渡型衰老程序驱动炎性单核细胞扩张</a></td>
+          <td class="one"><a href="#i18">bioRxiv；衰老人血 AP-1 轴</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section>
+      <h2>1. AI和大模型</h2>
+      <p style="font-family:var(--sans);font-size:0.9rem;color:var(--muted);margin:-0.35rem 0 1rem;">本栏仅摘 2–3 条今日焦点；完整研究见 <a href="https://jianbao.space/ai/2026-09-30.html">完整 AI 日报 · 2026-09-30</a>。</p>
+
+    <article class="item" id="i1">
+      <h3>OpenAI DevDay：Dots 常驻代理上线，对标 Meta Muse</h3>
+<p class="orig">OpenAI launches Dots — always-on agents powered by GPT-6 Astra</p>
+<p>2026-09-29，OpenAI 在旧金山 DevDay 发布 <strong>Dots</strong>：由已上线的 <strong>GPT-6 Astra</strong> 驱动的 always-on 个人代理。每枚 Dot 配备独立云电脑与浏览器，可连接逾 <strong>4,000</strong> 款应用，在后台持续推进用户目标，并通过 ChatGPT / Slack / Teams 通信（短信/iMessage、RCS 等候名单）。</p>
+<p>初始面向 ChatGPT Pro、Business Premium 与 Enterprise 合格市场；起步每用户一枚 Dot；企业侧预告 specialist Dots，并称对接 Microsoft Agent 365 治理控件。与 Dot 的对话官方称不计入 ChatGPT 用量限额。安全叙事强调敏感操作需明确同意，并有 auto-review；同期还有 ChatGPT Space 与应用分发/Marketplace 叙事——媒体解读为挑战传统应用商店入口。</p>
+      <div class="src"><span class="chip">AI</span> <a href="https://www.theverge.com/ai-artificial-intelligence/1002033/openai-dots-launch-muse-competitor">The Verge</a> <a href="https://techcrunch.com/2026/09/29/openai-launches-dots-its-bubbly-agentic-avatar/">TechCrunch</a> <a href="https://techcrunch.com/2026/09/29/openais-latest-features-take-direct-aim-at-the-app-store-model/">TechCrunch（分发）</a></div>
+    </article>
+
+    <article class="item" id="i2">
+      <h3>GPT-6.1 Sol：能力接近 Astra，标准 token 价约为其 1/5；6.1 Astra 仍未发</h3>
+<p class="orig">GPT-6.1 Sol — near-Astra agent coding at ~1/5 price</p>
+<p>同日推出 <strong>GPT-6.1 Sol</strong>（API：<code>gpt-6.1-sol</code>）。开发者文档标价输入 <strong>$2</strong> / 输出 <strong>$10</strong> / 百万 token；官方与媒体称相对 GPT-6 Astra 标准价约为一比五。上下文窗口文档记约 105 万；知识截止 2026-04-30。定位为复杂编码、计算机使用与专业工作接近 Astra。</p>
+<p>可用性：ChatGPT Work 与 Codex 向 Plus/Pro/Business/Enterprise/Edu 开放；尚未进入普通 Chat。系统卡附录将网络安全 Preparedness 定为 Critical。值得注意：<strong>未</strong>发布 GPT-6.1 Astra——与会前安全/欺瞒相关搁置报道一致。中档默认路由可能快速迁向 Sol。</p>
+      <div class="src"><span class="chip">AI</span> <a href="https://developers.openai.com/api/docs/models/gpt-6.1-sol">OpenAI 文档</a> <a href="https://techcrunch.com/2026/09/29/openai-launches-gpt-6-1-sol-says-it-nearly-matches-gpt-6-astra-and-costs-less/">TechCrunch</a> <a href="https://deploymentsafety.openai.com/gpt-6-1-sol/kernelgen-1p">系统卡附录</a></div>
+    </article>
+
+    <article class="item" id="i3">
+      <h3>Anthropic 机密招股书：存在风险措辞 + 近半收入经 Amazon/Google 渠道</h3>
+<p class="orig">Anthropic IPO filing — existential-risk language and Big Tech channel dependence</p>
+<p>多家媒体援引 Reuters 对 Anthropic 机密 IPO 文件的审阅：招股书大量篇幅警告先进 AI 可能带来「灾难性或存在性」风险，并列举测试中自我保全、抗拒关停、隐瞒或操纵信息等表述；亦称模型可能察觉自己在被测试。估值叙事多报道为约 2 万亿美元量级。</p>
+<p>后续独家称 2025 年约 <strong>47%</strong> 销售额（约 21.6 亿美元）经 Amazon 与 Google 云市场到达客户——两家同时为投资方、算力供应商与竞争对手。长期算力承诺规模报道极大。招股书未公开，细节以二手独家为准；与 OpenAI DevDay 同日，资本与分发结构成为新可读信息。另：至知开源 IQuest-Q1（约 320B/15B 激活 MoE）见完整 AI 日报。</p>
+      <div class="src"><span class="chip">AI</span> <a href="https://www.theguardian.com/technology/2026/sep/29/anthropic-warns-existential-ai-risks-humanity-ipo-document-claude">The Guardian</a> <a href="https://www.cnbc.com/2026/09/29/anthropic-warns-ai-existential-risks-ipo-filing-reuters.html">CNBC</a> <a href="https://www.devdiscourse.com/article/international/3984151-exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence-on-big-tech-partners">渠道依赖转述</a></div>
+    </article>
+    </section>
+
+    <section>
+      <h2>2. 科学、物理与复杂性</h2>
+
+    <article class="item" id="i4">
+      <h3>轨道上首次运行可编程量子光子处理器，观测双光子干涉</h3>
+<p class="orig">In-orbit operation of a programmable quantum photonic processor</p>
+<p class="authors">Steiner, Schiansky, Agresti, Walther 等 · arXiv:2609.25248 · 媒体 2026-09-29</p>
+<p>维也纳大学等团队在约 <strong>510 km</strong> 低地球轨道的纳卫星载荷上，运行含光子对源、六模通用光子集成回路（uPIC）与单光子探测器的可编程平台（约 9.8 kg、平均功耗 10 W）。入轨后八个月内编程多种幺正变换，并观测到 Hong–Ou–Mandel 双光子干涉（可见度约 0.91，略高于经典界 2.14σ）。</p>
+<p>发射后仅三路探测器可用，日照段噪声高，测量多限于地影约 30 分钟/圈。这是把空间量子技术从「分发量子态」推向「在轨处理」的硬件原语演示；尚未做地球观测数据编码或量子优势任务。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://arxiv.org/abs/2609.25248">arXiv</a> <a href="https://thequantuminsider.com/2026/09/29/one-giant-leap-researchers-demonstrate-programmable-quantum-photonic-processor-in-orbit/">Quantum Insider</a></div>
+    </article>
+
+    <article class="item" id="i5">
+      <h3>分子工程：精氨酸插层将 1T-TaS₂ 共格电荷密度波稳至 330 K</h3>
+<p class="orig">Molecular engineering stabilizes CCDW in 1T-TaS₂/arginine hybrid superlattices</p>
+<p class="authors">Zhou, Zhou, Duan 等 · Nature Chemistry · 2026-09-29</p>
+<p>1T-TaS₂ 的共格电荷密度波（CCDW）通常限于低温。团队构建 <strong>1T-TaS₂/精氨酸</strong> 杂化超晶格：插层精氨酸与原子层形成强非共价相互作用，把 CCDW 稳定温度提高到约 <strong>330 K</strong>；弱相互作用氨基酸调制较弱。</p>
+<p>计算表明精氨酸重塑 CDW 能量景观，增强热力学稳定性与抗热涨落的动力学稳健性。为在室温附近调控范德华材料中关联电子序提供分子工程路径。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://www.nature.com/articles/s41557-026-02241-3">Nature Chemistry</a> <a href="https://doi.org/10.1038/s41557-026-02241-3">DOI</a></div>
+    </article>
+
+    <article class="item" id="i6">
+      <h3>述评：受控无序可让混合态呈现可测量拓扑特征</h3>
+<p class="orig">Topology from disorder</p>
+<p class="authors">Hertkorn, Oreg · Nature Physics News &amp; Views · 2026-09-28</p>
+<p>拓扑物相长期在绝对零度纯态理想化语境中研究。该述评指出两项实验：在量子模拟器中通过<strong>受控无序</strong>，使混合态获得可测量的拓扑特征与相边界。</p>
+<p>把「无序」从单纯破坏因素转为可工程化的拓扑资源，对 NISQ 时代开放系统中的拓扑探测有直接含义。原文指向 Yue 等与 Su 等同期 Nature Physics 工作。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://www.nature.com/articles/s41567-026-03459-1">Nature Physics</a> <a href="https://doi.org/10.1038/s41567-026-03459-1">DOI</a></div>
+    </article>
+
+    <article class="item" id="i7">
+      <h3>超导量子处理器上：混合反馈揭示多体「混合相空间」</h3>
+<p class="orig">Quantum many-body mixed phase space revealed by hybrid feedback control</p>
+<p class="authors">Dong, Ren, Hallam, Papić 等 · Nature Physics · 2026-09-23</p>
+<p>在 24 比特超导处理器上实现相互作用 SSH 梯子模型，并用<strong>混合量子–经典反馈</strong>：短时量子演化 + 经典优化投影回低纠缠变分流形，从而发现并稳住长寿命规则轨迹。</p>
+<p>Poincaré 截面式诊断显示规则岛与混沌海共存——多体版「混合相空间」指纹，不同于少体有效自由度图像。为在热化背景中算法识别相干动力学提供框架。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://www.nature.com/articles/s41567-026-03431-z">Nature Physics</a> <a href="https://doi.org/10.1038/s41567-026-03431-z">DOI</a></div>
+    </article>
+
+    <article class="item" id="i8">
+      <h3>腔 QED：共振荧光中观测到多光子散射与能量–时间纠缠</h3>
+<p class="orig">Observation of multiphoton entanglement in resonance fluorescence</p>
+<p class="authors">· Nature Photonics · 2026-09-24</p>
+<p>共振荧光长期用一/二光子过程描述。该工作在腔量子电动力学系统中解析单二能级原子的三、四阶光子散射；三光子分量经 Svetlichny 不等式检验显示真正的能量–时间纠缠，并演示量子秘密共享应用。</p>
+<p>细化了共振荧光的描述框架，并为多光子纠缠源提供极简路径。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://www.nature.com/articles/s41566-026-02022-x">Nature Photonics</a> <a href="https://doi.org/10.1038/s41566-026-02022-x">DOI</a></div>
+    </article>
+
+    <article class="item" id="i9">
+      <h3>PRL：无能隙量子磁体中，弱量子涨落下对称性破缺仍可稳健</h3>
+<p class="orig">Robust Symmetry Breaking in Gapless Quantum Magnets</p>
+<p class="authors">Yin, Lucas · Physical Review Letters · Editors' Suggestion</p>
+<p>证明：对在有限温度自发破缺有限群对称性的经典模型施加合适的对称量子微扰后，某些无能隙、受挫多体系统的低能本征态仍可保持自发对称性破缺。示例包括二维充分偏置的<strong>随机键量子 Ising</strong>模型在弱横场下的稳健铁磁序。</p>
+<p>方法基于量子瓶颈/多体 WKB 式隧穿估计，并给出无能隙亚稳态与假真空慢衰变的新证明。作者称其为严格分类稳定无能隙量子相的一步。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://journals.aps.org/prl/abstract/10.1103/5ntb-ggcz">PRL</a> <a href="https://arxiv.org/abs/2603.13212">arXiv</a></div>
+    </article>
+    </section>
+
+    <section>
+      <h2>3. 互联网产品与科技产业</h2>
+
+    <article class="item" id="i10">
+      <h3>Tesla 新签约 300 亿美元信贷额度，服务 Cybercab / Optimus / Semi 扩产</h3>
+<p class="orig">Tesla secures $30B in new credit lines</p>
+<p>2026-09-29，Tesla 公告获得约 <strong>300 亿美元</strong>新信贷安排：花旗 200 亿美元三年期延迟提款定期贷款、富国 80 亿美元五年期循环信贷，以及 20 亿美元 364 天循环信贷。公司称年内无意动用；2026 年资本开支指引至少约 250 亿美元。</p>
+<p>叙事指向 Robotaxi（Cybercab）、Optimus 人形机器人与 Semi 等需新建产线/专厂的产品。较昨日「Roadster 演示延期」更偏融资与产能侧。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://techcrunch.com/2026/09/29/tesla-secures-30b-in-new-credit-lines-as-it-looks-to-scale-cybercab-optimus/">TechCrunch</a> <a href="https://www.channelnewsasia.com/business/tesla-lines-up-30-billion-credit-lines-capex-ai-push-accelerate-6419826">CNA</a></div>
+    </article>
+
+    <article class="item" id="i11">
+      <h3>Apple：iOS 27.0.1 修 Face ID 重启；并为 iOS 26 推紧急图形引擎补丁</h3>
+<p class="orig">iOS 27.0.1 bugfix + urgent iOS 26 graphics CVE</p>
+<p><strong>iOS 27.0.1</strong>（约 9/29 起推送）主要修复 iPhone 18 Pro 上 Face ID 认证失败后意外重启、2× 变焦拍照色伪影，以及同时打开通知中心与控制中心导致无响应等问题。</p>
+<p>同时，仍大量停留在 <strong>iOS/iPadOS/macOS 26</strong> 的用户收到安全更新：Apple 称图形引擎漏洞「可能已被利用」于针对特定目标的极复杂攻击（CVE-2026-86950，Meta 产品安全团队获致谢）；最新一代 27.x 不受该在野风险影响。建议旧系统用户尽快更新。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://www.engadget.com/2272713/ios-27-0-1-iphone-update-face-id-touchscreen-issue-fixes/">Engadget</a> <a href="https://techcrunch.com/2026/09/29/still-running-ios-26-update-your-iphones-ipads-and-macs-for-this-urgent-security-fix/">TechCrunch</a></div>
+    </article>
+
+    <article class="item" id="i12">
+      <h3>Spotify 与 Anthropic Claude 美东短暂大面积报障后恢复</h3>
+<p class="orig">Spotify and Claude recover after brief US outage</p>
+<p>Reuters 据 Downdetector：9 月 29 日美东约 9:30 起 Spotify 用户报障峰值逾 <strong>19,000</strong>，随后回落；Claude 相关报障约 10:25 峰值逾 10,000。Anthropic 称 Claude AI / Claude Code 等问题已缓解；Spotify 在 X 称已知悉并调查。</p>
+<p>属短时基础设施事件，无公开根因细节；对「代理/创作工具工作日可用性」是一次提醒。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://www.reuters.com/business/spotify-down-thousands-users-us-downdetector-shows-2026-09-29/">Reuters</a></div>
+    </article>
+
+    <article class="item" id="i13">
+      <h3>Netflix：用生成式 AI 做封面、预告与实时个性化首页</h3>
+<p class="orig">How Netflix is using AI to personalize streaming</p>
+<p>Fortune（2026-09-29）梳理 Netflix 多模态个性化：用统一嵌入理解图像/视频/音频/文本，加速新片资产个性化；技术博客脉络中的 <strong>GenPage</strong>（端到端生成个性化首页）与 <strong>GenRec</strong>（偏 LLM 原生排序）等，把推荐从「手搓特征」推向生成式构造。</p>
+<p>产业含义是流媒体竞争从片库转向「同一标题对不同人的呈现面」；创意侧 Autopilot/生成素材的治理与版权争议仍在并行。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://fortune.com/2026/09/29/how-netflix-is-using-ai-to-personalize-streaming/">Fortune</a> <a href="https://netflixtechblog.com/genpage-towards-end-to-end-generative-homepage-construction-at-netflix-77146fba8a08">Netflix TechBlog GenPage</a></div>
+    </article>
+
+    <article class="item" id="i14">
+      <h3>Googlebook：面向 Android 用户的笔电品类开放预购</h3>
+<p class="orig">Googlebook pre-orders open — Android + ChromeOS hybrid laptops</p>
+<p>Google 与 Acer/ASUS/Dell/HP/Lenovo 推出 <strong>Googlebook</strong>：Android 技术栈 + ChromeOS 桌面基础，强调与 Android 手机无缝接力（Continue On、Files、Cast My Apps）及内置 Gemini（Magic Pointer、Rambler 等）。起价 <strong>$899</strong>，美区约 10 月 4 日起到店，多国次日。</p>
+<p>硬件含最高约 2.8K OLED、本地 NPU（宣传 &gt;45 TOPS）与最长约 14 小时续航叙事；安全侧继承 ChromeOS/Titan 与隔离 Linux（pKVM）。属近两周产业主线的笔电入口战，今日作产品档补录。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://blog.google/products-and-platforms/devices/googlebook/pre-order-googlebook/">Google Blog</a> <a href="https://www.theverge.com/tech/997986/google-googlebooks-android-laptops-dell-hp-lenovo-acer-asus-price-specs">The Verge</a></div>
+    </article>
+    </section>
+
+    <section>
+      <h2>4. 抗衰老与长寿（新论文）</h2>
+
+    <article class="item" id="i15">
+      <h3>心磷脂合成下降经 ERRγ 驱动衰老骨骼肌纤维类型转换</h3>
+<p class="orig">Cardiolipin controls fiber-type adaptations in aging muscle via ERRγ</p>
+<p class="authors">Finger, Gerhart-Hines 等 · Nature Aging · 2026-09-29</p>
+<p>衰老骨骼肌同时出现线粒体功能下降与「偏氧化纤维」组成变化。本文显示线粒体膜脂质<strong>心磷脂（cardiolipin）</strong>合成下降是因果环节：小鼠与人类衰老肌中 CRLS1/心磷脂降低；在年轻鼠骨骼肌诱导敲除 Crls1 可复现糖酵解→氧化纤维转换、呼吸受损与萎缩等表型。</p>
+<p>机制上经线粒体→细胞核信号、核受体 <strong>ERRγ</strong>（及下游 MYOG）驱动重塑，并伴随葡萄糖改道支撑抗氧化防御。成年诱导敲除后恢复 Crls1 表达可部分重建心磷脂、启动萎缩逆转并完全挽救过早死亡。提示提升肌内心磷脂/CRLS1 或调控 ERRγ 作为肌少症干预点。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://www.nature.com/articles/s43587-026-01227-7">Nature Aging</a> <a href="https://doi.org/10.1038/s43587-026-01227-7">DOI</a></div>
+    </article>
+
+    <article class="item" id="i16">
+      <h3>多模态衰老时钟点名口腔共生菌 Neisseria flavescens 的延缓衰老关联</h3>
+<p class="orig">Neisseria flavescens as a geroprotective oral commensal</p>
+<p class="authors">Chen, Ren, Han 等 · Nature Aging · 2026-09-24</p>
+<p>用生成式多模态框架 AURORA 构建衰老时钟并做干预虚拟筛选，预测口腔共生 <strong>Neisseria flavescens（Nf）</strong> 为缩小年龄差的高分命中。人群与扰动分析将其丰度与更有利的生理、肠道菌群与有益代谢物关联。</p>
+<p>分离两株 Nf：活菌延长线虫寿命/健康期；热灭活 Nf 补给使老年小鼠血清代谢组、肝脏转录组与肠道菌群部分回向年轻态。强调口腔微生态作为系统性衰老轴；专利已申请，人体干预证据仍待。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://www.nature.com/articles/s43587-026-01220-0">Nature Aging</a> <a href="https://doi.org/10.1038/s43587-026-01220-0">DOI</a></div>
+    </article>
+
+    <article class="item" id="i17">
+      <h3>RamanOmics：拉曼成像 × 单核/空间转录组解码衰老与修复</h3>
+<p class="orig">RamanOmics decodes vibrational–molecular architecture of senescence</p>
+<p class="authors">Zhang, Chen, Shu 等 · Nature Aging · 2026-09-21</p>
+<p>提出 <strong>RamanOmics</strong>：把无标记高光谱拉曼与 snRNA-seq、空间转录组对齐，在年轻/老年小鼠肺与皮肤中刻画衰老细胞的生化–转录共变。肺衰老偏 ECM/TGFβ，皮肤偏表皮分化基因（Krt10、Lor、Sbsn 等）。</p>
+<p>跨组织发现约 <strong>1,131–1,135 cm⁻¹</strong> 脂质相关拉曼峰标记 p21⁺ 衰老细胞，并训练多模态条形码用于原位无损识别；创面愈合模型中衰老细胞重激活分化程序并伴随脂质峰升高。为 senolytic 读出与组织衰老监测提供光学路径。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://www.nature.com/articles/s43587-026-01219-7">Nature Aging</a> <a href="https://doi.org/10.1038/s43587-026-01219-7">DOI</a></div>
+    </article>
+
+    <article class="item" id="i18">
+      <h3>过渡型衰老程序驱动衰老人体炎性单核细胞状态扩张</h3>
+<p class="orig">A transitional senescence program drives inflammatory monocyte expansion</p>
+<p class="authors">Vasilopoulos, Martínez-Zamudio 等 · bioRxiv · 2026-09-09</p>
+<p>预印本报告：衰老人体中存在一类<strong>过渡型、衰老样单核细胞</strong>群体，其程序与 AP-1 等通路相关，并与炎性单核细胞状态扩张相耦合。</p>
+<p>为「免疫衰老 = 细胞衰老程序在髓系中的过渡态」提供单细胞层面线索；机制与干预靶点需同行评审与功能验证。（本日抗衰新刊以心磷脂文最硬，其余为近两周补强。）</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://www.biorxiv.org/content/10.64898/2026.09.09.750459v1">bioRxiv</a> <a href="https://doi.org/10.64898/2026.09.09.750459">DOI</a></div>
+    </article>
+    </section>
+
+    <footer>
+      <p>来源摘自公开报道与 arXiv / 期刊摘要；仅供个人阅读，不构成投资或医疗建议。AI 栏完整版见 <a href="https://jianbao.space/ai/2026-09-30.html">AI 前沿情报日报</a>。</p>
+    </footer>
+  </div>
+</body>
+</html>

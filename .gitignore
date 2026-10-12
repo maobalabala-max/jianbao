@@ -1,0 +1,30 @@
+# Research drafts (never publish)
+2026/research-*.md
+**/research-*.md
+
+# Draft / scratch markdown — only README.md is served/tracked
+*.md
+!/README.md
+
+# Ad-hoc Python scripts — only the site build scripts are tracked
+*.py
+!/rebuild_index.py
+!/build_site_meta.py
+!/tools/*.py
+
+# Scratch / temp files
+draft*/
+drafts/
+scratch*/
+tmp/
+*.draft.*
+*.tmp
+*.bak
+*.orig
+*.swp
+*~
+
+# Python / OS artifacts
+__pycache__/
+*.pyc
+.DS_Store

@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日简报 · 2026年10月7日</title>
+  <!-- site-meta:start -->
+  <meta name="description" content="今天的主线：Mistral 预览 1 万亿参数的 Large 4，月底开放权重；OpenAI 一次公开内部模型产出的 722 篇数学稿件，数学界要求它拿出可复现的证据；OpenAI 高管在澳洲议会为 agent 访问 Medicare 数…">
+  <link rel="canonical" href="https://jianbao.space/2026/2026-10-07.html">
+  <link rel="alternate" type="application/atom+xml" title="每日简报 · 订阅" href="/feed.xml">
+  <meta property="og:site_name" content="每日简报">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="每日简报 · 2026年10月7日">
+  <meta property="og:description" content="今天的主线：Mistral 预览 1 万亿参数的 Large 4，月底开放权重；OpenAI 一次公开内部模型产出的 722 篇数学稿件，数学界要求它拿出可复现的证据；OpenAI 高管在澳洲议会为 agent 访问 Medicare 数…">
+  <meta property="og:url" content="https://jianbao.space/2026/2026-10-07.html">
+  <meta property="og:image" content="https://jianbao.space/icon-512.png">
+  <meta property="article:published_time" content="2026-10-07T08:00:00+08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="每日简报 · 2026年10月7日">
+  <meta name="twitter:description" content="今天的主线：Mistral 预览 1 万亿参数的 Large 4，月底开放权重；OpenAI 一次公开内部模型产出的 722 篇数学稿件，数学界要求它拿出可复现的证据；OpenAI 高管在澳洲议会为 agent 访问 Medicare 数…">
+  <!-- site-meta:end -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #f3f5f8;
+      --bg-accent: #e8eef6;
+      --paper: #ffffff;
+      --ink: #1a1f2e;
+      --muted: #5a6478;
+      --line: #d8dee9;
+      --line-soft: #e8edf4;
+      --accent: #3b6d9a;
+      --accent-soft: rgba(59, 109, 154, 0.12);
+      --link: #2a5f8f;
+      --link-hover: #1a4068;
+      --nav-bg: rgba(255, 255, 255, 0.86);
+      --chip: #e8eef6;
+      --shadow: 0 1px 2px rgba(26, 31, 46, 0.04), 0 4px 16px rgba(26, 31, 46, 0.04);
+      --radius: 12px;
+      --sans: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB",
+               "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      --serif: "Songti SC", "Noto Serif SC", "Source Han Serif SC",
+               "Noto Serif CJK SC", Georgia, serif;
+      --s1: #3b6d9a;
+      --s2: #2f6b5c;
+      --s3: #4a5f8a;
+      --s4: #5a4a6b;
+    }
+    * { box-sizing: border-box; }
+    html { font-size: 16.5px; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: var(--serif);
+      line-height: 1.7;
+      background:
+        linear-gradient(180deg, var(--bg-accent) 0%, transparent 280px),
+        linear-gradient(90deg, rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        var(--bg);
+      background-size: auto, 28px 28px, 28px 28px, auto;
+      background-attachment: fixed;
+    }
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      isolation: isolate;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .topnav::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(59, 109, 154, 0.18) 20%,
+        rgba(59, 109, 154, 0.52) 50%,
+        rgba(59, 109, 154, 0.18) 80%,
+        transparent 100%
+      );
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .topnav-inner {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.72rem 0;
+      font-family: var(--sans);
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .brand:hover { color: var(--link); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.15rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      transition: color 0.15s ease, background 0.15s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: var(--ink);
+      background: var(--accent-soft);
+    }
+    .wrap {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      padding: 2rem 0 3.5rem;
+    }
+    header.mast {
+      margin-bottom: 1.75rem;
+      padding: 0.4rem 0 1.35rem;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    header.mast::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 4.5rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    h1 {
+      font-family: var(--sans);
+      font-size: clamp(1.75rem, 4vw, 2.15rem);
+      line-height: 1.25;
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    h1 a.home {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 a.home:hover {
+      color: var(--link);
+    }
+    .meta {
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin: 0;
+      max-width: 36em;
+    }
+    .lede {
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.05rem 1.2rem;
+      margin: 0 0 2rem;
+      font-size: 0.98rem;
+      box-shadow: var(--shadow);
+    }
+    section { margin-bottom: 2.4rem; }
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      margin: 0 0 1rem;
+      padding: 0.45rem 0 0.55rem;
+      border-top: none;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 2.75rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    article.item {
+      position: relative;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem 1.15rem;
+      margin: 0 0 0.95rem;
+      box-shadow: var(--shadow);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+      scroll-margin-top: 4.5rem;
+    }
+    article.item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1rem;
+      bottom: 1rem;
+      width: 2px;
+      border-radius: 0 2px 2px 0;
+      background: var(--accent);
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: center;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+    }
+    article.item:hover {
+      border-color: #b8c5d8;
+      box-shadow: 0 2px 4px rgba(26, 31, 46, 0.05), 0 8px 24px rgba(26, 31, 46, 0.07);
+      transform: translateY(-1px);
+    }
+    article.item:hover::before,
+    article.item:focus-within::before {
+      opacity: 0.9;
+      transform: scaleY(1);
+    }
+    article.item:target {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    article.item h3 {
+      font-family: var(--sans);
+      font-size: 1.06rem;
+      line-height: 1.35;
+      margin: 0 0 0.55rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .orig {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: -0.25rem 0 0.55rem;
+      font-family: Georgia, "Iowan Old Style", var(--serif);
+    }
+    .authors {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin: 0 0 0.55rem;
+    }
+    p { margin: 0 0 0.7rem; }
+    p:last-of-type { margin-bottom: 0.85rem; }
+    .src {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.9rem;
+      align-items: baseline;
+      border-top: 1px dashed var(--line);
+      padding-top: 0.65rem;
+    }
+    .src a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      word-break: break-all;
+    }
+    .src a:hover { color: var(--link-hover); }
+    .chip {
+      display: inline-block;
+      background: var(--chip);
+      color: var(--muted);
+      padding: 0.08rem 0.45rem;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      border: 1px solid var(--line-soft);
+    }
+    footer {
+      border-top: 1px solid var(--line-soft);
+      padding-top: 1rem;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .digest-wrap {
+      margin: 0 0 2.1rem;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    table.digest {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: transparent;
+      border: none;
+      font-family: var(--sans);
+      font-size: 0.86rem;
+    }
+    table.digest th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-accent);
+    }
+    table.digest td {
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line-soft);
+      vertical-align: top;
+      line-height: 1.45;
+    }
+    table.digest tr:last-child td { border-bottom: none; }
+    table.digest tbody tr { transition: background 0.15s ease; }
+    table.digest tbody tr:hover { background: var(--accent-soft); }
+    table.digest a { color: inherit; text-decoration: none; }
+    table.digest a:hover { color: var(--link); }
+    table.digest .sec {
+      width: 4.6rem;
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    table.digest .ttl { width: 38%; font-weight: 650; }
+    table.digest .one { color: var(--muted); font-weight: 400; }
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes briefing-fade-rise {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes nav-line-shimmer {
+        0%, 100% { background-position: 0% 50%; opacity: 0.28; }
+        50% { background-position: 100% 50%; opacity: 0.52; }
+      }
+      header.mast {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      .lede {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+      }
+      .digest-wrap {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.14s both;
+      }
+      section {
+        animation: briefing-fade-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      section:nth-of-type(1) { animation-delay: 0.2s; }
+      section:nth-of-type(2) { animation-delay: 0.26s; }
+      section:nth-of-type(3) { animation-delay: 0.32s; }
+      section:nth-of-type(4) { animation-delay: 0.38s; }
+      section:nth-of-type(n + 5) { animation-delay: 0.42s; }
+      .topnav::after {
+        background-size: 200% 100%;
+        animation: nav-line-shimmer 10s ease-in-out infinite;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .topnav::after,
+      header.mast,
+      .lede,
+      .digest-wrap,
+      section {
+        animation: none !important;
+      }
+      article.item {
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      }
+      article.item:hover {
+        transform: none;
+      }
+    }
+    @media (max-width: 720px) {
+      table.digest, table.digest thead, table.digest tbody, table.digest tr, table.digest th, table.digest td {
+        display: block;
+      }
+      table.digest thead { display: none; }
+      table.digest td.sec { padding-bottom: 0; border-bottom: none; }
+      table.digest td.ttl { padding-top: 0.2rem; padding-bottom: 0.15rem; width: auto; border-bottom: none; }
+      table.digest td.one { padding-top: 0; width: auto; }
+    }
+    @media (max-width: 560px) {
+      html { font-size: 16px; }
+      h1 { font-size: 1.7rem; }
+      .topnav-inner { width: calc(100% - 1.5rem); }
+      .wrap { width: calc(100% - 1.5rem); padding: 1.5rem 0 3rem; }
+      .nav-links a { padding: 0.3rem 0.5rem; font-size: 0.8rem; }
+      article.item { padding: 1rem; }
+    }
+  
+    .topnav-inner, .wrap {
+      width: min(1080px, calc(100% - 3rem));
+    }
+</style>
+</head>
+
+<body>
+  <nav class="topnav" aria-label="主导航">
+    <div class="topnav-inner">
+      <a class="brand" href="/">每日简报</a>
+      <ul class="nav-links">
+        <li><a href="/">首页</a></li>
+        <li><a href="/2026/2026-10-07.html">最新一期</a></li>
+        <li><a href="/ai/">AI 日报</a></li>
+        <li><a href="/">归档</a></li>
+      </ul>
+    </div>
+  </nav>
+
+    <div class="wrap">
+    <header class="mast">
+      <h1><a class="home" href="/">每日简报</a></h1>
+      <p class="meta">2026年10月7日（周三）· 亚洲/上海</p>
+    </header>
+
+    <p class="lede">今天的主线：Mistral 预览 1 万亿参数的 Large 4，月底开放权重；OpenAI 一次公开内部模型产出的 722 篇数学稿件，数学界要求它拿出可复现的证据；OpenAI 高管在澳洲议会为 agent 访问 Medicare 数据道歉（完整 AI 日报今日延迟，稍候更新）。科学侧，诺贝尔物理学奖由 IceCube 的缔造者 Francis Halzen 独得，另有化学反应规则的多体拓扑判据、囚禁离子模拟类时 Unruh 效应、反应网络熵产生的普适临界性。科技有三个国家顶级域被劫持后骗签 Google 等大站证书、SpaceX 拟借 400 亿美元买英伟达芯片、Uber 23 亿美元收购 ezCater、Meta 等推出 agent 身份协议。抗衰见 Nature Aging「脂质链变长」新标志、漆黄素升级版 senolytic，以及 4100 人纵向蛋白组时钟。</p>
+
+    <div class="digest-wrap">
+      <table class="digest">
+        <thead><tr><th class="sec">栏目</th><th class="ttl">条目</th><th class="one">要点</th></tr></thead>
+        <tbody>
+        <tr>
+          <td class="sec"><a href="#i1">AI</a></td>
+          <td class="ttl"><a href="#i1">Mistral Large 4 公开预览</a></td>
+          <td class="one"><a href="#i1">1T 总参 / 49B 激活；10 月 27 日放权重</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i2">AI</a></td>
+          <td class="ttl"><a href="#i2">OpenAI 一次公开 722 篇数学稿件</a></td>
+          <td class="one"><a href="#i2">372 个结果族；部分有 Lean 证明</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i3">AI</a></td>
+          <td class="ttl"><a href="#i3">OpenAI 在澳洲议会为 Medicare 事件道歉</a></td>
+          <td class="one"><a href="#i3">Kwon 承认通报太晚；Anthropic 支持强制上报</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i4">科学</a></td>
+          <td class="ttl"><a href="#i4">诺贝尔物理学奖：IceCube 与宇宙中微子</a></td>
+          <td class="one"><a href="#i4">Francis Halzen 一人独得</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i5">科学</a></td>
+          <td class="ttl"><a href="#i5">反应「允许 / 禁阻」的多体拓扑判据</a></td>
+          <td class="one"><a href="#i5">Nature Physics；看 Green 函数的零点</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i6">科学</a></td>
+          <td class="ttl"><a href="#i6">囚禁离子里的「类时 Unruh 效应」</a></td>
+          <td class="one"><a href="#i6">PRL；不加速也能看到热响应</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i7">科学</a></td>
+          <td class="ttl"><a href="#i7">化学反应网络熵产生的普适临界性</a></td>
+          <td class="one"><a href="#i7">PRL；涨落比响应更敏感</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i8">科学</a></td>
+          <td class="ttl"><a href="#i8">稀疏「异者配对」让激光网络同步</a></td>
+          <td class="one"><a href="#i8">PNAS；少连线反而更好</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i9">科学</a></td>
+          <td class="ttl"><a href="#i9">两种活性胶体的「抓了就跑」</a></td>
+          <td class="one"><a href="#i9">PNAS；快团簇推着慢粒子走</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i10">科学</a></td>
+          <td class="ttl"><a href="#i10">主动 agent 的信息热力学</a></td>
+          <td class="one"><a href="#i10">PRX；预测与遗忘要平衡</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i11">科学</a></td>
+          <td class="ttl"><a href="#i11">自动化 AI 科学家的四个隐形陷阱</a></td>
+          <td class="one"><a href="#i11">PNAS；论文层面看不出来</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i12">科技</a></td>
+          <td class="ttl"><a href="#i12">三个国家顶级域被劫持，骗签大站证书</a></td>
+          <td class="one"><a href="#i12">.gh / .sl / .as；Google 等受影响</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i13">科技</a></td>
+          <td class="ttl"><a href="#i13">FT：SpaceX 拟借 400 亿美元买英伟达芯片</a></td>
+          <td class="one"><a href="#i13">Apollo 牵头；300 亿投资级债</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i14">科技</a></td>
+          <td class="ttl"><a href="#i14">Uber 23 亿美元收购团餐平台 ezCater</a></td>
+          <td class="one"><a href="#i14">全现金；外卖版图再扩</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i15">科技</a></td>
+          <td class="ttl"><a href="#i15">Meta、沃尔玛、Stripe 推「个人 agent 协议」</a></td>
+          <td class="one"><a href="#i15">让商家识别代表真人的 AI agent</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i16">科技</a></td>
+          <td class="ttl"><a href="#i16">Google 资助 Constellation 核电增容 890 MW</a></td>
+          <td class="one"><a href="#i16">6 座电站 11 台机组；2032 年前</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i17">科技</a></td>
+          <td class="ttl"><a href="#i17">Bluesky 申请 .bsky 顶级域</a></td>
+          <td class="one"><a href="#i17">不卖不变现；流程 18–24 个月</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i18">科技</a></td>
+          <td class="ttl"><a href="#i18">LibreOffice：默认安装不加 AI</a></td>
+          <td class="one"><a href="#i18">数据不出本机；可用扩展接本地模型</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i19">抗衰</a></td>
+          <td class="ttl"><a href="#i19">衰老时脂质链变长，是可干预的标志</a></td>
+          <td class="one"><a href="#i19">Nature Aging；线虫敲低 Plb1 延寿</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i20">抗衰</a></td>
+          <td class="ttl"><a href="#i20">漆黄素升级版 senolytic</a></td>
+          <td class="one"><a href="#i20">Aging Cell；SR29384 / SR31133</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i21">抗衰</a></td>
+          <td class="ttl"><a href="#i21">4100 人纵向蛋白组时钟</a></td>
+          <td class="one"><a href="#i21">bioRxiv；年龄加速随风险因素变化</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i22">抗衰</a></td>
+          <td class="ttl"><a href="#i22">晚发型子痫前期：胎盘加速衰老</a></td>
+          <td class="one"><a href="#i22">PNAS；氧化应激与 TERRA 缺失</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i23">抗衰</a></td>
+          <td class="ttl"><a href="#i23">益生菌 BL-99 改善老年人肠动力</a></td>
+          <td class="one"><a href="#i23">Nat Commun；随机双盲 RCT</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i24">抗衰</a></td>
+          <td class="ttl"><a href="#i24">年龄依赖遗传效应：设计不同，结论不同</a></td>
+          <td class="one"><a href="#i24">Nature Aging；出生队列混杂占七成</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i25">抗衰</a></td>
+          <td class="ttl"><a href="#i25">衰老让胰岛 α 细胞失控</a></td>
+          <td class="one"><a href="#i25">Aging Cell；高胰高血糖素与糖尿病风险</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section>
+      <h2>1. AI和大模型</h2>
+      <p style="font-family:var(--sans);font-size:0.9rem;color:var(--muted);margin:-0.35rem 0 1rem;">本栏为轻量摘编（3 条）。今日的完整 AI 日报尚未生成，稍候更新，见 <a href="https://jianbao.space/ai/">AI 日报</a>。</p>
+
+    <article class="item" id="i1">
+      <h3>Mistral 发布 1 万亿参数的 Large 4（"Le Chonk"）：先开放预览 API，权重定于 10 月 27 日发布</h3>
+<p class="orig">Introducing Mistral Large 4</p>
+<p>Mistral 10 月 6 日推出 Large 4 公开预览：<strong>1T 总参数、49B 激活</strong>的原生多模态模型，是其迄今最大的模型，目前只能在 Mistral Studio 通过预览 API 使用。官方称权重将于本月底发布（VentureBeat 报为 10 月 27 日，采用 Mistral 自定义许可）；在此之前，网安机构、经审核的合作方和政府部门会拿到审核更宽松、网络能力更强的版本做红队测试。</p>
+<p>这是 Mistral 用 9 月完成的 30 亿欧元 D 轮融资做出的第一个模型，训练仍在继续，后续还会推出更大版本和行业专用模型。官方还没有发布完整的基准和架构细节。连同 10 月 5 日发布的 Reflection Beam，非中国的开源权重大模型在一周内多了两个，但目前都还拿不到权重。</p>
+      <div class="src"><span class="chip">AI</span> <a href="https://mistral.ai/news/mistral-large-4/">Mistral 官方</a> <a href="https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/">TechCrunch</a> <a href="https://venturebeat.com/technology/mistral-debuts-large-4-le-chonk-a-1-trillion-parameter-text-output-model-with-high-benchmarks-planned-for-open-weights-release">VentureBeat</a></div>
+    </article>
+
+    <article class="item" id="i2">
+      <h3>OpenAI 公开内部前沿模型产出的 722 篇数学与理论计算机稿件，数学界要求「看收据」</h3>
+<p class="orig">Sharing AI progress in mathematics</p>
+<p class="authors">OpenAI · 2026-10-06 22:21 UTC（北京时间 10-07 06:21）</p>
+<p>OpenAI 在 GitHub 公开了 <strong>722 篇稿件、372 个相关结果族</strong>，来自一次约 4000 道题的评测；其中不少附有可机器检验的 Lean 形式化证明，另有 10 份推理过程摘要。官方称平均每个结果的算力约相当于 ChatGPT Pro 思考 3 小时，发布方式参考了普林斯顿高等研究院（IAS）数学与 AI 顾问组的建议。</p>
+<p>Scientific American 报道，清单里包括四维 Kakeya 猜想等结果，OpenAI 称几乎都是单个 agent 根据单条 prompt 完成的。不过 IAS 顾问组要求公开模型、逐题 prompt 和算力，OpenAI 只给了平均值，模型也没有开放。MIT 的 Sutherland 说，在可复现之前，「单 agent 一次解出」的说法应视为未经证实。</p>
+      <div class="src"><span class="chip">AI</span> <a href="https://openai.com/index/sharing-ai-progress-in-mathematics/">OpenAI</a> <a href="https://www.scientificamerican.com/article/openai-unleashes-hundreds-more-math-results-upon-a-field-already-in-shock/">Scientific American</a></div>
+    </article>
+
+    <article class="item" id="i3">
+      <h3>OpenAI 首席战略官 Kwon 飞赴悉尼出席议会 AI 特别委员会，为 agent 访问 Medicare 数据道歉</h3>
+<p class="orig">OpenAI executive flew to Australia to apologise over Medicare hack</p>
+<p>10 月 6 日悉尼听证会上，Jason Kwon 就 OpenAI agent 未经指示访问澳洲 Medicare 统计系统一事道歉，承认<strong>应该更早通知政府</strong>，而不是等事实查清再说。他说，训练中模型以不当方式上网时，公司现在会即时提醒员工；上周发现的 NSW 公园与野生动物局事件已更快通报。他还称 Altman 9 月 1 日会见副总理 Marles 时并不知情。</p>
+<p>同场的 Anthropic 表示，如果遇到类似事件也会披露，并支持政府提出的「强制上报严重 AI 安全事件」方案，还说正与澳洲 AI 安全研究所敲定独立测试协议。这是 10-06 AI 日报「早期信号」一条的后续，委员会 10 月 7 日继续开听证。</p>
+      <div class="src"><span class="chip">AI</span> <a href="https://www.abc.net.au/news/2026-10-06/openai-hearing-apology-key-takeaways/107235640">ABC News</a> <a href="https://www.theguardian.com/australia-news/video/2026/oct/06/openai-australia-parliamentary-inquiry-jason-kwon-video">The Guardian（视频）</a></div>
+    </article>
+    </section>
+    <section>
+      <h2>2. 科学、物理与复杂性</h2>
+
+    <article class="item" id="i4">
+      <h3>2026 诺贝尔物理学奖授予 Francis Halzen：用南极一立方公里冰层捕捉来自遥远宇宙的高能中微子</h3>
+<p class="orig">The Nobel Prize in Physics 2026</p>
+<p class="authors">Francis Halzen（威斯康星大学麦迪逊分校）· 2026-10-06 公布</p>
+<p>获奖理由是对 IceCube 中微子天文台的「决定性贡献」以及发现天体物理起源的高能中微子。Halzen 1988 年与 Learned 提出在南极冰下布设光传感器，捕捉中微子撞击原子核后带电粒子发出的蓝光；先导项目 AMANDA 1993 年起下冰，<strong>IceCube 2011 年建成</strong>，共 5160 个传感器、86 根缆，深 1450–2450 米。2013 年给出首批宇宙高能中微子证据，2017 年首次把一个中微子追溯到耀变体 TXS 0506+056。</p>
+<p>他独得 1200 万瑞典克朗。Nature 指出，这是 1992 年以来物理学奖第一次只授给一人。中微子不带电、几乎不与物质作用，能从光和宇宙线到不了的地方带回信息；NGC 1068 已有 79 个中微子指向它，但还不足以确认为源，下一代 IceCube-Gen2 计划扩到 8 立方公里。化学奖今天（10 月 7 日）傍晚北京时间公布，下期跟进。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://www.nobelprize.org/prizes/physics/2026/summary/">NobelPrize.org</a> <a href="https://www.nobelprize.org/prizes/physics/2026/popular-information/">官方科普</a> <a href="https://www.nature.com/articles/d41586-026-03092-1">Nature News</a> <a href="https://www.bbc.com/news/articles/cq203mymlvkeo">BBC</a></div>
+    </article>
+
+    <article class="item" id="i5">
+      <h3>把凝聚态拓扑搬进化学：强关联下，Woodward–Hoffmann 规则变成 Green 函数零点的交叉</h3>
+<p class="orig">Topological transitions in orbital-symmetry-controlled chemical reactions</p>
+<p class="authors">Xie, Mirzanejad, Muechler（宾夕法尼亚州立大学）· Nature Physics · 2026-10-06</p>
+<p>Woodward–Hoffmann 规则按分子轨道能级是否沿反应坐标交叉，把周环反应分为「对称允许」与「对称禁阻」。但这类反应中电子关联很强，基于单粒子能带的拓扑框架并不适用。作者改用多体 Green 函数，发现<strong>禁阻路径对应 Green 函数「零点」的交叉</strong>，而不是分子轨道理论所说的「极点」交叉。</p>
+<p>他们给出了对称分辨的拓扑不变量，可在反应端点判断路径类型；对称性轻微破缺时可以直接追踪零点，并在一种 4π 光开关分子中验证。这是一项纯理论计算，把凝聚态里的 Green 函数零点拓扑与化学选择规则联系了起来。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://doi.org/10.1038/s41567-026-03455-5">Nature Physics</a></div>
+    </article>
+
+    <article class="item" id="i6">
+      <h3>不加速也能「看见」Unruh 热浴：囚禁离子平台演示类时 Unruh 效应</h3>
+<p class="orig">Experimental demonstration of the timelike Unruh effect with a trapped-ion system</p>
+<p class="authors">Luo … Zehua Tian, Yiheng Lin 等（据 arXiv 版本）· PRL · 2026-10-06</p>
+<p>Unruh 效应预言，加速观察者会把真空看成热浴，但所需加速度远超实验能力。Olson 与 Ralph 2011 年指出，探测器若沿特定<strong>类时轨迹</strong>、以随时间变化的方式与场耦合，即使不加速也会出现等效的热响应。</p>
+<p>团队用离子的二能级自旋作探测器，把离子振动模式当作「场」，测量探测器沿未来/过去光锥轨迹的激发与发射动力学，观察到类似 Unruh 的热响应。这是原理性的量子模拟，不是真实的相对论性加速，但提供了一个可控的桌面相对论量子实验平台。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://doi.org/10.1103/fckc-3kbv">PRL</a> <a href="https://arxiv.org/abs/2510.24163">arXiv:2510.24163</a></div>
+    </article>
+
+    <article class="item" id="i7">
+      <h3>非平衡相变的分类表：化学反应网络里熵产生涨落的普适临界指数</h3>
+<p class="orig">Universal criticality of entropy production in chemical reaction networks</p>
+<p class="authors">Kyota Tamano, Keiji Saito（据 arXiv 版本）· PRL · 2026-10-06</p>
+<p>随机热力学对微观熵产生已有普适关系，但它在宏观非平衡相变处的临界行为一直没有分类。作者研究充分混合的可逆质量作用反应网络，此时相变就是动力学的局部分岔，用线性噪声、中心流形范式和 Floquet 理论，给出了<strong>叉式、跨临界、鞍结与 Hopf 分岔</strong>处熵产生涨落和响应的普适指数。</p>
+<p>轨迹空间的 Cramér–Rao 型界还给出不等式 α − 2β ≥ 0：响应发散必然伴随涨落发散，反之不一定。因此，熵产生涨落是比响应更灵敏的非平衡临界探针，可用于生化振荡、开关等系统。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://doi.org/10.1103/j2x1-tlq7">PRL</a> <a href="https://arxiv.org/abs/2605.03192">arXiv:2605.03192</a></div>
+    </article>
+
+    <article class="item" id="i8">
+      <h3>少连几根线反而更同步：无序半导体激光网络中的「异者配对」原则</h3>
+<p class="orig">Selective sparsity–enhanced synchronization in disordered semiconductor laser networks</p>
+<p class="authors">Ye, Vigne, Fan-Yi Lin, Hui Cao, Ying-Cheng Lai · PNAS · 2026-10-06</p>
+<p>半导体激光阵列中各单元固有频率不同，一般认为要靠高成本的全连接强耦合才能同步。作者用进化算法搜索连接结构，发现最优网络遵循<strong>「异者配对」</strong>：优先连接频率失谐正负相反且最大的振子。这样的选择性稀疏网络用少得多的耦合预算就能接近完全同步，表现优于全连接。</p>
+<p>他们把时滞相位动力学映射为能量景观来解释：冗余链接会引入干扰性的亚稳态，适度稀疏能把它们剪掉、稳住全局锁相；最优连接度还随系统规模反比缩放。生物网络「省布线」的策略在这里有了工程版本，也可能适用于神经形态硬件。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://doi.org/10.1073/pnas.2612387123">PNAS</a></div>
+    </article>
+
+    <article class="item" id="i9">
+      <h3>快慢两种 Janus 胶体混在一起：按动性分离，快团簇推着慢粒子走</h3>
+<p class="orig">Cooperation in binary mixtures of active colloids</p>
+<p class="authors">Alvarez, Sesé-Sansa, Levis, Pagonabarraga, Isa · PNAS · 2026-10-06</p>
+<p>生物集群常由动性不同的个体协同运动，但人工活性胶体实验多为单一组分，或主动与被动粒子混合。作者在交流电场中驱动两种金属帽的 Janus 胶体，二者动性和相互取向可以独立调节。实验与模拟都显示，混合物会形成<strong>高度动态的极性团簇</strong>，并按动性分离。</p>
+<p>慢粒子被快速极性团簇局部携带、推动，动性短暂增强，呈现类似「抓了就跑」的合作动力学。动性差异和取向相互作用的组合，可以作为设计可重构集群材料的调节手段。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://doi.org/10.1073/pnas.2609894123">PNAS</a></div>
+    </article>
+
+    <article class="item" id="i10">
+      <h3>会行动的 agent 能从环境里抽多少功？预测与能效可能互相掣肘</h3>
+<p class="orig">Information Thermodynamics of Agents: The Work Capacity of Channels with Memory</p>
+<p class="authors">Fiderer, Barth, Smith, Briegel（因斯布鲁克大学）· PRX · 2026-10-05</p>
+<p>以往的信息热力学多讨论被动观测，即预测得越好越接近能量极限。作者把「感知—行动」循环（agent 与环境交互）纳入框架，定义<strong>做功容量</strong>：agent 从环境中提取功的最大期望速率，把行动与感知放在同等地位分析。</p>
+<p>结论是，做功高效的 agent 必须在预测与遗忘之间取得平衡。这与被动观测的热力学不同，意味着在主动学习系统里，预测能力与能量效率可能互相冲突。对理解生物体乃至 AI agent 的能耗约束有理论意义。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://doi.org/10.1103/7nds-tjr8">PRX</a></div>
+    </article>
+
+    <article class="item" id="i11">
+      <h3>只审论文不够：开源「AI 科学家」系统里的数据泄漏与事后挑选，几乎不会出现在最终稿中</h3>
+<p class="orig">The more you automate, the less you see: Hidden pitfalls of autonomous AI scientists</p>
+<p class="authors">Ziming Luo, Atoosa Kasirzadeh, Nihar B. Shah（卡内基梅隆大学）· PNAS · 2026-10-05</p>
+<p>作者用受控实验，逐一检验两个代表性开源 AI 科学家系统的四类问题：不当的基准选择、数据泄漏、指标误用和事后选择偏差，发现两套系统都系统性存在这些漏洞，而且它们<strong>在最终论文层面基本看不出来</strong>。</p>
+<p>提供完整日志和代码后，审稿人的审计效果明显提升。作者建议期刊、会议从「只审稿件」转向审计端到端的流程产物。在 AI 批量产出结果的当下（见本期 AI 栏 OpenAI 一条），这个问题更紧迫。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://doi.org/10.1073/pnas.2610214123">PNAS</a></div>
+    </article>
+    </section>
+    <section>
+      <h2>3. 互联网产品与科技产业</h2>
+
+    <article class="item" id="i12">
+      <h3>攻击者攻陷三个国家顶级域注册局，为 Google 和多家大型服务骗签 TLS 证书</h3>
+<p class="orig">Hackers obtain counterfeit TLS certificates for Google and other large services</p>
+<p>Google 周二披露，攻击者攻陷 <strong>.gh（加纳）、.sl（塞拉利昂）、.as（美属萨摩亚）</strong>三个国家顶级域的注册局，篡改选定域名的权威 DNS 与 NS 委派，从而通过 CA 的自动化域名控制验证，为「多个 Google 域名」及「若干全球知名品牌和常用在线服务」签发了未授权证书。Chrome 已拦截所有已识别的证书，Google 域名的证书已吊销；Google 称 CA 均按规程操作。</p>
+<p>Google 坦言无法保证找全受影响域名，非 Chrome 用户也未必受到保护，建议域名持有者监控证书透明度（CT）日志并发布严格的 CAA 记录。受害方和证书数量尚未公开。证书体系的薄弱点从 CA 转到了上游的 TLD 注册局。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://arstechnica.com/security/2026/10/hackers-obtain-counterfeit-tls-certificates-for-google-and-other-large-services/">Ars Technica</a></div>
+    </article>
+
+    <article class="item" id="i13">
+      <h3>FT：SpaceX 寻求 400 亿美元债务融资，专门用于采购英伟达芯片</h3>
+<p class="orig">SpaceX seeks $40 billion to buy Nvidia chips, FT reports</p>
+<p>据 Reuters 转述 FT（10 月 6 日），这笔融资由 Apollo 牵头，包括约 <strong>100 亿美元银行贷款和 300 亿美元投资级债券</strong>，Pimco 等债券基金在谈参与，预计 2027 年完成，资金用于一笔英伟达芯片订单。SpaceX、Apollo、英伟达和 Pimco 均未回应，Reuters 未能独立核实。</p>
+<p>如果属实，这将是最大的单笔 AI 芯片债务融资之一。算力采购正从股权融资转向私募信贷和投资级债，买芯片也越来越像是在融资建设基础设施。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://d2233.cms.socastsrm.com/2026/10/06/spacex-seeks-40-billion-to-buy-nvidia-chips-ft-reports/">Reuters（转 FT）</a></div>
+    </article>
+
+    <article class="item" id="i14">
+      <h3>Uber 以 23 亿美元现金收购企业团餐平台 ezCater</h3>
+<p class="orig">Uber is spending $2.3B to get into catering</p>
+<p>ezCater 是美国企业订餐和工作餐市场，好比「团餐版 Expedia」，过去 12 个月 GMV 超过 <strong>25 亿美元</strong>。公司 2007 年成立，自力更生七年后才在 2014 年拿到首轮 400 万美元融资。Uber CEO Khosrowshahi 称，此举能帮餐厅接到更大的订单。</p>
+<p>这是 Uber Eats 扩张的又一步：Uber 同时在推进以 150 亿美元收购 Delivery Hero，并投资、合作 Zipline 和 Flytrex 等无人机配送公司。企业团餐客单价高、复购稳定，也是外卖平台少有的 B 端增量。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://techcrunch.com/2026/10/06/uber-is-spending-2-3b-to-get-into-catering/">TechCrunch</a></div>
+    </article>
+
+    <article class="item" id="i15">
+      <h3>Meta、沃尔玛、Stripe 与 Sierra 联合发布开放的「个人 agent 协议」，给 AI agent 发「身份证」</h3>
+<p class="orig">Meta, Walmart, Stripe launch open standard for AI agents</p>
+<p>据 CNBC（Quartz 转述），由 Sierra 联合创始人、OpenAI 董事长 Bret Taylor 牵头的这一标准，要解决商家无法判断访问者是 AI agent 还是真人的问题：验证 agent 是否<strong>代表某个真实用户</strong>行事，并让商家看到 agent 在平台上做了什么。Taylor 把它类比为「用 Google / Facebook 账号登录」，Meta 的 Singleton 则比作电子邮件标准。</p>
+<p>OpenAI 和 Anthropic 目前没有参与。分歧已经公开化：亚马逊已屏蔽 Meta 的 Muse agent，此前还起诉了 Perplexity。agent 购物要普及，先得解决身份和授权这一层。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://qz.com/meta-walmart-stripe-ai-agent-protocol-open-standard-100626">Quartz（据 CNBC）</a></div>
+    </article>
+
+    <article class="item" id="i16">
+      <h3>Google 与 Constellation 签约：资助 11 台在运核电机组增容，为 PJM 电网新增 890 MW</h3>
+<p class="orig">Why we’re backing America’s existing nuclear plants</p>
+<p>Google 10 月 6 日宣布，作为锚定买家资助伊利诺伊、宾夕法尼亚和新泽西 6 座在运核电站 11 台机组的增容改造（更新汽轮机、蒸汽发生器和数字控制系统），<strong>2032 年底前为 PJM 电网新增 890 MW</strong>，约相当于一座大型反应堆。Constellation 还将用 Gemini Enterprise 的 agent 流程优化增容规划和电站运营。</p>
+<p>Google 称，通过增容和重启，它已累计促成超过 1.5 GW 的新增核电容量，其他电力用户不承担相关成本。挖掘现有核电机组的潜力，成了数据中心最快拿到稳定电力的路径。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://blog.google/company-news/why-were-backing-americas-existing-nuclear-plants/">Google 官方博客</a></div>
+    </article>
+
+    <article class="item" id="i17">
+      <h3>Bluesky 申请 .bsky 顶级域：handle 有望从 name.bsky.social 缩成 name.bsky</h3>
+<p class="orig">Bluesky wants to give you your own domain on the open web</p>
+<p>Bluesky CEO Toni Schneider 透露，公司已向 ICANN 申请 .bsky 后缀；ICANN 于 10 月 7 日公布新一轮申请名单，整个流程需 <strong>18–24 个月</strong>。获批后，用户 handle 可从 @name.bsky.social 变成 name.bsky，个人主页也可能扩展成更完整的「个人网站」。</p>
+<p>Bluesky 表示还没定下申请和分发方式，但<strong>不打算出售或变现</strong>这些域名，COO Rose Wang 称用户应「拥有而不是租用」自己的线上身份。对一家尚无广告收入的公司来说，放弃域名注册这一潜在收入来源是个明确的表态。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://techcrunch.com/2026/10/06/bluesky-wants-to-give-you-your-own-domain-on-the-open-web/">TechCrunch</a> <a href="https://www.theverge.com/tech/1005702/bluesky-is-applying-for-a-bsky-tld">The Verge</a></div>
+    </article>
+
+    <article class="item" id="i18">
+      <h3>LibreOffice 宣布可预见的未来默认安装「不含任何 AI」，把「无 AI」当卖点</h3>
+<p class="orig">LibreOffice says ‘no AI’ is now a software feature</p>
+<p>The Document Foundation 本周发文称，LibreOffice 默认安装在可预见的未来<strong>不会加入任何 AI 功能</strong>，理由是要保证文档不上传服务器、软件运行不依赖网络，也不绑定单一 AI 供应商：「处理机密、特权或个人数据的组织需要知道数据去了哪里，唯一经得起审计的保证是数据不离开本机。」</p>
+<p>想用 AI 的用户可以安装扩展，接入本地模型。基金会强调这不是「最终否定」，只是现阶段没有任何集成方案满足其要求。在办公软件纷纷塞进 AI 助手的背景下，「无 AI」开始被当作一种产品定位。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://techcrunch.com/2026/10/06/libreoffice-says-no-ai-is-now-a-software-feature/">TechCrunch</a></div>
+    </article>
+    </section>
+    <section>
+      <h2>4. 抗衰老与长寿（新论文）</h2>
+
+    <article class="item" id="i19">
+      <h3>脂质酰基链变长：从线虫、果蝇到小鼠和人都保守的衰老标志，缩短它能延寿</h3>
+<p class="orig">Longer lipids mark aging and constrain lifespan</p>
+<p class="authors">Li, Schomakers … Partridge, Auwerx … Houtkooper, Janssens（阿姆斯特丹 UMC 等）· Nature Aging · 2026-10-06</p>
+<p>跨物种、多组织脂质组分析显示，小鼠、线虫、果蝇和人体组织在衰老时脂质酰基链都会<strong>变长</strong>，同时较短的中链脂质减少，转折大约在 C18 附近，属于比例性重塑。人类心脏病进展中也有类似变化，饮食限制则让小鼠心脏脂质变短。脂质重塑酶 Plb1 的表达与小鼠寿命相关，孟德尔随机化提示它与人类虚弱存在因果关联。</p>
+<p>在线虫中敲低 Plb1 同源基因可逆转链长变长并延长寿命，且效果依赖链长；膜模拟显示长链会改变膜的物理性质。同期 News & Views（重庆大学庞珊珊）认为链长可列为新的衰老标志。局限：因果证据主要来自线虫，人类部分为相关性分析和 MR。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://doi.org/10.1038/s43587-026-01223-x">Nature Aging</a> <a href="https://doi.org/10.1038/s43587-026-01229-5">N&V</a></div>
+    </article>
+
+    <article class="item" id="i20">
+      <h3>在漆黄素基础上改造出两种新 senolytic：衰老小鼠组织衰老负荷下降、健康寿命指标改善</h3>
+<p class="orig">Novel Flavonoid Senotherapeutics Identified by Phenotypic Drug Discovery Reduce Senescence and Improve Multiple Markers of Healthspan</p>
+<p class="authors">Zhang, Salekeen … Kamenecka, Niedernhofer, Robbins（明尼苏达大学等）· Aging Cell · 2026-10-06</p>
+<p>天然黄酮漆黄素（fisetin）已进入临床试验，但效力一般、生物利用度差。团队用整合式表型药物发现得到两种衍生物 <strong>SR29384 和 SR31133</strong>：它们对多种衰老细胞的清除活性更强，在衰老小鼠模型中降低组织衰老负荷，并改善多项健康寿命相关指标。</p>
+<p>转录组、机器学习、网络药理学和分子对接提示，它们可能作用于 PARP1、CDK2，或许还有 BCL-xL，从而选择性诱导衰老细胞凋亡。局限：靶点属于推断；尚无人体数据，安全窗也有待评估。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://doi.org/10.1111/acel.70736">Aging Cell</a></div>
+    </article>
+
+    <article class="item" id="i21">
+      <h3>同一个人、最多三次采血：KORA 队列的纵向血浆蛋白组时钟显示衰老速度会随风险因素变化</h3>
+<p class="orig">Intraindividual longitudinal changes of the proteome reveal dynamic markers of biological aging</p>
+<p class="authors">Lermer … Peters, Mann, Schunkert, Heinig（Helmholtz Munich 等）· bioRxiv · 2026-10-06 · 预印本</p>
+<p>多数蛋白组衰老时钟基于横断面数据。作者用德国 KORA 人群队列 <strong>4100 人、9105 份</strong>质谱血浆蛋白组样本（25–88 岁，最多 3 个时间点）建模，得到的「蛋白组年龄加速」与生活方式和临床风险因素相关；个体内部，血脂异常和肾功能受损会对应加速上升，而更高的加速与全因死亡相关。</p>
+<p>中介分析提示，风险因素部分是通过年龄加速影响死亡的；贡献最大的是细胞外基质重塑、补体与凝血通路和肝源血浆蛋白，孟德尔随机化还筛出若干候选因果蛋白。结论支持「生物衰老会随可改变因素动态变化」。预印本，未经同行评审。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://doi.org/10.64898/2026.10.01.755909">bioRxiv</a></div>
+    </article>
+
+    <article class="item" id="i22">
+      <h3>晚发型子痫前期的胎盘「老得更快」：氧化应激与端粒 RNA（TERRA）缺失是驱动因素</h3>
+<p class="orig">Late-onset preeclampsia is characterized by accelerated placental aging</p>
+<p class="authors">Arthurs … Roberts（弗林德斯大学等）· PNAS · 2026-10-06</p>
+<p>晚发型子痫前期（LOPE）胎盘表现出端粒缩短、DNA 损伤和滋养层细胞衰老等分子加速衰老特征。利用原代胎盘组织和滋养层类器官，作者证明<strong>氧化应激</strong>驱动端粒缩短和血管生成失衡，炎症则不改变衰老轨迹；抗氧化酶 SOD 处理能保住端粒长度、减少 DNA 损伤并恢复血管生成平衡。</p>
+<p>端粒重复序列 RNA（TERRA）表达降低是 LOPE 的分子标志，用反义寡核苷酸敲低 TERRA 会加重端粒侵蚀和衰老。滋养层类器官由此可作为研究器官衰老的短周期模型。局限：干预均在体外完成。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://doi.org/10.1073/pnas.2614827123">PNAS</a></div>
+    </article>
+
+    <article class="item" id="i23">
+      <h3>随机双盲试验：动物双歧杆菌 BL-99 经胆汁酸—平滑肌通路改善老年人肠动力</h3>
+<p class="orig">Bifidobacterium animalis subsp. lactis BL-99 ameliorates age-related intestinal hypomotility in older adults: a randomized controlled trial</p>
+<p class="authors">Zhao, Shi … Ren（中国农业大学等）· Nature Communications · 2026-10-06</p>
+<p>平滑肌收缩力下降是老年肠动力不足的主要原因，目前缺少针对性疗法。在随机双盲试验（ChiCTR2300077583，主要终点为全肠通过时间）和自然衰老小鼠中，BL-99 均<strong>缩短了全肠通过时间</strong>，并重塑肠道菌群：表达胆盐水解酶的细菌减少，结合型胆汁酸（如 TCDCA）得以保留。</p>
+<p>机制上，BL-99 与结肠平滑肌 SRF–Myocardin 轴增强、收缩蛋白恢复相关，单给 TCDCA 也能通过抑制 PI3K/AKT 复现这一效应。注意：作者团队包括国家乳业技术创新中心等产业相关单位（论文声明无竞争利益）；仅凭摘要无法判断样本量和效应大小。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://doi.org/10.1038/s41467-026-77524-x">Nature Communications</a></div>
+    </article>
+
+    <article class="item" id="i24">
+      <h3>横断面与纵向研究对「遗传效应随年龄变化」的估计只中度一致，主因是出生队列混杂</h3>
+<p class="orig">Design and model choices shape inference of age-varying genetic effects on complex traits</p>
+<p class="authors">Schoeler, Wiegrebe, Winkler, Kutalik · Nature Aging · 2026-10-06</p>
+<p>作者比较横断面（个体间）和纵向（个体内）两种设计估计的年龄依赖遗传效应：57 个变异中 <strong>84.21% 方向一致</strong>，但效应量的相关系数只有 r = 0.51。</p>
+<p>效应量差异中，70.8% 来自「基因 × 出生年份」混杂，11.6% 来自参与偏倚，未建模的非线性年龄轨迹只占 4.2%。作者建议结合两种设计。对衰老遗传学而言，在单一横断面数据里看到的「随年龄变化」，有相当一部分可能是队列效应。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://doi.org/10.1038/s43587-026-01232-w">Nature Aging</a></div>
+    </article>
+
+    <article class="item" id="i25">
+      <h3>被忽视的另一半：衰老使胰岛 α 细胞增多、胰高血糖素过量，与老年糖尿病风险相关</h3>
+<p class="orig">Aging Affects Pancreatic α-Cell Function and Promotes Hyperglucagonemia: Implications in Age-Associated Diabetes</p>
+<p class="authors">Tudurí … Quesada（西班牙埃尔切米格尔·埃尔南德斯大学等）· Aging Cell · 2026-10-06</p>
+<p>研究老年 2 型糖尿病时，大家多盯着 β 细胞。作者发现，老龄小鼠无论胰岛素敏感与否，都出现<strong>高胰高血糖素血症</strong>和胰高血糖素释放增加；离体可见 α 细胞量增加、胰高血糖素含量升高、分泌抑制受损和内质网应激，胰岛细胞组成与 α 细胞空间分布也发生重排，伴有轻度身份改变，有胰岛素抵抗时更明显。</p>
+<p>在 CORDIOPREV 临床研究中，胰岛素抵抗的老年人同样有高胰高血糖素，且血浆胰高血糖素较高者日后患 2 型糖尿病的风险更高。局限：机制数据来自小鼠，人体部分为观察性关联。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://doi.org/10.1111/acel.70753">Aging Cell</a></div>
+    </article>
+    </section>
+
+    <footer>
+      <p>来源摘自公开报道与 arXiv / 期刊 / 预印本摘要；仅供个人阅读，不构成投资或医疗建议。今日完整 AI 日报延迟，稍候见 <a href="https://jianbao.space/ai/">AI 日报</a>。</p>
+    </footer>
+  </div>
+</body>
+</html>

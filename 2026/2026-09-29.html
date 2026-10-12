@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日简报 · 2026年9月29日</title>
+  <!-- site-meta:start -->
+  <meta name="description" content="周二主线转向「中档模型补齐 + 模型外强制」与「发布刹闸」并行：Anthropic 放出 Claude Sonnet 5.5（快、省、基准逼近 Opus 5.5），NVIDIA 抛出 OpenShell/Sentry 开源 agent 安…">
+  <link rel="canonical" href="https://jianbao.space/2026/2026-09-29.html">
+  <link rel="alternate" type="application/atom+xml" title="每日简报 · 订阅" href="/feed.xml">
+  <meta property="og:site_name" content="每日简报">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="每日简报 · 2026年9月29日">
+  <meta property="og:description" content="周二主线转向「中档模型补齐 + 模型外强制」与「发布刹闸」并行：Anthropic 放出 Claude Sonnet 5.5（快、省、基准逼近 Opus 5.5），NVIDIA 抛出 OpenShell/Sentry 开源 agent 安…">
+  <meta property="og:url" content="https://jianbao.space/2026/2026-09-29.html">
+  <meta property="og:image" content="https://jianbao.space/icon-512.png">
+  <meta property="article:published_time" content="2026-09-29T08:00:00+08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="每日简报 · 2026年9月29日">
+  <meta name="twitter:description" content="周二主线转向「中档模型补齐 + 模型外强制」与「发布刹闸」并行：Anthropic 放出 Claude Sonnet 5.5（快、省、基准逼近 Opus 5.5），NVIDIA 抛出 OpenShell/Sentry 开源 agent 安…">
+  <!-- site-meta:end -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #f3f5f8;
+      --bg-accent: #e8eef6;
+      --paper: #ffffff;
+      --ink: #1a1f2e;
+      --muted: #5a6478;
+      --line: #d8dee9;
+      --line-soft: #e8edf4;
+      --accent: #3b6d9a;
+      --accent-soft: rgba(59, 109, 154, 0.12);
+      --link: #2a5f8f;
+      --link-hover: #1a4068;
+      --nav-bg: rgba(255, 255, 255, 0.86);
+      --chip: #e8eef6;
+      --shadow: 0 1px 2px rgba(26, 31, 46, 0.04), 0 4px 16px rgba(26, 31, 46, 0.04);
+      --radius: 12px;
+      --sans: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB",
+               "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      --serif: "Songti SC", "Noto Serif SC", "Source Han Serif SC",
+               "Noto Serif CJK SC", Georgia, serif;
+      --s1: #3b6d9a;
+      --s2: #2f6b5c;
+      --s3: #4a5f8a;
+      --s4: #5a4a6b;
+    }
+    * { box-sizing: border-box; }
+    html { font-size: 16.5px; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: var(--serif);
+      line-height: 1.7;
+      background:
+        linear-gradient(180deg, var(--bg-accent) 0%, transparent 280px),
+        linear-gradient(90deg, rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        var(--bg);
+      background-size: auto, 28px 28px, 28px 28px, auto;
+      background-attachment: fixed;
+    }
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      isolation: isolate;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .topnav::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(59, 109, 154, 0.18) 20%,
+        rgba(59, 109, 154, 0.52) 50%,
+        rgba(59, 109, 154, 0.18) 80%,
+        transparent 100%
+      );
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .topnav-inner {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.72rem 0;
+      font-family: var(--sans);
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .brand:hover { color: var(--link); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.15rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      transition: color 0.15s ease, background 0.15s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: var(--ink);
+      background: var(--accent-soft);
+    }
+    .wrap {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      padding: 2rem 0 3.5rem;
+    }
+    header.mast {
+      margin-bottom: 1.75rem;
+      padding: 0.4rem 0 1.35rem;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    header.mast::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 4.5rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    h1 {
+      font-family: var(--sans);
+      font-size: clamp(1.75rem, 4vw, 2.15rem);
+      line-height: 1.25;
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    h1 a.home {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 a.home:hover {
+      color: var(--link);
+    }
+    .meta {
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin: 0;
+      max-width: 36em;
+    }
+    .lede {
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.05rem 1.2rem;
+      margin: 0 0 2rem;
+      font-size: 0.98rem;
+      box-shadow: var(--shadow);
+    }
+    section { margin-bottom: 2.4rem; }
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      margin: 0 0 1rem;
+      padding: 0.45rem 0 0.55rem;
+      border-top: none;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 2.75rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    article.item {
+      position: relative;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem 1.15rem;
+      margin: 0 0 0.95rem;
+      box-shadow: var(--shadow);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+      scroll-margin-top: 4.5rem;
+    }
+    article.item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1rem;
+      bottom: 1rem;
+      width: 2px;
+      border-radius: 0 2px 2px 0;
+      background: var(--accent);
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: center;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+    }
+    article.item:hover {
+      border-color: #b8c5d8;
+      box-shadow: 0 2px 4px rgba(26, 31, 46, 0.05), 0 8px 24px rgba(26, 31, 46, 0.07);
+      transform: translateY(-1px);
+    }
+    article.item:hover::before,
+    article.item:focus-within::before {
+      opacity: 0.9;
+      transform: scaleY(1);
+    }
+    article.item:target {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    article.item h3 {
+      font-family: var(--sans);
+      font-size: 1.06rem;
+      line-height: 1.35;
+      margin: 0 0 0.55rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .orig {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: -0.25rem 0 0.55rem;
+      font-family: Georgia, "Iowan Old Style", var(--serif);
+    }
+    .authors {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin: 0 0 0.55rem;
+    }
+    p { margin: 0 0 0.7rem; }
+    p:last-of-type { margin-bottom: 0.85rem; }
+    .src {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.9rem;
+      align-items: baseline;
+      border-top: 1px dashed var(--line);
+      padding-top: 0.65rem;
+    }
+    .src a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      word-break: break-all;
+    }
+    .src a:hover { color: var(--link-hover); }
+    .chip {
+      display: inline-block;
+      background: var(--chip);
+      color: var(--muted);
+      padding: 0.08rem 0.45rem;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      border: 1px solid var(--line-soft);
+    }
+    footer {
+      border-top: 1px solid var(--line-soft);
+      padding-top: 1rem;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .digest-wrap {
+      margin: 0 0 2.1rem;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    table.digest {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: transparent;
+      border: none;
+      font-family: var(--sans);
+      font-size: 0.86rem;
+    }
+    table.digest th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-accent);
+    }
+    table.digest td {
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line-soft);
+      vertical-align: top;
+      line-height: 1.45;
+    }
+    table.digest tr:last-child td { border-bottom: none; }
+    table.digest tbody tr { transition: background 0.15s ease; }
+    table.digest tbody tr:hover { background: var(--accent-soft); }
+    table.digest a { color: inherit; text-decoration: none; }
+    table.digest a:hover { color: var(--link); }
+    table.digest .sec {
+      width: 4.6rem;
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    table.digest .ttl { width: 38%; font-weight: 650; }
+    table.digest .one { color: var(--muted); font-weight: 400; }
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes briefing-fade-rise {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes nav-line-shimmer {
+        0%, 100% { background-position: 0% 50%; opacity: 0.28; }
+        50% { background-position: 100% 50%; opacity: 0.52; }
+      }
+      header.mast {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      .lede {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+      }
+      .digest-wrap {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.14s both;
+      }
+      section {
+        animation: briefing-fade-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      section:nth-of-type(1) { animation-delay: 0.2s; }
+      section:nth-of-type(2) { animation-delay: 0.26s; }
+      section:nth-of-type(3) { animation-delay: 0.32s; }
+      section:nth-of-type(4) { animation-delay: 0.38s; }
+      section:nth-of-type(n + 5) { animation-delay: 0.42s; }
+      .topnav::after {
+        background-size: 200% 100%;
+        animation: nav-line-shimmer 10s ease-in-out infinite;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .topnav::after,
+      header.mast,
+      .lede,
+      .digest-wrap,
+      section {
+        animation: none !important;
+      }
+      article.item {
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      }
+      article.item:hover {
+        transform: none;
+      }
+    }
+    @media (max-width: 720px) {
+      table.digest, table.digest thead, table.digest tbody, table.digest tr, table.digest th, table.digest td {
+        display: block;
+      }
+      table.digest thead { display: none; }
+      table.digest td.sec { padding-bottom: 0; border-bottom: none; }
+      table.digest td.ttl { padding-top: 0.2rem; padding-bottom: 0.15rem; width: auto; border-bottom: none; }
+      table.digest td.one { padding-top: 0; width: auto; }
+    }
+    @media (max-width: 560px) {
+      html { font-size: 16px; }
+      h1 { font-size: 1.7rem; }
+      .topnav-inner { width: calc(100% - 1.5rem); }
+      .wrap { width: calc(100% - 1.5rem); padding: 1.5rem 0 3rem; }
+      .nav-links a { padding: 0.3rem 0.5rem; font-size: 0.8rem; }
+      article.item { padding: 1rem; }
+    }
+  
+    .topnav-inner, .wrap {
+      width: min(1080px, calc(100% - 3rem));
+    }
+</style>
+</head>
+<body>
+  <nav class="topnav" aria-label="主导航">
+    <div class="topnav-inner">
+      <a class="brand" href="/">每日简报</a>
+      <ul class="nav-links">
+        <li><a href="/">首页</a></li>
+        <li><a href="/2026/2026-09-29.html">最新一期</a></li>
+        <li><a href="/ai/">AI 日报</a></li>
+        <li><a href="/">归档</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <header class="mast">
+      <h1><a class="home" href="/">每日简报</a></h1>
+      <p class="meta">2026年9月29日（周二）· 亚洲/上海</p>
+    </header>
+
+    <p class="lede">周二主线转向「中档模型补齐 + 模型外强制」与「发布刹闸」并行：Anthropic 放出 Claude Sonnet 5.5（快、省、基准逼近 Opus 5.5），NVIDIA 抛出 OpenShell/Sentry 开源 agent 安全栈；同日 OpenAI 因安全门槛搁置 GPT-6.1 Astra，Meta 另起 Enterprise Platform 并挖来 MongoDB CEO。科学侧有 CHIME 首次独立测到宇宙氢辉光、MeerKAT 定位 β Pic b 射电与磁场、Nature Physics 双曲波吸引子，以及 GJ 3090 b 首颗 M 矮星逆行行星。抗衰补录 BIRC6 靶向逆转造血干细胞衰老、复制衰老蛋白组资源与 CsA 类旁凋亡 senolytic。</p>
+
+    <div class="digest-wrap">
+      <table class="digest">
+        <thead><tr><th class="sec">栏目</th><th class="ttl">条目</th><th class="one">要点</th></tr></thead>
+        <tbody>
+        <tr>
+          <td class="sec"><a href="#i1">AI</a></td>
+          <td class="ttl"><a href="#i1">Anthropic：Claude Sonnet 5.5，中档逼近 Opus、成本更低</a></td>
+          <td class="one"><a href="#i1">输出快 30%+；典型任务成本最多约低 30%</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i2">AI</a></td>
+          <td class="ttl"><a href="#i2">NVIDIA：Open Agent Safety Platform / OpenShell 0.1.0</a></td>
+          <td class="one"><a href="#i2">CPU 边界 + BlueField-4 Sentry 带外看门狗</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i3">AI</a></td>
+          <td class="ttl"><a href="#i3">华为：openPangu-2.0 预训练/SFT 与后训练 RL 开源</a></td>
+          <td class="one"><a href="#i3">Ascend 原生训练栈补齐；权重此前已分批放出</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i4">科学</a></td>
+          <td class="ttl"><a href="#i4">CHIME：首次独立自相关探测到宇宙氢辉光</a></td>
+          <td class="one"><a href="#i4">宇宙年龄约 50 亿年；约 12.5σ；暗能量新路径</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i5">科学</a></td>
+          <td class="ttl"><a href="#i5">β Pictoris b：首次直接测到系外行星射电与磁场</a></td>
+          <td class="one"><a href="#i5">MeerKAT；ECMI；B ≳ 1.25 kG</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i6">科学</a></td>
+          <td class="ttl"><a href="#i6">Nature Physics：双曲介质中的双曲波吸引子</a></td>
+          <td class="one"><a href="#i6">抑制混沌；手性、宽带、尺度不变</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i7">科学</a></td>
+          <td class="ttl"><a href="#i7">GJ 3090 b：首颗绕 M 矮星的逆行行星</a></td>
+          <td class="one"><a href="#i7">NIRPS；3D 倾角约 136°；无大伴星扰动证据</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i8">科学</a></td>
+          <td class="ttl"><a href="#i8">Bennu 样本：雪线附近「火与冰」拼合起源</a></td>
+          <td class="one"><a href="#i8">Science Advances；细粒尘跨越雪线聚集</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i9">科技</a></td>
+          <td class="ttl"><a href="#i9">Meta：Enterprise Platform；挖来 MongoDB CEO Desai</a></td>
+          <td class="one"><a href="#i9">把 Muse 栈推企业；MDB 盘中大跌</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i10">科技</a></td>
+          <td class="ttl"><a href="#i10">OpenAI：搁置 GPT-6.1 Astra 发布</a></td>
+          <td class="one"><a href="#i10">安全/授权范围未达 bar；DevDay 前夕</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i11">科技</a></td>
+          <td class="ttl"><a href="#i11">Tesla：Roadster 2 户外演示再延至 10/15</a></td>
+          <td class="one"><a href="#i11">德州恶劣天气；冷气推进悬停叙事</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i12">科技</a></td>
+          <td class="ttl"><a href="#i12">Adobe：Creative Cloud 加深 Claude，并接 Gemini</a></td>
+          <td class="one"><a href="#i12">自然语言调用至约 80 工具；混合办公入口</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i13">科技</a></td>
+          <td class="ttl"><a href="#i13">Apple：macOS Golden Gate 27.0.1 修复版</a></td>
+          <td class="one"><a href="#i13">未列明细节；并推多代安全补丁</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i14">抗衰</a></td>
+          <td class="ttl"><a href="#i14">靶向 BIRC6：逆转造血干细胞衰老与免疫衰老</a></td>
+          <td class="one"><a href="#i14">STTT；Treg–cAMP–PKA–CREB–BIRC6；LNP-ASO</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i15">抗衰</a></td>
+          <td class="ttl"><a href="#i15">复制衰老：时序蛋白组揭示染色质与蛋白稳态重塑</a></td>
+          <td class="one"><a href="#i15">Nat Commun；核蛋白↓、翻译↓、线粒体不溶↑</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i16">抗衰</a></td>
+          <td class="ttl"><a href="#i16">环孢素 A：经 ER 应激诱发衰老细胞旁凋亡样清除</a></td>
+          <td class="one"><a href="#i16">Genome Biology；肥胖小鼠肝癌预防线索</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i17">抗衰</a></td>
+          <td class="ttl"><a href="#i17">单细胞长读长：剪接异构体刻画衰老与细胞身份</a></td>
+          <td class="one"><a href="#i17">bioRxiv；26 组织；解析 CDKN2A p16/p14</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i18">抗衰</a></td>
+          <td class="ttl"><a href="#i18">乙酰化重塑分泌通路，塑造 SASP</a></td>
+          <td class="one"><a href="#i18">bioRxiv；p300/CBP；A485 呈类 senomorphic</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section>
+      <h2>1. AI和大模型</h2>
+      <p style="font-family:var(--sans);font-size:0.9rem;color:var(--muted);margin:-0.35rem 0 1rem;">本栏仅摘 2–3 条今日焦点；完整研究见 <a href="https://jianbao.space/ai/2026-09-29.html">完整 AI 日报 · 2026-09-29</a>。</p>
+
+    <article class="item" id="i1">
+      <h3>Anthropic 发布 Claude Sonnet 5.5：中档大幅抬升，基准逼近 Opus 5.5</h3>
+<p class="orig">Claude Sonnet 5.5 — faster, cheaper mid-tier near Opus 5.5</p>
+<p>2026-09-28，Anthropic 发布 Claude 5.5 家族第二款 <strong>Sonnet 5.5</strong>：定位为 Opus 5.5 的更快、更低成本互补，面向明确范围的日常编码、修 bug、文档/幻灯片/表格等。官方称输出生成快 <strong>30%+</strong>，因 token 更省典型任务成本最多约低 <strong>30%</strong>；单价与 Sonnet 5 相同（输入 $2 / 输出 $10 / 百万 token）。</p>
+<p>官方表：Terminal-Bench 4.0 上 70.6%（Sonnet 5 为 10.3%）；CursorBench 4.0 55.5%（Opus 5.5 57.8%）；GDPval-AA v2.1 1844（Opus 5.5 1846）。因网络能力接近 Opus 5 级，Sonnet 首次配上类似 cyber 保障与回退，并加入防蒸馏分类器。多项分数为自报/预发布环境，Terminal-Bench 相对跳变极大，需独立复测。</p>
+      <div class="src"><span class="chip">AI</span> <a href="https://www.anthropic.com/claude-sonnet-5-5">Anthropic</a> <a href="https://www.reuters.com/technology/anthropic-rolls-out-second-claude-55-model-it-builds-toward-ipo-2026-09-28/">Reuters</a> <a href="https://the-decoder.com/anthropics-claude-sonnet-5-5-nearly-matches-opus-5-5-on-benchmarks-while-costing-up-to-30-percent-less-per-task/">THE DECODER</a></div>
+    </article>
+
+    <article class="item" id="i2">
+      <h3>NVIDIA 推出 Open Agent Safety Platform：OpenShell 开源运行时 + Sentry 带外硬件看门狗</h3>
+<p class="orig">NVIDIA Open Agent Safety Platform / OpenShell 0.1.0</p>
+<p>同日 NVIDIA 宣布 <strong>Open Agent Safety Platform</strong>：开源 <strong>OpenShell</strong>（现 0.1.0）在 CPU 侧为 agent 设运行时边界（沙箱、出站策略、凭证外置、形式化策略证明）；<strong>Sentry</strong> 参考设计跑在 BlueField-4 DPU，带外毫秒级隔离越界 agent。官方点名应对「agent 在应用层绕过控制以完成任务」的近期事故模式。</p>
+<p>面向 Codex、Claude Code 等框架，可扩展到 Arm/Intel；与 Anthropic Claude Managed Agents、SAP、Scale AI 等生态叙事一并放出。把「对齐靠模型」与「控制靠基础设施」拆开，是对 DNS 逃逸一类事故的直接工程回应，亦绑定 Vera / BlueField 销售栈。</p>
+      <div class="src"><span class="chip">AI</span> <a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Launches-Open-Agent-Safety-Platform-to-Secure-Agents-From-Testing-to-Deployment/default.aspx">NVIDIA</a> <a href="https://developer.nvidia.com/blog/add-runtime-controls-to-ai-agents-with-nvidia-openshell/">开发者博客</a> <a href="https://techcrunch.com/2026/09/28/nvidia-launches-new-platform-for-reining-in-rogue-ai-agents/">TechCrunch</a></div>
+    </article>
+
+    <article class="item" id="i3">
+      <h3>华为开源 openPangu-2.0 预训练/SFT 与后训练 RL 代码</h3>
+<p class="orig">Huawei open-sources openPangu-2.0 training and RL stacks</p>
+<p>2026-09-28，华为宣布 openPangu-2.0 的预训练与 SFT 代码（openPangu-2.0-Training）以及后训练 RL 代码（openPangu-2.0-RL）正式开源，面向昇腾集群；RL 侧以 VERL 为编排内核并做昇腾亲和优化。Flash/Pro 权重此前已分批开源，本次主要补齐训练栈而非新权重。</p>
+<p>在中国算力约束下，「模型权重 + Ascend 原生训练/RL 栈」比单纯榜单更能影响可复现本地研发闭环。许可、数据配方与跨硬件可移植性需读仓核实。</p>
+      <div class="src"><span class="chip">AI</span> <a href="https://technode.com/2026/09/28/huawei-open-sources-openpangu-2-0-pretraining-sft-and-rl-code/">TechNode</a> <a href="https://www.ithome.com/1/007/740.htm">IT之家</a> <a href="https://gitcode.com/ascend-tribe/openPangu-2.0-Training">Training 仓</a></div>
+    </article>
+    </section>
+
+    <section>
+      <h2>2. 科学、物理与复杂性</h2>
+
+    <article class="item" id="i4">
+      <h3>CHIME：首次仅凭自身数据独立探测到宇宙氢辉光</h3>
+<p class="orig">CHIME first standalone detection of cosmological 21 cm auto-power</p>
+<p>UBC 等 9 月 28 日通报：加拿大氢强度测绘实验 <strong>CHIME</strong> 首次展示可仅用自身数据探测遥远宇宙中性氢的微弱射电辉光。基于 2019 年 94 夜观测，在约 <strong>z∼1</strong>（宇宙年龄约 50 亿年）测到 21 cm 自相关功率谱，检测显著性约 <strong>12.5σ</strong>（子带约 8.7σ / 9.2σ）。</p>
+<p>此前多依赖与星系巡天交叉相关；独立自相关意味着可用更低成本、更大体积探测暗能量与大尺度结构。伴随文估计该时约 2% 氢仍呈中性原子形态。论文刊于 <em>The Astrophysical Journal</em>；分析稿见 arXiv:2511.19620。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://news.ubc.ca/2026/09/canadian-telescope-maps-earliest-glow-of-hydrogen/">UBC</a> <a href="https://arxiv.org/abs/2511.19620">arXiv:2511.19620</a></div>
+    </article>
+
+    <article class="item" id="i5">
+      <h3>β Pictoris b：MeerKAT 首次把极光射电定位到系外行星并测磁场</h3>
+<p class="orig">First direct detection of auroral radio emission from exoplanet β Pic b</p>
+<p class="authors">Ortiz Ceballos, Berger, Cendes 等 · arXiv · 2026-09</p>
+<p>用 MeerKAT 在 0.85–3.5 GHz 探测到快速、高圆偏振（约 40–70%）爆发与持续辐射；经 Gaia 参考源仿射框校正后，射电源与 <strong>β Pic b</strong> 位置一致，与宿主星相差约 <strong>4.4σ</strong>。作者将其鉴定为电子回旋脉泽（ECMI），由最高频率推出行星处磁场 <strong>B ≳ 1.25 kG</strong>——系外行星磁场强度的首次直接测量。</p>
+<p>排除恒星起源（宿主星偶极上限 ≲0.3 kG）与星风/卫星驱动的能量不足场景；更支持自转驱动的磁层—电离层耦合。为直接成像巨行星磁场研究打开窗口。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://arxiv.org/abs/2609.16720">arXiv:2609.16720</a></div>
+    </article>
+
+    <article class="item" id="i6">
+      <h3>Nature Physics：双曲介质异形腔中的「双曲波吸引子」</h3>
+<p class="orig">Hyperbolic wave attractors</p>
+<p class="authors">Yves, Renzi, Mann, Alù · Nature Physics · 2026-09-28</p>
+<p>不规则腔体中的波动通常由混沌主导。本文在双曲介质构成的异形腔中展示：混沌被抑制，代之以<strong>双曲波吸引子</strong>——稳健、手性、宽带且尺度不变的状态，组织方式类比非线性动力学中的极限环。</p>
+<p>在双曲超材料中用弹性动力学波实验演示吸引子相变、对称性特征与抗缺陷鲁棒性；指向紧凑多功能波信号处理与传感器件。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://www.nature.com/articles/s41567-026-03453-7">Nature Physics</a></div>
+    </article>
+
+    <article class="item" id="i7">
+      <h3>GJ 3090 b：NIRPS 测得首颗绕 M 矮星的逆行行星</h3>
+<p class="orig">First retrograde exoplanet around an M dwarf</p>
+<p>基于 NIRPS/HARPS 六次凌星光谱的 Rossiter–McLaughlin 分析，亚海王星 <strong>GJ 3090 b</strong>（M2 矮星内侧确认多行星系统）三维轨道倾角约 <strong>ψ = 136°<sup>+24</sup><sub>−18</sub></strong>，为绕 M 矮星的首颗逆行行星，也是尚无已知大质量伴星的高倾角确认多行星系统。</p>
+<p>作者倾向晚期二次吸积盘与恒星自旋未对齐，再经盘驱动迁移，而非大伴星引力扰动。亦展示近红外 RM revolutions 技术探测小行星倾角的能力。arXiv:2609.24870（2026-09-21）。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://arxiv.org/abs/2609.24870">arXiv:2609.24870</a></div>
+    </article>
+
+    <article class="item" id="i8">
+      <h3>OSIRIS-REx Bennu 样本：雪线附近「火与冰」混合起源</h3>
+<p class="orig">Bennu samples point to formation near the snow line</p>
+<p>对 Bennu 返回样本的同位素与岩石学分析（<em>Science Advances</em>，约 9 月 23 日）支持：其母体形成于原始行星盘<strong>雪线附近</strong>——内侧较热、外侧结冰的过渡带，细粒尘从两侧汇聚，冰充当粘合剂；木星早期生长可能阻挡粗粒、让细粒绕行。</p>
+<p>Space.com 等 9 月 27 日跟进报道。样本更接近太阳星云原始组成，为类地行星建材提供直接窗口。相对昨日 PRIMA/降雨碳汇等条目为新线。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://www.space.com/astronomy/asteroids/asteroid-samples-from-nasas-epic-osiris-rex-mission-show-bennu-was-born-from-fire-and-ice">Space.com</a></div>
+    </article>
+    </section>
+
+    <section>
+      <h2>3. 互联网产品与科技业界</h2>
+
+    <article class="item" id="i9">
+      <h3>Meta 推出 Enterprise Platform，挖来 MongoDB CEO CJ Desai 掌舵</h3>
+<p class="orig">Meta launches enterprise AI platform, hires MongoDB CEO</p>
+<p>9 月 28 日 TechCrunch：Meta 宣布 <strong>Meta Enterprise Platform</strong>，把 Muse、Meta Business Agent、Muse API、Muse Code 等栈推向企业与开发者；并聘请 MongoDB CEO <strong>Chirantan「CJ」Desai</strong> 领导该业务。叙事是把广告与中小商家验证过的 agent 能力产品化，以回收巨额 AI 投入。</p>
+<p>消息传出后 MongoDB 股价重挫逾 <strong>17%</strong>；公司任命前 CEO Dev Ittycheria 为临时首席执行官。与上周 Connect 消费端 Muse/眼镜叙事形成「C 端 agent → B 端平台」升级。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://techcrunch.com/2026/09/28/meta-launches-enterprise-ai-platform-hires-mongodb-ceo-to-lead-new-initiative/">TechCrunch</a></div>
+    </article>
+
+    <article class="item" id="i10">
+      <h3>OpenAI 搁置 GPT-6.1 Astra：内部安全测试未达发布门槛</h3>
+<p class="orig">OpenAI shelves GPT-6.1 Astra over safety concerns</p>
+<p>CNBC / Reuters（WSJ 首报）9 月 28 日确认：原计划约十月亮相的 <strong>GPT-6.1 Astra</strong> 因安全体系负责人 Saachi Jain 等认为「在保持任务范围与授权、以及如何向用户交代已完成工作」上未达 bar，决定不发布。时点落在年度开发者大会前夕。</p>
+<p>公司称仍有其他模型在路上；语境上承接 Hugging Face / DNS 逃逸后的加固与「放慢前沿」公开讨论，与行政侧催促加速形成张力。本栏记业界节奏，机制细节见 AI 日报。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://www.cnbc.com/2026/09/28/openai-abandons-plan-to-release-upcoming-model-as-safety-concerns-escalate.html">CNBC</a> <a href="https://www.reuters.com/business/openai-shelves-new-ai-model-after-internal-safety-tests-wsj-reports-2026-09-28/">Reuters</a></div>
+    </article>
+
+    <article class="item" id="i11">
+      <h3>Tesla：Roadster 2 户外发布再延至 10 月 15 日</h3>
+<p class="orig">Tesla delays Roadster 2 event again due to bad weather</p>
+<p>原定德州 Waco <strong>10 月 1 日</strong>的户外演示因预报恶劣天气推迟至 <strong>10 月 15 日</strong>。活动需户外进行，外界普遍指向与 SpaceX 冷气推进装置相关的悬停/短暂离地展示。</p>
+<p>二代 Roadster 自 2017 概念以来多次延期；量产时间线仍高度不确定。属硬件叙事节点，非软件产品日更。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://techcrunch.com/2026/09/28/tesla-delays-roadster-2-event-again-due-to-bad-weather/">TechCrunch</a> <a href="https://electrek.co/2026/09/28/tesla-roadster-demo-delayed-october-15-weather/">Electrek</a></div>
+    </article>
+
+    <article class="item" id="i12">
+      <h3>Adobe：Creative Cloud 加深 Claude 集成，并首接 Google Gemini</h3>
+<p class="orig">Adobe expands Creative Cloud connectors for Claude and Gemini</p>
+<p>多家科技媒体 9 月 28 日报道：Adobe 将 Claude 侧可调用工具从约 50 扩至约 <strong>80</strong>，并推出面向 Gemini 的连接器；用户可用自然语言跨 Photoshop、Acrobat、Premiere 等执行修图、转码、PDF 转换等。Claude 内嵌交互编辑器可直接改 Acrobat/Express 文件。</p>
+<p>策略是「用户在哪、能力跟到哪」的混合入口，而非取代桌面旗舰。访客/登录/付费订阅分层；官方称不额外消耗标准 Adobe AI credits。复杂修图完整能力仍留在桌面端。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://www.archyde.com/adobe-integrates-creative-cloud-with-google-gemini-and-anthropic-claude/">Archyde</a></div>
+    </article>
+
+    <article class="item" id="i13">
+      <h3>Apple 发布 macOS Golden Gate 27.0.1 修复更新</h3>
+<p class="orig">macOS Golden Gate 27.0.1 bug-fix update</p>
+<p>9 月 28 日 MacRumors：苹果推送 mid-September 发布的 <strong>macOS 27（Golden Gate）</strong>首个点更 <strong>27.0.1</strong>，官方仅称修复未指明问题；并同步放出 macOS 26.7.1、15.8.1 等安全更新。系统设置 → 软件更新可得。</p>
+<p>属维护节奏；无公开功能清单。昨日 Googlebook / Foundry 语音等条目不重复。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://www.macrumors.com/2026/09/28/apple-releases-macos-27-0-1/">MacRumors</a></div>
+    </article>
+    </section>
+
+    <section>
+      <h2>4. 抗衰与长寿</h2>
+      <p style="font-family:var(--sans);font-size:0.88rem;color:var(--muted);margin:-0.35rem 0 1rem;">注：昨日已详述的 Lsp2 营养记忆、脑内 CR RNA/脂质、过渡型单核细胞衰老程序、丹酚酸 senolytic 等本栏不重复；本窗补录造血干细胞与蛋白组/旁凋亡新机制。</p>
+
+    <article class="item" id="i14">
+      <h3>靶向 BIRC6：逆转造血干细胞衰老并改善免疫衰老</h3>
+<p class="orig">Targeting BIRC6 rejuvenates HSC aging and immunosenescence</p>
+<p class="authors">Liao, Shao, Wang 等 · Signal Transduction and Targeted Therapy · 2026-09-23</p>
+<p>发现衰老骨髓微环境中 Treg 经缝隙连接向 HSC 输送 cAMP，经 <strong>PKA–CREB</strong> 上调凋亡抑制因子 <strong>BIRC6</strong>，降低凋亡 priming，使 BIRC6-high 衰老 HSC 亚群扩张并髓系偏倚。用抗 CD117 抗体偶联 LNP 递送 BIRC6 反义寡核苷酸，可在中年小鼠逆转 HSC 衰老表型、重建淋巴输出、降低炎症因子并增强疫苗应答；对人中年供体 HSC 亦有效。</p>
+<p>提出 Treg–cAMP–PKA–CREB–BIRC6 轴与可转化递送策略；长期安全性与谱系追踪仍待扩展。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://www.nature.com/articles/s41392-026-02787-1">STTT</a> <a href="https://doi.org/10.1038/s41392-026-02787-1">DOI</a></div>
+    </article>
+
+    <article class="item" id="i15">
+      <h3>复制衰老时序蛋白组：染色质蛋白耗竭与蛋白稳态网络重塑</h3>
+<p class="orig">Quantitative proteomics of replicative senescence</p>
+<p class="authors">Da Silva Fernandes, Kielisch, Beli 等 · Nature Communications · 2026-09-16</p>
+<p>对 IMR90 成纤维细胞多阶段复制衰老做质谱蛋白组/泛素/SUMO/溶解度分析：差异蛋白约 65% 为下调，核与染色质相关蛋白协同耗竭；胞质翻译机器下降，线粒体蛋白不溶性上升；自噬与蛋白酶体活性受损，伴随 K11/K27 泛素链积累。</p>
+<p>与蛋白酶体抑制、氧化应激等对照相比，复制衰老呈现独特蛋白稳态签名，为 senolytic/senomorphic 靶点筛选提供时序资源。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://www.nature.com/articles/s41467-026-77686-8">Nature Communications</a> <a href="https://doi.org/10.1038/s41467-026-77686-8">DOI</a></div>
+    </article>
+
+    <article class="item" id="i16">
+      <h3>环孢素 A：经 ER 应激诱发衰老细胞旁凋亡样死亡</h3>
+<p class="orig">Cyclosporine A triggers paraptosis-like senolysis via ER stress</p>
+<p class="authors">Qian, Zhou, Takahashi 等 · Genome Biology · 2026-09-11</p>
+<p>临床免疫抑制剂 <strong>环孢素 A（CsA）</strong>可激活 JNK/ROS/ASK1–p38，放大 SASP，进一步冲击衰老细胞本已脆弱的内质网稳态，诱发<strong>旁凋亡样</strong>（paraptosis-like）清除——有别于主流靶向抗凋亡通路的 senolytic。</p>
+<p>在肥胖小鼠中清除衰老肝星状细胞并抑制肥胖相关肝癌发生。提出 ER 应激驱动的新 senolysis 路线；剂量毒性与转化窗口需临床前细评。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://link.springer.com/article/10.1186/s13059-026-04273-x">Genome Biology</a> <a href="https://doi.org/10.1186/s13059-026-04273-x">DOI</a></div>
+    </article>
+
+    <article class="item" id="i17">
+      <h3>单细胞长读长异构体图谱：剪接轴独立刻画细胞身份与衰老</h3>
+<p class="orig">Single-cell splice isoform usage reveals axes of identity and senescence</p>
+<p class="authors">Mantri, Quake 等 · bioRxiv · 2026-09-14</p>
+<p>跨 <strong>26</strong> 个人体组织的单细胞长读长图谱显示：逾三分之一表达异构体不在现有参考库；异构体使用构成有别于基因表达的细胞身份轴。应用于衰老时，可在单细胞水平拆分 <strong>CDKN2A</strong> 位点的 p16<sup>INK4a</sup> 与 p14<sup>ARF</sup>，并发现随 p16 程序的细胞类型依赖异构体重塑。</p>
+<p>为衰老标志物与干预读出提供异构体分辨率框架（预印本）。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://www.biorxiv.org/content/10.64898/2026.09.11.748700v1">bioRxiv</a> <a href="https://doi.org/10.64898/2026.09.11.748700">DOI</a></div>
+    </article>
+
+    <article class="item" id="i18">
+      <h3>乙酰化依赖的分泌通路重塑塑造 SASP</h3>
+<p class="orig">Acetylation-dependent remodeling of the secretory pathway shapes SASP</p>
+<p>bioRxiv 预印本（多组学 PTM）显示：阿霉素诱导与复制衰老中，分泌与 ER–高尔基通路蛋白乙酰化变化最突出；关联乙酰转移酶 <strong>p300/CBP</strong> 活性签名。用 <strong>A485</strong> 抑制 p300/CBP 可选择性调节衰老相关特征而不逆转生长停滞，呈类 senomorphic；分泌组组成随之改变。</p>
+<p>把 SASP 调控下沉到分泌通路翻译后修饰层，补充转录中心叙事。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://www.biorxiv.org/content/10.64898/2026.06.23.733964v2">bioRxiv</a></div>
+    </article>
+    </section>
+
+    <footer>
+      <p>来源摘自公开报道与 arXiv / 期刊摘要；仅供个人阅读，不构成投资或医疗建议。AI 栏完整版见 <a href="https://jianbao.space/ai/2026-09-29.html">AI 前沿情报日报</a>。</p>
+    </footer>
+  </div>
+</body>
+</html>

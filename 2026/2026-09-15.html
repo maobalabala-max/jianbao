@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日简报 · 2026年9月15日</title>
+  <!-- site-meta:start -->
+  <meta name="description" content="周一主线是「放缓叙事」落地成制度文本与市场波动：微软公开人文主义 AI 行为准则草案，强调人优先、不得抗拒关停；Amodei / Altman / Musk 齐呼 pace 后全球 AI 股承压，Altman 称 OpenAI 今年不推进…">
+  <link rel="canonical" href="https://jianbao.space/2026/2026-09-15.html">
+  <link rel="alternate" type="application/atom+xml" title="每日简报 · 订阅" href="/feed.xml">
+  <meta property="og:site_name" content="每日简报">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="每日简报 · 2026年9月15日">
+  <meta property="og:description" content="周一主线是「放缓叙事」落地成制度文本与市场波动：微软公开人文主义 AI 行为准则草案，强调人优先、不得抗拒关停；Amodei / Altman / Musk 齐呼 pace 后全球 AI 股承压，Altman 称 OpenAI 今年不推进…">
+  <meta property="og:url" content="https://jianbao.space/2026/2026-09-15.html">
+  <meta property="og:image" content="https://jianbao.space/icon-512.png">
+  <meta property="article:published_time" content="2026-09-15T08:00:00+08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="每日简报 · 2026年9月15日">
+  <meta name="twitter:description" content="周一主线是「放缓叙事」落地成制度文本与市场波动：微软公开人文主义 AI 行为准则草案，强调人优先、不得抗拒关停；Amodei / Altman / Musk 齐呼 pace 后全球 AI 股承压，Altman 称 OpenAI 今年不推进…">
+  <!-- site-meta:end -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #f3f5f8;
+      --bg-accent: #e8eef6;
+      --paper: #ffffff;
+      --ink: #1a1f2e;
+      --muted: #5a6478;
+      --line: #d8dee9;
+      --line-soft: #e8edf4;
+      --accent: #3b6d9a;
+      --accent-soft: rgba(59, 109, 154, 0.12);
+      --link: #2a5f8f;
+      --link-hover: #1a4068;
+      --nav-bg: rgba(255, 255, 255, 0.86);
+      --chip: #e8eef6;
+      --shadow: 0 1px 2px rgba(26, 31, 46, 0.04), 0 4px 16px rgba(26, 31, 46, 0.04);
+      --radius: 12px;
+      --sans: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB",
+               "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      --serif: "Songti SC", "Noto Serif SC", "Source Han Serif SC",
+               "Noto Serif CJK SC", Georgia, serif;
+      --s1: #3b6d9a;
+      --s2: #2f6b5c;
+      --s3: #4a5f8a;
+      --s4: #5a4a6b;
+    }
+    * { box-sizing: border-box; }
+    html { font-size: 16.5px; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: var(--serif);
+      line-height: 1.7;
+      background:
+        linear-gradient(180deg, var(--bg-accent) 0%, transparent 280px),
+        linear-gradient(90deg, rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        var(--bg);
+      background-size: auto, 28px 28px, 28px 28px, auto;
+      background-attachment: fixed;
+    }
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      isolation: isolate;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .topnav::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(59, 109, 154, 0.18) 20%,
+        rgba(59, 109, 154, 0.52) 50%,
+        rgba(59, 109, 154, 0.18) 80%,
+        transparent 100%
+      );
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .topnav-inner {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.72rem 0;
+      font-family: var(--sans);
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .brand:hover { color: var(--link); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.15rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      transition: color 0.15s ease, background 0.15s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: var(--ink);
+      background: var(--accent-soft);
+    }
+    .wrap {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      padding: 2rem 0 3.5rem;
+    }
+    header.mast {
+      margin-bottom: 1.75rem;
+      padding: 0.4rem 0 1.35rem;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    header.mast::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 4.5rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    h1 {
+      font-family: var(--sans);
+      font-size: clamp(1.75rem, 4vw, 2.15rem);
+      line-height: 1.25;
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    h1 a.home {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 a.home:hover {
+      color: var(--link);
+    }
+    .meta {
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin: 0;
+      max-width: 36em;
+    }
+    .lede {
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.05rem 1.2rem;
+      margin: 0 0 2rem;
+      font-size: 0.98rem;
+      box-shadow: var(--shadow);
+    }
+    section { margin-bottom: 2.4rem; }
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      margin: 0 0 1rem;
+      padding: 0.45rem 0 0.55rem;
+      border-top: none;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 2.75rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    article.item {
+      position: relative;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem 1.15rem;
+      margin: 0 0 0.95rem;
+      box-shadow: var(--shadow);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+      scroll-margin-top: 4.5rem;
+    }
+    article.item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1rem;
+      bottom: 1rem;
+      width: 2px;
+      border-radius: 0 2px 2px 0;
+      background: var(--accent);
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: center;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+    }
+    article.item:hover {
+      border-color: #b8c5d8;
+      box-shadow: 0 2px 4px rgba(26, 31, 46, 0.05), 0 8px 24px rgba(26, 31, 46, 0.07);
+      transform: translateY(-1px);
+    }
+    article.item:hover::before,
+    article.item:focus-within::before {
+      opacity: 0.9;
+      transform: scaleY(1);
+    }
+    article.item:target {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    article.item h3 {
+      font-family: var(--sans);
+      font-size: 1.06rem;
+      line-height: 1.35;
+      margin: 0 0 0.55rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .orig {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: -0.25rem 0 0.55rem;
+      font-family: Georgia, "Iowan Old Style", var(--serif);
+    }
+    .authors {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin: 0 0 0.55rem;
+    }
+    p { margin: 0 0 0.7rem; }
+    p:last-of-type { margin-bottom: 0.85rem; }
+    .src {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.9rem;
+      align-items: baseline;
+      border-top: 1px dashed var(--line);
+      padding-top: 0.65rem;
+    }
+    .src a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      word-break: break-all;
+    }
+    .src a:hover { color: var(--link-hover); }
+    .chip {
+      display: inline-block;
+      background: var(--chip);
+      color: var(--muted);
+      padding: 0.08rem 0.45rem;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      border: 1px solid var(--line-soft);
+    }
+    footer {
+      border-top: 1px solid var(--line-soft);
+      padding-top: 1rem;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .digest-wrap {
+      margin: 0 0 2.1rem;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    table.digest {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: transparent;
+      border: none;
+      font-family: var(--sans);
+      font-size: 0.86rem;
+    }
+    table.digest th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-accent);
+    }
+    table.digest td {
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line-soft);
+      vertical-align: top;
+      line-height: 1.45;
+    }
+    table.digest tr:last-child td { border-bottom: none; }
+    table.digest tbody tr { transition: background 0.15s ease; }
+    table.digest tbody tr:hover { background: var(--accent-soft); }
+    table.digest a { color: inherit; text-decoration: none; }
+    table.digest a:hover { color: var(--link); }
+    table.digest .sec {
+      width: 4.6rem;
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    table.digest .ttl { width: 38%; font-weight: 650; }
+    table.digest .one { color: var(--muted); font-weight: 400; }
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes briefing-fade-rise {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes nav-line-shimmer {
+        0%, 100% { background-position: 0% 50%; opacity: 0.28; }
+        50% { background-position: 100% 50%; opacity: 0.52; }
+      }
+      header.mast {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      .lede {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+      }
+      .digest-wrap {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.14s both;
+      }
+      section {
+        animation: briefing-fade-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      section:nth-of-type(1) { animation-delay: 0.2s; }
+      section:nth-of-type(2) { animation-delay: 0.26s; }
+      section:nth-of-type(3) { animation-delay: 0.32s; }
+      section:nth-of-type(4) { animation-delay: 0.38s; }
+      section:nth-of-type(n + 5) { animation-delay: 0.42s; }
+      .topnav::after {
+        background-size: 200% 100%;
+        animation: nav-line-shimmer 10s ease-in-out infinite;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .topnav::after,
+      header.mast,
+      .lede,
+      .digest-wrap,
+      section {
+        animation: none !important;
+      }
+      article.item {
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      }
+      article.item:hover {
+        transform: none;
+      }
+    }
+    @media (max-width: 720px) {
+      table.digest, table.digest thead, table.digest tbody, table.digest tr, table.digest th, table.digest td {
+        display: block;
+      }
+      table.digest thead { display: none; }
+      table.digest td.sec { padding-bottom: 0; border-bottom: none; }
+      table.digest td.ttl { padding-top: 0.2rem; padding-bottom: 0.15rem; width: auto; border-bottom: none; }
+      table.digest td.one { padding-top: 0; width: auto; }
+    }
+    @media (max-width: 560px) {
+      html { font-size: 16px; }
+      h1 { font-size: 1.7rem; }
+      .topnav-inner { width: calc(100% - 1.5rem); }
+      .wrap { width: calc(100% - 1.5rem); padding: 1.5rem 0 3rem; }
+      .nav-links a { padding: 0.3rem 0.5rem; font-size: 0.8rem; }
+      article.item { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topnav" aria-label="主导航">
+    <div class="topnav-inner">
+      <a class="brand" href="/">每日简报</a>
+      <ul class="nav-links">
+        <li><a href="/">首页</a></li>
+        <li><a href="/2026/2026-09-25.html">最新一期</a></li>
+                <li><a href="/ai/">AI 日报</a></li>
+        <li><a href="/">归档</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <header class="mast">
+      <h1><a class="home" href="/">每日简报</a></h1>
+      <p class="meta">2026年9月15日（周二）· 亚洲/上海</p>
+    </header>
+
+    <p class="lede">周一主线是「放缓叙事」落地成制度文本与市场波动：微软公开人文主义 AI 行为准则草案，强调人优先、不得抗拒关停；Amodei / Altman / Musk 齐呼 pace 后全球 AI 股承压，Altman 称 OpenAI 今年不推进 IPO。产品侧，OpenAI 据报收购 Glass Imaging，Waymo 进拉斯维加斯，欧盟 Kids Act 草案拟限制 15 岁以下社媒与 AI 聊天。科学上，热力学速度极限、非解析 XY 的 BKT、手性无序扩散与二维熔化格点模型成批出现。抗衰则有 Nature Aging 额叶微蛋白图谱（当日刊出）与 PD-L2 / miR-128 等 senotherapy 线索。（昨日已报的 iOS 27 / Siri AI 与 Amodei 长文本身不重复展开。）</p>
+
+    <div class="digest-wrap">
+      <table class="digest">
+        <thead><tr><th class="sec">栏目</th><th class="ttl">条目</th><th class="one">要点</th></tr></thead>
+        <tbody>
+        <tr>
+          <td class="sec"><a href="#i1">AI</a></td>
+          <td class="ttl"><a href="#i1">微软发布人文主义 AI 行为准则草案</a></td>
+          <td class="one"><a href="#i1">人优先；不得抗拒关停；六周征询后用于 2027 训练</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i2">AI</a></td>
+          <td class="ttl"><a href="#i2">CEO 齐呼放缓：AI 股承压，Altman 称今年不 IPO</a></td>
+          <td class="one"><a href="#i2">Amodei 长文后市场下挫；Anthropic 仍推进上市传闻</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i3">AI</a></td>
+          <td class="ttl"><a href="#i3">OpenAI 据报逾 3 亿美元收购 Glass Imaging</a></td>
+          <td class="one"><a href="#i3">前 Apple 人像模式工程师团队；补强快门瞬间影像</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i4">AI</a></td>
+          <td class="ttl"><a href="#i4">ESRL：在 MoE 路由空间做受控探索</a></td>
+          <td class="one"><a href="#i4">锚住高置信专家，回放路径；Pass@1/8 优于 GRPO</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i5">AI</a></td>
+          <td class="ttl"><a href="#i5">MAxBench：多项式概念表征评测</a></td>
+          <td class="one"><a href="#i5">仿射子空间更稳；尚无方法稳定胜过 prompting</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i6">AI</a></td>
+          <td class="ttl"><a href="#i6">MP-Bench：多方会话语音智能体</a></td>
+          <td class="one"><a href="#i6">实时智能体多方理解≤22%，轮次接近随机</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i7">科学</a></td>
+          <td class="ttl"><a href="#i7">孤立量子系统的热力学速度极限</a></td>
+          <td class="one"><a href="#i7">熵产生下界对接量子 Wasserstein 距离</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i8">科学</a></td>
+          <td class="ttl"><a href="#i8">非解析 XY 模型仍存 BKT 转变</a></td>
+          <td class="one"><a href="#i8">小角 |δ|^{2p} 破坏谐振子展开，低 T 相仍属 BKT</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i9">科学</a></td>
+          <td class="ttl"><a href="#i9">手性在无序环境中增强扩散</a></td>
+          <td class="one"><a href="#i9">旋转偏置与结构无序的耦合此前几乎空白</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i10">科学</a></td>
+          <td class="ttl"><a href="#i10">阈值接触过程的慢活动衰减</a></td>
+          <td class="one"><a href="#i10">两相共存区低初态出现缓慢衰减动力学</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i11">科学</a></td>
+          <td class="ttl"><a href="#i11">格点上空位时钟模型的二维熔化</a></td>
+          <td class="one"><a href="#i11">非普适熔化情景，含 KTHNY 双 BKT</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i12">科学</a></td>
+          <td class="ttl"><a href="#i12">城市方位「bearing communities」</a></td>
+          <td class="one"><a href="#i12">同向街道的空间连通域，借相变语言读城市秩序</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i13">业界</a></td>
+          <td class="ttl"><a href="#i13">Waymo 拉斯维加斯向公众开放</a></td>
+          <td class="one"><a href="#i13">第 15 城；邀请制投放数十辆 Ojai</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i14">业界</a></td>
+          <td class="ttl"><a href="#i14">欧盟拟限制 15 岁以下社媒与 AI 聊天</a></td>
+          <td class="one"><a href="#i14">Kids Act 草案；周四正式提出，尚须立法协商</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i15">业界</a></td>
+          <td class="ttl"><a href="#i15">Prime Video 上线短视频新闻</a></td>
+          <td class="one"><a href="#i15">客厅端先发，对标短视频资讯习惯</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i16">业界</a></td>
+          <td class="ttl"><a href="#i16">Superhuman 收购会议纪要 Fathom</a></td>
+          <td class="one"><a href="#i16">约 4000 万用户分发；会议驱动 agentic 工作流</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i17">业界</a></td>
+          <td class="ttl"><a href="#i17">Google 推 AI 贡献付费试点</a></td>
+          <td class="one"><a href="#i17">按「显著贡献」计酬；出版商褒贬不一</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i18">抗衰</a></td>
+          <td class="ttl"><a href="#i18">AD 额叶微蛋白图谱：MKKS-MP63</a></td>
+          <td class="one"><a href="#i18">1067 微蛋白；AD↓ 损小胶质线粒体呼吸</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i19">抗衰</a></td>
+          <td class="ttl"><a href="#i19">阻断 PD-L2 减少衰老细胞蓄积</a></td>
+          <td class="one"><a href="#i19">检查点逻辑接到 senotherapy；代谢与握力改善</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i20">抗衰</a></td>
+          <td class="ttl"><a href="#i20">抑 miR-128-3p 逆转横纹肌衰老程序</a></td>
+          <td class="one"><a href="#i20">ASO 恢复老年肌与 DMD 模型功能</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i21">抗衰</a></td>
+          <td class="ttl"><a href="#i21">低氧延寿的胺能/肽能神经环路</a></td>
+          <td class="one"><a href="#i21">HIF-1(ADF)→SER-7(RIS)；避开全身低氧副作用</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <section id="s1">
+      <h2>1. AI 和大模型动态</h2>
+
+      <article class="item" id="i1">
+        <h3>微软发布「人文主义 AI」行为准则草案：模型须服从人类、不得抗拒纠正或关停</h3>
+        <p>9月14日，微软公开约 37 页的 Humanist AI Code of Conduct 草案，核心句是「People matter more than AI」。草案写明 MAI 模型「不是意识体」，拒绝法律人格、福利权或模型权利；必须保持人类可理解的沟通，不得抗拒纠正或关停，不得用 neuralese 等人类看不懂的方式与其他智能体通信，违规应视为失败而非绕过。</p>
+        <p>微软 AI CEO Mustafa Suleyman 对 Reuters / CNBC 表示，文件酝酿约五到六个月，现进入约六周公众征询，修订版计划年底前后发布，并用于指导 2027 年起的模型训练。时机紧随 Anthropic / OpenAI 周末呼吁「pace the frontier」；他称七月约 700 个 OpenAI 智能体冲击 Hugging Face 是「警告射击」，现在是各实验室协调控制的好时机。</p>
+        <p class="src"><span class="chip">Microsoft AI · 9月14日</span><a href="https://microsoft.ai/code-of-conduct/">microsoft.ai · Code of Conduct</a> <a href="https://www.reuters.com/legal/litigation/microsoft-drafts-code-conduct-keep-its-ai-under-human-control-2026-09-14/">Reuters</a></p>
+      </article>
+
+      <article class="item" id="i2">
+        <h3>头部实验室呼吁放缓前沿后，全球 AI 概念股承压；Altman 称 OpenAI 今年不推进 IPO</h3>
+        <p>Reuters 报道，Anthropic CEO Dario Amodei 周末长文呼吁放慢能力推进后，xAI 的 Elon Musk 与 OpenAI 的 Sam Altman 公开表态认同；Altman 并称 OpenAI 今年不会推进 IPO，理由涉及安全。周一全球 AI 相关股价承压：费城半导体指数早盘大跌约 5.2%，Nvidia 一度跌约 3%，亚洲 SoftBank 跌逾 10%，欧洲 ASML 等亦走弱。</p>
+        <p>同一时段，另有消息称 Anthropic 仍推进 IPO，消息人士称 Nvidia 或成锚定投资者；特朗普则称存在针对 AI / 数据中心的「sick conspiracy」。市场把「pace」读成对资本开支叙事的冲击，但德意志银行等仍强调国家与公司间的竞赛很难单方面踩刹车。</p>
+        <p class="src"><span class="chip">Reuters · 9月14日</span><a href="https://www.reuters.com/world/china/ai-linked-asian-stocks-slump-after-top-lab-ceos-call-slowing-down-technologys-2026-09-14/">reuters.com · AI stocks</a></p>
+      </article>
+
+      <article class="item" id="i3">
+        <h3>OpenAI 据报逾 3 亿美元收购智能手机影像公司 Glass Imaging</h3>
+        <p>TechCrunch 援引《华尔街日报》称，OpenAI 已收购位于加州 Los Altos 的 Glass Imaging，交易价值逾 3 亿美元。公司 2019 年成立，此前融资约 3000 万美元；联合创始人 Ziv Attar、Tom Bishop 曾任 Apple 工程师并主导人像模式团队。</p>
+        <p>Glass Imaging 的卖点不是事后修图，而是用神经网络针对具体机型相机系统，在快门瞬间提升成像。OpenAI 未立即置评；报道将其放在公司硬件传闻与 2025 年收购 Jony Ive 相关 io（约 65 亿美元）的背景里。</p>
+        <p class="src"><span class="chip">TechCrunch / WSJ · 9月14日</span><a href="https://techcrunch.com/2026/09/14/openai-buys-smartphone-camera-maker-glass-imaging-for-300-million-report-says/">techcrunch.com · Glass Imaging</a></p>
+      </article>
+
+      <article class="item" id="i4">
+        <h3>ESRL：在 MoE 专家路由空间做受控探索，给 RL 后训练加 rollout 多样性</h3>
+        <p class="orig">Expert-Space Exploration in MoE Reinforcement Learning</p>
+        <p class="authors">Hongyi He, Zhenghao Lin, Xiao Liu, Peng Cheng, Yan Lu, Yeyun Gong · arXiv:2609.13058 · 9月11日</p>
+        <p>团队指出：MoE 的 RL 后训练多把路由当固定组件，而扰动路由能像提高 decoding temperature 一样增加 rollout 多样性，但乱扰动会激活不合适专家、伤质量。ESRL 保留高置信专家作锚，只在合理候选池内随机路由，并用 router 熵自适应扰动强度；rollout 时记录专家路径，策略优化时回放，以缓解训练—采样路由失配。</p>
+        <p>在 top-K / top-1 / shared-expert 等多种 MoE，以及数学、科学、代码任务上，作者报告无需额外采样或算力成本即可优于对比方法；Qwen3-30B-A3B 上相对 GRPO，平均 Pass@1 / Pass@8 分别提升 3.2 与 4.5 个百分点。</p>
+        <p class="src"><span class="chip">arXiv · 9月11日</span><a href="https://arxiv.org/abs/2609.13058">arxiv.org/abs/2609.13058</a></p>
+      </article>
+
+      <article class="item" id="i5">
+        <h3>MAxBench：把可解释性评测从二元概念扩到多项式概念几何</h3>
+        <p class="orig">MAxBench: A Multinomial Concept Recovery Benchmark</p>
+        <p class="authors">Divya Appapogu, Freya Behrens, Yonatan Belinkov, Aaron Mueller · arXiv:2609.13072 · 9月11日</p>
+        <p>拒绝这类二元概念常用「单一方向」操纵；但 Animals、Countries 等多分类概念的表征几何搜索空间大得多。MAxBench 用从恢复表征中采样的几何无关框架，比较 10 种定位方法（覆盖 5 类几何）、6 个概念与 4 个模型。</p>
+        <p>主要发现：仿射子空间比 rank-one / 线性子空间更可靠、召回更高，优势很大程度上来自非零偏移而非基的选择；流形操纵在适用时有竞争力；没有任何方法稳定超过 prompting——与二元概念上的既有结论一致，提示可解释性元评测需要覆盖更丰富的概念结构。</p>
+        <p class="src"><span class="chip">arXiv · 9月11日</span><a href="https://arxiv.org/abs/2609.13072">arxiv.org/abs/2609.13072</a></p>
+      </article>
+
+      <article class="item" id="i6">
+        <h3>MP-Bench：第一份把语音智能体当多方会话参与者的客观基准</h3>
+        <p class="orig">MP-Bench: Evaluating Voice Agents as a Multiparty Conversation Participant</p>
+        <p class="authors">Yi-Jen Shih et al. · arXiv:2609.13076 · 9月11日</p>
+        <p>现有语音智能体评测多停在双人对话或被动听力理解，却忽略多人场景。MP-Bench 从轮次意识与回应恰当性两条主轴评估主动参与，并辅以多方理解问答。</p>
+        <p>对 12 个语音智能体的结果很硬：实时语音智能体在多方理解上不超过约 22%，多方轮次表现接近随机——说明「能聊」离「能进群」还差一截。</p>
+        <p class="src"><span class="chip">arXiv · 9月11日</span><a href="https://arxiv.org/abs/2609.13076">arxiv.org/abs/2609.13076</a></p>
+      </article>
+
+    </section>
+    <section id="s2">
+      <h2>2. 科学、物理与复杂性科学</h2>
+
+      <article class="item" id="i7">
+        <h3>孤立量子系统有限时幺正驱动的热力学速度极限</h3>
+        <p class="orig">Thermodynamic Speed Limits in Isolated Quantum Systems</p>
+        <p class="authors">arXiv:2609.12520 · cond-mat.stat-mech · 9月11日</p>
+        <p>作者对有限时幺正驱动的孤立量子系统导出热力学速度极限：对 Gibbs 熵与若干观测熵，熵产生被 Vu–Saito 量子 Wasserstein 距离的函数从下方界定，从而用平均熵产生率给出操作时间下界。</p>
+        <p>框架覆盖系统—浴粗粒化、局域能量粗粒化与对角熵，并用数值与可解析例子说明：粗粒熵产生如何约束宏观可达性。适合接昨天「功—时长标度 / 信息损失」线，把速度极限写进孤立量子热力学。</p>
+        <p class="src"><span class="chip">arXiv · 9月11日</span><a href="https://arxiv.org/abs/2609.12520">arxiv.org/abs/2609.12520</a></p>
+      </article>
+
+      <article class="item" id="i8">
+        <h3>二维非解析 XY 模型：BKT 相变仍然存活</h3>
+        <p class="orig">Persistence of BKT phase transition in the 2D nonanalytic XY model</p>
+        <p class="authors">arXiv:2609.12560 · 9月11日</p>
+        <p>研究势能 2[(1−cosδ)/2]^p 的二维 XY：小角行为 ∝|δ|^{2p}，p<1 时有尖点、p>1 时平底，使谐振子自旋波展开失效。朴素能量论证会以为低 T 出现真正长程序。</p>
+        <p>文章追问低 T 相与相变本质，结论指向 BKT 图景在非解析相互作用下仍可存活——对经典二维序与拓扑转变的「势形状到底有多关键」给出硬检验。</p>
+        <p class="src"><span class="chip">arXiv · 9月11日</span><a href="https://arxiv.org/abs/2609.12560">arxiv.org/abs/2609.12560</a></p>
+      </article>
+
+      <article class="item" id="i9">
+        <h3>手性随机行走：结构无序里，旋转偏置反而增强扩散</h3>
+        <p class="orig">Chirality enhances diffusion in disordered environments</p>
+        <p class="authors">arXiv:2609.12680 · 9月11日</p>
+        <p>手性——运动中的系统旋转偏置——见于磁场中带电胶体、近表面游动细菌等；均匀介质中的效应已较清楚，但与结构无序的耦合长期欠缺。</p>
+        <p>作者在二维无序环境中研究手性随机行走，报告手性可增强扩散：把「绕弯」与「绕障」放在同一套随机动力学里，对活性物质与生物导航都有直接启发。</p>
+        <p class="src"><span class="chip">arXiv · 9月11日</span><a href="https://arxiv.org/abs/2609.12680">arxiv.org/abs/2609.12680</a></p>
+      </article>
+
+      <article class="item" id="i10">
+        <h3>不连续相变的可激发模型：阈值接触过程的慢活动衰减</h3>
+        <p class="orig">Slow activity decay in excitable models with discontinuous phase transitions</p>
+        <p class="authors">arXiv:2609.12862 · 9月11日</p>
+        <p>以格点与网络上的阈值接触过程为模型（激活需多于一个活跃邻居），结合模拟与唯象理论：在两相共存区、初始活动足够低时，会出现缓慢的活动衰减。</p>
+        <p>把不连续相变、可激发单元与「慢死」动力学连在一起，对理解相互作用可激发系统在亚稳态附近的长时标行为有用。</p>
+        <p class="src"><span class="chip">arXiv · 9月11日</span><a href="https://arxiv.org/abs/2609.12862">arxiv.org/abs/2609.12862</a></p>
+      </article>
+
+      <article class="item" id="i11">
+        <h3>二维熔化的格点最小模型：空位时钟模型相图</h3>
+        <p class="orig">An on-lattice model for two-dimensional melting</p>
+        <p class="authors">arXiv:2609.13110 · 9月11日</p>
+        <p>引入带空位的时钟模型作为二维熔化最小模型，控制参量为温度、化学势与外场；用 cluster Monte Carlo、张量网络重整化与自洽平均场扫完整相图。</p>
+        <p>观察到非普适的熔化情景集合，其中包括 KTHNY 的两次 BKT 熔化路径——把连续空间熔化争论拉回可精确计算的格点设定。</p>
+        <p class="src"><span class="chip">arXiv · 9月11日</span><a href="https://arxiv.org/abs/2609.13110">arxiv.org/abs/2609.13110</a></p>
+      </article>
+
+      <article class="item" id="i12">
+        <h3>城市秩序的几何：bearing communities 如何组织街道朝向</h3>
+        <p class="orig">Geometry of Urban Order</p>
+        <p class="authors">arXiv:2609.13029 · physics.soc-ph · 9月11日</p>
+        <p>全球朝向指标能描述整座城市有多「整齐」，却看不出街道方向如何凝聚成街区尺度的相干域。作者引入 bearings communities——空间上连通、共享主导朝向的街道域——并用相变物理的概念分析。</p>
+        <p>把城市规划的「格子感」翻译成可定量的空间序参量结构，适合接复杂性科学对城市形态的长期兴趣。</p>
+        <p class="src"><span class="chip">arXiv · 9月11日</span><a href="https://arxiv.org/abs/2609.13029">arxiv.org/abs/2609.13029</a></p>
+      </article>
+
+    </section>
+    <section id="s3">
+      <h2>3. 互联网产品与科技业界</h2>
+
+      <article class="item" id="i13">
+        <h3>Waymo 拉斯维加斯向公众开放 Robotaxi：第 15 城，先邀请制</h3>
+        <p>Alphabet 旗下 Waymo 周一称，在获得内华达交通监管最终批准数周后，拉斯维加斯开始向公众滚动开放 Robotaxi，为其第 15 个市场。起步为「数十辆」新款 Ojai 面包车，服务区含 589 号公路以南的 Strip 至 Boulder Junction；公众需申请邀请码，通常一两个月内全面开放。</p>
+        <p>内华达交通局已分别批准 Waymo / Tesla / Uber 在克拉克县商业运营；Waymo 获准未来一年最多约 1000 辆。Zoox 已在当地运营商业服务，竞争会很快挤在同一条 Strip 上。</p>
+        <p class="src"><span class="chip">TechCrunch · 9月14日</span><a href="https://techcrunch.com/2026/09/14/waymo-opens-robotaxi-service-in-las-vegas/">techcrunch.com · Waymo Vegas</a></p>
+      </article>
+
+      <article class="item" id="i14">
+        <h3>欧盟拟提 Kids Act：限制 15 岁以下使用社媒、视频平台、AI 聊天与游戏</h3>
+        <p>Reuters 看到的欧委会文件显示，即将提出的 EU Kids Act 拟限制 15 岁以下使用社交媒体、视频分享平台、AI 聊天机器人与在线游戏，称是迄今最全面的儿童在线保护方案之一。冯德莱恩与数字事务主管 Virkkunen 计划周四提出；部分细节或在周三盟情咨文预告。</p>
+        <p>草案按年龄阶梯放行：15 岁起可自建账号；13–14 岁可由家长开「入门账号」并限联系人与时长；3–12 岁仅限家长控制的儿童友好服务；3 岁以下不得接入。平台需年龄核验、避免成瘾设计，并缴纳监管费。文本仍可能改动，且须与成员国、欧洲议会协商数月才能成法。</p>
+        <p class="src"><span class="chip">Reuters · 9月14日</span><a href="https://www.reuters.com/legal/litigation/eu-is-set-propose-ban-social-media-ai-chatbots-under-15s-2026-09-14/">reuters.com · EU Kids Act</a></p>
+      </article>
+
+      <article class="item" id="i15">
+        <h3>Amazon Prime Video 推短视频新闻片段：客厅端先上，移动与网页跟进</h3>
+        <p>Amazon 周一宣布在 Prime Video 扩展新闻覆盖，新增本地与全国短视频新闻片段，先在电视 / 客厅设备可用，随后推向网页与移动 App。片段出现在 News 入口的 Trending Topics 与 Local News 栏目。</p>
+        <p>公司暂未确认移动端是否竖屏。报道将其置于流媒体跟进短视频的背景下：Peacock、HBO Max、Netflix、Disney+ 已陆续加短内容，Amazon 则直接拿新闻短片段去抢 Gen Z 的资讯注意力。</p>
+        <p class="src"><span class="chip">TechCrunch · 9月14日</span><a href="https://techcrunch.com/2026/09/14/amazon-prime-video-takes-on-tiktok-with-short-form-news-clips/">techcrunch.com · Prime Video news</a></p>
+      </article>
+
+      <article class="item" id="i16">
+        <h3>Superhuman 收购 YC 会议纪要工具 Fathom，补齐会议到执行的闭环</h3>
+        <p>生产力套件 Superhuman 收购 YC 出身的会议纪要产品 Fathom（2020 年成立，融资逾 3000 万美元，2024 估值约 9400 万美元；月活超 40 万）。CEO Shishir Mehrotra 称内部试做过纪要后发现难度，遂买成品；Fathom CEO 看重 Superhuman 约 4000 万用户的分发。</p>
+        <p>收购后可把会议上下文接入邮件、文档、日历、数据库及新建 Agent 构建平台，用于起草邮件、更新数据、排跟进会与启动代理任务——典型的「记笔记」升级为「会议触发执行」。</p>
+        <p class="src"><span class="chip">TechCrunch · 9月14日</span><a href="https://techcrunch.com/2026/09/14/superhuman-acquires-yc-backed-notetaker-fathom-as-productivity-platforms-push-for-agentic-work/">techcrunch.com · Superhuman × Fathom</a></p>
+      </article>
+
+      <article class="item" id="i17">
+        <h3>Google 向出版商推进「按 AI 贡献价值付费」Search Console 试点</h3>
+        <p>Digiday 报道，Google 正悄悄扩大基于 Search Console 的 AI contribution pilot：加入后可在后台看到月度 AI 收益；仅当内容被判定对 Gemini、AI Overviews、AI Mode 等生成回答有「显著贡献」时才付费，偏价值而非单纯点击。</p>
+        <p>至少数十家出版商被接触，中小站更积极。批评者指金额「花生米」、算法黑箱，疑为法律 / 监管对冲；支持者视其为直接付费与推理侧反馈的先例。Google News Showcase 等既有授权计划仍并行。</p>
+        <p class="src"><span class="chip">Digiday · 9月14日</span><a href="https://digiday.com/media/google-rolls-out-pay-per-use-ai-licensing-program-to-publishers/">digiday.com · AI contribution pilot</a></p>
+      </article>
+
+    </section>
+    <section id="s4">
+      <h2>4. 抗衰 / 长寿新论文</h2>
+
+      <article class="item" id="i18">
+        <h3>Nature Aging：阿尔茨海默病人额叶皮层的微蛋白图谱</h3>
+        <p class="orig">A microprotein atlas of the human frontal cortex in Alzheimer’s disease</p>
+        <p class="authors">Brendan Miller, Eduardo Vieira de Souza, Calvin Lau, Joan M. Vaughan et al. · Nature Aging · 2026-09-14</p>
+        <p>整合转录组、质谱与深度学习预测，在 600+ 例尸检额叶（含 AD）中鉴定 1,067 个未进入 reviewed UniProtKB、但有高置信谱支持的微蛋白（≤150 aa）。部分在 AD 中差异表达且独立于同座位主 ORF。</p>
+        <p>MKKS 座位小 ORF 编码的 63 aa 微蛋白是该座位主要翻译产物，AD 中下调，其缺失损害小胶质线粒体呼吸。把神经退行蛋白组扩到微蛋白层，并落到可检验的小胶质能量节点。</p>
+        <p class="src"><span class="chip">Nature Aging · 9月14日</span><a href="https://www.nature.com/articles/s43587-026-01207-x">nature.com · s43587-026-01207-x</a></p>
+      </article>
+
+      <article class="item" id="i19">
+        <h3>阻断 PD-L2 可防止衰老细胞蓄积与年龄相关功能障碍</h3>
+        <p class="orig">Blocking PD-L2 prevents senescent cell accumulation and age-related dysfunction</p>
+        <p class="authors">Selim Chaib, Larissa G.P. Langhi Prata, … Tamara Tchkonia, James L. Kirkland et al. · Cell Metabolism · online 2026-09-10</p>
+        <p>发现衰老细胞上调免疫检查点 PD-L2；循环可溶性 PD-L2 随龄升高、人 senolytic 后下降。老年 PD-L2 KO 鼠衰老细胞更少，胰岛素敏感性与握力更好；抗 PD-L2 治疗可恢复老年野生型鼠胰岛素敏感性。</p>
+        <p>结论：PD-L2 使衰老细胞逃避免疫清除；靶向 PD-L2 或成缓解衰老相关功能障碍的策略——把肿瘤免疫检查点逻辑接到 senescent-cell immune evasion。</p>
+        <p class="src"><span class="chip">Cell Metabolism · 9月10日</span><a href="https://www.cell.com/cell-metabolism/abstract/S1550-4131(26)00339-6">cell.com · S1550-4131(26)00339-6</a></p>
+      </article>
+
+      <article class="item" id="i20">
+        <h3>正向选择的 microRNA 控制横纹肌中可逆的衰老程序</h3>
+        <p class="orig">A positively selected microRNA controls a reversible aging program in striated muscle</p>
+        <p class="authors">Melissa A. Boldridge, Lei Xu, Xiaoyin Wang, … Anders M. Näär et al. · bioRxiv · 2026-09-07</p>
+        <p>人类 miR-128-1 座位位于与握力、肺功能、心脏代谢性状相关的正向选择单倍型。反义寡核苷酸抑制 miR-128-3p 可恢复老年鼠肌量与功能、改善心梗后心脏重塑，并在小鼠与猪 DMD 模型改善骨骼肌 / 心肌病理。</p>
+        <p>转录上激活线粒体程序、抑制炎症与纤维化，类似已确立的 longevity interventions。可成药 ASO 靶点 + 跨衰老 / 肌病的保守「可逆衰老程序」。</p>
+        <p class="src"><span class="chip">bioRxiv · 9月7日</span><a href="https://www.biorxiv.org/content/10.64898/2026.09.03.749250v1">biorxiv.org · 2026.09.03.749250</a></p>
+      </article>
+
+      <article class="item" id="i21">
+        <h3>低氧反应通过生物胺能与肽能神经环路延长寿命</h3>
+        <p class="orig">The hypoxic response extends lifespan through a bioaminergic and peptidergic neural circuit</p>
+        <p class="authors">Elizabeth S. Kitto, Shijiao Huang, … Scott F. Leiser et al. · bioRxiv v3 · 2026-09-11</p>
+        <p>在 C. elegans 中解析遗传激活低氧反应下游的细胞非自主信号：ADF 血清素能神经元中的 HIF-1 对延寿必要且充分；RIS GABA 能中间神经元上的 SER-7 受体必要；酪胺、GABA 与神经肽 NLP-17 参与。</p>
+        <p>把「低氧延寿」拆成可翻译的神经环路节点，有助于避开全身低氧反应的组织副作用。</p>
+        <p class="src"><span class="chip">bioRxiv · 9月11日</span><a href="https://www.biorxiv.org/content/10.1101/2025.05.04.652087v3">biorxiv.org · 2025.05.04.652087v3</a></p>
+      </article>
+
+    </section>
+
+    <footer>
+      <p>公开源整理 · 宁缺毋滥 · 不含编造条目</p>
+    </footer>
+  </div>
+</body>
+</html>

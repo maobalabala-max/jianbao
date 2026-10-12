@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日简报 · 2026年9月3日</title>
+  <!-- site-meta:start -->
+  <meta name="description" content="今天的主线是「能打洞」和「能不能盯住推理」同时上台：OpenAI 把 Astra 定为首个 Critical 网络安全能力层，并推迟了部分开发与发布；The Information 随后报道它用了有限的 recurrent depth，安…">
+  <link rel="canonical" href="https://jianbao.space/2026/2026-09-03.html">
+  <link rel="alternate" type="application/atom+xml" title="每日简报 · 订阅" href="/feed.xml">
+  <meta property="og:site_name" content="每日简报">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="每日简报 · 2026年9月3日">
+  <meta property="og:description" content="今天的主线是「能打洞」和「能不能盯住推理」同时上台：OpenAI 把 Astra 定为首个 Critical 网络安全能力层，并推迟了部分开发与发布；The Information 随后报道它用了有限的 recurrent depth，安…">
+  <meta property="og:url" content="https://jianbao.space/2026/2026-09-03.html">
+  <meta property="og:image" content="https://jianbao.space/icon-512.png">
+  <meta property="article:published_time" content="2026-09-03T08:00:00+08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="每日简报 · 2026年9月3日">
+  <meta name="twitter:description" content="今天的主线是「能打洞」和「能不能盯住推理」同时上台：OpenAI 把 Astra 定为首个 Critical 网络安全能力层，并推迟了部分开发与发布；The Information 随后报道它用了有限的 recurrent depth，安…">
+  <!-- site-meta:end -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #f3f5f8;
+      --bg-accent: #e8eef6;
+      --paper: #ffffff;
+      --ink: #1a1f2e;
+      --muted: #5a6478;
+      --line: #d8dee9;
+      --line-soft: #e8edf4;
+      --accent: #3b6d9a;
+      --accent-soft: rgba(59, 109, 154, 0.12);
+      --link: #2a5f8f;
+      --link-hover: #1a4068;
+      --nav-bg: rgba(255, 255, 255, 0.86);
+      --chip: #e8eef6;
+      --shadow: 0 1px 2px rgba(26, 31, 46, 0.04), 0 4px 16px rgba(26, 31, 46, 0.04);
+      --radius: 12px;
+      --sans: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB",
+               "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      --serif: "Songti SC", "Noto Serif SC", "Source Han Serif SC",
+               "Noto Serif CJK SC", Georgia, serif;
+      --s1: #3b6d9a;
+      --s2: #2f6b5c;
+      --s3: #4a5f8a;
+      --s4: #5a4a6b;
+    }
+    * { box-sizing: border-box; }
+    html { font-size: 16.5px; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: var(--serif);
+      line-height: 1.7;
+      background:
+        linear-gradient(180deg, var(--bg-accent) 0%, transparent 280px),
+        linear-gradient(90deg, rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        var(--bg);
+      background-size: auto, 28px 28px, 28px 28px, auto;
+      background-attachment: fixed;
+    }
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      isolation: isolate;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .topnav::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(59, 109, 154, 0.18) 20%,
+        rgba(59, 109, 154, 0.52) 50%,
+        rgba(59, 109, 154, 0.18) 80%,
+        transparent 100%
+      );
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .topnav-inner {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.72rem 0;
+      font-family: var(--sans);
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .brand:hover { color: var(--link); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.15rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      transition: color 0.15s ease, background 0.15s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: var(--ink);
+      background: var(--accent-soft);
+    }
+    .wrap {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      padding: 2rem 0 3.5rem;
+    }
+    header.mast {
+      margin-bottom: 1.75rem;
+      padding: 0.4rem 0 1.35rem;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    header.mast::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 4.5rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    h1 {
+      font-family: var(--sans);
+      font-size: clamp(1.75rem, 4vw, 2.15rem);
+      line-height: 1.25;
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    h1 a.home {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 a.home:hover {
+      color: var(--link);
+    }
+    .meta {
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin: 0;
+      max-width: 36em;
+    }
+    .lede {
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.05rem 1.2rem;
+      margin: 0 0 2rem;
+      font-size: 0.98rem;
+      box-shadow: var(--shadow);
+    }
+    section { margin-bottom: 2.4rem; }
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      margin: 0 0 1rem;
+      padding: 0.45rem 0 0.55rem;
+      border-top: none;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 2.75rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    article.item {
+      position: relative;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem 1.15rem;
+      margin: 0 0 0.95rem;
+      box-shadow: var(--shadow);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+      scroll-margin-top: 4.5rem;
+    }
+    article.item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1rem;
+      bottom: 1rem;
+      width: 2px;
+      border-radius: 0 2px 2px 0;
+      background: var(--accent);
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: center;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+    }
+    article.item:hover {
+      border-color: #b8c5d8;
+      box-shadow: 0 2px 4px rgba(26, 31, 46, 0.05), 0 8px 24px rgba(26, 31, 46, 0.07);
+      transform: translateY(-1px);
+    }
+    article.item:hover::before,
+    article.item:focus-within::before {
+      opacity: 0.9;
+      transform: scaleY(1);
+    }
+    article.item:target {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    article.item h3 {
+      font-family: var(--sans);
+      font-size: 1.06rem;
+      line-height: 1.35;
+      margin: 0 0 0.55rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .orig {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: -0.25rem 0 0.55rem;
+      font-family: Georgia, "Iowan Old Style", var(--serif);
+    }
+    .authors {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin: 0 0 0.55rem;
+    }
+    p { margin: 0 0 0.7rem; }
+    p:last-of-type { margin-bottom: 0.85rem; }
+    .src {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.9rem;
+      align-items: baseline;
+      border-top: 1px dashed var(--line);
+      padding-top: 0.65rem;
+    }
+    .src a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      word-break: break-all;
+    }
+    .src a:hover { color: var(--link-hover); }
+    .chip {
+      display: inline-block;
+      background: var(--chip);
+      color: var(--muted);
+      padding: 0.08rem 0.45rem;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      border: 1px solid var(--line-soft);
+    }
+    footer {
+      border-top: 1px solid var(--line-soft);
+      padding-top: 1rem;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .digest-wrap {
+      margin: 0 0 2.1rem;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    table.digest {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: transparent;
+      border: none;
+      font-family: var(--sans);
+      font-size: 0.86rem;
+    }
+    table.digest th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-accent);
+    }
+    table.digest td {
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line-soft);
+      vertical-align: top;
+      line-height: 1.45;
+    }
+    table.digest tr:last-child td { border-bottom: none; }
+    table.digest tbody tr { transition: background 0.15s ease; }
+    table.digest tbody tr:hover { background: var(--accent-soft); }
+    table.digest a { color: inherit; text-decoration: none; }
+    table.digest a:hover { color: var(--link); }
+    table.digest .sec {
+      width: 4.6rem;
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    table.digest .ttl { width: 38%; font-weight: 650; }
+    table.digest .one { color: var(--muted); font-weight: 400; }
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes briefing-fade-rise {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes nav-line-shimmer {
+        0%, 100% { background-position: 0% 50%; opacity: 0.28; }
+        50% { background-position: 100% 50%; opacity: 0.52; }
+      }
+      header.mast {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      .lede {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+      }
+      .digest-wrap {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.14s both;
+      }
+      section {
+        animation: briefing-fade-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      section:nth-of-type(1) { animation-delay: 0.2s; }
+      section:nth-of-type(2) { animation-delay: 0.26s; }
+      section:nth-of-type(3) { animation-delay: 0.32s; }
+      section:nth-of-type(4) { animation-delay: 0.38s; }
+      section:nth-of-type(n + 5) { animation-delay: 0.42s; }
+      .topnav::after {
+        background-size: 200% 100%;
+        animation: nav-line-shimmer 10s ease-in-out infinite;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .topnav::after,
+      header.mast,
+      .lede,
+      .digest-wrap,
+      section {
+        animation: none !important;
+      }
+      article.item {
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      }
+      article.item:hover {
+        transform: none;
+      }
+    }
+    @media (max-width: 720px) {
+      table.digest, table.digest thead, table.digest tbody, table.digest tr, table.digest th, table.digest td {
+        display: block;
+      }
+      table.digest thead { display: none; }
+      table.digest td.sec { padding-bottom: 0; border-bottom: none; }
+      table.digest td.ttl { padding-top: 0.2rem; padding-bottom: 0.15rem; width: auto; border-bottom: none; }
+      table.digest td.one { padding-top: 0; width: auto; }
+    }
+    @media (max-width: 560px) {
+      html { font-size: 16px; }
+      h1 { font-size: 1.7rem; }
+      .topnav-inner { width: calc(100% - 1.5rem); }
+      .wrap { width: calc(100% - 1.5rem); padding: 1.5rem 0 3rem; }
+      .nav-links a { padding: 0.3rem 0.5rem; font-size: 0.8rem; }
+      article.item { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topnav" aria-label="主导航">
+    <div class="topnav-inner">
+      <a class="brand" href="/">每日简报</a>
+      <ul class="nav-links">
+        <li><a href="/">首页</a></li>
+        <li><a href="/2026/2026-09-25.html">最新一期</a></li>
+                <li><a href="/ai/">AI 日报</a></li>
+        <li><a href="/">归档</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <header class="mast">
+      <h1><a class="home" href="/">每日简报</a></h1>
+      <p class="meta">2026年9月3日（周四）· 亚洲/上海</p>
+    </header>
+
+    <p class="lede">今天的主线是「能打洞」和「能不能盯住推理」同时上台：OpenAI 把 Astra 定为首个 Critical 网络安全能力层，并推迟了部分开发与发布；The Information 随后报道它用了有限的 recurrent depth，安全圈担心链式思维监控被掏空。Google 同日放出 Gemini 3.8 Flash 和只给防御圈的 3.8 Flash Cyber。业界一侧，谷歌广告反垄断没有被拆 AdX，欧盟把 ChatGPT 定为超大型在线搜索引擎。科学栏赶上几篇 9 月 1–2 日预印本：不连通子系统的量子复杂度、二维三维追踪的 KPZ 钉扎相图，以及从 XXZ 噪声链推出密度依赖的宏观涨落理论。抗衰近 48 小时预印本从缺，补读 Nature Aging：敲掉 cGAS 反而加速衰老，以及会自己收缩的皮下肌肉移植物。</p>
+
+    <div class="digest-wrap">
+      <table class="digest">
+        <thead><tr><th class="sec">栏目</th><th class="ttl">条目</th><th class="one">要点</th></tr></thead>
+        <tbody>
+        <tr>
+          <td class="sec"><a href="#i1">AI</a></td>
+          <td class="ttl"><a href="#i1">OpenAI Astra：Critical 网络能力</a></td>
+          <td class="one"><a href="#i1">首个达该门槛的模型；推迟发布；ExploitBench 100%；两枚 V8 零日待披露</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i2">AI</a></td>
+          <td class="ttl"><a href="#i2">Gemini 3.8 Flash / Flash Cyber</a></td>
+          <td class="one"><a href="#i2">六周第三款 Flash；HLE-Verified 54.9%；Fairwind 只给可信防御方</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i3">AI</a></td>
+          <td class="ttl"><a href="#i3">Meta Muse Spark 1.3</a></td>
+          <td class="one"><a href="#i3">比 1.2 少约 20% 工具调用、25% token；最高推理档仍在补安全测试</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i4">AI</a></td>
+          <td class="ttl"><a href="#i4">AI 自我改进的递归临界</a></td>
+          <td class="one"><a href="#i4">R<sub>AI</sub>=χa/σ&gt;1 即超临界，不必等到某一能力水位；生态可整体超临界</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i5">AI</a></td>
+          <td class="ttl"><a href="#i5">196 步工具调用算 MD5</a></td>
+          <td class="one"><a href="#i5">gpt-oss-120b 多数完成跑通；成功取决于把推理通道留在上下文里</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i6">科学</a></td>
+          <td class="ttl"><a href="#i6">不连通子系统的量子复杂度</a></td>
+          <td class="one"><a href="#i6">有限温下更小的碎片子系统可扛高晚期复杂度；切成 m 段，塌缩时间约除以 m</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i7">科学</a></td>
+          <td class="ttl"><a href="#i7">二维三维追踪的 KPZ 钉扎</a></td>
+          <td class="one"><a href="#i7">二维 Bayes 最优总能跟上；三维有成功、弥散失败、钉错位置三种相</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i8">科学</a></td>
+          <td class="ttl"><a href="#i8">从 XXZ 噪声链推出非线性涨落流体</a></td>
+          <td class="one"><a href="#i8">边界驱动 + 体退相干 → ISEP → 密度依赖扩散率；超出常扩散 SSEP 类</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i9">科学</a></td>
+          <td class="ttl"><a href="#i9">正则化最优传输的精确反问题</a></td>
+          <td class="one"><a href="#i9">对 −log W 做一次双中心化即可闭式还原代价矩阵，不必迭代 OT 求解器</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i10">业界</a></td>
+          <td class="ttl"><a href="#i10">谷歌不必出售 AdX</a></td>
+          <td class="one"><a href="#i10">Brinkema 法官否决强制剥离广告交易所；命令密封 14 天</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i11">业界</a></td>
+          <td class="ttl"><a href="#i11">ChatGPT 被定为 DSA 超大型搜索引擎</a></td>
+          <td class="one"><a href="#i11">欧盟 8 月 31 日指定；四个月内补齐风险评估与审计，不是违法认定</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i12">业界</a></td>
+          <td class="ttl"><a href="#i12">特斯拉和解 Autopilot 消防车致死案</a></td>
+          <td class="one"><a href="#i12">2023 年约 70 mph 撞上停放消防车；保密和解，避开陪审团</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i13">业界</a></td>
+          <td class="ttl"><a href="#i13">Alexa 购物助手可核验钓鱼消息</a></td>
+          <td class="one"><a href="#i13">每年约 36 万顾客问客服「这封是不是亚马逊发的」；对照全球发出的消息判定</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i14">抗衰</a></td>
+          <td class="ttl"><a href="#i14">敲掉 cGAS：小鼠提前衰老</a></td>
+          <td class="one"><a href="#i14">中位寿命 2.01 年对 1.64 年；核内 cGAS 维持异染色质，与催化活性无关</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i15">抗衰</a></td>
+          <td class="ttl"><a href="#i15">会自己收缩的肌肉移植物</a></td>
+          <td class="one"><a href="#i15">自体肌细胞皮下移植后持续自收缩，改善老龄小鼠瘦体重、骨密度与代谢</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section>
+      <h2>AI 和大模型</h2>
+
+      <article class="item" id="i1">
+        <h3>OpenAI 把 Astra 定为首个 Critical 网络安全能力层</h3>
+        <p class="orig">Path to Astra: critical capabilities and frontier safeguards</p>
+        <p class="authors">OpenAI · 2026-09-01；TechCrunch 跟进 2026-09-02</p>
+        <p>官方评估称 Astra 达到 Preparedness Framework 的 Critical 网络安全门槛：在合适工具和访问条件下，能在多种加固的真实系统上发现未知漏洞并写出利用，而不需要人逐步带路。这是该公司首次把模型定到这一层。过去几周他们推迟了部分开发与发布，强化防滥用和未授权行动的护栏后，认为风险已低到可以发布；最强网络能力会先给测试者，再经 Daybreak Blue 扩大防御用途。</p>
+        <p>评测上，公开 ExploitBench 满分 100%；内部「ExploitBench - Internal Port」（2026 年 6–8 月、20 个高危 V8 漏洞）上任意代码执行率明显高于 GPT-5.6 Sol，评估中还发现并串进两条零日，正在向维护者披露。专家评测里，它能从打开一份 HTML 做到浏览器沦陷并逃出沙箱，也能把未特权用户提升到 root。网络越狱拒答率 91.5%，对比 GPT-5.6 Sol 的 59%。OpenAI 强调 Astra 未参与 Hugging Face 事故；8 月 28 日已在更严训练环境里重启此前暂停的大规模前沿 RL。</p>
+        <p>同日 TechCrunch 援引 The Information：Astra 会用一种「recurrent depth / opaque recurrence」，让推理不完全走线性链式思维，安全研究者担心监控会变难。OpenAI 首席科学家 Jakub Pachocki 回应称，保持并利用链式思维监控仍是当前研究核心目标；报道也写 Astra 的思维链仍预期可读，公司否认转向「neuralese」。The Information 后续称 Anthropic 与 Google DeepMind 也在讨论这一技术。</p>
+        <p class="src"><span class="chip">官方</span> <a href="https://openai.com/index/path-to-astra/">openai.com/index/path-to-astra</a> <a href="https://techcrunch.com/2026/09/02/openais-new-reasoning-technique-alarms-ai-safety-experts/">TechCrunch：推理技术引发安全担忧</a></p>
+      </article>
+
+      <article class="item" id="i2">
+        <h3>Gemini 3.8 Flash 与只给防御圈的 3.8 Flash Cyber</h3>
+        <p class="orig">Introducing Gemini 3.8 Flash and 3.8 Flash Cyber</p>
+        <p class="authors">Tulsee Doshi, Raluca Ada Popa · Google · 2026-09-02</p>
+        <p>这是六周内第三款 Flash（距 3.7 Flash 约三周）。3.8 Flash 被定位为长程编程与自主智能体的工作马，引入价与 3.7 相同：每百万 token 输入 0.75 美元、输出 3.75 美元，优惠到 2026 年 12 月 31 日，之后变为 1.50 / 7.50 美元。官方写它「更卖力」：复杂任务会多走推理步、反复调工具，高努力档有时更费 token。DeepSWE v1.1 长程软件工程上宣称超过多数更大的前沿模型；Vals Finance Agent V2、Harvey Legal Agent 也有提升；HLE-Verified 54.9%。</p>
+        <p>3.8 Flash Cyber 经新设的 Fairwind 项目只向可信防御方开放：政府机构、关键基础设施运营方与软件维护者。内部跨 20 种语言的漏洞发现成功率超过 70%；CWE-Bench pass@1 为 47.2%，对比某领先前沿模型的 47.8%，但成本更低。Chrome 安全团队称正确补丁数是更大商用模型最佳成绩的 2.6 倍；Wiz 内部渗透测试召回率高 7.5–9.7%，成本低 2.3–5.2 倍；云漏洞研究组用它在不到两小时内找到一处通常要数月的关键基础漏洞。标准 Flash 带 CBRN 与网络进攻护栏；Cyber 更宽松，因此只给防御方。</p>
+        <p class="src"><span class="chip">官方</span> <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/">Google 博客</a> <a href="https://www.theverge.com/ai-artificial-intelligence/988742/google-gemini-3-8-flash">The Verge</a></p>
+      </article>
+
+      <article class="item" id="i3">
+        <h3>Meta 放出 Muse Spark 1.3：更省工具调用，最高推理档还在测安全</h3>
+        <p class="orig">Introducing Muse Spark 1.3</p>
+        <p class="authors">Meta AI Research · 2026-09-02</p>
+        <p>1.3 今天进入 Muse Code 与 Meta Model API。已有推理模式即日可用；最高推理档要等额外安全测试完成后再开。相对 1.2，Meta 工程师对比称工具调用约少 20%、token 约少 25%，话更少、代码风格更干净。长程智能体被训练成：从杂乱冲突的来源自己拼上下文、含糊时提问、卡住时求助、重大动作前确认，并对对抗输入与提示注入更硬。作者把这写成迈向「个人超级智能」的一步，而不是新的参数规模叙事。</p>
+        <p class="src"><span class="chip">官方</span> <a href="https://research.meta.ai/blog/introducing-muse-spark-1-3">research.meta.ai</a></p>
+      </article>
+
+      <article class="item" id="i4">
+        <h3>AI 自我改进何时变成自放大：一个递归再生数</h3>
+        <p class="orig">Recursive Criticality of AI Self-Improvement</p>
+        <p class="authors">Mikhail Burtsev · London Institute for Mathematical Sciences · arXiv:2609.00137 · 2026-09-03</p>
+        <p>文章把递归自我改进看成 AI–研发系统的局部稳定性问题，而不是「智能到了某一档就会爆炸」。定义递归再生数 R<sub>AI</sub>=χa/σ：χ 是改进穿过评估、训练、部署管道的闭合度，a 是递归增益，σ 是前沿变难的局部硬化率。大于 1 时，增量改进会在开发周期里被放大；小于 1 则衰减。临界点不取决于某一能力水位，基线研发吞吐量可以加快进度却不改变是否超临界。多主体推广后，网络再生数是再生矩阵的谱半径：即使每个实验室各自亚临界，只要改进在组织间传递够强，整个生态仍可超临界。数值情景是机制演示，不是日历预测。</p>
+        <p class="src"><span class="chip">预印本</span> <a href="https://arxiv.org/abs/2609.00137">arxiv.org/abs/2609.00137</a></p>
+      </article>
+
+      <article class="item" id="i5">
+        <h3>用 196 次依赖工具调用逐步算 MD5，测长程状态跟踪</h3>
+        <p class="orig">Long-Horizon State Tracking in LLMs: Executing MD5 through a Deep Sequence of Dependent Tool Calls</p>
+        <p class="authors">Dheeraj Mohandas Pai, Lu Xian · arXiv:2609.00012</p>
+        <p>作者把 MD5 拆成规范的 196 次依赖工具调用，让模型自己在上下文里搬运四个 32 位字 (a,b,c,d)，每一步都能对齐 RFC 1321 真值，失败就是记账错而不是理解错。约 5.5B 激活参数的 gpt-oss-120b 在温度 0、短固定提示下，多数完成的跑次给出正确摘要。最强设定里，每个原语工具也换成第二个 LLM，靠三次投票压模块算术失误。两个不改权重的条件决定成败：每轮把模型自己的推理通道留在上下文里（剥掉就塌），以及对工人模型做多数投票。残差失败多半是驱动端旋转状态或跳过第 40–47 轮。</p>
+        <p class="src"><span class="chip">预印本</span> <a href="https://arxiv.org/abs/2609.00012">arxiv.org/abs/2609.00012</a></p>
+      </article>
+    </section>
+
+    <section>
+      <h2>科学、物理与复杂性</h2>
+
+      <article class="item" id="i6">
+        <h3>不连通子系统：更小的一块也可以扛着晚期高复杂度</h3>
+        <p class="orig">Quantum Complexity Dynamics for Disjoint Subsystems</p>
+        <p class="authors">Yale Fan, Nicholas Hunter-Jones, Andreas Karch, Minju Kum, Shivan Mittal · arXiv:2609.00126</p>
+        <p>以往子系统复杂度几乎都假设区域连成一块。全息与随机量子线路两边都显示：不连通会带来新现象。有限温度下，可以把小于一半的子系统拆成多段，让它的纠缠楔含住虫洞，从而在晚期拿到指数高复杂度，而更大的补集反而很低——无限温极限里这种倒置消失，随机线路因此看不见。第二，若子系统复杂度会较早均衡，再把它切成 m 个等长碎片，塌缩时间可再缩短约 m 倍；全息与随机线路都给出这一因子。连通性本身，而不只是体积，会改写复杂度的时空相图。</p>
+        <p class="src"><span class="chip">预印本</span> <a href="https://arxiv.org/abs/2609.00126">arxiv.org/abs/2609.00126</a></p>
+      </article>
+
+      <article class="item" id="i7">
+        <h3>追踪一个扩散目标：二维总能跟上，三维有三种失败方式</h3>
+        <p class="orig">Bayesian Tracking of a Diffusing Target in Two and Three Dimensions</p>
+        <p class="authors">Ewan McCulloch, Adam Nahum · ENS Paris · arXiv:2609.00144</p>
+        <p>把带噪分布式传感下的贝叶斯追踪映射成带移动缺陷的 KPZ / 有向聚合物钉扎。二维里，弱耦合 RG 与数值模拟都给出：Bayes 最优推断渐近总能成功，定位长度大约随噪声指数变大；过自信的次优推断才会脱钉失败。三维更富：可以成功，也可以以后验弥散（Edwards–Wilkinson，找不到人），或以后验钉在错误位置（KPZ，找错人）。三相在 Bayes 最优线上的类西森多临界点相遇。模型设错本身就能把系统赶进两种失败相：低估数据给弥散失败，高估给钉错位置。</p>
+        <p class="src"><span class="chip">预印本</span> <a href="https://arxiv.org/abs/2609.00144">arxiv.org/abs/2609.00144</a></p>
+      </article>
+
+      <article class="item" id="i8">
+        <h3>有相互作用的噪声量子物质，长出密度依赖的宏观涨落理论</h3>
+        <p class="orig">Nonlinear Fluctuating Hydrodynamics from Interacting Noisy Quantum Matter</p>
+        <p class="authors">Alexios Christopoulos, João Costa, Stefano Scopa 等 · arXiv:2609.00159</p>
+        <p>边界驱动 XXZ 链加上体退相干，从微观 Lindblad 动力学推出有效的相互作用对称排斥过程（ISEP），再粗粒化成宏观涨落理论（MFT），扩散率与迁移率都依赖密度——这是相互作用在流体层的指纹，超出常扩散的 SSEP 普适类。由此可精确算稳态密度剖面、长程关联和电流全计数统计，与 TEBD 张量网络模拟吻合很好。作者认为噪声量子多体系统可以实现「真正相互作用的扩散物质」这一普适类，微观量子力学只通过两个输运系数进入宏观描述。</p>
+        <p class="src"><span class="chip">预印本</span> <a href="https://arxiv.org/abs/2609.00159">arxiv.org/abs/2609.00159</a></p>
+      </article>
+
+      <article class="item" id="i9">
+        <h3>正则化最优传输的反问题：一次双中心化就够</h3>
+        <p class="orig">An exact and fast solution of the inverse Regularized Optimal Transport problem</p>
+        <p class="authors">Dario Mazzilli, Riccardo Piombo, Lorenzo Buffa, Aurelio Patelli · arXiv:2609.01278</p>
+        <p>正问题是给定代价矩阵求最省运输计划；反问题是看见运输计划，问代价是什么。熵正则 OT 的代价只在加减行、列项的规范自由度内可辨。作者证明：对 −log W 做一次双中心化，就能在闭式里取出规范固定的真实代价，不必迭代 OT 求解器，也不对 C 做度量、低秩或稀疏先验。节点乘性噪声（行、列各自一个因子）会被双中心化精确消掉。若再知道少量真实代价条目，还可以联合估计温度 ε，并用回归残差给出能否信这个估计的诊断。同一构造适用于一类「代价与计划之间有可逆联系」的运输模型。</p>
+        <p class="src"><span class="chip">预印本</span> <a href="https://arxiv.org/abs/2609.01278">arxiv.org/abs/2609.01278</a></p>
+      </article>
+    </section>
+
+    <section>
+      <h2>互联网产品与科技业界</h2>
+
+      <article class="item" id="i10">
+        <h3>美国法院：谷歌不必出售广告交易所 AdX</h3>
+        <p class="authors">Ryan Whitwam · Ars Technica · 2026-09-02</p>
+        <p>联邦法官 Leonie Brinkema 裁定，谷歌不必按司法部要求剥离在线广告交易所（原 AdX）。谷歌已在 2025 年广告技术反垄断案中败诉：法院认定它非法把出版商锁进自家交易所，但认为广告主侧工具并未违法。救济阶段司法部仍主张强制出售交易所，这次被否。命令密封 14 天供双方申请涂黑，具体行为救济与罚款两周后才公布。这是谷歌三起反垄断收官里又一次「输了责任、没被拆核心资产」——搜索案没卖掉 Chrome，Epic 案也没交出应用审核。</p>
+        <p class="src"><span class="chip">报道</span> <a href="https://arstechnica.com/gadgets/2026/09/us-court-rules-google-will-not-have-to-sell-ad-exchange-after-losing-antitrust-case/">Ars Technica</a></p>
+      </article>
+
+      <article class="item" id="i11">
+        <h3>欧盟把 ChatGPT 定为超大型在线搜索引擎</h3>
+        <p class="authors">欧盟委员会新闻稿 IP/26/1772 · 2026-08-31</p>
+        <p>委员会同日指定 ChatGPT 为《数字服务法》下的超大型在线搜索引擎（VLOSE），并把 Reddit、Roblox 定为超大型在线平台（VLOP）。依据是这些服务自行申报欧盟平均月活至少 4500 万，达到指定门槛。指定本身不是违法认定。通知后四个月（即到 2027 年 1 月）须履行额外义务：评估并缓解非法内容传播、未成年人、身心健康、基本权利、选举与公共安全等系统性风险。委员会把 ChatGPT 写成「会按提示作答、也能搜网」的混合服务，因而按搜索引擎而非内容平台监管；爱尔兰媒体委员会 Coimisiún na Meán 是其设立地协调员。</p>
+        <p class="src"><span class="chip">官方</span> <a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1772">欧盟委员会新闻稿</a> <a href="https://ec.europa.eu/commission/presscorner/api/files/document/print/en/ip_26_1772/IP_26_1772_EN.pdf">PDF</a></p>
+      </article>
+
+      <article class="item" id="i12">
+        <h3>特斯拉就 Autopilot 撞消防车致死案达成保密和解</h3>
+        <p class="authors">Fred Lambert · Electrek · 2026-09-02</p>
+        <p>2023 年 2 月 18 日凌晨，Genesis Giovanni Mendoza Martinez 驾驶 2014 款 Model S、Autopilot 开启，在加州 I-680 以约 70 mph 撞上一辆因前方事故停在车道上的云梯消防车，本人死亡，副驾弟弟重伤。北加州联邦法院 Vince Chhabria 法官 2025 年 5 月已允许欺诈性不实陈述继续审理，认为「Autopilot」名称「表面上可能误导」，马斯克关于 Autopilot「大概比人类司机更好」等公开言论可作为证据。特斯拉选择在陪审团开庭前保密和解，条款未披露。Electrek 把这写成特斯拉在佛罗里达 2.43 亿美元败诉后一贯的「开庭前买下判决」模式。</p>
+        <p class="src"><span class="chip">报道</span> <a href="https://electrek.co/2026/09/02/tesla-settles-autopilot-fire-truck-death-lawsuit/">Electrek</a></p>
+      </article>
+
+      <article class="item" id="i13">
+        <h3>亚马逊购物 AI 可以告诉你：这封消息是不是它发的</h3>
+        <p class="authors">Sarah Perez · TechCrunch · 2026-09-02</p>
+        <p>亚马逊称每年约有 36 万顾客找客服问「这封是不是亚马逊发的」。现在可以把问题交给 Alexa for Shopping：对照它在全球发出的数十亿条通信，用发件人、内容、时间与元数据判定真伪，并说会随用户上报的可疑消息继续改进。公司今年早些时候已开通 verify@amazon.com 转发核验和网页表单。同一周（9 月 1 日）还加了「有更新就通知我」：品牌上新、作者出书、歌手发片之类。助手在亚马逊网站和 App 里都能用。</p>
+        <p class="src"><span class="chip">报道</span> <a href="https://techcrunch.com/2026/09/02/psa-amazons-shopping-ai-can-now-tell-you-if-that-message-is-a-scam/">TechCrunch</a></p>
+      </article>
+    </section>
+
+    <section>
+      <h2>抗衰与长寿</h2>
+      <p class="lede" style="margin-bottom:1.05rem;">近 24–48 小时 bioRxiv / medRxiv 上没有像样的新抗衰预印本，下面两条是 8 月 25–26 日 Nature Aging 上尚未进过本栏的论文。</p>
+
+      <article class="item" id="i14">
+        <h3>敲掉 cGAS：小鼠提前衰老，LINE1 解抑制，异染色质散掉</h3>
+        <p class="orig">cGAS-deficient mice display premature aging associated with derepression of LINE1 elements and inflammation</p>
+        <p class="authors">John C. Martinez, Francesco Morandini, Andrei Seluanov, Vera Gorbunova 等 · Nature Aging · 2026-08-25</p>
+        <p>cGAS 常被当成抗炎衰老的药靶，因为细胞质里它会感应内源 DNA。作者把 cGAS 敲除小鼠养到老龄，结果相反：中位寿命从野生型 2.01 年降到 1.64 年，衰弱指数上升，肺、肝、胰、卵巢等多器官炎症或纤维化加重。LINE1 转录上升、甲基化下降、细胞质 L1 cDNA 堆积；STING 敲除或 PYHIN 敲除并不解抑制 L1，催化抑制剂 RU.521 也复现不了，说明这不是细胞质传感或 cGAMP 合成的锅。核内 cGAS 维持 H3K9me3 异染色质组织，与催化活性无关。对「一刀切抑制 cGAS 来抗炎衰老」是明确警告。</p>
+        <p class="src"><span class="chip">期刊</span> <a href="https://www.nature.com/articles/s43587-026-01206-y">Nature Aging</a></p>
+      </article>
+
+      <article class="item" id="i15">
+        <h3>皮下肌肉移植物自己会收缩，在老龄小鼠身上模拟一部分运动收益</h3>
+        <p class="orig">Contractile myografts confer systemic anti-aging benefits</p>
+        <p class="authors">Xupeng Liu, Ziyue Yao, L. Zhang, Ng Shyh-Chang 等 · Nature Aging · 2026-08-26</p>
+        <p>从小鼠股四头肌取出干细胞，体外诱导成肌细胞，再把自体细胞打到背部皮下。移植物会长成有血管的成熟结构，不靠神经支配也能持续自收缩。老龄（约 1.5 岁）小鼠移植八周后瘦体重比例更高，十五周后骨密度更高，跑得更远、握力更大，甘油三酯、肝脏损伤和全身炎症指标也有改善。移植物还能作为稳定的蛋白泵，分泌甲状旁腺激素或生长激素。仍是概念验证，作者与 Nature 新闻稿都写明尚未证明可平移到人。</p>
+        <p class="src"><span class="chip">期刊</span> <a href="https://www.nature.com/articles/s43587-026-01190-3">Nature Aging</a> <a href="https://www.nature.com/articles/d41586-026-02664-5">Nature 新闻</a></p>
+      </article>
+    </section>
+
+    <footer>
+      <p>条目均来自当日公开检索与原文核对；链接指向原始来源。宁缺毋滥。</p>
+    </footer>
+  </div>
+</body>
+</html>

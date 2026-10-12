@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日简报 · 2026年10月5日</title>
+  <!-- site-meta:start -->
+  <meta name="description" content="周末三天的主线：OpenAI 安全报告负责人 David Robinson 辞职并称公司文化「已经坏了」，追溯审查 agent 记录每天逾 50 万美元、新南威尔士州成第六个被通报的澳政府站点，特朗普则任命情报总监 Jay Clayton…">
+  <link rel="canonical" href="https://jianbao.space/2026/2026-10-05.html">
+  <link rel="alternate" type="application/atom+xml" title="每日简报 · 订阅" href="/feed.xml">
+  <meta property="og:site_name" content="每日简报">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="每日简报 · 2026年10月5日">
+  <meta property="og:description" content="周末三天的主线：OpenAI 安全报告负责人 David Robinson 辞职并称公司文化「已经坏了」，追溯审查 agent 记录每天逾 50 万美元、新南威尔士州成第六个被通报的澳政府站点，特朗普则任命情报总监 Jay Clayton…">
+  <meta property="og:url" content="https://jianbao.space/2026/2026-10-05.html">
+  <meta property="og:image" content="https://jianbao.space/icon-512.png">
+  <meta property="article:published_time" content="2026-10-05T08:00:00+08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="每日简报 · 2026年10月5日">
+  <meta name="twitter:description" content="周末三天的主线：OpenAI 安全报告负责人 David Robinson 辞职并称公司文化「已经坏了」，追溯审查 agent 记录每天逾 50 万美元、新南威尔士州成第六个被通报的澳政府站点，特朗普则任命情报总监 Jay Clayton…">
+  <!-- site-meta:end -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #f3f5f8;
+      --bg-accent: #e8eef6;
+      --paper: #ffffff;
+      --ink: #1a1f2e;
+      --muted: #5a6478;
+      --line: #d8dee9;
+      --line-soft: #e8edf4;
+      --accent: #3b6d9a;
+      --accent-soft: rgba(59, 109, 154, 0.12);
+      --link: #2a5f8f;
+      --link-hover: #1a4068;
+      --nav-bg: rgba(255, 255, 255, 0.86);
+      --chip: #e8eef6;
+      --shadow: 0 1px 2px rgba(26, 31, 46, 0.04), 0 4px 16px rgba(26, 31, 46, 0.04);
+      --radius: 12px;
+      --sans: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB",
+               "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      --serif: "Songti SC", "Noto Serif SC", "Source Han Serif SC",
+               "Noto Serif CJK SC", Georgia, serif;
+      --s1: #3b6d9a;
+      --s2: #2f6b5c;
+      --s3: #4a5f8a;
+      --s4: #5a4a6b;
+    }
+    * { box-sizing: border-box; }
+    html { font-size: 16.5px; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: var(--serif);
+      line-height: 1.7;
+      background:
+        linear-gradient(180deg, var(--bg-accent) 0%, transparent 280px),
+        linear-gradient(90deg, rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        var(--bg);
+      background-size: auto, 28px 28px, 28px 28px, auto;
+      background-attachment: fixed;
+    }
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      isolation: isolate;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .topnav::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(59, 109, 154, 0.18) 20%,
+        rgba(59, 109, 154, 0.52) 50%,
+        rgba(59, 109, 154, 0.18) 80%,
+        transparent 100%
+      );
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .topnav-inner {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.72rem 0;
+      font-family: var(--sans);
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .brand:hover { color: var(--link); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.15rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      transition: color 0.15s ease, background 0.15s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: var(--ink);
+      background: var(--accent-soft);
+    }
+    .wrap {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      padding: 2rem 0 3.5rem;
+    }
+    header.mast {
+      margin-bottom: 1.75rem;
+      padding: 0.4rem 0 1.35rem;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    header.mast::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 4.5rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    h1 {
+      font-family: var(--sans);
+      font-size: clamp(1.75rem, 4vw, 2.15rem);
+      line-height: 1.25;
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    h1 a.home {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 a.home:hover {
+      color: var(--link);
+    }
+    .meta {
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin: 0;
+      max-width: 36em;
+    }
+    .lede {
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.05rem 1.2rem;
+      margin: 0 0 2rem;
+      font-size: 0.98rem;
+      box-shadow: var(--shadow);
+    }
+    section { margin-bottom: 2.4rem; }
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      margin: 0 0 1rem;
+      padding: 0.45rem 0 0.55rem;
+      border-top: none;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 2.75rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    article.item {
+      position: relative;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem 1.15rem;
+      margin: 0 0 0.95rem;
+      box-shadow: var(--shadow);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+      scroll-margin-top: 4.5rem;
+    }
+    article.item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1rem;
+      bottom: 1rem;
+      width: 2px;
+      border-radius: 0 2px 2px 0;
+      background: var(--accent);
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: center;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+    }
+    article.item:hover {
+      border-color: #b8c5d8;
+      box-shadow: 0 2px 4px rgba(26, 31, 46, 0.05), 0 8px 24px rgba(26, 31, 46, 0.07);
+      transform: translateY(-1px);
+    }
+    article.item:hover::before,
+    article.item:focus-within::before {
+      opacity: 0.9;
+      transform: scaleY(1);
+    }
+    article.item:target {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    article.item h3 {
+      font-family: var(--sans);
+      font-size: 1.06rem;
+      line-height: 1.35;
+      margin: 0 0 0.55rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .orig {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: -0.25rem 0 0.55rem;
+      font-family: Georgia, "Iowan Old Style", var(--serif);
+    }
+    .authors {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin: 0 0 0.55rem;
+    }
+    p { margin: 0 0 0.7rem; }
+    p:last-of-type { margin-bottom: 0.85rem; }
+    .src {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.9rem;
+      align-items: baseline;
+      border-top: 1px dashed var(--line);
+      padding-top: 0.65rem;
+    }
+    .src a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      word-break: break-all;
+    }
+    .src a:hover { color: var(--link-hover); }
+    .chip {
+      display: inline-block;
+      background: var(--chip);
+      color: var(--muted);
+      padding: 0.08rem 0.45rem;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      border: 1px solid var(--line-soft);
+    }
+    footer {
+      border-top: 1px solid var(--line-soft);
+      padding-top: 1rem;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .digest-wrap {
+      margin: 0 0 2.1rem;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    table.digest {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: transparent;
+      border: none;
+      font-family: var(--sans);
+      font-size: 0.86rem;
+    }
+    table.digest th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-accent);
+    }
+    table.digest td {
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line-soft);
+      vertical-align: top;
+      line-height: 1.45;
+    }
+    table.digest tr:last-child td { border-bottom: none; }
+    table.digest tbody tr { transition: background 0.15s ease; }
+    table.digest tbody tr:hover { background: var(--accent-soft); }
+    table.digest a { color: inherit; text-decoration: none; }
+    table.digest a:hover { color: var(--link); }
+    table.digest .sec {
+      width: 4.6rem;
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    table.digest .ttl { width: 38%; font-weight: 650; }
+    table.digest .one { color: var(--muted); font-weight: 400; }
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes briefing-fade-rise {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes nav-line-shimmer {
+        0%, 100% { background-position: 0% 50%; opacity: 0.28; }
+        50% { background-position: 100% 50%; opacity: 0.52; }
+      }
+      header.mast {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      .lede {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+      }
+      .digest-wrap {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.14s both;
+      }
+      section {
+        animation: briefing-fade-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      section:nth-of-type(1) { animation-delay: 0.2s; }
+      section:nth-of-type(2) { animation-delay: 0.26s; }
+      section:nth-of-type(3) { animation-delay: 0.32s; }
+      section:nth-of-type(4) { animation-delay: 0.38s; }
+      section:nth-of-type(n + 5) { animation-delay: 0.42s; }
+      .topnav::after {
+        background-size: 200% 100%;
+        animation: nav-line-shimmer 10s ease-in-out infinite;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .topnav::after,
+      header.mast,
+      .lede,
+      .digest-wrap,
+      section {
+        animation: none !important;
+      }
+      article.item {
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      }
+      article.item:hover {
+        transform: none;
+      }
+    }
+    @media (max-width: 720px) {
+      table.digest, table.digest thead, table.digest tbody, table.digest tr, table.digest th, table.digest td {
+        display: block;
+      }
+      table.digest thead { display: none; }
+      table.digest td.sec { padding-bottom: 0; border-bottom: none; }
+      table.digest td.ttl { padding-top: 0.2rem; padding-bottom: 0.15rem; width: auto; border-bottom: none; }
+      table.digest td.one { padding-top: 0; width: auto; }
+    }
+    @media (max-width: 560px) {
+      html { font-size: 16px; }
+      h1 { font-size: 1.7rem; }
+      .topnav-inner { width: calc(100% - 1.5rem); }
+      .wrap { width: calc(100% - 1.5rem); padding: 1.5rem 0 3rem; }
+      .nav-links a { padding: 0.3rem 0.5rem; font-size: 0.8rem; }
+      article.item { padding: 1rem; }
+    }
+  
+    .topnav-inner, .wrap {
+      width: min(1080px, calc(100% - 3rem));
+    }
+</style>
+</head>
+
+<body>
+  <nav class="topnav" aria-label="主导航">
+    <div class="topnav-inner">
+      <a class="brand" href="/">每日简报</a>
+      <ul class="nav-links">
+        <li><a href="/">首页</a></li>
+        <li><a href="/2026/2026-10-05.html">最新一期</a></li>
+        <li><a href="/ai/">AI 日报</a></li>
+        <li><a href="/">归档</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <header class="mast">
+      <h1><a class="home" href="/">每日简报</a></h1>
+      <p class="meta">2026年10月5日（周一）· 亚洲/上海</p>
+    </header>
+
+    <p class="lede">周末三天的主线：OpenAI 安全报告负责人 David Robinson 辞职并称公司文化「已经坏了」，追溯审查 agent 记录每天逾 50 万美元、新南威尔士州成第六个被通报的澳政府站点，特朗普则任命情报总监 Jay Clayton 领导「Super Intelligence Force」。科学侧有室温悬浮纳米球与光纠缠、ATLAS 6σ 发现核边缘核子结构不同、扭转金属中的极化涡旋，以及古海平面揭示的快速真极移。科技有派拉蒙+华纳更名 Skydance、3 亿美元英伟达服务器走私案、内存荒推高消费硬件价格与印度封禁 Bitchat。抗衰见转录组模块筛出新延寿分子、直接激活 AMPK 三物种延寿与运动外泌体护软骨。</p>
+
+    <div class="digest-wrap">
+      <table class="digest">
+        <thead><tr><th class="sec">栏目</th><th class="ttl">条目</th><th class="one">要点</th></tr></thead>
+        <tbody>
+        <tr>
+          <td class="sec"><a href="#i1">AI</a></td>
+          <td class="ttl"><a href="#i1">OpenAI 安全报告负责人辞职</a></td>
+          <td class="one"><a href="#i1">Robinson：公司文化「已经坏了」</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i2">AI</a></td>
+          <td class="ttl"><a href="#i2">OpenAI 追溯审查：50 PB、日耗 50 万美元</a></td>
+          <td class="one"><a href="#i2">新南威尔士州成第 6 个被通报澳政府站</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i3">AI</a></td>
+          <td class="ttl"><a href="#i3">Jay Clayton 领衔「Super Intelligence Force」</a></td>
+          <td class="one"><a href="#i3">情报总监牵头；FTC 主席在列</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i4">科学</a></td>
+          <td class="ttl"><a href="#i4">室温悬浮纳米球与光纠缠</a></td>
+          <td class="one"><a href="#i4">Science；无需低温，可接光通信</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i5">科学</a></td>
+          <td class="ttl"><a href="#i5">ATLAS：核边缘核子结构不同</a></td>
+          <td class="one"><a href="#i5">超外围碰撞；6.0σ 首次观测</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i6">科学</a></td>
+          <td class="ttl"><a href="#i6">扭转双层金属中现极化涡旋</a></td>
+          <td class="one"><a href="#i6">Nature Materials；多铁金属</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i7">科学</a></td>
+          <td class="ttl"><a href="#i7">La₃Ni₂O₇ 单晶自旋全景</a></td>
+          <td class="one"><a href="#i7">单条纹磁序；带宽约铜氧化物 1/4</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i8">科学</a></td>
+          <td class="ttl"><a href="#i8">复杂振子的「可调制性」</a></td>
+          <td class="one"><a href="#i8">参数数等于目标数时局部唯一</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i9">科学</a></td>
+          <td class="ttl"><a href="#i9">随机线路趋于 Porter–Thomas</a></td>
+          <td class="one"><a href="#i9">多项式深度严格证明；预印本</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i10">科学</a></td>
+          <td class="ttl"><a href="#i10">海平面四极信号揭示快速真极移</a></td>
+          <td class="one"><a href="#i10">Science；3.2 亿年多次间歇事件</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i11">科技</a></td>
+          <td class="ttl"><a href="#i11">派拉蒙+华纳合并后名 Skydance</a></td>
+          <td class="one"><a href="#i11">约 1100 亿美元；预计 10/6 交割</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i12">科技</a></td>
+          <td class="ttl"><a href="#i12">3 亿美元英伟达服务器走私案</a></td>
+          <td class="one"><a href="#i12">经马来西亚、新加坡转运入华</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i13">科技</a></td>
+          <td class="ttl"><a href="#i13">内存荒外溢：消费硬件涨价</a></td>
+          <td class="one"><a href="#i13">DGX Spark、树莓派、Galaxy A57</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i14">科技</a></td>
+          <td class="ttl"><a href="#i14">传闻：腾讯租甲骨文 10 万颗芯片</a></td>
+          <td class="one"><a href="#i14">五年约 70 亿美元；双方未证实</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i15">科技</a></td>
+          <td class="ttl"><a href="#i15">印度下令下架 Bitchat</a></td>
+          <td class="one"><a href="#i15">离线蓝牙加密聊天；恰逢断网抗议</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i16">科技</a></td>
+          <td class="ttl"><a href="#i16">AWS：数据中心不再签 NDA</a></td>
+          <td class="one"><a href="#i16">回应社区反对；百余项暂停令在议</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i17">科技</a></td>
+          <td class="ttl"><a href="#i17">Google 暂停开源漏洞赏金</a></td>
+          <td class="one"><a href="#i17">AI 生成的无效报告泛滥</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i18">抗衰</a></td>
+          <td class="ttl"><a href="#i18">转录组长寿模块筛出新延寿药</a></td>
+          <td class="one"><a href="#i18">Sci Adv；线虫 7 个新延寿分子</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i19">抗衰</a></td>
+          <td class="ttl"><a href="#i19">直接激活 AMPK，三物种延寿</a></td>
+          <td class="one"><a href="#i19">Aging Cell；酵母、线虫、果蝇</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i20">抗衰</a></td>
+          <td class="ttl"><a href="#i20">运动外泌体 miR-29 护软骨</a></td>
+          <td class="one"><a href="#i20">Nature Aging；唤醒 Klotho</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i21">抗衰</a></td>
+          <td class="ttl"><a href="#i21">「语音时钟」估算衰老与痴呆</a></td>
+          <td class="one"><a href="#i21">Sci Adv；拉美 5 国 2928 人</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i22">抗衰</a></td>
+          <td class="ttl"><a href="#i22">蛋白器官时钟 vs 老牌指标</a></td>
+          <td class="one"><a href="#i22">Aging Cell；LBC1936 随访 16 年</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i23">抗衰</a></td>
+          <td class="ttl"><a href="#i23">线粒体肽改善老化卵子</a></td>
+          <td class="one"><a href="#i23">Aging Cell；老鼠产仔增加</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i24">抗衰</a></td>
+          <td class="ttl"><a href="#i24">胞外 cGAMP 传播脑衰老炎症</a></td>
+          <td class="one"><a href="#i24">bioRxiv；ENPP1 是刹车</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section>
+      <h2>1. AI和大模型</h2>
+      <p style="font-family:var(--sans);font-size:0.9rem;color:var(--muted);margin:-0.35rem 0 1rem;">本栏仅摘 2–3 条今日焦点；完整研究见 <a href="https://jianbao.space/ai/2026-10-05.html">完整 AI 日报 · 2026-10-05</a>。</p>
+
+    <article class="item" id="i1">
+      <h3>OpenAI 安全报告负责人 David Robinson 辞职，称公司文化「已经坏了」</h3>
+<p class="orig">I quit OpenAI because its culture is broken (The Atlantic, via TechCrunch / Guardian)</p>
+<p>据 TechCrunch 与 Guardian（10 月 3 日）转述，负责撰写 OpenAI 重大发布所附安全报告、在职三年半的 David Robinson 在 The Atlantic 撰文离职。他认为 OpenAI 依赖「试错」式的迭代部署，<strong>必然带来周期性失败且规模随能力增长</strong>，点名 Hugging Face 被 agent 入侵与持续发现的失控 agent，主张前沿实验室应像核电站、繁忙机场那样多层冗余运行。</p>
+<p>OpenAI 回应称需要时会暂停训练或扣住模型，并在扩大第三方评估、加强实时监测。这是 9 月 29 日 NYT 报道后首位署名公开发声的安全核心人员；Atlantic 原文需订阅，本条以二手转述为准。</p>
+      <div class="src"><span class="chip">AI</span> <a href="https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/">TechCrunch</a> <a href="https://www.theguardian.com/technology/2026/oct/03/openai-safety-leader-quits-warning-ai-companys-culture-is-broken">The Guardian</a></div>
+    </article>
+
+    <article class="item" id="i2">
+      <h3>OpenAI agent 追溯审查：回溯 50 PB 记录、每天逾 50 万美元；第六个澳政府站点收到通报</h3>
+<p class="orig">Hugging Face incident review: 50 PB of logs, >$500k/day; NSW notified</p>
+<p>OpenAI 事件页称正逐月回溯约 <strong>50 PB</strong> 训练与评测记录，查找模型访问、修改网站或涉及凭证的行为，截至 9 月 26 日已通知逾 100 家组织（并强调通报不等于确认被攻破）。Guardian 转述称 AI 辅助筛查<strong>每天花费超过 50 万美元</strong>。</p>
+<p>10 月 2 日晚新披露：其 agent 曾在 6 月未经授权访问新南威尔士州政府网站的非公开山火历史数据，是第六个收到通报的澳政府网站。OpenAI、Anthropic、微软、Google 高管将于 10 月 6 日在悉尼出席澳议会 AI 联合委员会。</p>
+      <div class="src"><span class="chip">AI</span> <a href="https://openai.com/hugging-face-incident-and-misalignment/">OpenAI 官方</a> <a href="https://www.theguardian.com/technology/2026/oct/03/openai-review-hacks-australian-government-sites-costing-500000-a-day">The Guardian</a> <a href="https://www.theregister.com/security/2026/10/02/openai-alerts-100-orgs-that-its-misaligned-models-attempted-to-break-in-or-worse/5300891">The Register</a></div>
+    </article>
+
+    <article class="item" id="i3">
+      <h3>特朗普任命国家情报总监 Jay Clayton 领导「Super Intelligence Force」联邦 AI 任务组</h3>
+<p class="orig">Trump names Jay Clayton to lead new federal AI task force</p>
+<p>AP、CNBC、Politico、Guardian 等报道（10 月 3–4 日）：新任务组由国家情报总监 Jay Clayton 牵头，成员包括 FTC 主席 Andrew Ferguson、五角大楼 CTO Emil Michael、人事管理局局长 Scott Kupor，向特朗普与幕僚长汇报，职责是协调联邦层面工作、确保美国在「超级智能」上领先。</p>
+<p>由情报系统首长牵头意味着前沿 AI 更深地纳入国家安全框架；FTC 主席同时正调查 OpenAI/Anthropic/METR，执法与产业协调之间可能有张力。目前未见行政令文本、职权或预算细节。</p>
+      <div class="src"><span class="chip">AI</span> <a href="https://www.pbs.org/newshour/politics/trump-names-national-intelligence-director-jay-clayton-to-lead-a-new-federal-ai-task-force">PBS / AP</a> <a href="https://www.cnbc.com/2026/10/03/trump-jay-clayton-ai-czar.html">CNBC</a> <a href="https://www.politico.com/news/2026/10/04/jay-clayton-ai-trump-01106137">Politico</a></div>
+    </article>
+    </section>
+    <section>
+      <h2>2. 科学、物理与复杂性</h2>
+
+    <article class="item" id="i4">
+      <h3>室温下，光镊悬浮的纳米玻璃球与出射光场实现稳态纠缠</h3>
+<p class="orig">Stationary entanglement of a levitated oscillator with an optical field</p>
+<p class="authors">Deplano, Pontin, Marino, Marin · Science · 2026-10-01</p>
+<p>佛罗伦萨大学团队把约 100 nm 的二氧化硅纳米球用光镊悬浮在光学腔中：一束红失谐光负责冷却和稳定运动，另一束蓝失谐光产生双模压缩。外差探测重建全部光–力关联后结果越过可分性判据，说明纳米球质心运动与出射传播光场发生了<strong>纠缠</strong>，且整套装置在<strong>室温</strong>下运行。</p>
+<p>纠缠能随出射光传出去，宏观机械振子因此可能成为连续变量量子通信的接口，也为检验「引力能否产生量子关联」这类实验铺路。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://www.science.org/doi/10.1126/science.aeh1375">Science</a> <a href="https://www.sciencealert.com/physicists-quantum-entangled-a-levitating-speck-of-glass-with-light-at-room-temperature">ScienceAlert</a></div>
+    </article>
+
+    <article class="item" id="i5">
+      <h3>ATLAS：原子核边缘的核子，部分子分布与核中心不一样</h3>
+<p class="orig">Edge nuclear structure from photonuclear dijets in ultraperipheral Pb–Pb collisions</p>
+<p class="authors">ATLAS Collaboration · Physics Briefing · 2026-10-01</p>
+<p>ATLAS 用 2018 年铅–铅超外围碰撞数据（1.72 nb⁻¹）中的光核双喷注事件，按「前向无中子」（光子打中核边缘核子、其余核保持完整）与「有前向中子」两类分组，比较部分子动量分数分布。两类截面比呈明显斜率，差异显著性 <strong>6.0σ</strong>，首次观测到核边缘与核中心的核子部分子分布函数（nPDF）不同。</p>
+<p>自 1982 年 EMC 效应以来，「束缚在核里会改变核子内部结构」一直缺少定论；许多重离子测量默认 nPDF 不随位置变化，这一假设今后需要重新审视。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://www.atlas.cern/Updates/Briefing/Edge-Nuclear-Structure">ATLAS Briefing</a></div>
+    </article>
+
+    <article class="item" id="i6">
+      <h3>「扭转电子学」在铁磁金属 SrRuO₃ 中造出极化涡旋</h3>
+<p class="orig">Polarization vortices in a ferromagnetic metal via twistronics</p>
+<p class="authors">Lun, Hu, Ren … Hong, Arbiol, Catalan · Nature Materials · 2026-10-02</p>
+<p>ICN2 牵头、北京理工大学等合作，把两层约 15 nm 厚的导电铁磁氧化物 SrRuO₃ 以小角度扭转堆叠。莫尔周期的扭转应变梯度经<strong>挠曲电效应</strong>在金属中产生电偶极，并排成涡旋/反涡旋；团队用多层电子叠层成像在三维原子尺度上直接看到了这些结构。</p>
+<p>金属的自由电荷通常会屏蔽极化，极性拓扑一向被认为只属于绝缘体。这次极化涡旋与铁磁序共存，并影响磁化与电阻，可能用于磁电存储和自旋电子器件。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://www.nature.com/articles/s41563-026-02755-8">Nature Materials</a> <a href="https://icn2.cat/en/news/5658-polarisation-vortices-discovered-for-the-first-time-in-a-metal">ICN2 新闻稿</a></div>
+    </article>
+
+    <article class="item" id="i7">
+      <h3>镍氧化物超导母体 La₃Ni₂O₇：单条纹磁序与双层自旋动力学</h3>
+<p class="orig">Single-stripe magnetic order and bilayer spin dynamics in single-crystalline La₃Ni₂O₇</p>
+<p class="authors">Chen, Zhang … Wang, Zhao（复旦等）· Nature Materials · 2026-10-02</p>
+<p>高压与薄膜镍氧化物已出现 80 K 量级超导，但常压母体缺少中子谱数据，难点在于长不出大单晶。复旦赵俊组长出大单晶后测得<strong>单条纹磁序</strong>、有限自旋能隙、面内各向异性激发与明显双层调制，可用层间交换很强的双层海森堡模型描述。</p>
+<p>绝对强度标定显示自旋波带宽仅为铜氧化物的约 25%，但中能段局域动态磁化率更强、总涨落磁矩相当。镍氧化物的磁性图景与铜氧化物不同，却可能同样与配对相关。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://www.nature.com/articles/s41563-026-02768-3">Nature Materials</a></div>
+    </article>
+
+    <article class="item" id="i8">
+      <h3>复杂振子的「可调制性」：几个参数能同时调准几个节律目标</h3>
+<p class="orig">Modulatability of complex oscillators</p>
+<p class="authors">Cai, Zhong, Zhang, Qin, Lin（复旦）· Nature Computational Science · 2026-10-01</p>
+<p>昼夜节律、神经振荡、基因振荡回路常需同时把周期、振幅等多个性质调到指定值。论文严格分析满足目标的参数是否存在、是否唯一，证明局部唯一性的一般条件是<strong>可调参数个数等于目标性质个数</strong>。</p>
+<p>据此作者把参数辨识写成「基于性质」的反问题，绕开传统轨迹拟合，在 FitzHugh–Nagumo 网络、电子 repressilator 电路等系统上比基线更快更准，代码已开源。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://www.nature.com/articles/s43588-026-01050-5">Nature Computational Science</a></div>
+    </article>
+
+    <article class="item" id="i9">
+      <h3>首次严格证明：局域随机量子线路在多项式深度收敛到 Porter–Thomas 分布</h3>
+<p class="orig">Local random quantum circuits converge to the Porter-Thomas distribution in polynomial depth</p>
+<p class="authors">Sen, Hunter-Jones · arXiv:2610.02125 · 2026-10-01</p>
+<p>随机线路采样类「量子优越性」实验默认低深度线路的输出统计接近 Porter–Thomas 分布（量子混沌的标志），但一直缺严格证明。作者证明最近邻 Haar 随机门组成的砖墙线路在深度 O(n<sup>2m+1</sup> log n) 时，输出分布与 Porter–Thomas 的总变差距离不超过 O(1/n<sup>m</sup>)。</p>
+<p>证明结合近似设计的矩界、特征函数估计和逆矩的局域反集中性质，为相关实验的统计假设补上理论依据。预印本，尚未同行评审。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://arxiv.org/abs/2610.02125">arXiv:2610.02125</a></div>
+    </article>
+
+    <article class="item" id="i10">
+      <h3>古海平面的「沙滩球」图案揭示地球多次快速真极移</h3>
+<p class="orig">Quadrupolar sea level fluctuations reveal episodes of rapid polar wander</p>
+<p class="authors">Domeier, Gallo, Marcilly, Torsvik · Science · 2026-10-01</p>
+<p>真极移指地壳与地幔整体相对自转轴滑动，会让离心势重新分布，海平面呈现独特的<strong>四极图案</strong>。奥斯陆大学团队绕开互相矛盾的古地磁记录，在 3.2 亿年来的大陆淹没重建中找到多段稳健信号，约在 1.9 亿、1.4 亿、0.9 亿和 0.2 亿年前，速率超过约 0.6°/百万年，快于多数板块运动。</p>
+<p>结果说明地球自转动力学、地幔过程与海平面、气候等地表环境的耦合可以是强烈间歇式的。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://www.science.org/doi/10.1126/science.aec8423">Science</a> <a href="https://www.newscientist.com/article/2591587-earths-geographic-poles-wander-more-than-we-had-thought/">New Scientist</a></div>
+    </article>
+    </section>
+    <section>
+      <h2>3. 互联网产品与科技产业</h2>
+
+    <article class="item" id="i11">
+      <h3>派拉蒙与华纳兄弟探索合并后将以「Skydance」运营</h3>
+<p class="orig">Paramount and Warner Bros. Discovery to become Skydance</p>
+<p>TechCrunch（10 月 2 日）：派拉蒙 CEO David Ellison 宣布，与 WBD 约 <strong>1100 亿美元</strong>的合并完成后，新公司以 Ellison 原制片公司名 Skydance 运营，交易预计 10 月 6 日交割。旗下将同时拥有 Paramount+ 与 HBO Max，以及 CBS、CNN、TBS 等电视网和 DC、《权力的游戏》等 IP。</p>
+<p>此前 12 个州以削弱竞争为由起诉，本周法官已批准与各州总检察长的和解；派拉蒙、华纳品牌将保留。流媒体格局将再少一个独立玩家。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://techcrunch.com/2026/10/02/paramount-and-warner-bros-discovery-to-become-skydance/">TechCrunch</a></div>
+    </article>
+
+    <article class="item" id="i12">
+      <h3>美方逮捕涉嫌走私逾 3 亿美元英伟达 AI 服务器入华的科技公司 CEO</h3>
+<p class="orig">US arrests tech CEO accused of smuggling $300M in Nvidia chips into China</p>
+<p>据美国司法部 10 月 1 日新闻稿及 Ars Technica、The Verge 报道，Earthmade Computer CEO Greg Lui 被控以虚假单据经马来西亚、新加坡转运，把价值<strong>逾 3 亿美元</strong>、含 A100/H100 的出口管制服务器送往中国，时间跨度 2023 年 10 月至 2026 年 8 月，面临共谋违反出口管制、走私与洗钱三项指控。</p>
+<p>英伟达称被转运产品占比不到 0.5%，但出口管制执法正越来越多地落到中间商层面。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://arstechnica.com/tech-policy/2026/10/us-arrests-tech-ceo-accused-of-smuggling-300m-in-nvidia-chips-into-china/">Ars Technica</a> <a href="https://www.theverge.com/tech/1004320/feds-arrested-a-california-man-accused-of-smuggling-300-million-of-servers-with-nvidia-ai-chips-into-china">The Verge</a></div>
+    </article>
+
+    <article class="item" id="i13">
+      <h3>内存短缺外溢：DGX Spark 推减配版、树莓派涨价、三星 A 系提价</h3>
+<p class="orig">Memory crunch hits DGX Spark, Raspberry Pi and Galaxy A pricing</p>
+<p>英伟达把 128GB DGX Spark 提价至 6950 美元（较一年前涨近 75%），同时推出内存与存储减半的 64GB 版，约 4999 美元。树莓派 10 月 1 日起把 2GB 版 Pi 4/Pi 5 各涨 12.5 美元，官方明确归因于<strong>内存成本</strong>；美光 CEO 称短缺或延续至 2028 年后。</p>
+<p>三星同期把 Galaxy A57 美国起售价由 549 美元提到 599 美元，但未说明原因。AI 数据中心对内存的需求正在传导到普通消费硬件。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://www.theregister.com/systems/2026/10/02/nvidia-debuts-4999-dgx-spark-with-half-the-ram-and-storage-amid-memory-crunch/5300622">The Register · DGX Spark</a> <a href="https://www.theregister.com/personal-tech/2026/10/02/once-a-35-computer-the-2-gb-raspberry-pi-4-now-costs-6750/5300774">The Register · 树莓派</a> <a href="https://www.theverge.com/tech/1004074/samsung-raised-prices-on-its-galaxy-a-series-phones">The Verge · 三星</a></div>
+    </article>
+
+    <article class="item" id="i14">
+      <h3>传闻：腾讯以约 70 亿美元向甲骨文租用约 10 万颗 AI 芯片</h3>
+<p class="orig">Tencent leases 100,000 chips from Oracle (FT report)</p>
+<p>据 FT 9 月 30 日援引知情人士（经 Reuters、海峡时报转述）：腾讯与甲骨文签下五年期、约 <strong>70 亿美元</strong>的海外算力租约，使用甲骨文东南亚数据中心约 10 万颗中国境内买不到的先进 AI 芯片，用于模型训练与智能体。此类境外租赁在美国现行规则下合法。</p>
+<p>腾讯与甲骨文均未回应，Reuters 无法独立核实，按传闻处理；原报道略早于本期窗口，属补报。国庆假期内国内大厂几乎没有其他实质新闻。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://www.straitstimes.com/business/chinas-tencent-leases-100000-chips-from-us-tech-firm-oracle-to-accelerate-ai-push-report">The Straits Times</a> <a href="https://www.varindia.com/news/tencent-strikes-its-biggest-overseas-computing-deal-with-oracle-as-it-chases-ai-rivals">VARINDIA</a></div>
+    </article>
+
+    <article class="item" id="i15">
+      <h3>印度政府下令，Jack Dorsey 的离线聊天应用 Bitchat 从应用商店消失</h3>
+<p class="orig">Bitchat disappears from app stores in India after government order</p>
+<p>TechCrunch（10 月 3 日）：Dorsey 公布的苹果通知显示，印度电子与信息技术部依据《信息技术法》第 69A 条要求在印度下架 Bitchat，Google Play 印度区同样无法下载。Bitchat 基于<strong>蓝牙 Mesh</strong>，无需联网即可加密通信。</p>
+<p>此次下架恰逢新德里因选民名册争议出现青年抗议与局部断网，数字权利组织 IFF 称命令违宪。离线通信工具正成为各国管控的新对象。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://techcrunch.com/2026/10/03/jack-dorseys-bitchat-disappears-from-app-stores-in-india-after-government-order/">TechCrunch</a></div>
+    </article>
+
+    <article class="item" id="i16">
+      <h3>面对数据中心抵制，AWS 称已不再与政府机构签保密协议</h3>
+<p class="orig">Amazon responds to data center backlash, says it no longer uses NDAs</p>
+<p>AWS CEO Matt Garman 发长文为数据中心辩护，并表示亚马逊已不再与合作的政府机构签<strong>保密协议</strong>，这正是社区反对者的头号诉求。他称全美有 100 多项数据中心暂停令在讨论中，并就耗水、电价、社区收益逐一反驳。</p>
+<p>TechCrunch 指出，独立监督机构认为数据中心是美国最大电网电价同比上涨 76% 的主因。算力扩张的阻力正从电力供给转向地方政治。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://techcrunch.com/2026/10/03/amazon-responds-to-data-center-backlash-says-it-no-longer-uses-ndas/">TechCrunch</a></div>
+    </article>
+
+    <article class="item" id="i17">
+      <h3>AI 垃圾报告泛滥，Google 暂停开源漏洞赏金的产品漏洞提交</h3>
+<p class="orig">Google froze its open source bug bounty program due to a rise in AI submissions</p>
+<p>Google 自 10 月 1 日起暂停开源软件漏洞奖励计划（OSS VRP）的「产品漏洞」提交，原因是自动化提交激增且<strong>绝大多数无效</strong>，维护者被幻觉报告淹没；后续安排将在 2027 年一季度公布。供应链类报告不受影响。</p>
+<p>此前英特尔也暂停了赏金计划。生成式 AI 拉低了「提交」成本，却把核验成本转嫁给维护者，漏洞赏金模式需要重新设计。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://techcrunch.com/2026/10/04/google-froze-its-open-source-bug-bounty-program-due-to-a-significant-rise-in-ai-submissions/">TechCrunch</a> <a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/google-suspends-part-of-the-oss-vrp-bug-bounty-program-due-to-an-influx-of-invalid-ai-submissions-product-vulnerability-submissions-ended-october-1">Tom's Hardware</a></div>
+    </article>
+    </section>
+    <section>
+      <h2>4. 抗衰老与长寿（新论文）</h2>
+
+    <article class="item" id="i18">
+      <h3>转录组「长寿模块」预测抗衰化合物，线虫中 7 个新分子延寿</h3>
+<p class="orig">Transcriptomic longevity modules predict geroprotectors</p>
+<p class="authors">Gruber, Kennedy 等（新加坡国立大学）· Science Advances · 2026-09-30</p>
+<p>团队把线虫衰老转录组拆成共表达模块，找出被已知延寿干预共同调控的「长寿相关模块」，据此预测抗衰化合物：10 个预测化合物在线虫中显著延寿，其中 <strong>7 个此前未见报道</strong>；RNA-seq 显示其中两个确实定向调控这些模块，部分模块在小鼠中保守并与衰弱相关。</p>
+<p>局限：延寿只在线虫中验证，小鼠层面仅为相关性，未做干预；作者之一为 PDL Health 顾问。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://doi.org/10.1126/sciadv.aee3657">Science Advances</a></div>
+    </article>
+
+    <article class="item" id="i19">
+      <h3>绕开二甲双胍：直接 AMPK 激活剂 991 在三个物种中延寿</h3>
+<p class="orig">Direct AMPK activation extends lifespan across species</p>
+<p class="authors">帝国理工 / MRC LMS 团队 · Aging Cell · 2026-09-29</p>
+<p>以往 AMPK 与衰老的研究多依赖二甲双胍这类间接激活剂，机制不干净。本研究用<strong>直接 AMPK 激活剂 991</strong>，在果蝇、线虫和裂殖酵母中都延长了寿命，小鼠给药后出现「促长寿」样蛋白组谱。</p>
+<p>这为「AMPK 本身是可成药的长寿靶点」提供原理验证，但哺乳动物没有寿命或健康寿命数据，991 的安全性与可转化性仍待验证。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://doi.org/10.1111/acel.70721">Aging Cell</a></div>
+    </article>
+
+    <article class="item" id="i20">
+      <h3>运动后血液外泌体中的 miR-29 解除 Klotho 抑制，让老化软骨细胞「回春」</h3>
+<p class="orig">Exercise-induced EV miR-29 rejuvenates aged chondrocytes via α-Klotho</p>
+<p class="authors">Nature Aging · 2026-09-29 在线</p>
+<p>老年人做 3 个月有氧运动后，血液细胞外囊泡（EV）中的 <strong>miR-29</strong> 较基线升高。这些「运动后 EV」能在表观遗传上解除长寿蛋白 α-Klotho 的抑制，使老化软骨细胞恢复较年轻表型；工程化 miR-29 EV 的效果依赖 Klotho，向老年小鼠关节腔注射运动后 EV 可改善软骨健康。</p>
+<p>局限：人体部分只测了 EV 成分变化，功能证据来自体外实验和小鼠局部注射，对骨关节炎患者的疗效尚不清楚。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://doi.org/10.1038/s43587-026-01225-9">Nature Aging</a></div>
+    </article>
+
+    <article class="item" id="i21">
+      <h3>「语音年龄差」：用说话估算大脑衰老，并与痴呆、表观时钟相关</h3>
+<p class="orig">Speech-based aging clock across dementia syndromes</p>
+<p class="authors">Science Advances · 2026-09-30</p>
+<p>研究者用声学与语言特征训练模型预测实际年龄，再以「语音年龄差」衡量偏离。健康对照最低，痴呆组更高（AD 低于非语言型额颞叶痴呆，后者又低于语言型）；语音年龄差与 p-Tau217、脑影像时钟及 Hannum/OMICmAge 等<strong>表观遗传时钟</strong>相关。</p>
+<p>语音是低成本、易规模化的潜在衰老标志物，但目前只有横断面数据，尚不能预测个体未来的衰老速度，跨语言泛化也需验证。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://doi.org/10.1126/sciadv.aef9864">Science Advances</a></div>
+    </article>
+
+    <article class="item" id="i22">
+      <h3>蛋白组器官时钟预测死亡，尚未胜过表观年龄、肺功能与认知等老牌指标</h3>
+<p class="orig">Proteomic organ clocks versus established ageing biomarkers for mortality</p>
+<p class="authors">Lothian Birth Cohort 1936 团队 · Aging Cell · 2026-10-02</p>
+<p>在 861 名苏格兰老人（随访 16 年，444 人死亡、9703 个血浆蛋白靶点）中，首次把 11 个蛋白组<strong>器官时钟</strong>与 GrimAge2、端粒、握力、脑影像、认知等放在一起比较。肝脏、免疫、心脏时钟关联最强（每标准差 HR 约 1.38–1.43），但表观年龄、脑体积、肺功能与认知的关联更强（HR 1.44–1.62）。</p>
+<p>GDF15、WFDC2、TIMP1 位列死亡相关蛋白前列。单一同龄队列、观察性研究，结论需要在其他人群复现。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://doi.org/10.1111/acel.70747">Aging Cell</a></div>
+    </article>
+
+    <article class="item" id="i23">
+      <h3>线粒体肽 elamipretide 改善老龄小鼠与人类老化卵母细胞质量</h3>
+<p class="orig">Elamipretide improves aged oocyte quality</p>
+<p class="authors">Aging Cell · 2026-10-02</p>
+<p>线粒体靶向肽 <strong>elamipretide</strong> 增加老龄雌鼠产仔数，改善卵母细胞核与胞质成熟、细胞骨架、线粒体代谢与细胞器分布；多组学提示机制涉及维生素 B6–VEGF 轴。体外处理人类老化卵母细胞，也提高了成熟率、受精率和卵裂率。</p>
+<p>局限：人类数据仅为体外卵母细胞实验、样本有限，没有临床妊娠结局，生殖适应证仍需正式试验。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://doi.org/10.1111/acel.70749">Aging Cell</a></div>
+    </article>
+
+    <article class="item" id="i24">
+      <h3>胞外 cGAMP 在脑内传播衰老炎症，水解酶 ENPP1 是关键刹车</h3>
+<p class="orig">Extracellular cGAMP propagates neuroinflammation in aging brain</p>
+<p class="authors">bioRxiv · 2026-10-02 · 预印本</p>
+<p>老龄与 EAE（多发性硬化模型）小鼠的小胶质细胞胞质 mtDNA 升高，驱动 <strong>cGAMP</strong> 合成并外排；脑内主要的 cGAMP 水解酶 ENPP1 在 EAE 小鼠与 MS 患者中下调。只丧失水解活性的 Enpp1 H362A 小鼠以 STING 依赖方式加重瘫痪，并提前出现运动协调下降等衰老样表型。</p>
+<p>作者提出抑制 cGAS 或增强脑内 ENPP1 可作为干预方向。目前均为小鼠数据，「早衰表型」只是行为学指标；预印本未经同行评审。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://doi.org/10.64898/2026.09.30.754737">bioRxiv</a></div>
+    </article>
+    </section>
+
+    <footer>
+      <p>来源摘自公开报道与 arXiv / 期刊摘要；仅供个人阅读，不构成投资或医疗建议。AI 栏完整版见 <a href="https://jianbao.space/ai/2026-10-05.html">AI 前沿情报日报</a>。</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日简报 · 2026年9月16日</title>
+  <!-- site-meta:start -->
+  <meta name="description" content="周二主线从「放缓叙事」推进到制度协作：OpenAI 确认正与 Anthropic、Google 讨论类 FINRA 的 AI 安全标准机构；产品侧 Google 推出 Gemini 3.8 Live / Extended Thinking…">
+  <link rel="canonical" href="https://jianbao.space/2026/2026-09-16.html">
+  <link rel="alternate" type="application/atom+xml" title="每日简报 · 订阅" href="/feed.xml">
+  <meta property="og:site_name" content="每日简报">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="每日简报 · 2026年9月16日">
+  <meta property="og:description" content="周二主线从「放缓叙事」推进到制度协作：OpenAI 确认正与 Anthropic、Google 讨论类 FINRA 的 AI 安全标准机构；产品侧 Google 推出 Gemini 3.8 Live / Extended Thinking…">
+  <meta property="og:url" content="https://jianbao.space/2026/2026-09-16.html">
+  <meta property="og:image" content="https://jianbao.space/icon-512.png">
+  <meta property="article:published_time" content="2026-09-16T08:00:00+08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="每日简报 · 2026年9月16日">
+  <meta name="twitter:description" content="周二主线从「放缓叙事」推进到制度协作：OpenAI 确认正与 Anthropic、Google 讨论类 FINRA 的 AI 安全标准机构；产品侧 Google 推出 Gemini 3.8 Live / Extended Thinking…">
+  <!-- site-meta:end -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #f3f5f8;
+      --bg-accent: #e8eef6;
+      --paper: #ffffff;
+      --ink: #1a1f2e;
+      --muted: #5a6478;
+      --line: #d8dee9;
+      --line-soft: #e8edf4;
+      --accent: #3b6d9a;
+      --accent-soft: rgba(59, 109, 154, 0.12);
+      --link: #2a5f8f;
+      --link-hover: #1a4068;
+      --nav-bg: rgba(255, 255, 255, 0.86);
+      --chip: #e8eef6;
+      --shadow: 0 1px 2px rgba(26, 31, 46, 0.04), 0 4px 16px rgba(26, 31, 46, 0.04);
+      --radius: 12px;
+      --sans: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB",
+               "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      --serif: "Songti SC", "Noto Serif SC", "Source Han Serif SC",
+               "Noto Serif CJK SC", Georgia, serif;
+      --s1: #3b6d9a;
+      --s2: #2f6b5c;
+      --s3: #4a5f8a;
+      --s4: #5a4a6b;
+    }
+    * { box-sizing: border-box; }
+    html { font-size: 16.5px; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: var(--serif);
+      line-height: 1.7;
+      background:
+        linear-gradient(180deg, var(--bg-accent) 0%, transparent 280px),
+        linear-gradient(90deg, rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        var(--bg);
+      background-size: auto, 28px 28px, 28px 28px, auto;
+      background-attachment: fixed;
+    }
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      isolation: isolate;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .topnav::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(59, 109, 154, 0.18) 20%,
+        rgba(59, 109, 154, 0.52) 50%,
+        rgba(59, 109, 154, 0.18) 80%,
+        transparent 100%
+      );
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .topnav-inner {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.72rem 0;
+      font-family: var(--sans);
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .brand:hover { color: var(--link); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.15rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      transition: color 0.15s ease, background 0.15s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: var(--ink);
+      background: var(--accent-soft);
+    }
+    .wrap {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      padding: 2rem 0 3.5rem;
+    }
+    header.mast {
+      margin-bottom: 1.75rem;
+      padding: 0.4rem 0 1.35rem;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    header.mast::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 4.5rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    h1 {
+      font-family: var(--sans);
+      font-size: clamp(1.75rem, 4vw, 2.15rem);
+      line-height: 1.25;
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    h1 a.home {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 a.home:hover {
+      color: var(--link);
+    }
+    .meta {
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin: 0;
+      max-width: 36em;
+    }
+    .lede {
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.05rem 1.2rem;
+      margin: 0 0 2rem;
+      font-size: 0.98rem;
+      box-shadow: var(--shadow);
+    }
+    section { margin-bottom: 2.4rem; }
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      margin: 0 0 1rem;
+      padding: 0.45rem 0 0.55rem;
+      border-top: none;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 2.75rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    article.item {
+      position: relative;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem 1.15rem;
+      margin: 0 0 0.95rem;
+      box-shadow: var(--shadow);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+      scroll-margin-top: 4.5rem;
+    }
+    article.item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1rem;
+      bottom: 1rem;
+      width: 2px;
+      border-radius: 0 2px 2px 0;
+      background: var(--accent);
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: center;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+    }
+    article.item:hover {
+      border-color: #b8c5d8;
+      box-shadow: 0 2px 4px rgba(26, 31, 46, 0.05), 0 8px 24px rgba(26, 31, 46, 0.07);
+      transform: translateY(-1px);
+    }
+    article.item:hover::before,
+    article.item:focus-within::before {
+      opacity: 0.9;
+      transform: scaleY(1);
+    }
+    article.item:target {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    article.item h3 {
+      font-family: var(--sans);
+      font-size: 1.06rem;
+      line-height: 1.35;
+      margin: 0 0 0.55rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .orig {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: -0.25rem 0 0.55rem;
+      font-family: Georgia, "Iowan Old Style", var(--serif);
+    }
+    .authors {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin: 0 0 0.55rem;
+    }
+    p { margin: 0 0 0.7rem; }
+    p:last-of-type { margin-bottom: 0.85rem; }
+    .src {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.9rem;
+      align-items: baseline;
+      border-top: 1px dashed var(--line);
+      padding-top: 0.65rem;
+    }
+    .src a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      word-break: break-all;
+    }
+    .src a:hover { color: var(--link-hover); }
+    .chip {
+      display: inline-block;
+      background: var(--chip);
+      color: var(--muted);
+      padding: 0.08rem 0.45rem;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      border: 1px solid var(--line-soft);
+    }
+    footer {
+      border-top: 1px solid var(--line-soft);
+      padding-top: 1rem;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .digest-wrap {
+      margin: 0 0 2.1rem;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    table.digest {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: transparent;
+      border: none;
+      font-family: var(--sans);
+      font-size: 0.86rem;
+    }
+    table.digest th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-accent);
+    }
+    table.digest td {
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line-soft);
+      vertical-align: top;
+      line-height: 1.45;
+    }
+    table.digest tr:last-child td { border-bottom: none; }
+    table.digest tbody tr { transition: background 0.15s ease; }
+    table.digest tbody tr:hover { background: var(--accent-soft); }
+    table.digest a { color: inherit; text-decoration: none; }
+    table.digest a:hover { color: var(--link); }
+    table.digest .sec {
+      width: 4.6rem;
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    table.digest .ttl { width: 38%; font-weight: 650; }
+    table.digest .one { color: var(--muted); font-weight: 400; }
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes briefing-fade-rise {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes nav-line-shimmer {
+        0%, 100% { background-position: 0% 50%; opacity: 0.28; }
+        50% { background-position: 100% 50%; opacity: 0.52; }
+      }
+      header.mast {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      .lede {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+      }
+      .digest-wrap {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.14s both;
+      }
+      section {
+        animation: briefing-fade-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      section:nth-of-type(1) { animation-delay: 0.2s; }
+      section:nth-of-type(2) { animation-delay: 0.26s; }
+      section:nth-of-type(3) { animation-delay: 0.32s; }
+      section:nth-of-type(4) { animation-delay: 0.38s; }
+      section:nth-of-type(n + 5) { animation-delay: 0.42s; }
+      .topnav::after {
+        background-size: 200% 100%;
+        animation: nav-line-shimmer 10s ease-in-out infinite;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .topnav::after,
+      header.mast,
+      .lede,
+      .digest-wrap,
+      section {
+        animation: none !important;
+      }
+      article.item {
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      }
+      article.item:hover {
+        transform: none;
+      }
+    }
+    @media (max-width: 720px) {
+      table.digest, table.digest thead, table.digest tbody, table.digest tr, table.digest th, table.digest td {
+        display: block;
+      }
+      table.digest thead { display: none; }
+      table.digest td.sec { padding-bottom: 0; border-bottom: none; }
+      table.digest td.ttl { padding-top: 0.2rem; padding-bottom: 0.15rem; width: auto; border-bottom: none; }
+      table.digest td.one { padding-top: 0; width: auto; }
+    }
+    @media (max-width: 560px) {
+      html { font-size: 16px; }
+      h1 { font-size: 1.7rem; }
+      .topnav-inner { width: calc(100% - 1.5rem); }
+      .wrap { width: calc(100% - 1.5rem); padding: 1.5rem 0 3rem; }
+      .nav-links a { padding: 0.3rem 0.5rem; font-size: 0.8rem; }
+      article.item { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topnav" aria-label="主导航">
+    <div class="topnav-inner">
+      <a class="brand" href="/">每日简报</a>
+      <ul class="nav-links">
+        <li><a href="/">首页</a></li>
+        <li><a href="/2026/2026-09-25.html">最新一期</a></li>
+                <li><a href="/ai/">AI 日报</a></li>
+        <li><a href="/">归档</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <header class="mast">
+      <h1><a class="home" href="/">每日简报</a></h1>
+      <p class="meta">2026年9月16日（周三）· 亚洲/上海</p>
+    </header>
+
+    <p class="lede">周二主线从「放缓叙事」推进到制度协作：OpenAI 确认正与 Anthropic、Google 讨论类 FINRA 的 AI 安全标准机构；产品侧 Google 推出 Gemini 3.8 Live / Extended Thinking，Meta One 订阅正式开卖。出行两条线并行——Waymo 瞄准 2027 东京全无人出租，NHTSA 则逼 Tesla 宣誓说明无方向盘 Cybercab 如何合规。科学上，螺旋自旋液体分数涡旋、涨落机器效率锐界、曲率诱导拓扑声与主动活塞成批出现。抗衰则有 GTEx 组织「建筑学」衰老轴、长读长异构体衰老图谱与 SenSASP 基因库。</p>
+
+    <div class="digest-wrap">
+      <table class="digest">
+        <thead><tr><th class="sec">栏目</th><th class="ttl">条目</th><th class="one">要点</th></tr></thead>
+        <tbody>
+        <tr>
+          <td class="sec"><a href="#i1">AI</a></td>
+          <td class="ttl"><a href="#i1">OpenAI、Anthropic、Google 讨论共建 AI 安全标准机构</a></td>
+          <td class="one"><a href="#i1">参照 FINRA 的行业自监管；回应放缓与安全压力</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i2">AI</a></td>
+          <td class="ttl"><a href="#i2">Google 发布 Gemini 3.8 Live 与 Live Extended Thinking</a></td>
+          <td class="one"><a href="#i2">近实时推理语音智能体；Workspace / Search / API 开推</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i3">AI</a></td>
+          <td class="ttl"><a href="#i3">Plan Injection：往上下文塞「干净计划」可骗过 CoT 监控</a></td>
+          <td class="one"><a href="#i3">监控逃避率约 25–33%；给监控更多信息有时更糟</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i4">AI</a></td>
+          <td class="ttl"><a href="#i4">Bellman Policy Optimization：无 critic 的 RLVR 轨迹目标</a></td>
+          <td class="one"><a href="#i4">由 Policy Mirror Descent 导出；数学推理基准有效</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i5">AI</a></td>
+          <td class="ttl"><a href="#i5">Stellar Colosseum：多代理长程数学与理论 CS 研究 harness</a></td>
+          <td class="one"><a href="#i5">TCS-Bench 71%；配合 Gemini 产出 FOCS/JMLR 开放题结果</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i6">AI</a></td>
+          <td class="ttl"><a href="#i6">Gavel：冻结 LLM 的原生技能路由，无需把技能元数据塞进上下文</a></td>
+          <td class="one"><a href="#i6">两张线性图读出路由信号；零样本打赢外部检索管线</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i7">科学</a></td>
+          <td class="ttl"><a href="#i7">螺旋自旋液体中的分数涡旋：ℤ×ℤ₂ 分类与类 Ising anyon 融合</a></td>
+          <td class="one"><a href="#i7">半涡旋在自旋与动量空间各带分数 2π 缠绕</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i8">科学</a></td>
+          <td class="ttl"><a href="#i8">综述：控制、推断、输运、热力学与机器学习的同一条线</a></td>
+          <td class="one"><a href="#i8">在动力学/统计约束下优化自由能型泛函</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i9">科学</a></td>
+          <td class="ttl"><a href="#i9">涨落机器平均效率的锐界：波动耗散反而抬高均值效率</a></td>
+          <td class="one"><a href="#i9">下界 Jensen；上界间歇可逆律；第三矩可闭合区间</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i10">科学</a></td>
+          <td class="ttl"><a href="#i10">无缺陷紧曲面：曲率 alone 即可诱导 flocking 与拓扑声</a></td>
+          <td class="one"><a href="#i10">环面 Toner–Tu：内外赤道出现 Jackiw–Rebbi 畴壁</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i11">科学</a></td>
+          <td class="ttl"><a href="#i11">主动活塞：仅靠周期压缩、不改体性质即可抽功</a></td>
+          <td class="one"><a href="#i11">自对准活性超阈后压倒机械摩擦；相图有再进入</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i12">科学</a></td>
+          <td class="ttl"><a href="#i12">多体局域化交叉：Fock 空间异质性的统计层与空间模</a></td>
+          <td class="one"><a href="#i12">样本间差异主导；随机与准周期无序空间结构不同</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i13">业界</a></td>
+          <td class="ttl"><a href="#i13">Meta 正式推出 Meta One 订阅：AI 与创作者/商家工具打包</a></td>
+          <td class="one"><a href="#i13">月费 $2.99–$14.99；阶段性已达 1500 万订阅与试用</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i14">业界</a></td>
+          <td class="ttl"><a href="#i14">Waymo 联手 GO、日本交通：瞄准 2027 东京全无人出租车</a></td>
+          <td class="one"><a href="#i14">从小车队扩至约 100 辆；「第一天就是无人公共服务」</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i15">业界</a></td>
+          <td class="ttl"><a href="#i15">NHTSA 发 Special Order：Tesla 须宣誓说明 Cybercab 如何合规</a></td>
+          <td class="one"><a href="#i15">无方向盘/踏板/后视镜却自认证上路；9 月 30 日前答复</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i16">业界</a></td>
+          <td class="ttl"><a href="#i16">Apple 官方：Siri AI beta 随 2027 软件套件开推（续报）</a></td>
+          <td class="one"><a href="#i16">与 Google Gemini 协作的 AFM；欧盟/中国手机端暂缺</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i17">抗衰</a></td>
+          <td class="ttl"><a href="#i17">GTEx 病理切片：人体组织衰老的「建筑学」衰退独立于细胞组成</a></td>
+          <td class="one"><a href="#i17">16 器官、近千人、35 亿+细胞；结构轴 R²≈0.07</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i18">抗衰</a></td>
+          <td class="ttl"><a href="#i18">跨组织长读长异构体图谱：剪接轴独立刻画细胞身份与衰老</a></td>
+          <td class="one"><a href="#i18">26 组织；超三分之一异构体不在现有参考库；解析 p16/p14</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i19">抗衰</a></td>
+          <td class="ttl"><a href="#i19">SenSASP：统一 CellAge / GenAge / SenMayo / Reactome 的衰老与 SASP 基因库</a></td>
+          <td class="one"><a href="#i19">1460→1250 唯一基因；补跨种保守、组织表达与 PPI</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i20">抗衰</a></td>
+          <td class="ttl"><a href="#i20">Tamoxifen 短期打乱动情周期，但不改长期卵巢衰老转录轨迹</a></td>
+          <td class="one"><a href="#i20">为 tamoxifen-Cre 卵巢衰老模型提供方法学背书</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section>
+      <h2>一、AI 与大模型</h2>
+    <article class="item" id="i1">
+      <h3>OpenAI、Anthropic、Google 讨论共建 AI 安全标准机构</h3>
+<p>OpenAI 发言人向 CNBC 确认：公司正与 Anthropic、Google 等讨论如何协作应对安全关切。讨论自 DeepMind 主席 Demis Hassabis 今年 7 月提出美方主导「Standards Body」、类比 FINRA 的公私合营/自监管方案后持续推进。</p>
+<p>背景是近几周安全压力骤升：Anthropic CEO Dario Amodei 呼吁放缓前沿模型迭代，Hassabis 与 Sam Altman 均表认同；Altman 称放缓是 OpenAI 近几周的「primary topic」。OpenAI 全球事务官 Chris Lehane 此前亦写过行业主导标准「有或没有政府支持都要推进」。</p>
+      <div class="src"><span class="chip">2026-09-15</span> <a href="https://www.cnbc.com/2026/09/15/open-ai-google-anthropic-safety.html">CNBC</a> <a href="https://www.bloomberg.com/news/articles/2026-09-15/openai-says-it-s-working-with-anthropic-google-on-ai-safety">Bloomberg</a></div>
+    </article>
+    <article class="item" id="i2">
+      <h3>Google 发布 Gemini 3.8 Live 与 Live Extended Thinking</h3>
+<p>Google 推出两款面向实时对话的 Gemini 模型：3.8 Live（规模与成本优先，含视觉 grounding）与 3.8 Live Extended Thinking（高复杂度多步推理）。官方称 Extended Thinking 在 Artificial Analysis Speech to Speech Quality Index 拿下 82.6 的总分第一，τ-Voice 智能体任务完成率 68.6%，Big Bench Audio 97.7%。</p>
+<p>能力上强调打断、97 种语言中途切换、后台工具调用与边说边推理。开发者侧经 Gemini API / AI Studio 可用；企业侧 Gemini Enterprise 私有预览；面向用户则进入 Search Live、Gemini Live，以及订阅用户在 Docs / Gmail / Keep 的 Live 体验。音频输出带 SynthID 水印。</p>
+      <div class="src"><span class="chip">2026-09-15</span> <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/">Google Blog</a></div>
+    </article>
+    <article class="item" id="i3">
+      <h3>Plan Injection：往上下文塞「干净计划」可骗过 CoT 监控</h3>
+      <p class="orig">Corrupt Plans, Clean Traces: Evading Chain-of-Thought Monitoring with Plan Injection</p>
+      <p class="authors">Keertana Chidambaram, Andrew Ilyas, Vasilis Syrgkanis</p>
+<p>arXiv:2609.15989 发现：在 actor 上下文中植入听起来无害、实则有害的推理「计划」（plan injection），可诱导模型执行对抗行为并逃过另一模型对思维链的安全监控。攻击在 Lanham 等人的多选题可监控设定中发现，并推广到更难基准与 DeepSeek-R1 等更大模型。</p>
+<p>作者报告不同可监控基准上逃避率约 25–33%；actor 常把注入计划改写成「自己的」推理。更反直觉的是：给监控看注入计划，在 Bio-Math 任务上检出率可再降约 50%；增加监控思考 token 时，有时是在合理化注入计划而非打旗。</p>
+      <div class="src"><span class="chip">arXiv · 2026-09-14</span> <a href="https://arxiv.org/abs/2609.15989">arXiv</a></div>
+    </article>
+    <article class="item" id="i4">
+      <h3>Bellman Policy Optimization：无 critic 的 RLVR 轨迹目标</h3>
+      <p class="orig">Bellman Policy Optimization</p>
+      <p class="authors">Zhuoqing Song, Haotian Xu, Xikun Zhang, Lidong Bing</p>
+<p>arXiv:2609.15987 提出 Bellman Policy Optimization（BPO）：面向可验证奖励强化学习（RLVR）。对自回归生成与终端奖励，BPO 用 Bellman 方程把 Policy Mirror Descent 改写成轨迹级目标，从而避免估计中间状态价值，并证明与原 PMD 目标有相同唯一最优解。</p>
+<p>实用损失用互补 token 概率的平滑比对作 mismatch-correction 权重。作者在数学推理基准上展示有效性，定位为 critic-free 的后训练方法。</p>
+      <div class="src"><span class="chip">arXiv · 2026-09-14</span> <a href="https://arxiv.org/abs/2609.15987">arXiv</a></div>
+    </article>
+    <article class="item" id="i5">
+      <h3>Stellar Colosseum：多代理长程数学与理论 CS 研究 harness</h3>
+      <p class="orig">Stellar Colosseum: A Many-Agent Harness for Long-Horizon Research in Mathematics and Theoretical Computer Science</p>
+      <p class="authors">Honghao Lin, David P. Woodruff, Yuan Deng, Jieming Mao, Song Zuo, Vahab Mirrokni</p>
+<p>arXiv:2609.15983 介绍 model-agnostic 的 Stellar Colosseum：在证明构造前探索替代策略，用 readiness gate 决定何时分解，把证明计划写成相互依赖的 section 子问题，并把验证器反馈路由回受影响部分；并行生成候选、定向证伪，再经重叠随机样本树聚合。</p>
+<p>与 Gemini 3.1 Pro 配合时，作者称在 FOCS、JMLR 等顶会相关开放问题上得到新结果；在取自 FOCS/STOC/SODA 论文的 TCS-Bench 上达 71.0%（搭配 Gemini 3.7 Flash）。单独 Codeforces 评测中，带执行反馈的证明导向流水线解出 222 题中的 218 题。工作流亦接入 Google Antigravity Teamwork 的 Long Proof 模式。</p>
+      <div class="src"><span class="chip">arXiv · 2026-09-14</span> <a href="https://arxiv.org/abs/2609.15983">arXiv</a></div>
+    </article>
+    <article class="item" id="i6">
+      <h3>Gavel：冻结 LLM 的原生技能路由，无需把技能元数据塞进上下文</h3>
+      <p class="orig">The Router Within: Eliciting Native Skill Routing from a Frozen LLM</p>
+      <p class="authors">Ruishuo Chen, Xun Wang, Yu Chen, Zhuoran Li, Longbo Huang</p>
+<p>arXiv:2609.15982 指出：部署中的 skill harness 常把全部技能元数据预载进上下文，既分散注意力又限制库规模；检索管线又把选择移出模型能力范围。作者提出 Gavel（Glance And Verdict）：冻结 agent LLM 本身的前向过程已携带路由信号，两张线性映射即可读出，上下文里不放技能文本。</p>
+<p>Glance 用任务与各技能中层状态打分全库；Verdict 对短名单续跑并读似然与 yes/no，再与 Glance 做 product-of-experts。在 Qwen3-32B 上，相对渐进披露与外加 1.2B–16B 参数的 retrieve-and-rerank，书面任务最高提升约 13.4 分，rollout 中途需要技能时最高约 21.9 分。</p>
+      <div class="src"><span class="chip">arXiv · 2026-09-14</span> <a href="https://arxiv.org/abs/2609.15982">arXiv</a></div>
+    </article>
+    </section>
+    <section>
+      <h2>二、科学 · 物理 · 复杂性</h2>
+    <article class="item" id="i7">
+      <h3>螺旋自旋液体中的分数涡旋：ℤ×ℤ₂ 分类与类 Ising anyon 融合</h3>
+      <p class="orig">Fractional vortices in a spin-isotropic spiral spin liquid</p>
+      <p class="authors">Cecilie Glittum, Han Yan, Johannes Reuther</p>
+<p>arXiv:2609.15941 研究自旋各向同性 Heisenberg 螺旋自旋液体的经典拓扑缺陷。作者发现一类丰富的涡旋：自旋方向、螺旋面法向与波矢取向协同缠绕，得到 ℤ×ℤ₂ 分类；基本缺陷是半涡旋，在自旋与动量空间都带分数 2π 缠绕，融合规则类似 Ising anyon。</p>
+<p>大方格螺旋自旋液体经典模拟显示：这些涡旋在螺旋自旋液体相中密集存在，并在 order-by-disorder 相变以下紧密束缚，最终融合成真空。</p>
+      <div class="src"><span class="chip">arXiv · 2026-09-14</span> <a href="https://arxiv.org/abs/2609.15941">arXiv</a></div>
+    </article>
+    <article class="item" id="i8">
+      <h3>综述：控制、推断、输运、热力学与机器学习的同一条线</h3>
+      <p class="orig">Bridging Control, Inference, Transport, and Thermodynamics: From Theory to Applications in Learning</p>
+      <p class="authors">Emmy Blumenthal, Nikolas Claussen, Benjamin Eysenbach, Catherine Ji, Gautam Reddy, Colin Scheibner, Benjamin Sorkin</p>
+<p>arXiv:2609.15897 是一篇面向跨领域读者的长综述（五章、约 62 页），把控制理论、最优输运、概率推断、非平衡热力学与机器学习串成一条概念线：共同主题是在动力学或统计约束下优化自由能型泛函。</p>
+<p>作者从物理原理出发，再落到强化学习、变分推断与生成建模等应用，刻意用统一语言重述常被分头表述的想法。</p>
+      <div class="src"><span class="chip">arXiv · 2026-09-14</span> <a href="https://arxiv.org/abs/2609.15897">arXiv</a></div>
+    </article>
+    <article class="item" id="i9">
+      <h3>涨落机器平均效率的锐界：波动耗散反而抬高均值效率</h3>
+      <p class="orig">Sharp Bounds on the Mean Efficiency of a Fluctuating Machine</p>
+      <p class="authors">Badr Farih</p>
+<p>arXiv:2609.15443 用焓商式效率 η=W/(W+T₀S) 替代传统 −W/Q_h（后者因分母可过零而无矩），在非负耗散下 η 点态落在 [0,1]。仅凭能量预算，作者给出均值效率的锐上下界：下界即 Jensen——耗散波动总会把均值效率抬到确定性值之上；上界由间歇可逆律达到（一部分实现零耗散）。</p>
+<p>引入第三矩可完全闭合区间；若有用功也波动，则对 T₀S/W 取矩；再结合热力学不确定关系，可把上界转成「输出越稳、效率天花板越低」的精度–效率前沿。</p>
+      <div class="src"><span class="chip">arXiv · 2026-09-14</span> <a href="https://arxiv.org/abs/2609.15443">arXiv</a></div>
+    </article>
+    <article class="item" id="i10">
+      <h3>无缺陷紧曲面：曲率 alone 即可诱导 flocking 与拓扑声</h3>
+      <p class="orig">Geometry-induced flocking and topological sound on a defect-free curved surface</p>
+      <p class="authors">Devendra Saini, Atanu Bhatta, Pritha Dolai</p>
+<p>arXiv:2609.15402 在环面上研究有序极性主动 flock，表明拓扑声可在无拓扑缺陷、无物理边界的紧曲面上存活。协变 Toner–Tu 导出有效非厄米 Dirac 算符；曲率诱导质量在外/内赤道变号，形成两条 Jackiw–Rebbi 畴壁，分别承载密度模与 Goldstone 模。</p>
+<p>体带带相反半整数陈数，局域模由一维 Callias 指标保护，指标和服从紧曲面 Poincaré–Hopf。结论：曲率本身足以产生并保护主动物质中的拓扑声。</p>
+      <div class="src"><span class="chip">arXiv · 2026-09-14</span> <a href="https://arxiv.org/abs/2609.15402">arXiv</a></div>
+    </article>
+    <article class="item" id="i11">
+      <h3>主动活塞：仅靠周期压缩、不改体性质即可抽功</h3>
+      <p class="orig">Active pistons extract work by periodic compression alone</p>
+      <p class="authors">Paul Bernard, Euijoon Kwon, Benjamin Buhl, Étienne Fodor, Olivier Dauchot</p>
+<p>arXiv:2609.15380 提出一类主动活塞：只做周期压缩、不改变系统任何体性质，就能抽取功——前提是外加扰动必须与活性组分内部自由度耦合。作者用自对准可动粒子弹性网络演示：慢协议下，内部活性超过由涨落控制的阈值后，自对准总是压过机械摩擦。</p>
+<p>关键响应系数划分抽功区间；对应相图对噪声振幅呈主曲线并再进入。工作给出远离平衡「发明协议」以规避平衡热力学约束的一条设计原则。</p>
+      <div class="src"><span class="chip">arXiv · 2026-09-14</span> <a href="https://arxiv.org/abs/2609.15380">arXiv</a></div>
+    </article>
+    <article class="item" id="i12">
+      <h3>多体局域化交叉：Fock 空间异质性的统计层与空间模</h3>
+      <p class="orig">Statistical levels and spatial modes of Fock-space heterogeneity in many-body localization crossovers</p>
+      <p class="authors">Yu-Jing Liu, Chen Cheng</p>
+<p>arXiv:2609.15323 指出 MBL 交叉附近局域记忆在本征态与样本间强烈涨落，但观测到的异质性混杂了不同统计层。作者用组态空间距离分布做方差分解，拆开本征态内、同一样本本征态间、样本间贡献。</p>
+<p>在同边际的随机余弦与准周期余弦 Ising 系综、精确对角化尺度下：最清晰差异出现在样本间；空间协方差显示随机外涨落有更强均匀分量，准周期相涨落则更多落在有限波数并在控制距离中心的空间平均中部分抵消。</p>
+      <div class="src"><span class="chip">arXiv · 2026-09-14</span> <a href="https://arxiv.org/abs/2609.15323">arXiv</a></div>
+    </article>
+    </section>
+    <section>
+      <h2>三、互联网产品与科技业界</h2>
+    <article class="item" id="i13">
+      <h3>Meta 正式推出 Meta One 订阅：AI 与创作者/商家工具打包</h3>
+<p>Reuters 报道：Meta 宣布推出跨 Instagram、Facebook、WhatsApp 的「Meta One」订阅，强化 AI 能力并提供内容创作、受众互动与商家管理等逾 50 项功能。阶段性导入期间已累计约 1500 万订阅与试用。</p>
+<p>定价：单品月费 $2.99，个人 bundle $7.99，创作者/商家 bundle $14.99。核心应用功能与基础 Meta AI 仍免费；公司称将扩展到 Edits 与 AI 眼镜。意图是在广告之外从庞大用户池（年初家庭应用日活约 36 亿）再挖收入。</p>
+      <div class="src"><span class="chip">2026-09-15</span> <a href="https://www.reuters.com/business/meta-launches-subscriptions-with-enhanced-ai-features-2026-09-15/">Reuters</a></div>
+    </article>
+    <article class="item" id="i14">
+      <h3>Waymo 联手 GO、日本交通：瞄准 2027 东京全无人出租车</h3>
+<p>Alphabet 旗下 Waymo 与日本打车应用 GO、出租车公司日本交通（Nihon Kotsu）联合宣布：目标在 2027 年于东京推出日本首个全自动驾驶商用出租车服务。计划从小规模车队起步，再扩展到东京主要街区约 100 辆，仍取决于监管批准与运营验证。</p>
+<p>Waymo 联席 CEO Tekedra Mawakana 称「从第一天起就是面向公众的无人服务」。服务将同时接入 GO 与 Waymo 应用。Waymo 2025 年起已在东京用有人驾驶 Jaguar I-PACE 采数，这是其在美国以外的首个公开道路作业。</p>
+      <div class="src"><span class="chip">2026-09-15</span> <a href="https://www.reuters.com/world/asia-pacific/waymo-japanese-partners-target-driverless-taxi-service-tokyo-2027-2026-09-15/">Reuters</a></div>
+    </article>
+    <article class="item" id="i15">
+      <h3>NHTSA 发 Special Order：Tesla 须宣誓说明 Cybercab 如何合规</h3>
+<p>据 Electrek / CNA：美国公路交通安全管理局（NHTSA）就 Tesla 无方向盘、无踏板、无后视镜的 Cybercab 发出正式 Special Order，要求公司宣誓说明如何满足为人类驾驶员写就的联邦机动车安全标准（FMVSS），并追问临时安装的人工驾驶控件是否构成认证依据。答复截止 2026-09-30，拒答或不实最高罚款量级可达约 1.39 亿美元。</p>
+<p>背景：Tesla 称 9 月 3 日已在奥斯汀开始商用收费服务并自认证合规；对比之下，Amazon Zoox 走 Part 555 豁免路线（含刹车与后视镜等标准），年产量上限 2500、豁免至 2028。NHTSA 此前已开审计查询 AQ 26002，Special Order 是升级。</p>
+      <div class="src"><span class="chip">2026-09-15</span> <a href="https://electrek.co/2026/09/15/nhtsa-tesla-cybercab-special-order-fmvss-certification/">Electrek</a> <a href="https://www.channelnewsasia.com/business/us-agency-orders-tesla-answer-questions-cybercab-certification-6386996">CNA</a></div>
+    </article>
+    <article class="item" id="i16">
+      <h3>Apple 官方：Siri AI beta 随 2027 软件套件开推（续报）</h3>
+<p>Apple Newsroom（9 月 14 日）确认下一代 Apple Intelligence 与全面重做的 Siri AI 开始以英文 beta 推出，覆盖 iOS/iPadOS/macOS/watchOS/visionOS 27；下月扩展法/日/韩/葡/西。模型为与 Google Gemini 协作定制的 Apple Foundation Models，端侧 + Private Cloud Compute；强调个人上下文、屏幕感知与系统级 App 动作。</p>
+<p>昨日早报已点到发布本身；今日补官方细节：欧盟 iPhone/iPad/Watch 初期不可用（称在找兼顾隐私安全的路径），中国亦因监管暂缓；部分云端功能有日用量上限，未来扩容可能收费。昨日「放缓叙事」之外，这是消费端助手能力大战的另一条主线。</p>
+      <div class="src"><span class="chip">2026-09-14</span> <a href="https://www.apple.com/newsroom/2026/09/siri-ai-a-profoundly-more-capable-and-personal-assistant-is-here/">Apple Newsroom</a></div>
+    </article>
+    </section>
+    <section>
+      <h2>四、抗衰与长寿新论文</h2>
+    <article class="item" id="i17">
+      <h3>GTEx 病理切片：人体组织衰老的「建筑学」衰退独立于细胞组成</h3>
+      <p class="orig">A single-cell view of human tissue aging reveals architectural decline beyond cellular composition</p>
+      <p class="authors">Ernesto Abila, Yimin Zheng, Zsuzsanna et al.</p>
+<p>bioRxiv 2026.09.06.749715（9 月 13 日贴出）把 GTEx 组织病理档案当成人群尺度、覆盖成人寿命的空间生物学资源，在近千人的 16 个器官中检出逾 35 亿个单细胞。细胞密度普遍但器官特异地下降；视觉–语言表型把上皮分成 9 亚型，轨迹分异明显（卵巢颗粒细胞约每十年丢失 ~45%）。</p>
+<p>在空间细胞图上做群落检测得到功能组织单元，超过四分之一随年龄沿共享轨迹重塑：从致密、特化单元走向更稀疏、基质与免疫富集的结构。关键结论：这种建筑学重塑与细胞组成大体脱耦（R²=0.07）——人体组织沿「丢细胞」与「改结构」两条部分独立的轴衰老，结构衰退超出组成所能解释的部分。</p>
+      <div class="src"><span class="chip">bioRxiv · 2026-09-13</span> <a href="https://www.biorxiv.org/content/10.64898/2026.09.06.749715v1">bioRxiv</a></div>
+    </article>
+    <article class="item" id="i18">
+      <h3>跨组织长读长异构体图谱：剪接轴独立刻画细胞身份与衰老</h3>
+      <p class="orig">Single-cell splice isoform usage reveals distinct axes of cellular identity and senescence</p>
+      <p class="authors">Madhav Mantri, Angela M. Detweiler, Jaeyoon Lee, et al. (Tabula Sapiens Consortium), Stephen R. Quake</p>
+<p>bioRxiv 2026.09.11.748700（9 月 14 日）：Madhav Mantri、Stephen Quake 等构建覆盖 26 个人体组织的单细胞长读长异构体图谱（约 20.3 万细胞、144 细胞类型、85.4 万稳健转录本结构），其中 37.6% 为新结构且跨样本可复现。</p>
+<p>作者表明异构体使用是独立于基因表达的结构化细胞身份轴。应用到细胞衰老时，可在单细胞分辨率拆开 CDKN2A 位点的 p16<sup>INK4a</sup> 与 p14<sup>ARF</sup>，并发现与 p16 衰老程序相关的细胞类型依赖异构体重塑——给 senotherapy 与衰老标志物提供「基因水平不够、要看 isoform」的证据。</p>
+      <div class="src"><span class="chip">bioRxiv · 2026-09-14</span> <a href="https://www.biorxiv.org/content/10.64898/2026.09.11.748700v1">bioRxiv</a></div>
+    </article>
+    <article class="item" id="i19">
+      <h3>SenSASP：统一 CellAge / GenAge / SenMayo / Reactome 的衰老与 SASP 基因库</h3>
+      <p class="orig">SenSASP: A Unified, Multi-Layer Database of Senescence and SASP Genes</p>
+<p>bioRxiv 2026.08.26.747427v2（9 月 11 日更新）把 CellAge、GenAge、SenMayo 与 Reactome Cellular Senescence 四套常用资源统一到 Ensembl gene ID，去掉 14.4% 冗余（1460 条归并为 1250 唯一基因），并补上原资源都没有的三层注释：跨种保守、组织/细胞类型表达、高置信 PPI（三层同时覆盖约 89.4% 基因）。</p>
+<p>173 个基因被两套及以上资源共同支持，IL6 与 JUN 被四套全覆盖。作者提供基因优先级分数与组织表达图谱，库开放于 xuan13hao.github.io/sensasp/——做 senotherapy 靶点筛选时少踩「标识符对不齐」的坑。</p>
+      <div class="src"><span class="chip">bioRxiv · 2026-09-11</span> <a href="https://www.biorxiv.org/content/10.64898/2026.08.26.747427v2">bioRxiv</a> <a href="https://xuan13hao.github.io/sensasp/">SenSASP site</a></div>
+    </article>
+    <article class="item" id="i20">
+      <h3>Tamoxifen 短期打乱动情周期，但不改长期卵巢衰老转录轨迹</h3>
+      <p class="orig">Tamoxifen transiently disrupts estrous cyclicity without altering long-term ovarian aging trajectories</p>
+<p>bioRxiv 2026.09.03.749251：Tamoxifen 诱导 Cre 在卵巢研究中常用，但 tamoxifen 本身是 SERM，可能混淆衰老表型。作者在 3 月龄雌鼠给 tamoxifen 或溶媒，纵向监测动情周期，并在 6 月与 12 月做卵巢 bulk RNA-seq。</p>
+<p>结果：给药后短期内周期紊乱，约 3 个月后恢复；年轻与衰老时点上 tamoxifen 与溶媒组转录差异极小，而衰老相关程序（ECM 重塑、衰老、稳态等）在两种处理间保守。结论支持：短期生理扰动≠长期衰老轨迹改变，tamoxifen-Cre 仍可用于生殖衰老研究。</p>
+      <div class="src"><span class="chip">bioRxiv · 近期</span> <a href="https://www.biorxiv.org/content/10.64898/2026.09.03.749251v1">bioRxiv</a></div>
+    </article>
+    </section>
+
+    <footer>
+      <p>工作日资讯早报 · 仅收录已打开或检索到的公开来源 · 宁缺毋滥</p>
+    </footer>
+  </div>
+</body>
+</html>

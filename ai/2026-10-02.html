@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 前沿情报日报｜2026-10-02</title>
+  <!-- site-meta:start -->
+  <meta name="description" content="1. OpenAI 把「对抗蒸馏」（adversarial distillation）推到公开安全叙事中心：称已打断一场以提取受保护推理轨迹为目标的协同行动，并将核心集群归因于与月之暗面（Moonshot AI / Kimi）相关的人员；…">
+  <link rel="canonical" href="https://jianbao.space/ai/2026-10-02.html">
+  <link rel="alternate" type="application/atom+xml" title="每日简报 · 订阅" href="/feed.xml">
+  <meta property="og:site_name" content="每日简报">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI 前沿情报日报｜2026-10-02">
+  <meta property="og:description" content="1. OpenAI 把「对抗蒸馏」（adversarial distillation）推到公开安全叙事中心：称已打断一场以提取受保护推理轨迹为目标的协同行动，并将核心集群归因于与月之暗面（Moonshot AI / Kimi）相关的人员；…">
+  <meta property="og:url" content="https://jianbao.space/ai/2026-10-02.html">
+  <meta property="og:image" content="https://jianbao.space/icon-512.png">
+  <meta property="article:published_time" content="2026-10-02T08:00:00+08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AI 前沿情报日报｜2026-10-02">
+  <meta name="twitter:description" content="1. OpenAI 把「对抗蒸馏」（adversarial distillation）推到公开安全叙事中心：称已打断一场以提取受保护推理轨迹为目标的协同行动，并将核心集群归因于与月之暗面（Moonshot AI / Kimi）相关的人员；…">
+  <!-- site-meta:end -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+
+    :root {
+      --bg: #f3f5f8;
+      --bg-accent: #e8eef6;
+      --paper: #ffffff;
+      --ink: #1a1f2e;
+      --muted: #5a6478;
+      --line: #d8dee9;
+      --line-soft: #e8edf4;
+      --accent: #3b6d9a;
+      --accent-soft: rgba(59, 109, 154, 0.12);
+      --link: #2a5f8f;
+      --link-hover: #1a4068;
+      --nav-bg: rgba(255, 255, 255, 0.86);
+      --shadow: 0 1px 2px rgba(26, 31, 46, 0.04), 0 4px 16px rgba(26, 31, 46, 0.04);
+      --radius: 12px;
+      --sans: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB",
+               "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      --serif: "Songti SC", "Noto Serif SC", "Source Han Serif SC",
+               "Noto Serif CJK SC", Georgia, serif;
+    }
+    * { box-sizing: border-box; }
+    html { font-size: 16.5px; scroll-behavior: smooth; }
+    body {
+      margin: 0; min-height: 100vh; color: var(--ink); font-family: var(--serif);
+      line-height: 1.75;
+      background:
+        linear-gradient(180deg, var(--bg-accent) 0%, transparent 280px),
+        linear-gradient(90deg, rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        var(--bg);
+      background-size: auto, 28px 28px, 28px 28px, auto;
+      background-attachment: fixed;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { color: var(--link-hover); text-decoration: underline; }
+    .topnav {
+      position: sticky; top: 0; z-index: 40;
+      backdrop-filter: saturate(1.2) blur(10px);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .topnav-inner {
+      width: min(860px, calc(100% - 3rem)); margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; min-height: 3.1rem; font-family: var(--sans);
+    }
+    .brand { font-weight: 650; color: var(--ink); letter-spacing: 0.02em; text-decoration: none; }
+    .brand:hover { color: var(--accent); text-decoration: none; }
+    .nav-links { display: flex; gap: 0.15rem; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
+    .nav-links a {
+      display: inline-block; padding: 0.35rem 0.65rem; border-radius: 999px;
+      color: var(--muted); font-size: 0.88rem; text-decoration: none;
+    }
+    .nav-links a:hover { color: var(--ink); background: var(--accent-soft); text-decoration: none; }
+    .nav-links a[aria-current="page"] { color: var(--accent); background: var(--accent-soft); font-weight: 600; }
+    .wrap { width: min(860px, calc(100% - 3rem)); margin: 0 auto; padding: 1.75rem 0 3.5rem; }
+    .mast { margin: 0.5rem 0 1.5rem; }
+    .mast h1 { margin: 0; font-size: 1.85rem; letter-spacing: 0.02em; font-family: var(--sans); }
+    .mast .meta { margin: 0.45rem 0 0; color: var(--muted); font-size: 0.92rem; font-family: var(--sans); }
+    .lede {
+      background: var(--paper); border: 1px solid var(--line-soft); border-radius: var(--radius);
+      box-shadow: var(--shadow); padding: 1.1rem 1.25rem; margin: 0 0 1.5rem;
+    }
+    .lede p { margin: 0; }
+    h2 {
+      margin: 2rem 0 0.85rem; font-size: 1.15rem; font-family: var(--sans);
+      letter-spacing: 0.04em; color: var(--accent);
+      border-bottom: 1px solid var(--line-soft); padding-bottom: 0.4rem;
+    }
+    .card {
+      background: var(--paper); border: 1px solid var(--line-soft); border-radius: var(--radius);
+      box-shadow: var(--shadow); padding: 1.15rem 1.25rem; margin: 0 0 1rem;
+      position: relative; overflow: hidden;
+    }
+    .card::before {
+      content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+      background: var(--accent); opacity: 0.55;
+    }
+    .card h3 { margin: 0 0 0.75rem; font-size: 1.05rem; font-family: var(--sans); line-height: 1.45; }
+    .badge {
+      display: inline-block; margin-left: 0.35rem; padding: 0.1rem 0.45rem;
+      border-radius: 999px; font-size: 0.72rem; font-weight: 600; font-family: var(--sans);
+      background: var(--accent-soft); color: var(--accent); vertical-align: middle;
+    }
+    .field { margin: 0.55rem 0; }
+    .field .lab {
+      display: block; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: none;
+      color: var(--muted); font-family: var(--sans); margin-bottom: 0.15rem;
+    }
+    .field p { margin: 0; }
+    ul { margin: 0.4rem 0 0.4rem 1.2rem; padding: 0; }
+    li { margin: 0.25rem 0; }
+    .site-footer {
+      margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--line-soft);
+      color: var(--muted); font-size: 0.85rem; font-family: var(--sans);
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .mast, .lede, .card { animation: rise 0.55s ease both; }
+      .card:nth-of-type(2) { animation-delay: 0.04s; }
+      .card:nth-of-type(3) { animation-delay: 0.08s; }
+      @keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+    }
+
+    .toc {
+      background: var(--paper); border: 1px solid var(--line-soft); border-radius: var(--radius);
+      box-shadow: var(--shadow); padding: 0.95rem 1.15rem; margin: 0 0 1.5rem;
+      font-family: var(--sans);
+    }
+    .toc-label {
+      margin: 0 0 0.55rem; font-size: 0.78rem; letter-spacing: 0.08em;
+      color: var(--muted); font-weight: 600;
+    }
+    .toc > ol {
+      margin: 0; padding: 0 0 0 1.15rem; list-style: decimal;
+    }
+    .toc > ol > li {
+      margin: 0.45rem 0; font-size: 0.95rem; line-height: 1.45; font-weight: 600;
+      color: var(--ink);
+    }
+    .toc > ol > li > a { color: var(--ink); text-decoration: none; }
+    .toc > ol > li > a:hover { color: var(--accent); text-decoration: underline; }
+    .toc ol ol {
+      margin: 0.35rem 0 0.15rem; padding: 0 0 0 1.05rem;
+      list-style: disc; font-weight: 400;
+    }
+    .toc ol ol li {
+      margin: 0.22rem 0; font-size: 0.86rem; line-height: 1.4; font-weight: 400;
+      color: var(--muted);
+    }
+    .toc ol ol a { color: var(--muted); text-decoration: none; }
+    .toc ol ol a:hover { color: var(--accent); text-decoration: underline; }
+    h2[id], .card[id] { scroll-margin-top: 4.2rem; }
+    @media (max-width: 640px) {
+      .topnav-inner { width: calc(100% - 1.5rem); }
+      .wrap { width: calc(100% - 1.5rem); }
+      .mast h1 { font-size: 1.5rem; }
+      .nav-links a { padding: 0.3rem 0.5rem; font-size: 0.8rem; }
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="topnav" aria-label="主导航">
+    <div class="topnav-inner">
+      <a class="brand" href="/">每日简报</a>
+      <ul class="nav-links">
+        <li><a href="/">首页</a></li>
+        <li><a href="/2026/2026-10-01.html">最新一期</a></li>
+        <li><a href="/ai/" aria-current="page">AI 日报</a></li>
+        <li><a href="/">归档</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="wrap">
+    <header class="mast">
+      <h1>AI 前沿情报日报｜2026-10-02</h1>
+      <p class="meta">2026年10月2日（周五）· 亚洲/上海 · 截至：2026-10-02 07:43（Asia/Shanghai）｜窗口：自上次成功日报 2026-10-01 07:44 以来约 24h｜访问限制：WSJ / The Information / NYT / Bloomberg / Washington Post 部分正文需订阅；OpenAI 蒸馏披露正文经官网可核对；研究者 Azure 复测以 THE DECODER 转述与 arXiv 论文为准；Artificial Analysis 指数以媒体对其公开分数的转述为主；未穷尽全网。</p>
+    </header>
+<nav class="toc" aria-label="本页摘要目录">
+  <div class="toc-label">本页目录</div>
+  <ol><li><a href="#sec-1">今日核心判断</a></li><li><a href="#sec-2">重点消息</a><ol><li><a href="#story-1">OpenAI 披露打断「对抗蒸馏」协同行动；核心集群归因 Moonsh…</a></li><li><a href="#story-2">研究者：第一方已挡、Azure 上同类推理提取仍可复现数周【原创媒体报…</a></li><li><a href="#story-3">Artificial Analysis：Gemini 4 Argon …</a></li></ol></li><li><a href="#sec-3">早期信号</a><ol><li><a href="#story-4">Anthropic 研究频道：BootLoops 与「Claude-s…</a></li></ol></li><li><a href="#sec-4">更新与纠错</a></li><li><a href="#sec-5">实务观察</a></li></ol>
+</nav>
+<h2 id="sec-1">今日核心判断</h2>
+<div class="lede"><p>1. OpenAI 把「对抗蒸馏」（adversarial distillation）推到公开安全叙事中心：称已打断一场以提取受保护推理轨迹为目标的协同行动，并将核心集群归因于与月之暗面（Moonshot AI / Kimi）相关的人员；同时强调此手法不独属于自家模型，已通过 Frontier Model Forum 与政府渠道共享。<br>2. 同一披露窗口内，独立研究者指出：第一方 API 打补丁之后，Azure 等伙伴云上同类提取仍可复现数周——「同模型、不同托管面、不同防护」成为比单次封号更硬的产业问题。<br>3. Gemini 4 Argon 侧出现第三方指数对照：Artificial Analysis 称其 Intelligence Index 与 GPT-6 Astra 并列 53、幻觉率显著更低、任务成本在介绍价下更低；公开 API 仍未放开，与昨日 Fairwind 有限放行叙事一致。</p></div>
+<h2 id="sec-2">重点消息</h2>
+<article class="card" id="story-1">
+  <h3>OpenAI 披露打断「对抗蒸馏」协同行动；核心集群归因 Moonshot 相关人员【公开材料可核对】<span class="badge">原创媒体报道</span></h3>
+  <div class="field"><span class="lab">事实</span><ul><li>OpenAI 安全博客（页面日期 2026-09-30；CNBC 等美东晚间发稿、进入本窗口）称：最早自 7 月第一周观察到协同活动，目标是提取模型的 protected reasoning（内部解题记录，通常不向用户展示明文）。7 月 24–25 日出现高峰：逾 4,000 用户、约 16,000 次带相关提取模式的请求；进一步调查将相关提示模式活动关联到逾 15,000 用户的集群，并称于 7 月 28 日完全打断。脚注明确：数字为尝试次数，不必然等于成功提取量。</li><li>手法定性为 adversarial distillation：系统化、未经授权地使用他方模型输出或推理，以训练/复现/改进另一模型。官方称攻击者未破解加密、未入侵数据库、未直接读取存储的用户对话，而是操纵多轮交互，使受保护推理以请求方可读的形式被复现，并违反服务条款。</li><li>归因：OpenAI 写明「不清楚观察期内全部操作者是否来自单一主体」，但将「核心集群」归因于与 Moonshot AI（Kimi 开发方）相关的个人。已封禁/限制欺诈账户、强化注册与基础设施控制、加强跨用户/工作区/组织/模型族的隐藏推理防护，并关闭「已持有他人加密推理即可回放并恢复内容」的路径，同时对可能暴露推理的流式输出增加检测与拦截。相关发现经 Frontier Model Forum 与政府信息共享渠道通报。Moonshot 对 CNBC 请求评论未立即回应。</li><li>背景对照：数周前 Anthropic 曾指控包括 Moonshot、阿里等在内的中国开发者秘密利用 Claude 辅助自研（媒体转述含请求中继与 CoT 训练等指控）；本日为 OpenAI 侧的公开对位材料，二者不可互相「独立证实」对方全部指控细节。</li></ul></div>
+  <div class="field"><span class="lab">来源与证据</span><ul><li>OpenAI 官方：<a href="https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/" rel="noopener">https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/</a></li><li>CNBC：<a href="https://www.cnbc.com/2026/10/01/openai-chinas-moonshot-ai-kimi.html" rel="noopener">https://www.cnbc.com/2026/10/01/openai-chinas-moonshot-ai-kimi.html</a></li><li>The Hacker News：<a href="https://thehackernews.com/2026/10/openai-disrupts-reasoning-extraction.html" rel="noopener">https://thehackernews.com/2026/10/openai-disrupts-reasoning-extraction.html</a></li><li>Quartz 综述：<a href="https://qz.com/openai-moonshot-ai-model-reasoning-distillation-100126" rel="noopener">https://qz.com/openai-moonshot-ai-model-reasoning-distillation-100126</a></li></ul></div>
+  <div class="field"><span class="lab">为什么值得关注</span><p>隐藏 CoT / encrypted thinking 本是防蒸馏与降敏的产品设计；本日披露把「加密块可被跨会话操纵」从研究议题抬成厂商安全公告与地缘竞争话术。对企业侧，这意味着：仅依赖「推理不可见」并不能当 IP 护栏；第三方托管与弱模型「解密预言机」必须纳入威胁模型。</p></div>
+  <div class="field"><span class="lab">新增与疑点</span><p>未公开归因的技术证据链；未说明成功提取了多少可用训练数据、是否进入任何已发布 Kimi 权重。15,000 用户集群 ≠ 全部归属 Moonshot。事件主体发生在 7 月，本日是「披露日」而非「攻击日」。</p></div>
+</article>
+<article class="card" id="story-2">
+  <h3>研究者：第一方已挡、Azure 上同类推理提取仍可复现数周【原创媒体报道】<span class="badge">公开材料可核对</span></h3>
+  <div class="field"><span class="lab">事实</span><ul><li>THE DECODER（2026-10-01）报道：与 OpenAI 披露同日，Joachim Schaeffer 等团队更新研究称「We stole reasoning. Again」。9 月 13 日复测时，OpenAI 与 Anthropic 自有 API 上攻击已被阻断；但在 Microsoft Azure 上，对所测全部 OpenAI 模型（含 GPT-6 Astra）以及 Anthropic 至 Sonnet 5 的模型，单次尝试即可 verbatim 拉出推理。「同模型、不同平台、不同防护」。</li><li>时间线（媒体转述研究者口径）：Astra 上架第三方云时一度未带齐防护；OpenAI 对 Azure 端点的相关保障约至 9 月 27 日才加上；Anthropic 模型在 Azure 上约自 9 月 28 日起无法再复现该提取。另有更简单的「虚拟记事本工具写出推理」路径，称在多款 OpenAI 模型与 Opus 4.8 / Sonnet 5 上有效，Opus 5 / Fable 5 / Fable 5.1 等未暴露。</li><li>支撑论文 arXiv:2608.09867（Stealing Reasoning Traces from Proprietary LLM APIs，MATS / ELLIS Tübingen / Snyk 等）：刻画跨会话、跨用户、跨模型兼容的加密推理块，以及用弱模型作解密预言机的可扩展提取；并报告从公开仓库刮取的推理块中恢复 PII/凭证等隐私面。OpenAI 博客点名致谢独立研究者的负责任披露，并承认伙伴托管部署需与第一方同等防护，「工作尚未完成」。</li></ul></div>
+  <div class="field"><span class="lab">来源与证据</span><ul><li>THE DECODER：<a href="https://the-decoder.com/openai-says-it-stopped-a-campaign-to-steal-its-models-reasoning-but-the-trick-still-worked-on-azure/" rel="noopener">https://the-decoder.com/openai-says-it-stopped-a-campaign-to-steal-its-models-reasoning-but-the-trick-still-worked-on-azure/</a></li><li>arXiv：<a href="https://arxiv.org/abs/2608.09867" rel="noopener">https://arxiv.org/abs/2608.09867</a></li><li>OpenAI 博客（伙伴云段落，同上）</li></ul></div>
+  <div class="field"><span class="lab">为什么值得关注</span><p>出口管制与 RSP 讨论常盯「权重与自有 API」；若云市场副本长期低配防护，则形成 API 层旁路。采购「某实验室模型」时，必须问清是第一方端点还是哪家云的哪一版防护矩阵。</p></div>
+  <div class="field"><span class="lab">新增与疑点</span><p>Azure 现状是否已在 9 月底全面对齐，需各厂商与微软后续说明；论文评测窗口多为 2026 年 7 月前后，与 9 月复测应分开读。不把附录中对开源模型「风格漂移」的探索性分析升格为「已证实蒸馏」。</p></div>
+</article>
+<article class="card" id="story-3">
+  <h3>Artificial Analysis：Gemini 4 Argon 指数并列 Astra，介绍价下任务成本更低【原创媒体报道】<span class="badge">独立交叉确认（分数口径）</span></h3>
+  <div class="field"><span class="lab">事实</span><ul><li>继 9 月 30 日 Google 宣布 Argon 经 Fairwind 向可信网络防御方有限放行后，多家媒体转述 Artificial Analysis：Gemini 4 Argon（High）在 Intelligence Index 上取得 53 分，与 GPT-6 Astra 并列，略高于 GPT-6.1 Sol（52）；相对 Google 先前非 Flash 旗舰 Gemini 3.1 Pro Preview 高约 23 分。AA-Omniscience 幻觉率报道为约 15%，对比 Astra 约 51%；AutomationBench-AA 约 77.5%，高于 Claude Sonnet 5.5 约 71.3%；终端类榜单仍落后 Sonnet/Opus 5.5 与 Astra。</li><li>成本：介绍价口径下每 Index 任务约 $1.99，对比 Astra 约 $3.26；若按介绍期结束后的标准价，任务成本可升至约 $3.98（约 1.2× Astra）。Argon 平均输出约 6.2 万 token/任务，高于 Astra 约 2.7 万——便宜主要来自单价，而非更少生成。公开 API / Ultra 仍未对开发者默认开放。</li></ul></div>
+  <div class="field"><span class="lab">来源与证据</span><ul><li>BeInCrypto（含 AA 分数与成本）：<a href="https://beincrypto.com/google-gemini-4-argon-benchmark-cost/" rel="noopener">https://beincrypto.com/google-gemini-4-argon-benchmark-cost/</a></li><li>Engadget：<a href="https://www.engadget.com/2274263/google-gemini-4-model-argon/" rel="noopener">https://www.engadget.com/2274263/google-gemini-4-model-argon/</a></li><li>Artificial Analysis 模型页（可核验列表）：<a href="https://artificialanalysis.ai/models/comparisons/gemini-4-argon-vs-claude-opus-5-5-high" rel="noopener">https://artificialanalysis.ai/models/comparisons/gemini-4-argon-vs-claude-opus-5-5-high</a></li><li>Google 官方（放行范围，昨日已报）：<a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/" rel="noopener">https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/</a></li></ul></div>
+  <div class="field"><span class="lab">为什么值得关注</span><p>官方自报榜之外，出现可引用的第三方综合指数与「幻觉率/任务美元」对照，有助于在 Fairwind 之外做采购预研；但指数不等于业务工作流，且介绍价窗口未写死。</p></div>
+  <div class="field"><span class="lab">新增与疑点</span><p>AA 方法论与污染控制未在本日逐项复核；「并列 Astra」与 Google 自报 DeepSWE 等细分榜需分开使用。</p></div>
+</article>
+<h2 id="sec-3">早期信号</h2>
+<article class="card" id="story-4">
+  <h3>Anthropic 研究频道：BootLoops 与「Claude-shaped」科学问题<span class="badge">公开材料可核对</span></h3>
+  <div class="field"><span class="lab">事实</span><ul><li>2026-10-01，Anthropic 研究站发布访问学者 Matthew Schwartz 客座长文：描述其停止「逼 Claude 像人类科学家工作」，改为寻找当前 LLM agent 擅长的「Claude-shaped」定量问题，并开源科学计算 harness BootLoops（bootloops.ai / GitHub）。叙事包括：用 Fable 5 等移植半数值 bootstrap、批量计算椭圆类 Feynman 积分；在专家协作下把工具迁到中性生物多样性、群体遗传学、经济学复现包检查、语音重音数据库等；披露其在 Anthropic 任访问研究者，BootLoops 非 Anthropic 产品。</li><li>价值在方法：强调「阻抗匹配」、专家品味过滤、对抗式复核与 harness 迭代，而非单次「AI 证明千年难题」头条。属 AI-for-science 操作手册级材料，不是新模型发布。</li></ul></div>
+  <div class="field"><span class="lab">来源与证据</span><p>疑点：<br>成果多为进行中手稿与领域专家共塑；科学声明需以各领域同行评议为准，不宜直接当作已定论突破清单。</p><ul><li>Anthropic：<a href="https://www.anthropic.com/research/claude-shaped-science" rel="noopener">https://www.anthropic.com/research/claude-shaped-science</a></li></ul></div>
+</article>
+<h2 id="sec-4">更新与纠错</h2>
+<div class="lede"><ul><li>Gemini 4 Argon：昨日为官方有限放行 + 自报榜；本日补独立指数/成本对照，公开 API 状态无变化。</li><li>FTC 调查 OpenAI/Anthropic/METR、白宫自愿「超级智能」协议、DeepSeek 昇腾六件套、DevDay Dots / GPT-6.1 Sol、Anthropic 机密招股书风险措辞：未见推翻性新事实，不重述。</li><li>GPT-6.1 Sol Ultrafast：仍未见官方「已全量上线并标价」确认。</li><li>Meta Muse for Small Business（约 9 月 29 日官方）：连接 Shopify/QuickBooks 等中小企业工具；属 agent 产品扩展，非本窗口最高优先级，不单列重点。</li></ul></div>
+<h2 id="sec-5">实务观察</h2>
+<div class="lede"><p>1. 采购推理模型时把「托管面」写进安全问卷：第一方 API、Azure/GCP/AWS 市场副本、防护版本与发布时间是否对齐；默认假设「加密 thinking = 不可蒸馏」已不够。<br>2. 禁止把含 signature / thinking 块的原始 agent 轨迹提交到公开仓库；清理可见文本不等于清理加密推理——论文已展示第三方解码路径。<br>3. Argon 公开前可用 AA 指数与自有 DeepSWE/终端/法务长程集做影子评测，但路由决策仍应等到可稳定调用的付费 API 与确定价。</p></div>
+    <footer class="site-footer">
+      <p><a href="/ai/">AI 日报归档</a> · <a href="/">综合每日简报</a></p>
+    </footer>
+  </div>
+</body>
+</html>

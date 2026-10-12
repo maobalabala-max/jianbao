@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日简报 · 2026年9月11日</title>
+  <!-- site-meta:start -->
+  <meta name="description" content="AI 安全周继续升温：Anthropic 公布蒸馏与「单人可跑国家级网攻」威胁情报，OpenAI 基金会请来 Paul Christiano 并公开一年约 4% 失控估计；NVIDIA–Palantir 把主权 AI 先装进自家供应链。业…">
+  <link rel="canonical" href="https://jianbao.space/2026/2026-09-11.html">
+  <link rel="alternate" type="application/atom+xml" title="每日简报 · 订阅" href="/feed.xml">
+  <meta property="og:site_name" content="每日简报">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="每日简报 · 2026年9月11日">
+  <meta property="og:description" content="AI 安全周继续升温：Anthropic 公布蒸馏与「单人可跑国家级网攻」威胁情报，OpenAI 基金会请来 Paul Christiano 并公开一年约 4% 失控估计；NVIDIA–Palantir 把主权 AI 先装进自家供应链。业…">
+  <meta property="og:url" content="https://jianbao.space/2026/2026-09-11.html">
+  <meta property="og:image" content="https://jianbao.space/icon-512.png">
+  <meta property="article:published_time" content="2026-09-11T08:00:00+08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="每日简报 · 2026年9月11日">
+  <meta name="twitter:description" content="AI 安全周继续升温：Anthropic 公布蒸馏与「单人可跑国家级网攻」威胁情报，OpenAI 基金会请来 Paul Christiano 并公开一年约 4% 失控估计；NVIDIA–Palantir 把主权 AI 先装进自家供应链。业…">
+  <!-- site-meta:end -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #f3f5f8;
+      --bg-accent: #e8eef6;
+      --paper: #ffffff;
+      --ink: #1a1f2e;
+      --muted: #5a6478;
+      --line: #d8dee9;
+      --line-soft: #e8edf4;
+      --accent: #3b6d9a;
+      --accent-soft: rgba(59, 109, 154, 0.12);
+      --link: #2a5f8f;
+      --link-hover: #1a4068;
+      --nav-bg: rgba(255, 255, 255, 0.86);
+      --chip: #e8eef6;
+      --shadow: 0 1px 2px rgba(26, 31, 46, 0.04), 0 4px 16px rgba(26, 31, 46, 0.04);
+      --radius: 12px;
+      --sans: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB",
+               "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      --serif: "Songti SC", "Noto Serif SC", "Source Han Serif SC",
+               "Noto Serif CJK SC", Georgia, serif;
+      --s1: #3b6d9a;
+      --s2: #2f6b5c;
+      --s3: #4a5f8a;
+      --s4: #5a4a6b;
+    }
+    * { box-sizing: border-box; }
+    html { font-size: 16.5px; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: var(--serif);
+      line-height: 1.7;
+      background:
+        linear-gradient(180deg, var(--bg-accent) 0%, transparent 280px),
+        linear-gradient(90deg, rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        var(--bg);
+      background-size: auto, 28px 28px, 28px 28px, auto;
+      background-attachment: fixed;
+    }
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      isolation: isolate;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .topnav::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(59, 109, 154, 0.18) 20%,
+        rgba(59, 109, 154, 0.52) 50%,
+        rgba(59, 109, 154, 0.18) 80%,
+        transparent 100%
+      );
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .topnav-inner {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.72rem 0;
+      font-family: var(--sans);
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .brand:hover { color: var(--link); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.15rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      transition: color 0.15s ease, background 0.15s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: var(--ink);
+      background: var(--accent-soft);
+    }
+    .wrap {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      padding: 2rem 0 3.5rem;
+    }
+    header.mast {
+      margin-bottom: 1.75rem;
+      padding: 0.4rem 0 1.35rem;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    header.mast::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 4.5rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    h1 {
+      font-family: var(--sans);
+      font-size: clamp(1.75rem, 4vw, 2.15rem);
+      line-height: 1.25;
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    h1 a.home {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 a.home:hover {
+      color: var(--link);
+    }
+    .meta {
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin: 0;
+      max-width: 36em;
+    }
+    .lede {
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.05rem 1.2rem;
+      margin: 0 0 2rem;
+      font-size: 0.98rem;
+      box-shadow: var(--shadow);
+    }
+    section { margin-bottom: 2.4rem; }
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      margin: 0 0 1rem;
+      padding: 0.45rem 0 0.55rem;
+      border-top: none;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 2.75rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    article.item {
+      position: relative;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem 1.15rem;
+      margin: 0 0 0.95rem;
+      box-shadow: var(--shadow);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+      scroll-margin-top: 4.5rem;
+    }
+    article.item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1rem;
+      bottom: 1rem;
+      width: 2px;
+      border-radius: 0 2px 2px 0;
+      background: var(--accent);
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: center;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+    }
+    article.item:hover {
+      border-color: #b8c5d8;
+      box-shadow: 0 2px 4px rgba(26, 31, 46, 0.05), 0 8px 24px rgba(26, 31, 46, 0.07);
+      transform: translateY(-1px);
+    }
+    article.item:hover::before,
+    article.item:focus-within::before {
+      opacity: 0.9;
+      transform: scaleY(1);
+    }
+    article.item:target {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    article.item h3 {
+      font-family: var(--sans);
+      font-size: 1.06rem;
+      line-height: 1.35;
+      margin: 0 0 0.55rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .orig {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: -0.25rem 0 0.55rem;
+      font-family: Georgia, "Iowan Old Style", var(--serif);
+    }
+    .authors {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin: 0 0 0.55rem;
+    }
+    p { margin: 0 0 0.7rem; }
+    p:last-of-type { margin-bottom: 0.85rem; }
+    .src {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.9rem;
+      align-items: baseline;
+      border-top: 1px dashed var(--line);
+      padding-top: 0.65rem;
+    }
+    .src a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      word-break: break-all;
+    }
+    .src a:hover { color: var(--link-hover); }
+    .chip {
+      display: inline-block;
+      background: var(--chip);
+      color: var(--muted);
+      padding: 0.08rem 0.45rem;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      border: 1px solid var(--line-soft);
+    }
+    footer {
+      border-top: 1px solid var(--line-soft);
+      padding-top: 1rem;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .digest-wrap {
+      margin: 0 0 2.1rem;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    table.digest {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: transparent;
+      border: none;
+      font-family: var(--sans);
+      font-size: 0.86rem;
+    }
+    table.digest th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-accent);
+    }
+    table.digest td {
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line-soft);
+      vertical-align: top;
+      line-height: 1.45;
+    }
+    table.digest tr:last-child td { border-bottom: none; }
+    table.digest tbody tr { transition: background 0.15s ease; }
+    table.digest tbody tr:hover { background: var(--accent-soft); }
+    table.digest a { color: inherit; text-decoration: none; }
+    table.digest a:hover { color: var(--link); }
+    table.digest .sec {
+      width: 4.6rem;
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    table.digest .ttl { width: 38%; font-weight: 650; }
+    table.digest .one { color: var(--muted); font-weight: 400; }
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes briefing-fade-rise {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes nav-line-shimmer {
+        0%, 100% { background-position: 0% 50%; opacity: 0.28; }
+        50% { background-position: 100% 50%; opacity: 0.52; }
+      }
+      header.mast {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      .lede {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+      }
+      .digest-wrap {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.14s both;
+      }
+      section {
+        animation: briefing-fade-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      section:nth-of-type(1) { animation-delay: 0.2s; }
+      section:nth-of-type(2) { animation-delay: 0.26s; }
+      section:nth-of-type(3) { animation-delay: 0.32s; }
+      section:nth-of-type(4) { animation-delay: 0.38s; }
+      section:nth-of-type(n + 5) { animation-delay: 0.42s; }
+      .topnav::after {
+        background-size: 200% 100%;
+        animation: nav-line-shimmer 10s ease-in-out infinite;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .topnav::after,
+      header.mast,
+      .lede,
+      .digest-wrap,
+      section {
+        animation: none !important;
+      }
+      article.item {
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      }
+      article.item:hover {
+        transform: none;
+      }
+    }
+    @media (max-width: 720px) {
+      table.digest, table.digest thead, table.digest tbody, table.digest tr, table.digest th, table.digest td {
+        display: block;
+      }
+      table.digest thead { display: none; }
+      table.digest td.sec { padding-bottom: 0; border-bottom: none; }
+      table.digest td.ttl { padding-top: 0.2rem; padding-bottom: 0.15rem; width: auto; border-bottom: none; }
+      table.digest td.one { padding-top: 0; width: auto; }
+    }
+    @media (max-width: 560px) {
+      html { font-size: 16px; }
+      h1 { font-size: 1.7rem; }
+      .topnav-inner { width: calc(100% - 1.5rem); }
+      .wrap { width: calc(100% - 1.5rem); padding: 1.5rem 0 3rem; }
+      .nav-links a { padding: 0.3rem 0.5rem; font-size: 0.8rem; }
+      article.item { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topnav" aria-label="主导航">
+    <div class="topnav-inner">
+      <a class="brand" href="/">每日简报</a>
+      <ul class="nav-links">
+        <li><a href="/">首页</a></li>
+        <li><a href="/2026/2026-09-25.html">最新一期</a></li>
+                <li><a href="/ai/">AI 日报</a></li>
+        <li><a href="/">归档</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <header class="mast">
+      <h1><a class="home" href="../">每日简报</a></h1>
+      <p class="meta">2026年9月11日 · 星期五</p>
+    </header>
+
+    <p class="lede">AI 安全周继续升温：Anthropic 公布蒸馏与「单人可跑国家级网攻」威胁情报，OpenAI 基金会请来 Paul Christiano 并公开一年约 4% 失控估计；NVIDIA–Palantir 把主权 AI 先装进自家供应链。业界侧 Bending Spoons 以约 13.55 亿美元企业价值全现金拿下 Miro，Positron、ADI/Alif、Salesforce Fin 同日挤满并购融资榜。科学栏看 Jarzynski 最优中间哈密顿、长程量子行走首次探测相变与活跃固体拓扑失稳。抗衰近窗有 SUN1–ApoD 旁分泌老化回路、半胱氨酸而非甲硫氨酸限制、卵巢纤维化作为生殖衰老可测标志。</p>
+
+    <div class="digest-wrap">
+      <table class="digest">
+        <thead><tr><th class="sec">栏目</th><th class="ttl">条目</th><th class="one">要点</th></tr></thead>
+        <tbody>
+        <tr>
+          <td class="sec"><a href="#i1">AI</a></td>
+          <td class="ttl"><a href="#i1">Anthropic 威胁情报：蒸馏 + 网攻平民化</a></td>
+          <td class="one"><a href="#i1">近 2 亿次蒸馏；阿里链峰值近 300 万次/日</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i2">AI</a></td>
+          <td class="ttl"><a href="#i2">Christiano 入 OpenAI 基金会董事会</a></td>
+          <td class="one"><a href="#i2">个人声明：1 年失控≈4%，3 年≈15%</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i3">AI</a></td>
+          <td class="ttl"><a href="#i3">NVIDIA–Palantir 主权供应链 AI</a></td>
+          <td class="one"><a href="#i3">域特化 30B Lightning 86.7% 胜 550B Ultra</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i4">AI</a></td>
+          <td class="ttl"><a href="#i4">Fortunate Recall：按类型管记忆生命周期</a></td>
+          <td class="one"><a href="#i4">LifecycleBench 76.9%；胡编约减半</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i5">AI</a></td>
+          <td class="ttl"><a href="#i5">IBIB：按 serving route 评企业 AI</a></td>
+          <td class="one"><a href="#i5">路由/精度/harness 会改结论甚至排序</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i6">AI</a></td>
+          <td class="ttl"><a href="#i6">Aya：数据配比撑起语种内推理</a></td>
+          <td class="one"><a href="#i6">60 语 L2 推理率 &gt;93%，无需处处标推理数据</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i7">科学</a></td>
+          <td class="ttl"><a href="#i7">Jarzynski 最优中间哈密顿量</a></td>
+          <td class="one"><a href="#i7">初末跃变；最小耗散≠最快收敛</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i8">科学</a></td>
+          <td class="ttl"><a href="#i8">长程量子行走首次探测相变</a></td>
+          <td class="one"><a href="#i8">α=1 分隔复发/暂态；测量诱导 IR–UV 干涉</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i9">科学</a></td>
+          <td class="ttl"><a href="#i9">量子 Mpemba：迹距离何时管用</a></td>
+          <td class="one"><a href="#i9">电荷对称可跟踪；置换对称残余项破坏对应</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i10">科学</a></td>
+          <td class="ttl"><a href="#i10">非互易谐链的能量输运与涨落定理</a></td>
+          <td class="one"><a href="#i10">可出现冷→热反向热流；满足广义 GC 对称</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i11">科学</a></td>
+          <td class="ttl"><a href="#i11">活跃固体：拓扑失稳与再入结晶</a></td>
+          <td class="one"><a href="#i11">强非互易下缺陷对增殖熔化；更高活性可再入</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i12">科学</a></td>
+          <td class="ttl"><a href="#i12">曲率诱导的非厄米 Anderson 普适类</a></td>
+          <td class="one"><a href="#i12">双曲格子 ν≃1；曲率可作新组织原则</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i13">业界</a></td>
+          <td class="ttl"><a href="#i13">Bending Spoons 全现金收购 Miro</a></td>
+          <td class="one"><a href="#i13">企业价值约 $13.55 亿；相对 2021 峰值大折价</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i14">业界</a></td>
+          <td class="ttl"><a href="#i14">DOJ 调查英伟达–Groq「许可」交易</a></td>
+          <td class="one"><a href="#i14">约 $170 亿非排他许可是否规避反垄断</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i15">业界</a></td>
+          <td class="ttl"><a href="#i15">Positron AI 融资 $8.75 亿</a></td>
+          <td class="one"><a href="#i15">估值跃至 $50 亿；Asimov 目标 2027 下半年量产</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i16">业界</a></td>
+          <td class="ttl"><a href="#i16">Salesforce 完成收购 Fin（原 Intercom）</a></td>
+          <td class="one"><a href="#i16">并入 Agentforce；宣称平均解决率约 76%</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i17">业界</a></td>
+          <td class="ttl"><a href="#i17">ADI $13.5 亿现金收购 Alif</a></td>
+          <td class="one"><a href="#i17">边缘 AI MCU；最高另有约 $2 亿或有对价</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i18">业界</a></td>
+          <td class="ttl"><a href="#i18">亚马逊 Quick 桌面版 Windows/macOS GA</a></td>
+          <td class="one"><a href="#i18">企业智能体可后台持续跑；支持 SSO/MDM</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i19">抗衰</a></td>
+          <td class="ttl"><a href="#i19">SUN1–ApoD 旁分泌老化反馈环</a></td>
+          <td class="one"><a href="#i19">老化成纤维分泌 ApoD 诱导年轻细胞老化表型</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i20">抗衰</a></td>
+          <td class="ttl"><a href="#i20">限制半胱氨酸，而非甲硫氨酸</a></td>
+          <td class="one"><a href="#i20">Cth⁻/⁻ 小鼠：减半胱氨酸才有免疫代谢获益</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i21">抗衰</a></td>
+          <td class="ttl"><a href="#i21">卵巢纤维化：可测可靶的生殖衰老标志</a></td>
+          <td class="one"><a href="#i21">硬度独立关联卵母细胞产量与卵泡效率</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i22">抗衰</a></td>
+          <td class="ttl"><a href="#i22">miR-128-3p：可逆的肌老化程序</a></td>
+          <td class="one"><a href="#i22">ASO 抑制恢复老龄肌量功能，猪 DMD 模型有效</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i23">抗衰</a></td>
+          <td class="ttl"><a href="#i23">灵长类长寿与雄性生育基因趋同替换</a></td>
+          <td class="one"><a href="#i23">126 种比较；与哺乳动物长寿候选显著重叠</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i24">抗衰</a></td>
+          <td class="ttl"><a href="#i24">老化脑中 DDR 状态的空间组织</a></td>
+          <td class="one"><a href="#i24">MERFISH：低/高 DDR 神经元占据对立微环境</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section>
+      <h2>AI 与大模型</h2>
+
+      <article class="item" id="i1">
+        <h3>Anthropic 威胁情报：蒸馏战役近 2 亿次，网攻「平民化」</h3>
+        <p class="orig">Detecting and countering misuse of AI: September 2026</p>
+        <p>Anthropic 9 月 10 日发布覆盖 2025-12 至 2026-08 的滥用处置报告，横跨网络、影响作战、监控、诈骗、生物与常规武器、蒸馏等伤害域。蒸馏侧五起战役合计近 2 亿次交互；归因阿里的行动被称为「有史以来最大批发式蒸馏」——2026 年 5–7 月逾 1.51 亿次、峰值近 300 万次/日、约 3500 虚假账号，用固定提示逼 Opus 写出思维链以训练 Qwen；另点名 Moonshot、DeepSeek、Xiaomi、Zhipu、SenseTime、MiniMax。</p>
+        <p>网络侧核心判断：AI 已抹平「国家级 vs 个人」劳动力差距——疑似 Midnight Blizzard 的团伙用 Claude 在检测命中后自动改包重部署；关联团伙可在约 3 小时内从单枚开发者令牌扩到云管全控。公司称已封禁并与当局/业界共享情报。</p>
+        <p class="src"><span class="chip">9月10日</span><a href="https://www.anthropic.com/threat-intelligence-report-september-2026">Anthropic</a><a href="https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek/">TechCrunch</a></p>
+      </article>
+
+      <article class="item" id="i2">
+        <h3>Paul Christiano 加入 OpenAI 基金会董事会，并给出失控风险估计</h3>
+        <p class="orig">Paul Christiano joins OpenAI Foundation Board</p>
+        <p>OpenAI Foundation 宣布任命对齐研究者 Paul Christiano（前 OpenAI RLHF 关键人物、Alignment Research Center 创始人、NIST/CAISI 顾问）为基金会董事，并加入 Safety and Security Committee；同时任 OpenAI Group PBC 董事会无投票观察员。</p>
+        <p>他同日个人声明强调：加入不等于背书现有安全实践；认为行业（含 OpenAI）目前「未走上把失控风险降到可接受水平的轨道」。主观估计未来 1 年不可逆失控风险约 4%、3 年约 15%，并点出全自动 AI R&amp;D 可能触发智能爆炸。Guardian / CNBC 等同日报道亦援引其「灾难性失控」判断。</p>
+        <p class="src"><span class="chip">9月9–10日</span><a href="https://openaifoundation.org/news/paul-christiano-joins-openai-foundation-board">OpenAI Foundation</a><a href="https://paulfchristiano.substack.com/p/personal-statement-on-joining-the">Christiano Substack</a><a href="https://www.theguardian.com/technology/2026/sep/10/openai-risk-catastrophic-loss-control-board-member-paul-christiano">The Guardian</a></p>
+      </article>
+
+      <article class="item" id="i3">
+        <h3>NVIDIA × Palantir：主权供应链 AI，先在自家落地</h3>
+        <p class="orig">NVIDIA and Palantir Bring Sovereign Intelligence to Critical Supply Chains</p>
+        <p>两家公司宣布把「主权 AI」用于关键供应链：Nemotron 开源模型接入 Palantir Foundry / AIP，以 Ontology 结构化部件–工厂–产能–交付；NVIDIA cuOpt 做稀缺件分配与情景规划，专家保留最终决策权。首个客户是 NVIDIA 自身（Vera Rubin 机架约 130 万零件级复杂度）。</p>
+        <p>公开数字：在供应链材料分配任务上，领域后训练的 30B Nemotron 3.5 Lightning 准确率 86.7%，显著高于约 18 倍大的 550B Nemotron 3 Ultra 的 55.5%——专业化可以压过通用规模。架构可本地/云/托管部署，客户可用自有数据后训练并保留权重控制权。</p>
+        <p class="src"><span class="chip">9月10日</span><a href="https://thenewstack.io/ai-factories-are-among-the-most-complex-systems-ever-built-nvidia-and-palantir-turn-nvidias-supply-chain-into-a-proving-ground-for-sovereign-ai/">The New Stack</a></p>
+      </article>
+
+      <article class="item" id="i4">
+        <h3>Fortunate Recall：按行为类型管理 LLM 长期记忆生命周期</h3>
+        <p class="orig">Fortunate Recall: Ontology-Driven Memory Lifecycle Management for Persistent Coherence in LLMs</p>
+        <p class="authors">Ansuman Mullick, Eray Tüzün · arXiv:2609.10413</p>
+        <p>现有记忆系统常对所有个人事实一视同仁，库无限膨胀、检索变差。Fortunate Recall 把事实分入 10+1 行为本体，再施加差异化时间衰减、槽位键替换、事件时间有效性与类别感知检索路由。</p>
+        <p>FR-Bank 在新建 LifecycleBench（516 题时间消歧）上 pass rate 76.9%，高于 Mem0 / A-MEM / Memory-R1 / MemoryOS（约 61–70.5%）。消融显示：通用生命周期元数据贡献正确性，行为本体贡献校准——可将下游 confabulation 约减半（12.0% vs 24.2%）。</p>
+        <p class="src"><span class="chip">arXiv · 9月9日</span><a href="https://arxiv.org/abs/2609.10413">arxiv.org/abs/2609.10413</a></p>
+      </article>
+
+      <article class="item" id="i5">
+        <h3>IBIB：企业 AI 应按「服务路由」而非模型名牌评测</h3>
+        <p class="orig">IBIB: A Protocol for Measuring Enterprise AI Systems by Serving Route, Not Model Identifier</p>
+        <p class="authors">Blake Stenstrom, Charangan Vasantharajan, Brian Sathianathan · arXiv:2609.10494</p>
+        <p>企业部署的是系统而非 checkpoint：能力取决于权重、serving 路由、精度、输出契约与 harness。作者审计 18 个基准都在给「广告模型标识符」打分，视为测量误差，并提出协议 IB2（金标盲能力绑定预检、把失败计入分数、分数盲裁决）。</p>
+        <p>跨 11 个系统：相同权重的完整单路由跑之后仍可能在绑定门不同谓词上失败；区分度主要来自受治理数据库与多表连接；serving 臂选择可把同一修订/精度从 77.38 拉到 82.54；若把失败剔出分母会改变点排序。</p>
+        <p class="src"><span class="chip">arXiv · 9月9日</span><a href="https://arxiv.org/abs/2609.10494">arxiv.org/abs/2609.10494</a></p>
+      </article>
+
+      <article class="item" id="i6">
+        <h3>数据配比支撑「提示语种内推理」（L2 reasoning）</h3>
+        <p class="orig">Building Multilingual Bridges: Data Mixing as the Pillar of Generalization for In-Language Reasoning</p>
+        <p class="authors">Mehrnaz Mofakhami et al. · arXiv:2609.10445</p>
+        <p>推理模型常「无论提示何种语言都 internally 用英语想」，对非英语用户不友好且易丢意图。作者推进 L2 reasoning：在用户提示语种内一致推理，从数据组成与调度入手。</p>
+        <p>3.35B 的 Tiny Aya L2-Thinker 在 60 种语言、6 类基准上 L2 推理率 &gt;93%，同时保持任务表现。推广到留出语言的路径是更广语言覆盖 + 现成多语言非推理数据 + 足够的英语推理骨干——无需为每种目标语言都准备推理监督。</p>
+        <p class="src"><span class="chip">arXiv · 9月9日</span><a href="https://arxiv.org/abs/2609.10445">arxiv.org/abs/2609.10445</a></p>
+      </article>
+    </section>
+
+    <section>
+      <h2>科学、物理与复杂性</h2>
+
+      <article class="item" id="i7">
+        <h3>非平衡自由能：找出使 Jarzynski 估计误差最小的中间哈密顿</h3>
+        <p class="orig">Optimal Intermediate Hamiltonians for Non-Equilibrium Free Energy Calculations: A Numerical Study of Markov Models</p>
+        <p class="authors">David Beyer, Helmut Grubmüller · arXiv:2609.10519</p>
+        <p>Jarzynski 等式可用有限时间非平衡切换估计平衡自由能差，但稀有轨迹主导指数功平均，收敛往往很差。作者在离散时间 Markov 模型上，用倾斜主方程给出大样本极限 MSE 的精确表示，并结合自动微分对全部中间能级做梯度最小化。</p>
+        <p>在两态、双阱与位移势阱中，最优中间势在初、末时刻出现跃变，相对线性/对数插值可将 MSE 压低一个数量级以上；且最优路径未必耗散更少。对分子尺度非平衡自由能计算给出明确启发式：初末跃变、降障再升障，最小化耗散不等于最快收敛。</p>
+        <p class="src"><span class="chip">arXiv · 9月9日</span><a href="https://arxiv.org/abs/2609.10519">arxiv.org/abs/2609.10519</a></p>
+      </article>
+
+      <article class="item" id="i8">
+        <h3>监测长程量子行走：首次探测统计的相变</h3>
+        <p class="orig">Phase transitions in first-detection statistics of monitored long-range quantum walks</p>
+        <p class="authors">Sayan Roy, Shamik Gupta, Giovanna Morigi, Gabriele Perfetto · arXiv:2609.10510</p>
+        <p>链上量子行走初始位点被频闪监测，跳跃强度按距离 d<sup>−α</sup> 衰减。首次探测返回概率由 α 决定：α=1 分隔复发（α&lt;1）与暂态（α&gt;1）行走，总探测概率发生连续相变；α&lt;1 时强长程导致局域化并使总探测概率为 1。</p>
+        <p>α&gt;1 时返回概率按 t<sup>−β</sup> 代数衰减，且 β(α) 出现非解析点。奇异性不仅来自低能谱，还来自投影测量诱导的红外–紫外干涉——属非幺正动力学内禀临界行为，可用单一参数 α 调控。</p>
+        <p class="src"><span class="chip">arXiv · 9月9日</span><a href="https://arxiv.org/abs/2609.10510">arxiv.org/abs/2609.10510</a></p>
+      </article>
+
+      <article class="item" id="i9">
+        <h3>量子 Mpemba：迹距离何时能复现纠缠不对称性的诊断</h3>
+        <p class="orig">Symmetry structure dependent diagnostic of the Quantum Mpemba Effect</p>
+        <p class="authors">Tamizhselvan S, Manju C, Bijay Kumar Agarwalla, Uma Divakaran · arXiv:2609.10470</p>
+        <p>近期工作用纠缠不对称性刻画量子 Mpemba——初态对称破缺更强者反而更快恢复对称。本文追问基于能量的迹距离是否刻画同一现象：把迹距离解析分解为对称相干贡献与残余贡献。</p>
+        <p>对电荷对称，残余项可忽略，迹距离由对称扇区相干主导并可复现 Mpemba 式行为；对置换对称，显著残余项导致 qualitatively 不同的弛豫。澄清何时能量型诊断可靠。</p>
+        <p class="src"><span class="chip">arXiv · 9月9日</span><a href="https://arxiv.org/abs/2609.10470">arxiv.org/abs/2609.10470</a></p>
+      </article>
+
+      <article class="item" id="i10">
+        <h3>非互易谐振子链：反向热流与广义涨落定理</h3>
+        <p class="orig">Energy Transport Structure and Fluctuation Theorem in Nonreciprocal Harmonic Chains</p>
+        <p class="authors">Ziwei Cheng, Geng Li, Zhanchun Tu · arXiv:2609.09593</p>
+        <p>对一维具有非对称近邻耦合的谐振子链，作者用 Green 函数给出精确输运结构：热流方向由温度偏置与有效方向不对称的竞争决定，可出现冷→热的反向热流。</p>
+        <p>非互易还引入与反对称相互作用扇区相关的额外功率通道，得到包含两库热流与非互易功率流的广义稳态能量平衡；两库热交换的联合标度累积量母函数满足精确 Gallavotti–Cohen 对称。</p>
+        <p class="src"><span class="chip">arXiv · 9月9日</span><a href="https://arxiv.org/abs/2609.09593">arxiv.org/abs/2609.09593</a></p>
+      </article>
+
+      <article class="item" id="i11">
+        <h3>活跃固体：拓扑失稳熔化与再入结晶</h3>
+        <p class="orig">Topological instability and reentrant crystallization in active solids</p>
+        <p class="authors">Zory Davoyan, Aditya Jha, Anton Souslov · arXiv:2609.09500</p>
+        <p>将二维缺陷介导熔化的 KTHNY 理论推广到同时具有非互易（奇）弹性与 Cosserat（微极）耦合的活跃固体。弱非互易下熔化仍由缺陷解离驱动，但熔点因活性偏移。</p>
+        <p>超过非互易阈值后出现拓扑失稳：任意温度下缺陷对增殖导致熔化。更高活性下还发现再入结晶——准长程序可在平衡晶体已熔化的温度下存活。场论与模拟共同指出核能量驱动的缺陷增殖是尚未充分探索的二维熔化路径。</p>
+        <p class="src"><span class="chip">arXiv · 9月8日</span><a href="https://arxiv.org/abs/2609.09500">arxiv.org/abs/2609.09500</a></p>
+      </article>
+
+      <article class="item" id="i12">
+        <h3>曲率诱导：非厄米 Anderson 转变的几何普适类</h3>
+        <p class="orig">Curvature-Induced Geometric Universality in Non-Hermitian Anderson Transitions</p>
+        <p class="authors">Chen Wang, Run-Qiu Yang, X. R. Wang, Hechen Ren · arXiv:2609.09562</p>
+        <p>欧氏空间中 Anderson 转变普适类主要由对称性与维度决定。本文在类双曲格子上给出证据：非厄米 Anderson 转变可出现由大尺度负曲率几何控制的普适类——指数体积增长与非欧几里得空间标度改变临界行为。</p>
+        <p>对多种 {p,q} 铺砌的参与比做有限尺度标度，得到共同临界指数 ν≃1 的单参数坍缩；唯象粗粒化 Landau–Ginzburg 分析表明指数相关体积增长压制临界涨落，从而解释平均场式标度。</p>
+        <p class="src"><span class="chip">arXiv · 9月9日</span><a href="https://arxiv.org/abs/2609.09562">arxiv.org/abs/2609.09562</a></p>
+      </article>
+    </section>
+
+    <section>
+      <h2>互联网产品与科技业界</h2>
+
+      <article class="item" id="i13">
+        <h3>Bending Spoons 全现金收购协作白板 Miro</h3>
+        <p class="orig">Bending Spoons agrees to acquire Miro</p>
+        <p>意大利上市公司 Bending Spoons（NASDAQ: BSP）宣布与 Miro 达成最终协议，全现金收购，企业价值约 13.55 亿美元，计入净现金后股权价值约 17.9 亿；部分股东将把约 2.95 亿对价再投 Bending Spoons 新股。官方称 Miro 年经常性收入约 6 亿、近 90% 来自企业客户、约 400 万付费用户；交割目标 2026 Q4，待监管批准。</p>
+        <p>相对其 2021 末约 175 亿估值大幅折价，延续该公司收购 Airtable 等「疫情估值回调 SaaS」路径。</p>
+        <p class="src"><span class="chip">9月10日</span><a href="https://investors.bendingspoons.com/newsroom/bending-spoons-agrees-to-acquire-miro">Bending Spoons</a><a href="https://techcrunch.com/2026/09/10/bending-spoons-to-buy-collaboration-tools-maker-miro-for-1-36b-90-less-than-its-2022-valuation/">TechCrunch</a></p>
+      </article>
+
+      <article class="item" id="i14">
+        <h3>美司法部调查英伟达与 Groq 的「许可」交易</h3>
+        <p class="orig">US DOJ probes Nvidia’s licensing deal with AI startup Groq</p>
+        <p>Reuters 援引《纽约时报》称，美国司法部正调查英伟达与 AI 芯片初创 Groq 的安排是否被设计成规避反垄断审查。英伟达去年宣布约 170 亿美元「非排他许可」Groq 芯片技术，并聘用包括创始人 Jonathan Ross 在内的多名高管；调查在交易宣布后不久启动，已向英伟达发出正式信息请求。</p>
+        <p>英伟达发言人称该交易体现「促进创新」；报道称即便认定处理不当，也更可能罚款而非撤销交易。</p>
+        <p class="src"><span class="chip">9月10日</span><a href="https://www.reuters.com/legal/litigation/us-doj-probes-nvidias-licensing-deal-with-ai-startup-groq-nyt-reports-2026-09-10/">Reuters</a></p>
+      </article>
+
+      <article class="item" id="i15">
+        <h3>Positron AI 融资 8.75 亿美元，估值跃至 50 亿</h3>
+        <p class="orig">Positron AI raises $875 million at a $5 billion valuation</p>
+        <p>专注 AI 推理芯片的 Positron AI 周四宣布最新一轮融资 8.75 亿美元，投后估值 50 亿；PitchBook 显示其 2 月曾以约 10.6 亿估值募 2.3 亿。融资分两档：Series C 3.75 亿与 NEA、Jim Clark 领投的 Series C-1 最高 5 亿；参与方还包括卡塔尔投资局、Cisco Investments、Naver Ventures 等。</p>
+        <p>资金用于下一代 Asimov 芯片收尾设计，目标 2027 下半年量产；公司称 Titan 系统可单节点服务超 16 万亿参数、超千万 token 上下文，并已在 Oracle Cloud 部署逾 50 机架 Atlas。</p>
+        <p class="src"><span class="chip">9月10日</span><a href="https://www.reuters.com/business/ai-chip-startup-positrons-valuation-skyrockets-latest-funding-round-2026-09-10/">Reuters</a><a href="https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html">PR Newswire</a></p>
+      </article>
+
+      <article class="item" id="i16">
+        <h3>Salesforce 完成收购客服智能体公司 Fin（原 Intercom）</h3>
+        <p class="orig">Salesforce completes acquisition of Fin (formerly Intercom)</p>
+        <p>Salesforce 宣布已完成对 Fin（前身为 Intercom）的收购交割，将其客服智能体平台、AI 技术团队及逾 3 万家企业客户并入 Salesforce。公司称 Fin 专有模型面向客户体验训练，可跨 live chat、邮件、WhatsApp、SMS、语音与 Slack 端到端解决复杂查询，平均解决率约 76%。</p>
+        <p>CEO Marc Benioff 称将强化 Agentforce 客服能力；Fin 将作为 Salesforce AI Labs 一部分继续服务现有客户并推进模型研发。</p>
+        <p class="src"><span class="chip">9月10日</span><a href="https://www.salesforce.com/news/press-releases/2026/09/10/salesforce-completes-acquisition-of-fin/">Salesforce</a></p>
+      </article>
+
+      <article class="item" id="i17">
+        <h3>Analog Devices 以 13.5 亿美元现金收购 Alif</h3>
+        <p class="orig">Analog Devices to acquire Alif Semiconductor for $1.35 billion</p>
+        <p>模拟芯片商 ADI 与私营 Alif Semiconductor 达成最终协议：ADI 将支付 13.5 亿美元预付现金，另有最高约 2 亿或有对价。加州 Pleasanton 的 Alif 做低功耗边缘 AI 微控制器/融合处理器（传感、连接、安全一体），产品已出货消费与工业客户。</p>
+        <p>交易已获双方董事会批准，预计 2026 年底前交割，需通过 Hart-Scott-Rodino 反垄断等待期；意在把 ADI 传感/信号处理/电源与 Alif AI 算力结合，服务实时物理系统。</p>
+        <p class="src"><span class="chip">9月9日</span><a href="https://www.reuters.com/technology/analog-devices-buy-alif-semiconductor-135-billion-2026-09-09/">Reuters</a></p>
+      </article>
+
+      <article class="item" id="i18">
+        <h3>亚马逊 Quick 智能体平台桌面版 Windows / macOS 正式 GA</h3>
+        <p class="orig">Amazon Quick generally available for desktop on Windows and macOS</p>
+        <p>亚马逊宣布其企业 AI 助手与智能体平台 Quick 的桌面应用在 Windows 与 macOS 正式一般可用。报道称同步更新 iOS/Android 活动流，汇总邮件、日历、消息与 CRM；智能体可在云端后台持续跑，合上笔记本后仍处理收件摘要、周报等任务。</p>
+        <p>AWS 文档写明桌面向 Plus/Enterprise 开放（免费档可有 30 天试用），可从网页 Extensions 或直接下载安装包，并支持企业 SSO/MDM 部署。</p>
+        <p class="src"><span class="chip">9月10日</span><a href="https://siliconangle.com/2026/09/10/amazon-makes-its-agentic-ai-platform-quick-generally-available-for-desktop-on-windows-and-macos/">SiliconANGLE</a><a href="https://docs.aws.amazon.com/quick/latest/userguide/getting-started-desktop.html">AWS Docs</a></p>
+      </article>
+    </section>
+
+    <section>
+      <h2>抗衰与长寿新论文</h2>
+
+      <article class="item" id="i19">
+        <h3>SUN1–ApoD 反馈环：老化细胞如何「带坏」年轻邻居</h3>
+        <p class="orig">A SUN1-ApoD feedback loop promotes cellular aging via microtubule-nuclear mechanotransduction</p>
+        <p class="authors">Mengqi Chen, Paige C. Wilson, Wenyao Yang et al. · bioRxiv 2026.09.08.750279</p>
+        <p>用组织培养版「并体」发现：老化成纤维分泌的活性可诱导年轻成纤维出现老化相关极性缺陷。分泌组学锁定因子为 ApoD——循环水平随年龄上升的载脂蛋白。ApoD 经 SUN1 促进微管–细胞核偶联，提高 SUN1 并扰乱极性；升高的 SUN1 又增强 ApoD 表达与分泌，形成正反馈。</p>
+        <p>小鼠中 ApoD 可诱导肌肉老化相关表型。把核被膜蛋白改变如何跨细胞传播，落到一条可干预的旁分泌–力学转导轴上。</p>
+        <p class="src"><span class="chip">bioRxiv · 9月10日</span><a href="https://www.biorxiv.org/content/10.64898/2026.09.08.750279v1">biorxiv.org/content/10.64898/2026.09.08.750279v1</a></p>
+      </article>
+
+      <article class="item" id="i20">
+        <h3>真正延寿的或许是减半胱氨酸，不是甲硫氨酸限制</h3>
+        <p class="orig">Cysteine reduction rather than methionine restriction promotes immunometabolic fitness to confer survival benefit in aging</p>
+        <p class="authors">Lucie Orliaguet, Hee-Hoon Kim, Piyush Gupta et al. · bioRxiv 2026.09.04.749519</p>
+        <p>经典「甲硫氨酸限制」延寿饮食往往同时缺胱氨酸，宿主会经转硫途径由甲硫氨酸生成半胱氨酸，因此到底哪个含硫氨基酸在起作用一直含糊。作者在线虫中显示选择性半胱氨酸限制可独立于甲硫氨酸延长寿命与应激存活。</p>
+        <p>在 Cth 缺陷小鼠中，无半胱氨酸饮食（无论甲硫氨酸是否限制）诱导促代谢效应，而含正常半胱氨酸的甲硫氨酸限制无效；老年 Cth⁻/⁻ 小鼠持续约 70% 半胱氨酸降低可重编程免疫代谢轴并带来健康寿命获益。</p>
+        <p class="src"><span class="chip">bioRxiv · 9月9日</span><a href="https://www.biorxiv.org/content/10.64898/2026.09.04.749519v1">biorxiv.org/content/10.64898/2026.09.04.749519v1</a></p>
+      </article>
+
+      <article class="item" id="i21">
+        <h3>卵巢纤维化：人生殖衰老可测、可靶的标志</h3>
+        <p class="orig">Multimodal profiling establishes ovarian fibrosis as a measurable and targetable hallmark of human reproductive aging</p>
+        <p class="authors">Lydia Hughes, Emily Zaniker-Gomez, Pooja R. Devrukhkar et al. · bioRxiv 2026.09.04.749443</p>
+        <p>在同一受试者内整合剪切波弹性成像、细胞外基质新表位指纹与卵泡液单细胞转录组，系统刻画人卵巢纤维化。年龄分层队列（≤33 与 ≥37 岁，N=32）中，年龄预测卵巢硬度，而平均硬度独立关联较低卵母细胞产量与卵泡效率。</p>
+        <p>ECM 指纹显示偏形成、少降解的动态纤维化指数；单细胞转录组见年龄相关促纤维炎症基质程序。把「基质变硬」从推测落到可量化、可干预的临床–分子轴上。</p>
+        <p class="src"><span class="chip">bioRxiv · 9月8日</span><a href="https://www.biorxiv.org/content/10.64898/2026.09.04.749443v1">biorxiv.org/content/10.64898/2026.09.04.749443v1</a></p>
+      </article>
+
+      <article class="item" id="i22">
+        <h3>正向选择的 microRNA 控制可逆的横纹肌老化程序</h3>
+        <p class="orig">A positively selected microRNA controls a reversible aging program in striated muscle</p>
+        <p class="authors">Melissa A. Boldridge, Lei Xu, Xiaoyin Wang et al. · bioRxiv 2026.09.03.749250</p>
+        <p>miR-128-1 位于与握力、肺功能与心脏代谢性状相关的正向选择单倍型。反义寡核苷酸抑制 miR-128-3p 可恢复老龄小鼠肌量与功能，改善心梗后心功能并限制不良重塑，并在小鼠与猪 DMD 模型中改善骨骼肌与心肌病理。</p>
+        <p>跨情境转录响应一致：激活线粒体程序、抑制炎症与纤维化信号，形态上接近若干已知长寿干预。把一个人类正向选择位点落到可药物化的肌老化开关。</p>
+        <p class="src"><span class="chip">bioRxiv · 9月7日</span><a href="https://www.biorxiv.org/content/10.64898/2026.09.03.749250v1">biorxiv.org/content/10.64898/2026.09.03.749250v1</a></p>
+      </article>
+
+      <article class="item" id="i23">
+        <h3>灵长类长寿：趋同氨基酸替换落在雄性生育相关基因</h3>
+        <p class="orig">Convergent Amino-Acid Substitutions Link Primate Longevity to Male-Fertility Genes</p>
+        <p class="authors">Fabio Barteri, Miguel Ramon, Eva Brigos, David Juan, Gerard Muntane, Arcadi Navarro · bioRxiv 2026.09.04.749475</p>
+        <p>用体质量校正寿命与系统发育知情的表型漂移框架比较 126 种灵长类，选出 7 长寿与 6 短寿物种做趋同氨基酸替换分析。严格汇总得到 934 个基因中的 1068 个表型相关位点；与哺乳动物长寿候选重叠 226 个基因（期望约 120，1.88 倍富集，P≈10⁻²²）。</p>
+        <p>功能分析最强一致信号落在雄性不育/生育相关通路——把寿命演化与生殖权衡重新接到可检验的分子位点上。</p>
+        <p class="src"><span class="chip">bioRxiv · 9月10日</span><a href="https://www.biorxiv.org/content/10.64898/2026.09.04.749475v1">biorxiv.org/content/10.64898/2026.09.04.749475v1</a></p>
+      </article>
+
+      <article class="item" id="i24">
+        <h3>老化脑：基因组维护状态组织对立的多细胞微环境</h3>
+        <p class="orig">Neuronal and vascular genome-maintenance states organize opposing multicellular architectures in the aging brain</p>
+        <p class="authors">Arvin Koshboresh, Vijay Laxmi Roy, Mofida Abdelmageed et al. · bioRxiv 2026.09.07.749801</p>
+        <p>用 MERFISH 在 2–3 月龄与 22 月龄小鼠匹配切片上映射约 60.4 万细胞的修复程序。区域 DDR 表达与协调形成年龄依赖马赛克，并伴随免疫与少突胶质谱系变化。</p>
+        <p>独立 metacell 与距离分辨分析显示：低 DDR 神经元占据免疫与 OPC–少突胶质富集微环境；高 DDR 血管锚点则与血管细胞富集相关。把「细胞固有」的基因组维护放回原生组织结构里看。</p>
+        <p class="src"><span class="chip">bioRxiv · 9月10日</span><a href="https://www.biorxiv.org/content/10.64898/2026.09.07.749801v1">biorxiv.org/content/10.64898/2026.09.07.749801v1</a></p>
+      </article>
+    </section>
+
+    <footer>
+      <p>工作日资讯早报 · 仅收录已打开或检索到的公开来源 · 宁缺毋滥</p>
+    </footer>
+  </div>
+</body>
+</html>

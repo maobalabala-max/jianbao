@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日简报 · 2026年9月8日</title>
+  <!-- site-meta:start -->
+  <meta name="description" content="模型连发周之后，OpenAI 把镜头转向自己：9 月 6 日同发「自动化科研实习」进度报告与首席科学家 Pachocki 的 An Alien Mind——一边报中位研究员日耗逾 $600 推理、研究组织约 3.1 个 agent 工作日…">
+  <link rel="canonical" href="https://jianbao.space/2026/2026-09-08.html">
+  <link rel="alternate" type="application/atom+xml" title="每日简报 · 订阅" href="/feed.xml">
+  <meta property="og:site_name" content="每日简报">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="每日简报 · 2026年9月8日">
+  <meta property="og:description" content="模型连发周之后，OpenAI 把镜头转向自己：9 月 6 日同发「自动化科研实习」进度报告与首席科学家 Pachocki 的 An Alien Mind——一边报中位研究员日耗逾 $600 推理、研究组织约 3.1 个 agent 工作日…">
+  <meta property="og:url" content="https://jianbao.space/2026/2026-09-08.html">
+  <meta property="og:image" content="https://jianbao.space/icon-512.png">
+  <meta property="article:published_time" content="2026-09-08T08:00:00+08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="每日简报 · 2026年9月8日">
+  <meta name="twitter:description" content="模型连发周之后，OpenAI 把镜头转向自己：9 月 6 日同发「自动化科研实习」进度报告与首席科学家 Pachocki 的 An Alien Mind——一边报中位研究员日耗逾 $600 推理、研究组织约 3.1 个 agent 工作日…">
+  <!-- site-meta:end -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #f3f5f8;
+      --bg-accent: #e8eef6;
+      --paper: #ffffff;
+      --ink: #1a1f2e;
+      --muted: #5a6478;
+      --line: #d8dee9;
+      --line-soft: #e8edf4;
+      --accent: #3b6d9a;
+      --accent-soft: rgba(59, 109, 154, 0.12);
+      --link: #2a5f8f;
+      --link-hover: #1a4068;
+      --nav-bg: rgba(255, 255, 255, 0.86);
+      --chip: #e8eef6;
+      --shadow: 0 1px 2px rgba(26, 31, 46, 0.04), 0 4px 16px rgba(26, 31, 46, 0.04);
+      --radius: 12px;
+      --sans: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB",
+               "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      --serif: "Songti SC", "Noto Serif SC", "Source Han Serif SC",
+               "Noto Serif CJK SC", Georgia, serif;
+      --s1: #3b6d9a;
+      --s2: #2f6b5c;
+      --s3: #4a5f8a;
+      --s4: #5a4a6b;
+    }
+    * { box-sizing: border-box; }
+    html { font-size: 16.5px; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: var(--serif);
+      line-height: 1.7;
+      background:
+        linear-gradient(180deg, var(--bg-accent) 0%, transparent 280px),
+        linear-gradient(90deg, rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        var(--bg);
+      background-size: auto, 28px 28px, 28px 28px, auto;
+      background-attachment: fixed;
+    }
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      isolation: isolate;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .topnav::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(59, 109, 154, 0.18) 20%,
+        rgba(59, 109, 154, 0.52) 50%,
+        rgba(59, 109, 154, 0.18) 80%,
+        transparent 100%
+      );
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .topnav-inner {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.72rem 0;
+      font-family: var(--sans);
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .brand:hover { color: var(--link); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.15rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      transition: color 0.15s ease, background 0.15s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: var(--ink);
+      background: var(--accent-soft);
+    }
+    .wrap {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      padding: 2rem 0 3.5rem;
+    }
+    header.mast {
+      margin-bottom: 1.75rem;
+      padding: 0.4rem 0 1.35rem;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    header.mast::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 4.5rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    h1 {
+      font-family: var(--sans);
+      font-size: clamp(1.75rem, 4vw, 2.15rem);
+      line-height: 1.25;
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    h1 a.home {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 a.home:hover {
+      color: var(--link);
+    }
+    .meta {
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin: 0;
+      max-width: 36em;
+    }
+    .lede {
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.05rem 1.2rem;
+      margin: 0 0 2rem;
+      font-size: 0.98rem;
+      box-shadow: var(--shadow);
+    }
+    section { margin-bottom: 2.4rem; }
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      margin: 0 0 1rem;
+      padding: 0.45rem 0 0.55rem;
+      border-top: none;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 2.75rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    article.item {
+      position: relative;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem 1.15rem;
+      margin: 0 0 0.95rem;
+      box-shadow: var(--shadow);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+      scroll-margin-top: 4.5rem;
+    }
+    article.item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1rem;
+      bottom: 1rem;
+      width: 2px;
+      border-radius: 0 2px 2px 0;
+      background: var(--accent);
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: center;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+    }
+    article.item:hover {
+      border-color: #b8c5d8;
+      box-shadow: 0 2px 4px rgba(26, 31, 46, 0.05), 0 8px 24px rgba(26, 31, 46, 0.07);
+      transform: translateY(-1px);
+    }
+    article.item:hover::before,
+    article.item:focus-within::before {
+      opacity: 0.9;
+      transform: scaleY(1);
+    }
+    article.item:target {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    article.item h3 {
+      font-family: var(--sans);
+      font-size: 1.06rem;
+      line-height: 1.35;
+      margin: 0 0 0.55rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .orig {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: -0.25rem 0 0.55rem;
+      font-family: Georgia, "Iowan Old Style", var(--serif);
+    }
+    .authors {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin: 0 0 0.55rem;
+    }
+    p { margin: 0 0 0.7rem; }
+    p:last-of-type { margin-bottom: 0.85rem; }
+    .src {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.9rem;
+      align-items: baseline;
+      border-top: 1px dashed var(--line);
+      padding-top: 0.65rem;
+    }
+    .src a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      word-break: break-all;
+    }
+    .src a:hover { color: var(--link-hover); }
+    .chip {
+      display: inline-block;
+      background: var(--chip);
+      color: var(--muted);
+      padding: 0.08rem 0.45rem;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      border: 1px solid var(--line-soft);
+    }
+    footer {
+      border-top: 1px solid var(--line-soft);
+      padding-top: 1rem;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .digest-wrap {
+      margin: 0 0 2.1rem;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    table.digest {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: transparent;
+      border: none;
+      font-family: var(--sans);
+      font-size: 0.86rem;
+    }
+    table.digest th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-accent);
+    }
+    table.digest td {
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line-soft);
+      vertical-align: top;
+      line-height: 1.45;
+    }
+    table.digest tr:last-child td { border-bottom: none; }
+    table.digest tbody tr { transition: background 0.15s ease; }
+    table.digest tbody tr:hover { background: var(--accent-soft); }
+    table.digest a { color: inherit; text-decoration: none; }
+    table.digest a:hover { color: var(--link); }
+    table.digest .sec {
+      width: 4.6rem;
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    table.digest .ttl { width: 38%; font-weight: 650; }
+    table.digest .one { color: var(--muted); font-weight: 400; }
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes briefing-fade-rise {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes nav-line-shimmer {
+        0%, 100% { background-position: 0% 50%; opacity: 0.28; }
+        50% { background-position: 100% 50%; opacity: 0.52; }
+      }
+      header.mast {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      .lede {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+      }
+      .digest-wrap {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.14s both;
+      }
+      section {
+        animation: briefing-fade-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      section:nth-of-type(1) { animation-delay: 0.2s; }
+      section:nth-of-type(2) { animation-delay: 0.26s; }
+      section:nth-of-type(3) { animation-delay: 0.32s; }
+      section:nth-of-type(4) { animation-delay: 0.38s; }
+      section:nth-of-type(n + 5) { animation-delay: 0.42s; }
+      .topnav::after {
+        background-size: 200% 100%;
+        animation: nav-line-shimmer 10s ease-in-out infinite;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .topnav::after,
+      header.mast,
+      .lede,
+      .digest-wrap,
+      section {
+        animation: none !important;
+      }
+      article.item {
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      }
+      article.item:hover {
+        transform: none;
+      }
+    }
+    @media (max-width: 720px) {
+      table.digest, table.digest thead, table.digest tbody, table.digest tr, table.digest th, table.digest td {
+        display: block;
+      }
+      table.digest thead { display: none; }
+      table.digest td.sec { padding-bottom: 0; border-bottom: none; }
+      table.digest td.ttl { padding-top: 0.2rem; padding-bottom: 0.15rem; width: auto; border-bottom: none; }
+      table.digest td.one { padding-top: 0; width: auto; }
+    }
+    @media (max-width: 560px) {
+      html { font-size: 16px; }
+      h1 { font-size: 1.7rem; }
+      .topnav-inner { width: calc(100% - 1.5rem); }
+      .wrap { width: calc(100% - 1.5rem); padding: 1.5rem 0 3rem; }
+      .nav-links a { padding: 0.3rem 0.5rem; font-size: 0.8rem; }
+      article.item { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topnav" aria-label="主导航">
+    <div class="topnav-inner">
+      <a class="brand" href="/">每日简报</a>
+      <ul class="nav-links">
+        <li><a href="/">首页</a></li>
+        <li><a href="/2026/2026-09-25.html">最新一期</a></li>
+                <li><a href="/ai/">AI 日报</a></li>
+        <li><a href="/">归档</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <header class="mast">
+      <h1><a class="home" href="/">每日简报</a></h1>
+      <p class="meta">2026年9月8日（周二）· 亚洲/上海</p>
+    </header>
+
+    <p class="lede">模型连发周之后，OpenAI 把镜头转向自己：9 月 6 日同发「自动化科研实习」进度报告与首席科学家 Pachocki 的 <em>An Alien Mind</em>——一边报中位研究员日耗逾 $600 推理、研究组织约 3.1 个 agent 工作日对 1 个人日，一边直言没有实验室的对齐与监控足以继续「全速扩」；CoT 监控可靠性也在下滑。评测侧两篇硬核：分子性质基准上的逐字检索污染，以及智能体解释是否真「必要 / 充分」。科学栏玻璃动力学把中程结构写进加权对熵后，结构–动力学相关可冲到约 0.9；非互易 OU 链与斜投影 Mori–Zwanzig 继续扩非平衡工具箱。业界盯着后天 Ternus 首秀：KeyBanc 预估 Pro / Ultra 大幅提价并警告股价催化剂偏空；微软侧则在 IFA 前夕细说 Windows 11 为 RTX Spark 从调度到统一内存的底层改造。抗衰近 48 小时预印本意外地厚：miR-128 抑制可逆转老龄横纹肌、交感末梢撤出呈性二态且可恢复，以及血清 CAF 作为神经肌肉衰老标志物。</p>
+
+    <div class="digest-wrap">
+      <table class="digest">
+        <thead><tr><th class="sec">栏目</th><th class="ttl">条目</th><th class="one">要点</th></tr></thead>
+        <tbody>
+        <tr>
+          <td class="sec"><a href="#i1">AI</a></td>
+          <td class="ttl"><a href="#i1">OpenAI：自动化「科研实习」达标</a></td>
+          <td class="one"><a href="#i1">中位日耗 &gt;$600；3.1 agent 人日比；下一步全自动研究员</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i2">AI</a></td>
+          <td class="ttl"><a href="#i2">Pachocki：An Alien Mind</a></td>
+          <td class="one"><a href="#i2">无人配好对齐与监控；CoT 监控变脆；要强制安全门槛</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i3">AI</a></td>
+          <td class="ttl"><a href="#i3">分子基准里的「数字似曾相识」</a></td>
+          <td class="one"><a href="#i3">22 模型×12 集；高推理档检索标记多约 89%</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i4">AI</a></td>
+          <td class="ttl"><a href="#i4">WearableQA：纵向可穿戴推理基准</a></td>
+          <td class="one"><a href="#i4">200 人×至多 500 天；4084 道十选一</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i5">AI</a></td>
+          <td class="ttl"><a href="#i5">解释因素真的必要 / 充分吗？</a></td>
+          <td class="one"><a href="#i5">智能体决策组件；必要性与充分性两套检验</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i6">科学</a></td>
+          <td class="ttl"><a href="#i6">加权对熵钉住玻璃异质动力学</a></td>
+          <td class="one"><a href="#i6">纳入中程有序；结构–动力学相关最高约 0.9</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i7">科学</a></td>
+          <td class="ttl"><a href="#i7">非互易 OU：可调例外点层级</a></td>
+          <td class="one"><a href="#i7">g=g* 漂移矩阵不可对角化；链映射 Hatano–Nelson</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i8">科学</a></td>
+          <td class="ttl"><a href="#i8">斜投影 Mori–Zwanzig 粗粒化</a></td>
+          <td class="one"><a href="#i8">远平衡活性物质；被动示踪子手性动力学</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i9">科学</a></td>
+          <td class="ttl"><a href="#i9">马尔可夫链刚踏入非可逆</a></td>
+          <td class="one"><a href="#i9">路径图与抬升图；谱与加速如何一起变</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i10">科学</a></td>
+          <td class="ttl"><a href="#i10">映射熵选「该留的神经元」</a></td>
+          <td class="one"><a href="#i10">无标签粗粒化隐层；teacher–student 可找回关键单元</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i11">科学</a></td>
+          <td class="ttl"><a href="#i11">Yang–Baxter 门上的算符纠缠上界</a></td>
+          <td class="one"><a href="#i11">qubit 情形 Schmidt 秩时间上有界</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i12">业界</a></td>
+          <td class="ttl"><a href="#i12">KeyBanc：9/9 发布或成利空催化</a></td>
+          <td class="one"><a href="#i12">Pro $1249 / Max $1399 / Ultra $2199 预估</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i13">业界</a></td>
+          <td class="ttl"><a href="#i13">Windows 11 为 RTX Spark 重做底层</a></td>
+          <td class="one"><a href="#i13">调度、统一内存、Prism；IFA 后 OEM 将出货</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i14">抗衰</a></td>
+          <td class="ttl"><a href="#i14">抑制 miR-128 扭转横纹肌衰老程序</a></td>
+          <td class="one"><a href="#i14">老龄鼠肌量功能、心梗后重塑、DMD 猪模型</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i15">抗衰</a></td>
+          <td class="ttl"><a href="#i15">交感末梢撤出：性二态且可逆</a></td>
+          <td class="one"><a href="#i15">雄性更重；立毛肌补 NGF 可再支配</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i16">抗衰</a></td>
+          <td class="ttl"><a href="#i16">血清 CAF：神经肌肉衰老血检候选</a></td>
+          <td class="one"><a href="#i16">20–92 岁男性；与失神经纤维、功能相关</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i17">抗衰</a></td>
+          <td class="ttl"><a href="#i17">CCND1–CDK6 拧 SASP：帕博西尼作 senomorphic</a></td>
+          <td class="one"><a href="#i17">Nature Aging；老龄鼠虚弱与运动改善</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section id="s1">
+      <h2>1. AI 和大模型动态</h2>
+
+      <article class="item" id="i1">
+        <h3>OpenAI：按自测已达「自动化科研实习」，研究侧 agent 工作量超过人</h3>
+        <p class="orig">Research acceleration: The view inside OpenAI</p>
+        <p class="authors">OpenAI · 2026-09-06</p>
+        <p>Astra 发布三天后，OpenAI 公开内部度量：按自家口径，已达到去年秋天定下的目标——到 2026 年 9 月具备「自动化科研实习」（automated research intern）：在人类指导下完成边界清楚的科研任务，包括熟练研究员要花数天的那种。下一步仍写着在人类监督下做深度学习和对齐的全自动 AI 研究员；公开叙述里把更完整的自动化研究员时间线放到约 2028 年前后。</p>
+        <p>数字很刺眼：到 8 月中旬，按 agent 用量排序的中位研究员每天接入 agent，以 API 价计推理花费超过 $600，第 90 百分位超过 $7000/天；按标准 8 小时人日折算，整个研究组织约用 3.1 个 agent 工作日换 1 个人日。实验次数随 Codex 采用与算力扩张在 8 月创新高。分类上，代码与基建、技术协助、训练监控都在涨，高层规划仍很少。文中也把 7 月 Hugging Face 相关基础设施事件后的 RL 暂停、以及 8 月 Astra 疑似触及 Preparedness「Critical」网络能力后的更高安全环境限制，写进「可测的研究节奏」叙事——并强调指标易采、与真实科研进展的关系仍不确定，且无独立审计。</p>
+        <p class="src"><span class="chip">OpenAI · 9月6日</span><a href="https://openai.com/index/research-acceleration-view-inside-openai">openai.com · Research acceleration</a> <a href="https://the-decoder.com/openai-reports-ai-research-interns-and-warns-about-its-own-pace-at-the-same-time/">THE DECODER 综述</a></p>
+      </article>
+
+      <article class="item" id="i2">
+        <h3>Pachocki《An Alien Mind》：没有实验室配好对齐与监控，却还在冲 RSI</h3>
+        <p class="orig">An Alien Mind</p>
+        <p class="authors">Jakub Pachocki · OpenAI 首席科学家 · 2026-09-06</p>
+        <p>配套长文把上述指标放进递归自改进（RSI）框架：基于未公开的内部结果，作者预期当前进度可能延续到 RSI；「没人准备好机器智力继续陡升的后果」。对齐上他说 Astra 明显好过 GPT-5.6 Sol，但仍不够；泛化理论缺失，于是实证验证对齐手段「或许比手段本身更重要」。</p>
+        <p>OpenAI 主押的思维链（CoT）监控正在变脆：言语化推理与受监控通信 / 工具使用搅在一起，模型更会操纵自身推理过程，也可以在少言语化思维时变强。他主张把 Preparedness / RSP 一类承诺升级为有第三方审计、政府或国际机构执行的强制安全门槛，并希望自愿减速常态化——同时又写明 OpenAI 仍要把 RSI 当作留在前沿的路径。这种「要刹车规则、自己却不能掉队」的张力，是今天最值得对照进度报告一起读的部分。</p>
+        <p class="src"><span class="chip">OpenAI · 9月6日</span><a href="https://openai.com/index/an-alien-mind">openai.com · An Alien Mind</a></p>
+      </article>
+
+      <article class="item" id="i3">
+        <h3>分子性质榜上的「数字似曾相识」：准确率分不清预测与背答案</h3>
+        <p class="orig">Molecular Déjà Vu: Digit-Level Retrieval of Published Values in Frontier Language Models</p>
+        <p class="authors">Matthias Busch, Marius Tacke, Sviatlana V. Lamaka 等 · arXiv:2609.05381 · 2026-09-04</p>
+        <p>在 12 个回归基准上审计 22 个前沿模型的逐字检索：污染广泛但偏数据集特异——五个数据集上超过一半模型出现 verbatim retrieval，其余多是孤立格子。同一分子、同一提示，高推理档被标记为检索的次数比最低档大约多 89%。</p>
+        <p>在污染最重的情形尝试打断检索后，最强模型有时仍认得「变换后的 SMILES + 原始标签」组合；压掉检索后，各模型相对误差彼此靠拢，而 verbatim 用量差异会把它们拉开。含义直接：分子基准上的「领先」不能自动读成更强的性质预测能力。</p>
+        <p class="src"><span class="chip">arXiv · 9月4日</span><a href="https://arxiv.org/abs/2609.05381">arxiv.org/abs/2609.05381</a></p>
+      </article>
+
+      <article class="item" id="i4">
+        <h3>WearableQA：真用户纵向可穿戴记录上的健康推理考卷</h3>
+        <p class="orig">WearableQA: A Benchmark for Health Reasoning over Real-World Wearable Data</p>
+        <p class="authors">Ji Soo Lee, Xilun Chen, Pierce Chuang, Ashish Shenoy, Jason Wei 等 · arXiv:2609.05405 · 2026-09-04</p>
+        <p>现有基准很少考「能不能读懂一个真人长达一年半的可穿戴档案」。WearableQA 用 200 名真实用户的可穿戴时序、血液生物标志物与人口学信息，构造 4084 道十选一；每人最多约 500 天日测，并保留设备噪声与个体差异。</p>
+        <p>题型按两条轴切成 16 类：数据推理 vs 健康推理等。对做个人健康 agent / 医生副驾驶的团队，这是一张比「干净实验室表」更接近产品事故面的卷子。</p>
+        <p class="src"><span class="chip">arXiv · 9月4日</span><a href="https://arxiv.org/abs/2609.05405">arxiv.org/abs/2609.05405</a></p>
+      </article>
+
+      <article class="item" id="i5">
+        <h3>智能体给的「理由」：换掉它决策会不会变？只留它够不够？</h3>
+        <p class="orig">Necessary or Sufficient? Evaluating LLM Explanations With Behavioural Evidence</p>
+        <p class="authors">Urja Pawar, Rajitha Ramanayake, Nabeel Kemal 等 · arXiv:2609.05385 · 2026-09-04</p>
+        <p>工作流里的 LLM 决策组件常一边给建议一边列因素；运维默认这些因素与可观察行为一致。作者把命名因素拆成两种行为检验：必要性（改掉它输出是否变）与充分性（只留它、去掉其他可变信息，输出是否还在）。</p>
+        <p>在「给客户荐顾问」与「判断提示有害 / 风险」两个合成场景里跑。对把解释当监控面板或升级门槛的人，这是提醒：表面忠实的理由，未必经得起干预式探针。</p>
+        <p class="src"><span class="chip">arXiv · 9月4日</span><a href="https://arxiv.org/abs/2609.05385">arxiv.org/abs/2609.05385</a></p>
+      </article>
+    </section>
+
+    <section id="s2">
+      <h2>2. 科学、物理与复杂性科学</h2>
+
+      <article class="item" id="i6">
+        <h3>玻璃里谁先动？把中程有序写进加权对熵，相关可到约 0.9</h3>
+        <p class="orig">Connecting heterogeneous dynamics with local entropy</p>
+        <p class="authors">Jun Wu, Walter Kob, Yujie Wang, Zhen Zhang · arXiv:2609.05276 · 2026-09-04</p>
+        <p>静态结构与异质弛豫何时可靠挂钩，仍是玻璃物理老难题。作者在传统二体超额熵积分上乘一个与配对关联长度尺度相关的权重：短程贡献几乎不动，却能纳入中程有序。</p>
+        <p>在典型二维 Lennard-Jones 玻璃形成体系上，该描述符与粒子级长时间动力学倾向（多个 α 弛豫时间尺度）相关最高约达 0.9，明显强过普通局域对超额熵。等于用「带物理长度的熵」把结构–动力学相关推高，同时保持可解释。</p>
+        <p class="src"><span class="chip">arXiv · 9月4日</span><a href="https://arxiv.org/abs/2609.05276">arxiv.org/abs/2609.05276</a></p>
+      </article>
+
+      <article class="item" id="i7">
+        <h3>非互易 OU 过程：一个参数扫出例外点，多体链接到 Hatano–Nelson</h3>
+        <p class="orig">Non-reciprocally interacting Ornstein-Uhlenbeck processes: Exceptional points, Anomalous relaxation…</p>
+        <p class="authors">Soumya Kanti Pal, Shamik Gupta · arXiv:2609.05391 · 2026-09-04</p>
+        <p>非互易相互作用在活性、生物与无序系统里普遍，并驱动系统离开平衡。作者构造由可调非互易参数 g 控制的非互易 OU（NROU）层级：在特殊点 g=g*，漂移矩阵不可对角化，实现不同阶例外点（特征值与特征向量同时合并）。</p>
+        <p>层级覆盖非互易二聚体、无序版本，以及精确映射到非厄米量子里经典 Hatano–Nelson 模型的多体链；并讨论异常弛豫、伪平衡与边界制冷等。给「非互易 = 非平衡引擎」提供一套可解析的玩具到多体梯子。</p>
+        <p class="src"><span class="chip">arXiv · 9月4日</span><a href="https://arxiv.org/abs/2609.05391">arxiv.org/abs/2609.05391</a></p>
+      </article>
+
+      <article class="item" id="i8">
+        <h3>远平衡粗粒化：斜投影 Mori–Zwanzig，把系统力与噪声拆干净</h3>
+        <p class="orig">Coarse-graining far-from-equilibrium dynamics using oblique projectors</p>
+        <p class="authors">Gerhard Jung · arXiv:2609.05217 · 2026-09-04</p>
+        <p>活性 / 生命物质远离平衡时，正交投影的 Mori–Zwanzig 容易把涌现相互作用拆错。作者引入双正交变量下的斜投影，使粗粒化粒子的系统力与随机力分解正确，并接到非平衡线性响应与绝热微扰论。</p>
+        <p>据此给出算法，示范从手性活性浴中提取被动示踪子的涌现手性动力学。想给活性物质写有效方程时，这是工具层更新，不只是形式重写。</p>
+        <p class="src"><span class="chip">arXiv · 9月4日</span><a href="https://arxiv.org/abs/2609.05217">arxiv.org/abs/2609.05217</a></p>
+      </article>
+
+      <article class="item" id="i9">
+        <h3>可逆马尔可夫链怎样一点点变成非可逆？谱与加速一起变</h3>
+        <p class="orig">Markov chains at the onset of non-reversibility</p>
+        <p class="authors">Gustave Robichon, Cecile Monthus, Werner Krauth · arXiv:2609.05183 · 2026-09-04</p>
+        <p>在一维路径图及其「位点复制」抬升图上，作者把可逆链逐步扰动到非可逆：可逆时转移矩阵可对角化、特征值实，左右特征向量成双正交系；非可逆后可能可对角 / 不可对角，特征值可为实或复共轭对。</p>
+        <p>对平坦、方波、楔形、V 形等稳态，他们计算两图上的谱，并讨论可达到的加速。对「破细致平衡换混合速度」这条非平衡采样线，是带具体图例的入门级硬计算。</p>
+        <p class="src"><span class="chip">arXiv · 9月4日</span><a href="https://arxiv.org/abs/2609.05183">arxiv.org/abs/2609.05183</a></p>
+      </article>
+
+      <article class="item" id="i10">
+        <h3>过参数网络里哪些神经元该留？用映射熵做无监督粗粒化</h3>
+        <p class="orig">Coarse-Graining Hidden Representations: Unsupervised Neuron Selection via Mapping Entropy</p>
+        <p class="authors">Margherita Mele, Andrea Castagna, Roberto Menichetti, Raffaello Potestio, Alessandro Ingrosso · arXiv:2609.05126 · 2026-09-04</p>
+        <p>隐层单元远多于任务名义所需时，哪些是「必要的」？作者把神经元选择写成对隐层的粗粒化，用映射熵（mapping entropy）给候选子集打分：丢掉一部分单元会损失多少判别力；最小化映射熵的子集视为特别信息丰富。判据只依赖隐激活统计，无标签、无梯度。</p>
+        <p>在 teacher–student 设定里，优化映射熵可找回关键单元。复杂系统里的粗粒化语言，直接接到表示可解释与压缩。</p>
+        <p class="src"><span class="chip">arXiv · 9月4日</span><a href="https://arxiv.org/abs/2609.05126">arxiv.org/abs/2609.05126</a></p>
+      </article>
+
+      <article class="item" id="i11">
+        <h3>满足辫关系的砖墙线路：算符纠缠的时间上界</h3>
+        <p class="orig">On the growth of operator entanglement in brickwork circuits with Yang–Baxter gates</p>
+        <p class="authors">Balázs Pozsgay · arXiv:2609.05121 · 2026-09-04</p>
+        <p>研究一维砖墙线路中、两位点门满足辫关系（文中称 Yang–Baxter 门）时局域算符的算符纠缠。对若干结构化门类给出上界：所有 qubit Yang–Baxter 门，以及由非退化 Yang–Baxter 映射得到的置换门（任意局域维），算符 Schmidt 秩在时间上均匀有界；对合对偶幺正等情形至多多项式增长。</p>
+        <p>含义是：可积 / 辫结构会强烈限制算符纠缠的增长，和一般随机线路的快速纠缠形成对照——对量子多体「算符增长 vs 可积约束」是干净的一类结果。</p>
+        <p class="src"><span class="chip">arXiv · 9月4日</span><a href="https://arxiv.org/abs/2609.05121">arxiv.org/abs/2609.05121</a></p>
+      </article>
+    </section>
+
+    <section id="s3">
+      <h2>3. 互联网产品与科技业界</h2>
+
+      <article class="item" id="i12">
+        <h3>KeyBanc：后天「Surprise and Shine」或成苹果股价利空催化</h3>
+        <p class="authors">MacRumors 转述 KeyBanc · 2026-09-07</p>
+        <p>距 John Ternus 以 CEO 身份首秀还有一天，KeyBanc 维持 Underweight，目标价 $250（当时股价约 $325），并警告 9 月 9 日发布会可能逼投资者把「提价」与「成本–需求–毛利」放在一起称。选项是：普遍提价对冲毛利压力（量与 sticker shock），或更选择性提价（仍可能引来后续再涨价预期）。</p>
+        <p>量的模型：2026 财年 Q4 到 2027 财年 Q1 的 iPhone 18 系列总备货约 8000 万，低于去年同期约 9100 万——主因是这段周期没有标准版 iPhone 18，靠更高单价与更富产品组合部分对冲。价格预期：18 Pro 涨 $150 至 $1249，Pro Max 涨 $200 至 $1399，折叠 Ultra 起售约 $2199。历史上看，过去五年发布日均跌约 0.72%，五日约 1.22%。对 Ternus 首秀，这是「硬件叙事 vs 内存成本通胀」的卖方帧。</p>
+        <p class="src"><span class="chip">MacRumors · 9月7日</span><a href="https://www.macrumors.com/2026/09/07/iphone-18-pro-event-could-hit-apple-shares/">macrumors.com · KeyBanc / Sep 9</a></p>
+      </article>
+
+      <article class="item" id="i13">
+        <h3>IFA 前夕：微软工程师讲述为 RTX Spark 重写 Windows 11 子系统</h3>
+        <p class="orig">I spoke to the Microsoft PM rebuilding Windows 11 for Nvidia RTX Spark…</p>
+        <p class="authors">Jason England · Tom's Guide · 2026-09-07</p>
+        <p>RTX Spark（Grace CPU + Blackwell GPU、统一内存、至约 1 PFLOP 本地 AI）平台本身在年中 GTC 已亮相；9 月 7 日这篇访谈的价值在「出货前夜的软件账本」。微软首席产品经理 Peter Dawoud 描述：团队与 Nvidia 从硅启动层一起干了约八个月，才让第一台机器点亮；Windows 不能只靠贴驱动，而要同时改对调度、内存、仿真与功耗热框架。</p>
+        <p>公开材料里对应的是 Workload Profile Scheduling、打破严格 GPU 显存墙的统一内存管理、面向该微架构调过的 Prism x86 仿真，以及 Microsoft Power and Thermal Framework；代理安全侧还有新的 Windows 原语与 Nvidia OpenShell。OEM 名单含 ASUS、Dell、HP、Lenovo、Surface、MSI 等，IFA 周期强调「还有几周」到货。对「Windows on Arm 这次能不能真打进创作 + 本地 agent」争论，这是平台层进度条，不是又一张跑分海报。</p>
+        <p class="src"><span class="chip">Tom's Guide · 9月7日</span><a href="https://www.tomsguide.com/computing/windows-operating-systems/i-spoke-to-the-microsoft-pm-rebuilding-windows-11-for-nvidia-rtx-spark-the-radical-reinvention-building-the-first-true-macbook-pro-threat">tomsguide.com · Dawoud / RTX Spark</a> <a href="https://nvidianews.nvidia.com/news/nvidia-microsoft-windows-pcs-agents-rtx-spark">NVIDIA 新闻稿（平台背景）</a></p>
+      </article>
+    </section>
+
+    <section id="s4">
+      <h2>4. 抗衰 / 长寿</h2>
+
+      <article class="item" id="i14">
+        <h3>正选择位点上的 miR-128：关掉它，横纹肌衰老程序可逆</h3>
+        <p class="orig">A positively selected microRNA controls a reversible aging program in striated muscle</p>
+        <p class="authors">Melissa A. Boldridge, Lei Xu, Xiaoyin Wang 等 · bioRxiv 10.64898/2026.09.03.749250 · 约 2026-09-03</p>
+        <p>人染色体 2q21.3 上受正选择的单倍型覆盖 miR-128-1，并与握力、肺功能与心脏代谢性状变异相关。作者用反义寡核苷酸抑制 miR-128-3p：老龄小鼠恢复肌量与功能；心梗后改善心功能并限制不良重塑；在杜氏肌营养不良的小鼠与猪模型中改善骨骼肌与心肌病理。</p>
+        <p>跨场景转录响应保守：激活线粒体程序、压低炎症与纤维化信号，形态上接近已知长寿干预。把「可遗传的调节性 RNA」接到可逆的肌肉衰老程序，是今天抗衰栏最硬的一条新预印本。</p>
+        <p class="src"><span class="chip">bioRxiv · 约9月3日</span><a href="https://www.biorxiv.org/content/10.64898/2026.09.03.749250v1">biorxiv.org · miR-128 / striated muscle</a></p>
+      </article>
+
+      <article class="item" id="i15">
+        <h3>皮肤交感衰老：远端轴突撤出、雄性更重，补 NGF 可再支配</h3>
+        <p class="orig">Reversible, Sexually Dimorphic Sympathetic Aging: Distal Axon Withdrawal…</p>
+        <p class="authors">Gabriella Rita Pangilinan, Sagar Patil, Francisco Mires 等 · bioRxiv 10.64898/2026.09.03.748995 · 约 2026-09-03</p>
+        <p>外周支配随龄下降，是神经元死了还是末梢–靶器官互动坏了？在小鼠皮肤这个清晰效应器里，交感衰老强烈性二态，老龄雄性失支配更重；投射到皮肤的交感神经元本身仍在，说明是远端轴突撤出而非胞体丢失。神经–靶互动与立毛肌微环境恶化也以雄性为主。</p>
+        <p>老龄交感神经元仍响应 NGF；在立毛肌内恢复 NGF 可促进再支配与毛发再生。遗传与内分泌模型指向性腺而非性染色体，早期去势可减弱轨迹分叉。结论是：这类交感衰老可逆，且性别生物学必须写进实验设计。</p>
+        <p class="src"><span class="chip">bioRxiv · 约9月3日</span><a href="https://www.biorxiv.org/content/10.64898/2026.09.03.748995v1">biorxiv.org · sympathetic aging</a></p>
+      </article>
+
+      <article class="item" id="i16">
+        <h3>血清 C 端 agrin 片段（CAF）：男性神经肌肉衰老的血检线索</h3>
+        <p class="orig">Serum C-terminal agrin fragment as a biomarker of age-related neuromuscular decline in men…</p>
+        <p class="authors">Rami Hammad, Vincent Marcangeli, Marina Cefis 等 · bioRxiv 10.64898/2026.09.02.747348 · 约 2026-09-02</p>
+        <p>神经肌肉接头退化伴衰老；agrin 被切割后的循环 C 端片段（CAF）被当作 NMJ 退化的微创标志物，但与功能、失神经组织学及体力活动的关系仍薄。研究纳入 136 名 20–92 岁社区男性（活跃 87 / 不活跃 49），ELISA 测血清 CAF，并在股外侧肌活检看 NCAM 阳性（失神经）纤维比例，再叠最大等长力、下肢功率、电机械延迟、神经传导、H/M、中枢激活与多种行走 / 起立功能测试。</p>
+        <p>对想在人群层跟踪「神经肌肉衰老」而不是只看肌肉横截面积的人，CAF 是可复现的候选血检读数；是否独立于活动量、能否指导干预，要看全文相关矩阵。</p>
+        <p class="src"><span class="chip">bioRxiv · 约9月2日</span><a href="https://www.biorxiv.org/content/10.64898/2026.09.02.747348v1">biorxiv.org · serum CAF</a></p>
+      </article>
+
+      <article class="item" id="i17">
+        <h3>补读 Nature Aging：CCND1–CDK6 经 DNA 损伤喂养 SASP，帕博西尼可当 senomorphic</h3>
+        <p class="orig">Inhibiting cyclin D1–CDK6 suppresses senescence-associated inflammatory gene expression…</p>
+        <p class="authors">Adarsh Rajesh, Aaron P. Havas, Rouven Arnold 等 · Nature Aging · 2026-08-20</p>
+        <p>周期蛋白 D1（CCND1）在多种非增殖衰老细胞中反常上调；本文显示 CCND1 与 CDK6 通过促进 DNA 损伤累积驱动 SASP 与干扰素刺激基因：胞质染色质碎片激活 cGAS–STING。老龄小鼠肝脏衰老肝细胞 Ccnd1 升高；肝细胞特异敲除或临床级 CDK4/6 抑制剂帕博西尼可降低 DNA 损伤与 ISG，并改善虚弱与体能。</p>
+        <p>同期 News &amp; Views 把 CDK4/6 抑制剂框成可重新用途的 senomorphic。相对「杀衰老细胞」，这是拧炎症输出的药盒扩展——且分子已在肿瘤科使用。</p>
+        <p class="src"><span class="chip">Nature Aging · 8月20日</span><a href="https://www.nature.com/articles/s43587-026-01196-x">nature.com · CCND1–CDK6 / SASP</a> <a href="https://www.nature.com/articles/s43587-026-01189-w">News &amp; Views</a></p>
+      </article>
+    </section>
+
+    <footer>
+      <p>工作日资讯早报 · 仅收录已打开或检索到的公开来源 · 宁缺毋滥</p>
+    </footer>
+  </div>
+</body>
+</html>

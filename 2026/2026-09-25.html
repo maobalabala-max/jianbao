@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日简报 · 2026年9月25日</title>
+  <!-- site-meta:start -->
+  <meta name="description" content="周五主线是「Google 产品线密集落地 + 美英模型共享摩擦 + 产业自建安全标准」：Gemini「Call for Me」电话代理在美区 Pixel 试点、3.8 Live Avatar 为企业对话「有脸」、DeepMind 新掌门确…">
+  <link rel="canonical" href="https://jianbao.space/2026/2026-09-25.html">
+  <link rel="alternate" type="application/atom+xml" title="每日简报 · 订阅" href="/feed.xml">
+  <meta property="og:site_name" content="每日简报">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="每日简报 · 2026年9月25日">
+  <meta property="og:description" content="周五主线是「Google 产品线密集落地 + 美英模型共享摩擦 + 产业自建安全标准」：Gemini「Call for Me」电话代理在美区 Pixel 试点、3.8 Live Avatar 为企业对话「有脸」、DeepMind 新掌门确…">
+  <meta property="og:url" content="https://jianbao.space/2026/2026-09-25.html">
+  <meta property="og:image" content="https://jianbao.space/icon-512.png">
+  <meta property="article:published_time" content="2026-09-25T08:00:00+08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="每日简报 · 2026年9月25日">
+  <meta name="twitter:description" content="周五主线是「Google 产品线密集落地 + 美英模型共享摩擦 + 产业自建安全标准」：Gemini「Call for Me」电话代理在美区 Pixel 试点、3.8 Live Avatar 为企业对话「有脸」、DeepMind 新掌门确…">
+  <!-- site-meta:end -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #f3f5f8;
+      --bg-accent: #e8eef6;
+      --paper: #ffffff;
+      --ink: #1a1f2e;
+      --muted: #5a6478;
+      --line: #d8dee9;
+      --line-soft: #e8edf4;
+      --accent: #3b6d9a;
+      --accent-soft: rgba(59, 109, 154, 0.12);
+      --link: #2a5f8f;
+      --link-hover: #1a4068;
+      --nav-bg: rgba(255, 255, 255, 0.86);
+      --chip: #e8eef6;
+      --shadow: 0 1px 2px rgba(26, 31, 46, 0.04), 0 4px 16px rgba(26, 31, 46, 0.04);
+      --radius: 12px;
+      --sans: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB",
+               "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      --serif: "Songti SC", "Noto Serif SC", "Source Han Serif SC",
+               "Noto Serif CJK SC", Georgia, serif;
+      --s1: #3b6d9a;
+      --s2: #2f6b5c;
+      --s3: #4a5f8a;
+      --s4: #5a4a6b;
+    }
+    * { box-sizing: border-box; }
+    html { font-size: 16.5px; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: var(--serif);
+      line-height: 1.7;
+      background:
+        linear-gradient(180deg, var(--bg-accent) 0%, transparent 280px),
+        linear-gradient(90deg, rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        var(--bg);
+      background-size: auto, 28px 28px, 28px 28px, auto;
+      background-attachment: fixed;
+    }
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      isolation: isolate;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .topnav::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(59, 109, 154, 0.18) 20%,
+        rgba(59, 109, 154, 0.52) 50%,
+        rgba(59, 109, 154, 0.18) 80%,
+        transparent 100%
+      );
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .topnav-inner {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.72rem 0;
+      font-family: var(--sans);
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .brand:hover { color: var(--link); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.15rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      transition: color 0.15s ease, background 0.15s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: var(--ink);
+      background: var(--accent-soft);
+    }
+    .wrap {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      padding: 2rem 0 3.5rem;
+    }
+    header.mast {
+      margin-bottom: 1.75rem;
+      padding: 0.4rem 0 1.35rem;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    header.mast::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 4.5rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    h1 {
+      font-family: var(--sans);
+      font-size: clamp(1.75rem, 4vw, 2.15rem);
+      line-height: 1.25;
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    h1 a.home {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 a.home:hover {
+      color: var(--link);
+    }
+    .meta {
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin: 0;
+      max-width: 36em;
+    }
+    .lede {
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.05rem 1.2rem;
+      margin: 0 0 2rem;
+      font-size: 0.98rem;
+      box-shadow: var(--shadow);
+    }
+    section { margin-bottom: 2.4rem; }
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      margin: 0 0 1rem;
+      padding: 0.45rem 0 0.55rem;
+      border-top: none;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 2.75rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    article.item {
+      position: relative;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem 1.15rem;
+      margin: 0 0 0.95rem;
+      box-shadow: var(--shadow);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+      scroll-margin-top: 4.5rem;
+    }
+    article.item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1rem;
+      bottom: 1rem;
+      width: 2px;
+      border-radius: 0 2px 2px 0;
+      background: var(--accent);
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: center;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+    }
+    article.item:hover {
+      border-color: #b8c5d8;
+      box-shadow: 0 2px 4px rgba(26, 31, 46, 0.05), 0 8px 24px rgba(26, 31, 46, 0.07);
+      transform: translateY(-1px);
+    }
+    article.item:hover::before,
+    article.item:focus-within::before {
+      opacity: 0.9;
+      transform: scaleY(1);
+    }
+    article.item:target {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    article.item h3 {
+      font-family: var(--sans);
+      font-size: 1.06rem;
+      line-height: 1.35;
+      margin: 0 0 0.55rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .orig {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: -0.25rem 0 0.55rem;
+      font-family: Georgia, "Iowan Old Style", var(--serif);
+    }
+    .authors {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin: 0 0 0.55rem;
+    }
+    p { margin: 0 0 0.7rem; }
+    p:last-of-type { margin-bottom: 0.85rem; }
+    .src {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.9rem;
+      align-items: baseline;
+      border-top: 1px dashed var(--line);
+      padding-top: 0.65rem;
+    }
+    .src a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      word-break: break-all;
+    }
+    .src a:hover { color: var(--link-hover); }
+    .chip {
+      display: inline-block;
+      background: var(--chip);
+      color: var(--muted);
+      padding: 0.08rem 0.45rem;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      border: 1px solid var(--line-soft);
+    }
+    footer {
+      border-top: 1px solid var(--line-soft);
+      padding-top: 1rem;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .digest-wrap {
+      margin: 0 0 2.1rem;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    table.digest {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: transparent;
+      border: none;
+      font-family: var(--sans);
+      font-size: 0.86rem;
+    }
+    table.digest th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-accent);
+    }
+    table.digest td {
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line-soft);
+      vertical-align: top;
+      line-height: 1.45;
+    }
+    table.digest tr:last-child td { border-bottom: none; }
+    table.digest tbody tr { transition: background 0.15s ease; }
+    table.digest tbody tr:hover { background: var(--accent-soft); }
+    table.digest a { color: inherit; text-decoration: none; }
+    table.digest a:hover { color: var(--link); }
+    table.digest .sec {
+      width: 4.6rem;
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    table.digest .ttl { width: 38%; font-weight: 650; }
+    table.digest .one { color: var(--muted); font-weight: 400; }
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes briefing-fade-rise {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes nav-line-shimmer {
+        0%, 100% { background-position: 0% 50%; opacity: 0.28; }
+        50% { background-position: 100% 50%; opacity: 0.52; }
+      }
+      header.mast {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      .lede {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+      }
+      .digest-wrap {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.14s both;
+      }
+      section {
+        animation: briefing-fade-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      section:nth-of-type(1) { animation-delay: 0.2s; }
+      section:nth-of-type(2) { animation-delay: 0.26s; }
+      section:nth-of-type(3) { animation-delay: 0.32s; }
+      section:nth-of-type(4) { animation-delay: 0.38s; }
+      section:nth-of-type(n + 5) { animation-delay: 0.42s; }
+      .topnav::after {
+        background-size: 200% 100%;
+        animation: nav-line-shimmer 10s ease-in-out infinite;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .topnav::after,
+      header.mast,
+      .lede,
+      .digest-wrap,
+      section {
+        animation: none !important;
+      }
+      article.item {
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      }
+      article.item:hover {
+        transform: none;
+      }
+    }
+    @media (max-width: 720px) {
+      table.digest, table.digest thead, table.digest tbody, table.digest tr, table.digest th, table.digest td {
+        display: block;
+      }
+      table.digest thead { display: none; }
+      table.digest td.sec { padding-bottom: 0; border-bottom: none; }
+      table.digest td.ttl { padding-top: 0.2rem; padding-bottom: 0.15rem; width: auto; border-bottom: none; }
+      table.digest td.one { padding-top: 0; width: auto; }
+    }
+    @media (max-width: 560px) {
+      html { font-size: 16px; }
+      h1 { font-size: 1.7rem; }
+      .topnav-inner { width: calc(100% - 1.5rem); }
+      .wrap { width: calc(100% - 1.5rem); padding: 1.5rem 0 3rem; }
+      .nav-links a { padding: 0.3rem 0.5rem; font-size: 0.8rem; }
+      article.item { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topnav" aria-label="主导航">
+    <div class="topnav-inner">
+      <a class="brand" href="/">每日简报</a>
+      <ul class="nav-links">
+        <li><a href="/">首页</a></li>
+        <li><a href="/2026/2026-09-25.html">最新一期</a></li>
+                <li><a href="/ai/">AI 日报</a></li>
+        <li><a href="/">归档</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <header class="mast">
+      <h1><a class="home" href="/">每日简报</a></h1>
+      <p class="meta">2026年9月25日（周五）· 亚洲/上海</p>
+    </header>
+
+    <p class="lede">周五主线是「Google 产品线密集落地 + 美英模型共享摩擦 + 产业自建安全标准」：Gemini「Call for Me」电话代理在美区 Pixel 试点、3.8 Live Avatar 为企业对话「有脸」、DeepMind 新掌门确认 Gemini 4 已入早期后训练并望年内早发；白宫要求 OpenAI/Anthropic 新模型先经美方审查再给英国 AISI，三厂则筹划无政府监督的前沿安全标准机构；Google Project Suncatcher 下周首飞测轨上 TPU。科学侧周五 arXiv 偏重演化 SBM 渗流、跳跃率涨落 MFPT、跨维漏斗与活性布朗首达。科技侧 Verizon 开卖摩托折叠机、Waymo 德州车队三周 +49%、Spotify Taste Profile 与菲律宾 Discord 解封。抗衰以 Nature Aging 口腔共生菌 Nf（AURORA）与靶向 BIRC6 年轻化衰老 HSC 领衔。</p>
+
+    <div class="digest-wrap">
+      <table class="digest">
+        <thead><tr><th class="sec">栏目</th><th class="ttl">条目</th><th class="one">要点</th></tr></thead>
+        <tbody>
+        <tr>
+          <td class="sec"><a href="#i1">AI</a></td>
+          <td class="ttl"><a href="#i1">Gemini「Call for Me」：Pixel 代打电话办预约/改期</a></td>
+          <td class="one"><a href="#i1">美区 Pixel 11 订阅试点；可授权个资；实时字幕可接管</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i2">AI</a></td>
+          <td class="ttl"><a href="#i2">DeepMind 新掌门：Gemini 4 已后训练，望年内早发</a></td>
+          <td class="one"><a href="#i2">精炼/早期后训练；远早于年底；Flash 曾拖旗舰</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i3">AI</a></td>
+          <td class="ttl"><a href="#i3">Gemini 3.8 Live Avatar：企业实时对话「有脸」</a></td>
+          <td class="one"><a href="#i3">97 语口型；SynthID；异步工具不断线</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i4">AI</a></td>
+          <td class="ttl"><a href="#i4">白宫：新模型先美审再给英国 AISI</a></td>
+          <td class="one"><a href="#i4">Mythos 5.1 未交英；Astra 英方已测；网络风险驱动</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i5">AI</a></td>
+          <td class="ttl"><a href="#i5">Project Suncatcher：下周首飞测轨上 TPU</a></td>
+          <td class="one"><a href="#i5">Transporter-18；辐射/真空散热；2027 双星激光</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i6">AI</a></td>
+          <td class="ttl"><a href="#i6">三厂筹划无政府监督的前沿安全标准机构</a></td>
+          <td class="one"><a href="#i6">年底/明年初；评测+事件披露+审计；industry-only</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i7">AI</a></td>
+          <td class="ttl"><a href="#i7">LeakScale：基准污染对分数的因果贡献</a></td>
+          <td class="one"><a href="#i7">接触≠影响力；暴露可抬 +7～27 pp</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i8">科学</a></td>
+          <td class="ttl"><a href="#i8">演化社区 SBM：渗流临界度不必为 1</a></td>
+          <td class="one"><a href="#i8">λ_max=1 / 社区分支；几何相关限制</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i9">科学</a></td>
+          <td class="ttl"><a href="#i9">跳跃率涨落：平均首达从发散到有限</a></td>
+          <td class="one"><a href="#i9">α_c=1/2；爆发式大率正则化空间发散</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i10">科学</a></td>
+          <td class="ttl"><a href="#i10">跨维漏斗：高维增强拓扑保护振荡</a></td>
+          <td class="one"><a href="#i10">漏斗→边流/时钟相干；Zak ν；皮肤效应</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i11">科学</a></td>
+          <td class="ttl"><a href="#i11">活性布朗：上坡/下坡首达不对称与重加权</a></td>
+          <td class="one"><a href="#i11">活性破条件时间相等；Σ 重加权；上坡可由下坡重构</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i12">科学</a></td>
+          <td class="ttl"><a href="#i12">多尺度熵：非平衡相变的标度序参量</a></td>
+          <td class="one"><a href="#i12">WCRG 熵分解；φ⁴/AMB+/意见动力学</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i13">科学</a></td>
+          <td class="ttl"><a href="#i13">驱动 Potts 热机：有序相普适分裂</a></td>
+          <td class="one"><a href="#i13">q 亚相/q−1 跃迁；n_{q−1} 盆→集体热机</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i14">科学</a></td>
+          <td class="ttl"><a href="#i14">重置搜索者下的最优规避</a></td>
+          <td class="one"><a href="#i14">调 τ 最大化存活；τ_⋆；关联时间=规避资源</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i15">科学</a></td>
+          <td class="ttl"><a href="#i15">哨兵节点：非线性网络动力学可迁移重构</a></td>
+          <td class="one"><a href="#i15">ln N 哨兵；邻接可迁移 vs Laplacian 孤立</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i16">科技</a></td>
+          <td class="ttl"><a href="#i16">Verizon 开卖摩托 2026 折叠机 + Watch Ultra</a></td>
+          <td class="one"><a href="#i16">Razr Fold/$1,949；手表捆绑回流 Wear OS</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i17">科技</a></td>
+          <td class="ttl"><a href="#i17">Create My Widget：自然语言生成桌面组件</a></td>
+          <td class="one"><a href="#i17">十月随 Googlebook 首发；生成式 UI 产品化</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i18">科技</a></td>
+          <td class="ttl"><a href="#i18">Waymo：德州车队三周 +49%，Ojai 约占三分之一</a></td>
+          <td class="one"><a href="#i18">约 4000 车八成在加州+德州；Zeekr 改装</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i19">科技</a></td>
+          <td class="ttl"><a href="#i19">One UI 9（Android 17）美国开推：暂限 T-Mobile S26</a></td>
+          <td class="one"><a href="#i19">运营商分阶段；AI 功能成更新卖点</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i20">科技</a></td>
+          <td class="ttl"><a href="#i20">Spotify Taste Profile：美区 Premium 自然语言调推荐</a></td>
+          <td class="one"><a href="#i20">18+ beta；纠偏 Home/Discover；共享账号串味</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i21">科技</a></td>
+          <td class="ttl"><a href="#i21">菲律宾解封 Discord：谈妥儿童安全「绿通道」</a></td>
+          <td class="one"><a href="#i21">封约一日后复通；以市场准入换安全承诺</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i22">抗衰</a></td>
+          <td class="ttl"><a href="#i22">口腔共生菌 N. flavescens：AI 多模态钟筛出的护老候选</a></td>
+          <td class="one"><a href="#i22">AURORA；Nf 线虫延寿；热灭活鼠部分年轻化</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i23">抗衰</a></td>
+          <td class="ttl"><a href="#i23">极端长寿者皮下脂肪：纤维化/衰老↓、更「年轻」</a></td>
+          <td class="one"><a href="#i23">n=210 多组学；生物年龄加速↓；SIRT/FOXO vs SASP</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i24">抗衰</a></td>
+          <td class="ttl"><a href="#i24">器官蛋白钟：「健康饮酒」悖论为何靠不住</a></td>
+          <td class="one"><a href="#i24">跨研究矛盾；警示观察性因果；方法学 Perspective</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i25">抗衰</a></td>
+          <td class="ttl"><a href="#i25">靶向 BIRC6：LNP-ASO 翻盘衰老 HSC</a></td>
+          <td class="one"><a href="#i25">Treg–cAMP–CREB–BIRC6；疫苗应答↑约 22 倍</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i26">抗衰</a></td>
+          <td class="ttl"><a href="#i26">过氧化物酶体输入应激经 SCAF1 驱动衰老</a></td>
+          <td class="one"><a href="#i26">mito 核糖体装配闸门；IMR90 衰老表型</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i27">抗衰</a></td>
+          <td class="ttl"><a href="#i27">细胞外囊泡：衰老造血生态位的选择性信使</a></td>
+          <td class="one"><a href="#i27">衰老 EV 促髓系偏向；年轻 EV 可逆转线索</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i28">抗衰</a></td>
+          <td class="ttl"><a href="#i28">肾脏衰老：细胞衰老在老化、损伤与纤维化中的双重角色</a></td>
+          <td class="one"><a href="#i28">CKD≈8.5 亿；衰老双刃；干预关键考量</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section>
+      <h2>1. AI和大模型</h2>
+
+    <article class="item" id="i1">
+      <h3>Gemini「Call for Me」：Pixel 订阅用户可让 AI 代打电话办预约/改期/询库存</h3>
+<p class="orig">Google tests letting Gemini call businesses for you / “Call for Me”</p>
+<p>Google 推出实验功能 <strong>「Call for Me」</strong>：Gemini 可代表用户致电商家，处理询库存、订餐、改预约、留货等任务；会自我介绍、过 IVR、排队等候，用户通过<strong>实时文字记录</strong>跟进并可随时接管。</p>
+<p>首批面向美国 <strong>Pixel 11</strong>、付费 Gemini 订阅用户，并需 Android Phone 应用 <strong>beta</strong>。相对去年「Ask for Me」等偏询问能力，本次允许用户<strong>批准后分享个人信息</strong>以完成更广动作，且用<strong>本人号码</strong>从本机拨出。公司称现实对话复杂、先小规模试验。</p>
+<p>背景是 Meta Muse/Instinct 等已可代打电话——电话代理能力进入主力助手产品线。</p>
+      <div class="src"><span class="chip">AI</span> <a href="https://techcrunch.com/2026/09/24/google-tests-letting-gemini-make-phone-calls-initially-for-us-pixel-owners/">TechCrunch</a></div>
+    </article>
+
+    <article class="item" id="i2">
+      <h3>DeepMind 新掌门 Koray Kavukcuoglu：Gemini 4 已入早期后训练，目标「远早于年底」发布</h3>
+<p class="orig">Gemini 4 is almost ready, says new Google DeepMind chief</p>
+<p>8 月接掌 Google DeepMind 的 <strong>Koray Kavukcuoglu</strong> 首次媒体亮相（The Information AI Agenda Live Summit）称：Gemini 4 已处<strong>精炼/早期后训练</strong>阶段，公司意图「尽快」发布早期后训练产物，「我们看到结果、很兴奋」，并继续快速迭代；目标<strong>远早于 2026 年底</strong>。</p>
+<p>Google 自 2025 年 11 月 Gemini 3 系列后再无旗舰发布，期间 GPT-6、Anthropic Mythos 等已领先；I/O 曾预告的 Gemini 3.5 Pro 未落地，Kavukcuoglu 称曾「稍退后」优先推更快的 Flash 系列。被问是否担心落后时称「我们总会在前沿」。</p>
+<p>叙事：三强竞赛中 Google 压缩时间线追赶。</p>
+      <div class="src"><span class="chip">AI</span> <a href="https://www.theverge.com/tech/999802/google-deepmind-gemini-4-timeline-koray-kavukcuoglu">The Verge</a></div>
+    </article>
+
+    <article class="item" id="i3">
+      <h3>Gemini 3.8 Live + Live Avatar：企业实时对话 AI「有脸」；97 语种口型同步 + SynthID</h3>
+<p class="orig">Introducing Gemini 3.8 Live with Live Avatar</p>
+<p>在上周 Gemini 3.8 Live（近实时视觉输入）之上，Google 发布 <strong>Live Avatar</strong>：对话时以动画人物唇形同步、表情变化回应；支持 <strong>97 种语言</strong>无缝切换且声称不降视频保真、不产生视觉漂移；可边说边调工具拉信息（异步工具调用保持「在场」）。</p>
+<p>面向 <strong>Gemini Enterprise</strong>；提供预设形象库，亦可用参考图生成品牌定制 Avatar（企业白名单）。输出带不可见 <strong>SynthID</strong> 水印，并强调身份尊重护栏。</p>
+<p>对标 Meta Realtime Avatar 等「有形象的代理」路线——企业客服/导览场景产品化。</p>
+      <div class="src"><span class="chip">AI</span> <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar/">Google The Keyword</a> <a href="https://www.theverge.com/tech/1000328/google-gemini-ai-live-avatar-face">The Verge</a></div>
+    </article>
+
+    <article class="item" id="i4">
+      <h3>白宫要求 OpenAI、Anthropic：新前沿模型先经美方审查，再分享给英国 AISI</h3>
+<p class="orig">White House asks OpenAI, Anthropic to hold models from British testers</p>
+<p>Politico 称白宫（经 <strong>Office of the National Cyber Director</strong>）要求 OpenAI、Anthropic <strong>暂缓</strong>将最新模型交给英国政府 <strong>AI Security Institute（AISI）</strong>，直至美方先完成审查，以确保「美国系统安全」后再与伙伴共享。</p>
+<p>Anthropic 似已配合：<strong>Claude Mythos 5.1</strong> 仅对一组美国组织开放、未提供给 AISI；AISI 主任 Henry de Zoete 致议会信承认缺该模型，但称仍保有部分预发布权限并曾测过 OpenAI <strong>GPT-6 Astra</strong>。英方发言人淡化摩擦、强调跨境风险需合作。</p>
+<p>背景：代理越界/网络能力上升后，美方优先「本国先行」评估——冲击英国以自愿预发布测试立身的安全外交。</p>
+      <div class="src"><span class="chip">AI</span> <a href="https://www.channelnewsasia.com/business/white-house-asks-openai-anthropic-hold-models-british-testers-politico-reports-6409141">CNA / Politico</a> <a href="https://www.livemint.com/news/us-news/white-house-wants-us-government-review-of-openai-anthropic-s-new-ai-models-before-uk-access-report-11790271763243.html">LiveMint</a></div>
+    </article>
+
+    <article class="item" id="i5">
+      <h3>Google Project Suncatcher：下周 Transporter-18 首射原型星，测轨上 TPU 能否扛辐射/散热</h3>
+<p class="orig">Behind Project Suncatcher / Google plans first test of AI chips in space</p>
+<p>Google 宣布 <strong>Project Suncatcher</strong> 首个在轨测试：与 <strong>Planet</strong> 合作、搭乘 SpaceX <strong>Transporter-18</strong> rideshare（报道称约 <strong>10 月 1 日</strong>），将原型卫星送入低轨，评估 <strong>TPU</strong> 对抗发射振动、辐射（含 bit flip）与真空散热。</p>
+<p>地面已在 UC Davis 质子束等设施跑过 AI 负载；轨道侧重真实环境与<strong>热管+辐射器</strong>冷却方案。官方定位为收集数据、找失效点，而非演示运营级轨道数据中心；<strong>2027</strong> 计划再射两颗星测高带宽<strong>激光互联</strong>。</p>
+<p>叙事：太空近持续日照、规避地面电力约束的长期 moonshot——与 SpaceX/Starcloud 等轨道算力议论同周升温。</p>
+      <div class="src"><span class="chip">AI</span> <a href="https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/">Google Research</a> <a href="https://arstechnica.com/google/2026/09/googles-first-suncatcher-orbital-data-center-test-launches-october-1/">Ars Technica</a></div>
+    </article>
+
+    <article class="item" id="i6">
+      <h3>The Information：OpenAI、Google、Anthropic 筹划无政府监督的前沿 AI 安全标准机构</h3>
+<p class="orig">OpenAI, Google and Anthropic join forces to set AI safety standards</p>
+<p>据 The Information，Anthropic、Google、OpenAI 拟在 <strong>2026 年底或 2027 年初</strong>推出由前沿模型厂商<strong>自律</strong>的标准机构——<strong>无政府监督</strong>；原设想公私合伙，据称在特朗普政府下停滞。</p>
+<p>职能拟含：支持第三方预发布测评、规定安全/安全事件如何报告、定义自愿安全承诺、设定独立审计师资质；工作组还讨论是否由该机构本身测模型。与 2023 年 Frontier Model Forum（含 Microsoft）有接触、或可协作。批评者担忧三巨头借此排挤开源与其他竞争者。</p>
+<p>异于已覆盖的「美主导安全联盟」旧闻——本条重点是 <strong>industry-only、无政府 oversight</strong> 的新标准体时间表。</p>
+      <div class="src"><span class="chip">AI</span> <a href="https://www.pymnts.com/news/artificial-intelligence/2026/openai-google-and-anthropic-join-forces-to-set-ai-safety-standards/">PYMNTS / The Information</a></div>
+    </article>
+
+    <article class="item" id="i7">
+      <h3>LeakScale：用干预实验量化「基准进训练集」对分数的因果贡献（+7～+27 pp）</h3>
+<p class="orig">Beyond Overlap: Estimating the Causal Effect of Benchmark Exposure（LeakScale）</p>
+<p class="authors">Divyansh Singh · arXiv cs.CL · 2026-09-23</p>
+<p>作者指出：证明评测材料进入训练，并不能说明它对分数<strong>影响多大</strong>——溯源只证「接触」，量化需<strong>反事实</strong>。提出 <strong>LeakScale</strong>：构造需私有、族特异性信息的新可执行任务，控制是否暴露该信息，估计控制调整后的可执行准确率变化。</p>
+<p>在 <strong>2048</strong> 个独特任务族、两模型族、两可执行域、<strong>262,144</strong> 次生成上，暴露在每一模型×域组合均提升准确率，增益约 <strong>+7.17～+27.31</strong> 个百分点。</p>
+<p>将「是否污染」与「污染对分数依赖有多强」拆开，使后者可测——对排行榜可信度与数据泄漏辩论有直接方法学意义。</p>
+      <div class="src"><span class="chip">AI</span> <a href="https://arxiv.org/abs/2609.27176">arXiv:2609.27176</a></div>
+    </article>
+    </section>
+
+    <section>
+      <h2>2. 科学、物理与复杂性</h2>
+
+    <article class="item" id="i8">
+      <h3>演化社区 SBM：渗流临界度不必为 1</h3>
+<p class="orig">Percolation in the Stochastic Block Model</p>
+<p class="authors">Luca Pieleanu, Moritz Laber, Narayan G. Sabhahit, Dmitri Krioukov · physics.soc-ph / cond-mat.stat-mech · 2026-09-25</p>
+<p>标准 SBM 渗流多固定块结构；真实网络社区随规模演化。作者研究五类 SBM 序列——块数、块大小与内外连边概率均可随 \(n\) 变化——树状序列用线性化自洽方程（临界由期望连边矩阵最大本征值 \(\lambda_{\max}=1\)），有聚类序列用社区尺度分支过程。</p>
+<p>即使局部树化，临界平均度一般亦非 1，取决于连接在演化社区上如何分配；社区间足够稀疏时，社区尺度分支过程在非零聚类下仍准确，几何 SBM 则暴露相关边失效。为长程几何渗流阈值上下界提供新方法。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://arxiv.org/abs/2609.27141">arXiv:2609.27141</a></div>
+    </article>
+
+    <article class="item" id="i9">
+      <h3>跳跃率涨落：平均首达从发散到有限</h3>
+<p class="orig">First Passage in the Presence of Jump Rate Fluctuations: A Transition from Infinite to Finite Mean</p>
+<p class="authors">Bara Levit, Shlomi Reuveni · cond-mat.stat-mech · 2026-09-25</p>
+<p>一维对称随机行走必达任意位点，但平均首达时间（MFPT）发散；等待时间随机化（CTRW）亦无法修补——发散本质是空间长游走。作者在双重随机 CTRW（DSCTRW）中令跳跃率本身为随机过程（每 \(\tau_r\) 从 Mittag-Leffler/\(\sim\lambda^{-1-\alpha}\) 重采样），证明 \(\alpha_c=1/2\) 相变。</p>
+<p>\(\alpha&lt;1/2\) 时强率涨落产生爆发式多步，生存尾 \(\sim t^{-1/(2\alpha)}\) 使 MFPT 有限；\(\alpha\geq 1/2\) 仍发散。有限区 MFPT \(\sim x_0^{2\alpha}\)，并对 \(\tau_r\) 两端同幂 \(1-\alpha\)。机制普适于任何大率幂律尾及有限弛豫时间的率过程。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://arxiv.org/abs/2609.26925">arXiv:2609.26925</a></div>
+    </article>
+
+    <article class="item" id="i10">
+      <h3>跨维漏斗：高维增强拓扑保护振荡</h3>
+<p class="orig">An interdimensional funnel enhances topologically protected oscillations in high-dimensional stochastic systems</p>
+<p class="authors">Varsha Traynor, Jaime Agudo-Canalejo · cond-mat.soft / stat-mech / physics.bio-ph · 2026-09-25</p>
+<p>蛋白复合物构型空间维数 \(D\) 随亚基数增长，通常被视为相干障碍。作者证明任意 \(D\) 均可出现拓扑保护边缘电流：拓扑相（\(\gamma_{\rm ex}/\gamma_{\rm in}&gt;1\)）中稳态电流局域于一维边环；介于 \(D\) 维体与 1 维环之间的中间维面形成<strong>跨维漏斗</strong>，依次把概率推向更低维面直至边环。</p>
+<p>增大 \(D\) 增强漏斗 → 更强一维局域与振荡相干（周期精度 \(\mathcal{N}\propto D\)）。双正交 Zak 相量子化标志拓扑跃迁，并伴结构化非厄米皮肤效应（广延数模皮肤局域到 1 维环）。与既有随机拓扑不同，该现象在量子凝聚态/活性物质中无直接对应。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://arxiv.org/abs/2609.26966">arXiv:2609.26966</a></div>
+    </article>
+
+    <article class="item" id="i11">
+      <h3>活性布朗：上坡/下坡首达不对称与路径重加权</h3>
+<p class="orig">Uphill and downhill first passage of an active Brownian particle: Asymmetry and exact path reweighting</p>
+<p class="authors">Mykola Tasinkevych, Xuan My Le, Artem Ryabov · cond-mat.soft / stat-mech · 2026-09-25</p>
+<p>被动有偏扩散中，相反出口分裂概率可不同，但条件首达时间分布仍相同。活性布朗粒子（ABP）在恒力下两吸收边界间自推进打破该等式。空间反射 \(X\to -X\)（取向史不变）仍把等时长上坡/下坡路径一一配对；路径概率对数比定义不对称泛函 \(\Sigma\)，给出精确重加权。</p>
+<p>半加权表示下，任意取向持久性时上坡与下坡首达时间分布重合；稀有上坡统计可由更常采样的下坡轨迹重构。弱持久展开与冻结取向极限解释无加权统计的方向不对称。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://arxiv.org/abs/2609.27425">arXiv:2609.27425</a></div>
+    </article>
+
+    <article class="item" id="i12">
+      <h3>多尺度熵：非平衡相变的标度序参量</h3>
+<p class="orig">Multiscale Entropies as Order Parameters for Nonequilibrium Phase Transitions</p>
+<p class="authors">Gerhard Jung, Misaki Ozawa · cond-mat.stat-mech / soft · 2026-09-25</p>
+<p>基于小波条件重整化群（WCRG），将总 Shannon 熵分解为各空间尺度贡献；生成模型从构型/快照估计条件分布，即使概率未知的非平衡系统亦可。应用于平衡 \(\varphi^4\)（二阶相变）与活性 Model B+（微相分离）：总熵光滑，而多尺度/条件熵在临界与渗流–气泡转变处显现峰/跳；粗粒熵 \(S_J\approx\tfrac12\ln\chi\) 捕获磁化率。</p>
+<p>意见动力学 Hegselmann–Krause 异质模型上同样刻画共识相界。多尺度熵充当无需先验序参量的标度依赖序参量。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://arxiv.org/abs/2609.27705">arXiv:2609.27705</a></div>
+    </article>
+
+    <article class="item" id="i13">
+      <h3>驱动 Potts 热机：有序相普适分裂 + 集体热机</h3>
+<p class="orig">Universal splitting of nonequilibrium phase transitions in driven Potts heat engines</p>
+<p class="authors">Vitória T. Henkes, Gustavo A. L. Forão, Andre C. Barato, Carlos E. Fiore · cond-mat.stat-mech · 2026-09-25</p>
+<p>驱动 Potts（\(q\geq 3\)）耦冷/热两库，驱动方案打破态置换对称。有序相内出现 \(q\) 个亚相，以稳定不动点数 \(q,q-1,\ldots,1\) 区分，对应 \(q-1\) 次不连续跃迁（「相变分裂」）。</p>
+<p>在保留全部 \(q\) 个不动点的相中、初态落入 \(n_{q-1}\) 主导吸引盆时，系统可作为集体热机输出功率；强有序平均场可解析功率/热流/效率。二维格子 Gillespie 模拟复现分裂与热机，表明对维数稳健。将此前驱动 Ising 的分裂现象推广到多态结构。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://arxiv.org/abs/2609.28148">arXiv:2609.28148</a></div>
+    </article>
+
+    <article class="item" id="i14">
+      <h3>重置搜索者下的最优规避：关联时间作资源</h3>
+<p class="orig">Optimal Evasion from a Resetting Searcher</p>
+<p class="authors">Ami Taitelbaum, Matan Shporer, Shlomi Reuveni, Michael Assaf · cond-mat.stat-mech · 2026-09-25</p>
+<p>重置加速搜索已充分研究；本文反转视角：可动目标如何推迟被捕获？重置布朗搜索者 vs 在家位置 \(x_0\) 附近 OU 涨落的目标（探索范围 \(\sigma\) 固定、关联时间 \(\tau\) 可调）。</p>
+<p>短 \(\tau\)：目标快速回访重置点 → 平均捕获时间（MCT）\(\propto\tau\to 0\)；长 \(\tau\)：近似静止 → MCT 从上方趋近固定目标结果。中间 \(\tau_\star\) 使 MCT 最大——足够远游且足够持久以挫败连续搜索。两端解析 + 数值给出 \(\langle T\rangle_{\max}\propto\tau_\star\)（跨多数量级）；目标机动性还将快速重置下 MCT 的指数发散正则化为有限平台。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://arxiv.org/abs/2609.28126">arXiv:2609.28126</a></div>
+    </article>
+
+    <article class="item" id="i15">
+      <h3>哨兵节点：非线性网络动力学的可迁移全状态重构</h3>
+<p class="orig">Transferable reconstruction of nonlinear network dynamics from sentinel nodes</p>
+<p class="authors">Naoki Masuda, Bisna Mary Eldo, Tharusha Bandara · physics.soc-ph / nlin · 2026-09-25</p>
+<p>从 \(n=\lfloor\ln N\rfloor\) 个哨兵节点的平衡态读数重构全网 \(N\) 维平衡态。跨 14 网络、16 种非线性动力学（流行病/神经/基因/生态/双稳），浅层神经网络与线性岭回归解码器常可准确重构。</p>
+<p>可迁移性结构化而非普适——11 种邻接矩阵型耦合形成稳健可迁移类，5 种拉普拉斯扩散型标量动力学形成孤立转移分量。非随机哨兵选择（MinCorr/QR）一致优于随机；池化训练（C11）大幅优于单动力学源。耦合架构是跨动力学迁移成败的关键。</p>
+      <div class="src"><span class="chip">科学</span> <a href="https://arxiv.org/abs/2609.27968">arXiv:2609.27968</a></div>
+    </article>
+    </section>
+
+    <section>
+      <h2>3. 互联网产品与科技业界</h2>
+
+    <article class="item" id="i16">
+      <h3>Verizon 全国开卖摩托罗拉 2026 折叠机 + Moto Watch Ultra</h3>
+<p class="orig">Motorola’s 2026 Razr foldables arrive on Verizon’s shelves</p>
+<p>Verizon <strong>09-24</strong> 宣布全国开卖 <strong>motorola razr fold</strong>（零售 <strong>$1,949.99</strong>，比摩托官网解锁版约高 $50）、<strong>razr+ 2026</strong>（<strong>$1,099.99</strong>）、<strong>razr 2026 with Crystals by Swarovski</strong>（<strong>$999.99</strong>，比发布日约高 $100），并同步上架 Wear OS 回归作 <strong>moto watch ultra</strong>（零售约 <strong>$349.99</strong>）。</p>
+<p>Simplicity 48 个月分期下 Fold 可至约 <strong>$25/月</strong>（无需以旧换新）；符合条件以旧换新最高约 <strong>$1,100</strong> 账单抵扣；购/携入摩托罗拉机并加表号线可账单抵扣拿 Watch Ultra。Razr Fold：约 <strong>8.1"</strong> 内屏 + <strong>6.6"</strong> 外屏、Snapdragon <strong>8 Gen 5</strong>、16GB/512GB、约 <strong>6000mAh</strong>；Razr+：Snapdragon <strong>8s Gen 3</strong>；Swarovski 款为 Dimensity <strong>7450X</strong>。三机出厂 <strong>Android 16</strong>；仅 Fold 承诺约 <strong>7</strong> 年系统/安全更新。</p>
+<p>运营商补齐摩托书本式折叠机渠道；定价高于解锁版；手表捆绑回流 Wear OS。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://www.verizon.com/about/news/verizon-motorola-2026-foldable-phone-deals">Verizon</a> <a href="https://www.androidauthority.com/verizon-motorola-razr-fold-plus-2026-3715126/">Android Authority</a> <a href="https://9to5google.com/2026/09/24/motorola-razr-fold-verizon/">9to5Google</a></div>
+    </article>
+
+    <article class="item" id="i17">
+      <h3>Android「Create My Widget」：自然语言生成桌面小组件，十月随 Googlebook 首发</h3>
+<p class="orig">Android’s Create My Widget ‘app’ detailed on phones, Googlebooks</p>
+<p>9to5Google 详述 Play 上已出现的 <strong>Create My Widget</strong>（包名 <code>com.google.android.apps.yourwidget</code>，版本串含 desktop_release）。手机端提供 Combo、天气预警、世界时钟、Daily Brief、重要日期、行情等模板轮播，底部可「描述你的小组件」再用自然语言生成并钉到主屏；Googlebook 界面分类更多（天气、运动、旅行、习惯、金融、工具等）。</p>
+<p>生成件可用 Material 3 Expressive 形状做低信息密度样式。官方定位首发在 <strong>十月初 Googlebook</strong>；今日稿同步给出 listing 日期口径 <strong>September 24</strong>。属「生成式 UI」消费侧落地。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://9to5google.com/2026/09/24/google-create-my-widget-app/">9to5Google</a></div>
+    </article>
+
+    <article class="item" id="i18">
+      <h3>Waymo：德州车队三周 +49%，Ojai（Zeekr）占比约三分之一</h3>
+<p class="orig">Waymo is scaling fast. Here’s what the fleet data shows.</p>
+<p>TechCrunch 据德州注册与车队追踪数据：Waymo 全美约 <strong>4000</strong> 辆 Robotaxi，约 <strong>80%</strong> 在加州与德州；商业服务已扩至约 <strong>15</strong> 城、周付费单约 <strong>50 万</strong>。截至 <strong>09-24</strong> 德州登记 <strong>1102</strong> 辆，过去约三周 <strong>+49%</strong>（八月底约 700+），增量主靠中国吉利旗下 <strong>Zeekr</strong> 改装、Waymo 品牌化的 <strong>Ojai</strong> 面包车（约六代自驾系统+车内 Gemini），已占德州车队约 <strong>三分之一</strong>。</p>
+<p>底盘在华生产、去联网件后运美、亚利桑那厂装传感器；关税抬升单车成本，但 MoffettNathanson 预计年底进口 Ojai 约 <strong>5100</strong> 辆。奥斯汀（Uber 合作）、达拉斯、休斯敦、圣安东尼奥为德州主战场；佛罗里达与拉斯维加斯料将接车。</p>
+<p>规模叙事下看地理集中度；中国造车体+美自驾栈；关税 vs 规模成本博弈。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://techcrunch.com/2026/09/24/waymo-is-scaling-fast-heres-what-the-fleet-data-shows/">TechCrunch</a></div>
+    </article>
+
+    <article class="item" id="i19">
+      <h3>三星 One UI 9（Android 17）美国开推：暂限 T-Mobile Galaxy S26</h3>
+<p class="orig">Samsung's One UI 9 is finally rolling out in the US, but only for some Galaxy owners</p>
+<p>三星基于 <strong>Android 17</strong> 的 <strong>One UI 9</strong> 在美国约晚一周开始推送；Reddit 等反馈目前基本仅 <strong>T-Mobile</strong> 渠道 <strong>Galaxy S26</strong> 可见，<strong>AT&amp;T / Verizon / 解锁机</strong> 仍无。Z Fold 8 / Flip 8 / S26 FE 等已预装或更早拿到；A 系列与平板时间表未公布。</p>
+<p>更新重点多在 AI：Gemini Intelligence、Now Brief 日报、Interpreter 线程翻译、Security Brief、诈骗检测，以及 My FanCam 等后期剪辑；非大改版，更像 One UI 8.5 的 Android 对齐。</p>
+<p>运营商分阶段推送；旗舰先吃 Android 17；AI 功能成更新卖点。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://www.howtogeek.com/samsung-one-ui-9-update-us-availability/">How-To Geek</a></div>
+    </article>
+
+    <article class="item" id="i20">
+      <h3>Spotify Taste Profile：美国 Premium（18+）开放自然语言调推荐</h3>
+<p class="orig">Spotify Rolls Out Taste Profile For Premium Users In The US</p>
+<p>Spotify 向美国 <strong>Premium</strong>、<strong>18 岁以上</strong> 用户推 beta <strong>Taste Profile</strong>（此前新西兰试过；三月 SXSW 由联席 CEO Gustav Söderström 介绍）。用户可查看平台对其音乐/播客/有声书偏好的解读，并用自然语言要求「更多样」「少某类」「压低哄睡/儿童账号串味」等，影响 Home、Discover Weekly、Made for You 乃至 Wrapped 相关推荐；改动称数小时后反映到 Home。</p>
+<p>入口：头像 → Taste Profile → “Tell us more”。仍为 beta，无全球全面时间表。不同于此前「印度 Early Access」条，属美国最大市场控制权产品。</p>
+<p>推荐从隐式行为走向可对话纠偏；共享账号串味成刚需；美区 Premium 优先。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://dataconomy.com/2026/09/24/spotify-taste-profile-premium-users-us/">Dataconomy</a></div>
+    </article>
+
+    <article class="item" id="i21">
+      <h3>菲律宾解封 Discord：CICC 与平台谈妥儿童安全「绿通道」后要求 NTC 复通</h3>
+<p class="orig">CICC lifts Discord ban, asks NTC to restore access</p>
+<p>菲律宾 <strong>CICC</strong>（隶属 DICT）在 <strong>09-24</strong> 记者会宣布解除对 <strong>Discord</strong> 的临时屏蔽，并请 <strong>NTC</strong> 启动复通。此前约 <strong>09-22</strong> 向 Discord、Reddit 下 24 小时「在菲建立对接」通牒，关切虚无主义暴力极端主义、未成年诱导与安全协作。</p>
+<p>解封条件含政府诉求「绿通道」、加快下架/协查流程。DICT 部长强调平台应对菲儿童负责；民间 Scam Watch 批评「全面封禁伤及合法用户（外包、教育、游戏等）」，主张打内容不打整站。舆论视其为「以市场准入换安全承诺」的新剧本。</p>
+<p>东南亚监管用断网施压全球社交；合规可快速复通；用户成政策附带伤害。</p>
+      <div class="src"><span class="chip">科技</span> <a href="https://www.rappler.com/technology/cicc-lifts-discord-ban/">Rappler</a> <a href="https://tribune.net.ph/2026/09/24/discord-ban-reversal-tests-new-playbook-for-platforms">Daily Tribune</a></div>
+    </article>
+    </section>
+
+    <section>
+      <h2>4. 抗衰与长寿</h2>
+
+    <article class="item" id="i22">
+      <h3>口腔共生菌 N. flavescens：AI 多模态钟筛出的护老候选</h3>
+<p class="orig">Multi-modality profiling identifies Neisseria flavescens as a central geroprotective oral commensal in humans</p>
+<p class="authors">Jiawei Chen, Ya Ren, Yong Zhou, Ziyang Wang, Jiyang Li, Xiaoxiao Guo, Hao Xu, Yiyang Wang, Huiru Tang, Jing-Dong J. Han 等 · Nature Aging · 2026-09-24</p>
+<p>用生成式多模态框架 <strong>AURORA</strong> 构建衰老钟并做 in silico 干预筛选，将舌苔宏基因组与血浆代谢等对接，预测口腔共生菌 <strong>Neisseria flavescens（Nf）</strong> 为缩小年龄差的顶级命中。分离两株 Nf，验证有益代谢物；活菌延长 <em>C. elegans</em> 寿命与健康跨度；热灭活 Nf 使老龄小鼠血清代谢组、肝脏转录组与肠道菌群部分回向年轻态。</p>
+<p>把被低估的口腔微生态推到系统衰老干预轴，并给出可复用的 AI 干预发现引擎（专利 pending）。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://www.nature.com/articles/s43587-026-01220-0">Nature Aging</a> <a href="https://doi.org/10.1038/s43587-026-01220-0">DOI</a></div>
+    </article>
+
+    <article class="item" id="i23">
+      <h3>极端长寿者皮下脂肪：纤维化/衰老↓、成脂程序与染色质可及性更「年轻」</h3>
+<p class="orig">Multiomics reveals a resilient subcutaneous adipose tissue phenotype in extreme human longevity</p>
+<p class="authors">Matheus Corteletti, Wang Wei, Giuseppe Mancini, Niccolò Conti, Xu Junjie, Dominic Zimmermann Grün · Research Square preprint · 2026-09-24</p>
+<p>140 名长寿者 vs 70 对照的皮下脂肪整合组织学、bulk/snRNA-seq、空间转录组与 scATAC-seq。长寿组脂肪细胞更小更均质、纤维化↓、微血管↑；衰老/炎症空间微龛减弱，UCP1⁺ 米色脂肪↑。转录组脂肪生物年龄加速显著更低；长寿分子程序富集 SIRT3、PRKAA1、PPARG、UCP1、SIRT1、NFE2L2、FOXO3、ADIPOQ 等，对照侧 CDKN2A/IL6/CCL2 等 SASP 基因↑。</p>
+<p>染色质层面 PPARG/CEBPA/NFE2L2/FOXO1 等 motif 更可及，对照侧 NF-κB/AP-1/TP53 相关 motif 更开放。为「极端长寿＝主动维持的脂肪衰老轨迹」提供多层图谱（预印本，待审）。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://www.researchsquare.com/article/rs-10973887/v1">Research Square</a> <a href="https://doi.org/10.21203/rs.3.rs-10973887/v1">DOI</a></div>
+    </article>
+
+    <article class="item" id="i24">
+      <h3>器官特异蛋白质组衰老钟：「健康饮酒」悖论为何靠不住</h3>
+<p class="orig">Organ-Specific Proteomic Aging Clocks Reveal Complexities Underlying the Healthy Drinking Paradox</p>
+<p class="authors">Gabin Drouard · Aging Cell · Perspective · 2026-09-24</p>
+<p>「健康饮酒」悖论指观察性研究中饮酒看似与更好健康结局相关，却被混杂严重扭曲。近期若干器官特异蛋白质组衰老钟报告：饮酒在部分器官「变慢」衰老、在另一些器官加速——结果跨研究高度不一致。</p>
+<p>本文梳理钟构建方式、饮酒表型编码与混杂控制差异，强调若按字面解读，可能<strong>低估</strong>酒精对人体的已知损害。对把器官钟直接用于生活方式因果推断提出方法学警示，适合 geroscience 流行病学读者。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://onlinelibrary.wiley.com/doi/10.1111/acel.70743">Aging Cell</a> <a href="https://doi.org/10.1111/acel.70743">DOI</a></div>
+    </article>
+
+    <article class="item" id="i25">
+      <h3>靶向 BIRC6：骨髓 Treg–cAMP 轴维持的衰老 HSC，可被 LNP-ASO 翻盘</h3>
+<p class="orig">Targeting BIRC6 rejuvenates hematopoietic stem cell aging and immunosenescence</p>
+<p class="authors">Weinian Liao, Fangze Shao, Shaoyan Wang, Yetong Wang, Xinliang Chen, Yue Zhang, Zhang Zhang, Xiaodong Zai, Yilong Yang, Ying Yin, Youliang Wang, Jun Zhang, Junping Wang, Junjie Xu · Signal Transduction and Targeted Therapy · 2026-09-23</p>
+<p>鉴定老龄化 HSC 中高表达凋亡抑制因子 <strong>BIRC6</strong> 的亚群；骨髓 Treg 经缝隙连接递送 cAMP→<strong>PKA–CREB</strong> 转录激活 <em>Birc6</em>，降低凋亡 priming，巩固髓系偏向与免疫失衡。抗 CD117 抗体偶联 <strong>LNP-ASO</strong> 靶向敲低 BIRC6 后，中年鼠 HSC 年轻化、CLP/幼稚 T/成熟 B 回升、炎症与衰老标志↓，SARS-CoV-2 Spike 疫苗抗体滴度约升 <strong>22 倍</strong>；对人中年供体循环 HSC 体外同样有效。</p>
+<p>把干细胞衰老微环境轴推到可递送干预（免疫衰老/疫苗佐剂转化看点）。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://www.nature.com/articles/s41392-026-02787-1">STTT</a> <a href="https://doi.org/10.1038/s41392-026-02787-1">DOI</a></div>
+    </article>
+
+    <article class="item" id="i26">
+      <h3>过氧化物酶体输入应激：经 SCAF1 抑制线粒体核糖体组装驱动衰老</h3>
+<p class="orig">Impaired Peroxisome Import Drives Cellular Senescence through SCAF1-Dependent Suppression of Mitoribosome Biogenesis</p>
+<p class="authors">Jacinta Correia, Jinoh Kim, Pham Thuy Tien Vo, Hua Bai · bioRxiv preprint · 2026-09-23</p>
+<p>基因组 CRISPR 筛在过氧化物酶体输入应激下鉴定剪接因子 <strong>SCAF1</strong>：应激时被蛋白水解加工并转位至线粒体，其 N 端作为自主抑制模块阻断线粒体核糖体亚基装配。敲低 SCAF1 加速亚基接合、抬高 OXPHOS 蛋白；在 IMR90 成纤维中过表达则触发稳健衰老（SA-β-gal↑）。</p>
+<p>提出「过氧化物酶体衰退→线粒体翻译失衡→细胞衰老」的细胞器间信号轴，补全衰老中 peroxisome–mito 对话的分子机制（预印本）。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://www.biorxiv.org/content/10.64898/2026.09.19.752713v1">bioRxiv</a> <a href="https://doi.org/10.64898/2026.09.19.752713">DOI</a></div>
+    </article>
+
+    <article class="item" id="i27">
+      <h3>细胞外囊泡：衰老造血生态位的选择性信使与年轻化线索</h3>
+<p class="orig">The Role of EVs in the Aging Hematopoietic System</p>
+<p class="authors">Esra G. Kosebent, Nathalie Havranek, Karoline Kollmann, Kristina Kirschner, Eszter Doma, Kavya Gupta · Aging Cell · Review · 2026-09-23</p>
+<p>综述骨髓生态位与 HSPC 之间 EV 介导的通讯：衰老/端粒磨损重塑 EV 生物发生与载荷；衰老 MSC/成骨细胞来源 EV 的 miRNA 谱改变、保护性抗氧化成分↓，可诱导受体细胞衰老并促进髓系偏向。靶向依赖 tetraspanin/整合素等表面签名与受体配对。</p>
+<p>相反，年轻或多能干细胞来源 EV 可传递年轻化信号、缓解 inflammaging。为 EV 诊断与造血免疫年轻化策略提供框架（与条目 BIRC6 的 HSC 微环境主题互补）。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://onlinelibrary.wiley.com/doi/10.1111/acel.70715">Aging Cell</a> <a href="https://doi.org/10.1111/acel.70715">DOI</a></div>
+    </article>
+
+    <article class="item" id="i28">
+      <h3>肾脏衰老：细胞衰老在老化、损伤与纤维化中的双重角色</h3>
+<p class="orig">The role of senescence in kidney ageing, injury and fibrosis</p>
+<p class="authors">Piotr P. Janas, Tilly Mason, David A. Ferenbach · Nature Reviews Nephrology · Review · 2026-09-23</p>
+<p>CKD 仍影响全球约 <strong>8.5 亿</strong>人且难治愈；肾脏老化与 CKD 共享细胞衰老、纤维化等特征。本综述梳理衰老作为生理过程与致病驱动的双重角色，并讨论针对肾脏衰老干预（含 senolytic/senomorphic）的关键考量——转化窗口、细胞类型特异性与安全性。</p>
+<p>对把 geroscience 工具引入肾科临床路径有对标价值（机制综述）。</p>
+      <div class="src"><span class="chip">抗衰</span> <a href="https://www.nature.com/articles/s41581-026-01123-8">Nature Reviews Nephrology</a> <a href="https://doi.org/10.1038/s41581-026-01123-8">DOI</a></div>
+    </article>
+    </section>
+
+    <footer>
+      <p>来源摘自公开报道与 arXiv / 期刊摘要；仅供个人阅读，不构成投资或医疗建议。</p>
+    </footer>
+  </div>
+</body>
+</html>

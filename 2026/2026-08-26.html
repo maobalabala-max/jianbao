@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日简报 · 2026年8月26日</title>
+  <!-- site-meta:start -->
+  <meta name="description" content="今天的主线很清楚：模型开始把「记忆」和「代理」做成默认能力，芯片与端侧硬件则在给本地推理让路。科学一侧，多体量子问题从近藤效应到自旋液体都有可计算、可实验的新进展。抗衰栏目里，肠道菌代谢物、巨噬细胞清扫衰老中性粒细胞、少突胶质细胞 NRF…">
+  <link rel="canonical" href="https://jianbao.space/2026/2026-08-26.html">
+  <link rel="alternate" type="application/atom+xml" title="每日简报 · 订阅" href="/feed.xml">
+  <meta property="og:site_name" content="每日简报">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="每日简报 · 2026年8月26日">
+  <meta property="og:description" content="今天的主线很清楚：模型开始把「记忆」和「代理」做成默认能力，芯片与端侧硬件则在给本地推理让路。科学一侧，多体量子问题从近藤效应到自旋液体都有可计算、可实验的新进展。抗衰栏目里，肠道菌代谢物、巨噬细胞清扫衰老中性粒细胞、少突胶质细胞 NRF…">
+  <meta property="og:url" content="https://jianbao.space/2026/2026-08-26.html">
+  <meta property="og:image" content="https://jianbao.space/icon-512.png">
+  <meta property="article:published_time" content="2026-08-26T08:00:00+08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="每日简报 · 2026年8月26日">
+  <meta name="twitter:description" content="今天的主线很清楚：模型开始把「记忆」和「代理」做成默认能力，芯片与端侧硬件则在给本地推理让路。科学一侧，多体量子问题从近藤效应到自旋液体都有可计算、可实验的新进展。抗衰栏目里，肠道菌代谢物、巨噬细胞清扫衰老中性粒细胞、少突胶质细胞 NRF…">
+  <!-- site-meta:end -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #f3f5f8;
+      --bg-accent: #e8eef6;
+      --paper: #ffffff;
+      --ink: #1a1f2e;
+      --muted: #5a6478;
+      --line: #d8dee9;
+      --line-soft: #e8edf4;
+      --accent: #3b6d9a;
+      --accent-soft: rgba(59, 109, 154, 0.12);
+      --link: #2a5f8f;
+      --link-hover: #1a4068;
+      --nav-bg: rgba(255, 255, 255, 0.86);
+      --chip: #e8eef6;
+      --shadow: 0 1px 2px rgba(26, 31, 46, 0.04), 0 4px 16px rgba(26, 31, 46, 0.04);
+      --radius: 12px;
+      --sans: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB",
+               "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      --serif: "Songti SC", "Noto Serif SC", "Source Han Serif SC",
+               "Noto Serif CJK SC", Georgia, serif;
+      --s1: #3b6d9a;
+      --s2: #2f6b5c;
+      --s3: #4a5f8a;
+      --s4: #5a4a6b;
+    }
+    * { box-sizing: border-box; }
+    html { font-size: 16.5px; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: var(--serif);
+      line-height: 1.7;
+      background:
+        linear-gradient(180deg, var(--bg-accent) 0%, transparent 280px),
+        linear-gradient(90deg, rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        var(--bg);
+      background-size: auto, 28px 28px, 28px 28px, auto;
+      background-attachment: fixed;
+    }
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      isolation: isolate;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .topnav::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(59, 109, 154, 0.18) 20%,
+        rgba(59, 109, 154, 0.52) 50%,
+        rgba(59, 109, 154, 0.18) 80%,
+        transparent 100%
+      );
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .topnav-inner {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.72rem 0;
+      font-family: var(--sans);
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .brand:hover { color: var(--link); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.15rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      transition: color 0.15s ease, background 0.15s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: var(--ink);
+      background: var(--accent-soft);
+    }
+    .wrap {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      padding: 2rem 0 3.5rem;
+    }
+    header.mast {
+      margin-bottom: 1.75rem;
+      padding: 0.4rem 0 1.35rem;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    header.mast::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 4.5rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    h1 {
+      font-family: var(--sans);
+      font-size: clamp(1.75rem, 4vw, 2.15rem);
+      line-height: 1.25;
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    h1 a.home {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 a.home:hover {
+      color: var(--link);
+    }
+    .meta {
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin: 0;
+      max-width: 36em;
+    }
+    .lede {
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.05rem 1.2rem;
+      margin: 0 0 2rem;
+      font-size: 0.98rem;
+      box-shadow: var(--shadow);
+    }
+    section { margin-bottom: 2.4rem; }
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      margin: 0 0 1rem;
+      padding: 0.45rem 0 0.55rem;
+      border-top: none;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 2.75rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    article.item {
+      position: relative;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem 1.15rem;
+      margin: 0 0 0.95rem;
+      box-shadow: var(--shadow);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+      scroll-margin-top: 4.5rem;
+    }
+    article.item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1rem;
+      bottom: 1rem;
+      width: 2px;
+      border-radius: 0 2px 2px 0;
+      background: var(--accent);
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: center;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+    }
+    article.item:hover {
+      border-color: #b8c5d8;
+      box-shadow: 0 2px 4px rgba(26, 31, 46, 0.05), 0 8px 24px rgba(26, 31, 46, 0.07);
+      transform: translateY(-1px);
+    }
+    article.item:hover::before,
+    article.item:focus-within::before {
+      opacity: 0.9;
+      transform: scaleY(1);
+    }
+    article.item:target {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    article.item h3 {
+      font-family: var(--sans);
+      font-size: 1.06rem;
+      line-height: 1.35;
+      margin: 0 0 0.55rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .orig {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: -0.25rem 0 0.55rem;
+      font-family: Georgia, "Iowan Old Style", var(--serif);
+    }
+    .authors {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin: 0 0 0.55rem;
+    }
+    p { margin: 0 0 0.7rem; }
+    p:last-of-type { margin-bottom: 0.85rem; }
+    .src {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.9rem;
+      align-items: baseline;
+      border-top: 1px dashed var(--line);
+      padding-top: 0.65rem;
+    }
+    .src a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      word-break: break-all;
+    }
+    .src a:hover { color: var(--link-hover); }
+    .chip {
+      display: inline-block;
+      background: var(--chip);
+      color: var(--muted);
+      padding: 0.08rem 0.45rem;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      border: 1px solid var(--line-soft);
+    }
+    footer {
+      border-top: 1px solid var(--line-soft);
+      padding-top: 1rem;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .digest-wrap {
+      margin: 0 0 2.1rem;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    table.digest {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: transparent;
+      border: none;
+      font-family: var(--sans);
+      font-size: 0.86rem;
+    }
+    table.digest th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-accent);
+    }
+    table.digest td {
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line-soft);
+      vertical-align: top;
+      line-height: 1.45;
+    }
+    table.digest tr:last-child td { border-bottom: none; }
+    table.digest tbody tr { transition: background 0.15s ease; }
+    table.digest tbody tr:hover { background: var(--accent-soft); }
+    table.digest a { color: inherit; text-decoration: none; }
+    table.digest a:hover { color: var(--link); }
+    table.digest .sec {
+      width: 4.6rem;
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    table.digest .ttl { width: 38%; font-weight: 650; }
+    table.digest .one { color: var(--muted); font-weight: 400; }
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes briefing-fade-rise {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes nav-line-shimmer {
+        0%, 100% { background-position: 0% 50%; opacity: 0.28; }
+        50% { background-position: 100% 50%; opacity: 0.52; }
+      }
+      header.mast {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      .lede {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+      }
+      .digest-wrap {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.14s both;
+      }
+      section {
+        animation: briefing-fade-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      section:nth-of-type(1) { animation-delay: 0.2s; }
+      section:nth-of-type(2) { animation-delay: 0.26s; }
+      section:nth-of-type(3) { animation-delay: 0.32s; }
+      section:nth-of-type(4) { animation-delay: 0.38s; }
+      section:nth-of-type(n + 5) { animation-delay: 0.42s; }
+      .topnav::after {
+        background-size: 200% 100%;
+        animation: nav-line-shimmer 10s ease-in-out infinite;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .topnav::after,
+      header.mast,
+      .lede,
+      .digest-wrap,
+      section {
+        animation: none !important;
+      }
+      article.item {
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      }
+      article.item:hover {
+        transform: none;
+      }
+    }
+    @media (max-width: 720px) {
+      table.digest, table.digest thead, table.digest tbody, table.digest tr, table.digest th, table.digest td {
+        display: block;
+      }
+      table.digest thead { display: none; }
+      table.digest td.sec { padding-bottom: 0; border-bottom: none; }
+      table.digest td.ttl { padding-top: 0.2rem; padding-bottom: 0.15rem; width: auto; border-bottom: none; }
+      table.digest td.one { padding-top: 0; width: auto; }
+    }
+    @media (max-width: 560px) {
+      html { font-size: 16px; }
+      h1 { font-size: 1.7rem; }
+      .topnav-inner { width: calc(100% - 1.5rem); }
+      .wrap { width: calc(100% - 1.5rem); padding: 1.5rem 0 3rem; }
+      .nav-links a { padding: 0.3rem 0.5rem; font-size: 0.8rem; }
+      article.item { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topnav" aria-label="主导航">
+    <div class="topnav-inner">
+      <a class="brand" href="/">每日简报</a>
+      <ul class="nav-links">
+        <li><a href="/">首页</a></li>
+        <li><a href="/2026/2026-09-25.html">最新一期</a></li>
+                <li><a href="/ai/">AI 日报</a></li>
+        <li><a href="/">归档</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <header class="mast">
+      <h1><a class="home" href="/">每日简报</a></h1>
+      <p class="meta">2026年8月26日（周三）· 亚洲/上海</p>
+    </header>
+
+    <p class="lede">今天的主线很清楚：模型开始把「记忆」和「代理」做成默认能力，芯片与端侧硬件则在给本地推理让路。科学一侧，多体量子问题从近藤效应到自旋液体都有可计算、可实验的新进展。抗衰栏目里，肠道菌代谢物、巨噬细胞清扫衰老中性粒细胞、少突胶质细胞 NRF2，以及表观遗传时钟对干预的响应，构成一套偏机制、偏可复现的新证据。</p>
+
+    <nav class="toc" aria-label="栏目">
+      <a href="#s1"><span class="n">01 · 6 条</span>AI 和大模型动态</a>
+      <a href="#s2"><span class="n">02 · 5 条</span>科学、物理与复杂性科学</a>
+      <a href="#s3"><span class="n">03 · 5 条</span>互联网产品与科技业界</a>
+      <a href="#s4"><span class="n">04 · 4 条</span>抗衰 / 长寿新论文</a>
+    </nav>
+
+    <section id="s1">
+      <h2>1. AI 和大模型动态</h2>
+
+      <article class="item">
+        <h3>Anthropic 打通 Claude 聊天与 Cowork 的统一记忆</h3>
+        <p>8月25日，Anthropic 宣布 Claude 聊天与代理产品 Cowork 共用同一套记忆。用户在对话里积累的项目背景、偏好和截止日期，会在把任务交给 Cowork 时直接可用；Cowork 运行中学到的内容也会回到聊天里。记忆改为在对话过程中动态写入主题，而不再等会话结束后再摘要。</p>
+        <p>用户可在设置中按主题查看、编辑或删除记忆，也可随时暂停或重置。健康、信仰、种族、政治等敏感主题默认不写入；需要时需单独打开「在记忆中包含敏感主题」。Free / Pro / Max 默认开启记忆；Team 与 Enterprise 由管理员控制，个人用户需自行打开。身份证号等仍不会被存储。</p>
+        <p class="src"><span class="chip">Anthropic</span><a href="https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it">claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it</a></p>
+      </article>
+
+      <article class="item">
+        <h3>IBM 开源 Granite 4.2：可开关思考模式的稠密推理模型</h3>
+        <p>IBM 于 8月25日发布 Granite 4.2，提供 3B、8B、30B 三档稠密 decoder-only 模型，Apache 2.0 许可。每档都支持思考 / 非思考 / 低开销思考三种模式，并原生输出 OpenAI 函数调用格式。预训练约 15 万亿 token，上下文经五阶段训练扩展到 512K；监督微调约 720 万条样本。</p>
+        <p>8B 与 30B 还经过真实环境中的智能体强化学习：在仓库里改代码并跑隐藏测试、在终端多轮操作、用联网搜索回答多跳问题。IBM 自报 30B 在 SWE-Bench Verified 为 57.00、Terminal-Bench 2.1 为 29.24、AIME25 为 89.17。权重、量化版与训练说明已放上 Hugging Face 与 GitHub。</p>
+        <p class="src"><span class="chip">IBM Research / Hugging Face</span><a href="https://research.ibm.com/blog/introducing-granite-4-2">research.ibm.com/blog/introducing-granite-4-2</a> · <a href="https://huggingface.co/blog/ibm-granite/granite-4-2">huggingface.co/blog/ibm-granite/granite-4-2</a></p>
+      </article>
+
+      <article class="item">
+        <h3>同日发布 Granite Speech 5.0：去掉 LLM 骨架的高速转写</h3>
+        <p>同一份 IBM 公告还推出 Granite Speech 5.0 Turbo CTC 与非商用 NC 版，参数约 4.7 亿，不再挂载大语言模型骨架，面向笔记本、手机和边缘设备。IBM 称在单张 H200 上 RTFx 约 12,600，高于 Open ASR 榜单当时领先者约 6,000 的量级，并给出「一秒转写三小时录音」的内部测试描述。</p>
+        <p>模型走 CTC 路线，强调流式音频与呼叫中心等高吞吐转写。可从 Hugging Face、Ollama 等渠道下载。这是 IBM 把语言推理与语音识别拆成两条产品线的又一次表态。</p>
+        <p class="src"><span class="chip">IBM Research</span><a href="https://research.ibm.com/blog/introducing-granite-4-2">research.ibm.com/blog/introducing-granite-4-2</a></p>
+      </article>
+
+      <article class="item">
+        <h3>Google Cloud 推出面向金融的 Gemini Enterprise，现已预览</h3>
+        <p>8月25日，Google Cloud 发布 Gemini Enterprise for Financial Services，面向资本市场与公司银行工作流。方案包含 Google 托管的 Financial Research 智能体、50 余项金融技能、企业数据连接器，以及系统集成商与金融数据商组成的生态。智能体输出带置信度、方法说明、数据快照与来源引用，可通过 Gemini Enterprise 应用或 Agent-to-Agent API 接入。</p>
+        <p>新闻稿称 CME Group 与作为设计合作伙伴的 Deutsche Bank 已在使用；更广的 Gemini Enterprise 用户还包括 BNY、Citi Wealth、Lloyds、Macquarie 等。同期还发布了面向法律行业的专用方案。Google 强调客户数据与专有规则不用于训练基础模型。</p>
+        <p class="src"><span class="chip">Google Cloud / PR Newswire</span><a href="https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-for-financial-services/">cloud.google.com 官方博文</a> · <a href="https://www.prnewswire.com/news-releases/google-cloud-launches-gemini-enterprise-for-financial-services-302859186.html">prnewswire.com</a></p>
+      </article>
+
+      <article class="item">
+        <h3>OpenAI 把 GPT-5.6 全家桶接入 AWS Kiro，宣称完成任务成本降约 82%</h3>
+        <p>8月24日，OpenAI 宣布 GPT-5.6 的 Sol、Terra、Luna 三档均可在 AWS 的规格驱动开发环境 Kiro 中使用。官方称，双方联合测试中，GPT-5.6 Terra 在 Terminal-Bench 2.1 上完成成功任务的成本约降低 82%。该数字来自厂商测试，针对的是成本而非准确率，公告未完整公开基准构成。</p>
+        <p>OpenAI 把降本归因于 Kiro 先把需求、设计与任务上下文写清楚，再让模型动手，从而减少空转。GPT-5.6 于 7月9日正式上市，之后 Terra 与 Luna 已降价，Sol 也在 8月21日有过限时降价。双方表示会继续优化该环境中的模型表现。</p>
+        <p class="src"><span class="chip">OpenAI</span><a href="https://openai.com/index/gpt-5-6-in-kiro/">openai.com/index/gpt-5-6-in-kiro</a></p>
+      </article>
+
+      <article class="item">
+        <h3>NVIDIA 宣布 Groq 3 LPX 全面量产，瞄准低延迟智能体推理</h3>
+        <p>8月24日，NVIDIA 在 Hot Chips 期间宣布交互式推理加速器 Groq 3 LPX 进入全面量产，作为 Vera Rubin 平台的延伸，用于提高 token 生成速率，服务对延迟敏感的智能体编码等负载。NVIDIA 称其在 Artificial Analysis 基准中展示了「世界级」速度，并提升 Vera Rubin NVL72 系统的推理表现。</p>
+        <p>AI 云厂商 Nebius 成为首家采用方，计划把 Groq 3 LPX 接入其 Token Factory 推理平台。公告未在公开摘要中给出完整独立第三方对照表，但明确这是 NVIDIA 收购 Groq 相关技术后的量产节点。</p>
+        <p class="src"><span class="chip">NVIDIA Newsroom</span><a href="https://nvidianews.nvidia.com/news/nvidia-groq-3-lpx-now-in-full-production-with-world-class-speed-for-agentic-ai">nvidianews.nvidia.com · Groq 3 LPX</a></p>
+      </article>
+    </section>
+
+    <section id="s2">
+      <h2>2. 科学、物理与复杂性科学</h2>
+
+      <article class="item">
+        <h3>用真实材料定量计算近藤效应：向「可预测的关联电子材料」走近一步</h3>
+        <p class="orig">Toward an exact quantum many-body treatment of Kondo correlation in magnetic impurities</p>
+        <p class="authors">Tianyu Zhu、Linqing Peng 等；通讯作者 Garnet Chan（Caltech）。Science (2026). DOI: 10.1126/science.adq7402</p>
+        <p>Caltech 与耶鲁团队在《科学》发表工作，首次用真实原子与电子结构、而不是高度简化的模型轨道，定量计算金属中磁杂质的近藤效应。他们把量子化学里描述分子的方法迁到材料场景，对嵌在铜中的七种过渡金属原子给出结果；对多数元素，预测精度比传统模型计算高出最多约两个数量级。</p>
+        <p>近藤效应是强关联多体问题的基准：低温下磁杂质与导带电子形成屏蔽云，电阻在近藤温度附近先降后升。作者认为这是通向高温超导体等更复杂关联材料的「原型问题」。phys.org 于 8月25日报道该文。</p>
+        <p class="src"><span class="chip">Science / Caltech / phys.org</span><a href="https://phys.org/news/2026-08-chemical-physicists-quantitatively-electron-interactions.html">phys.org 报道</a> · <a href="https://doi.org/10.1126/science.adq7402">doi.org/10.1126/science.adq7402</a></p>
+      </article>
+
+      <article class="item">
+        <h3>粒子穿过「对偶缺陷」后变成雾状非局域激发，或解开磁单极佯谬</h3>
+        <p class="orig">Perfect particle transmission through duality defects</p>
+        <p class="authors">Atsushi Ueda 等；剑桥、根特、牛津。Nature Physics (2026). DOI: 10.1038/s41567-026-03390-5</p>
+        <p>剑桥大学 8月25日介绍一项《自然物理》结果：在自旋链中向「对偶缺陷」（有序与无序的界面）发射量子波包，粒子从不反射，总是穿过，但出来后变成拖着细丝连回界面的弥散激发，作者比作歌德诗里的「一缕雾」。</p>
+        <p>团队用张量网络把缺陷的虚空间解释为真实的内部量子态，其维度决定缺陷的内部自由度。这为1980年代以来电荷与磁单极散射中「出射态似乎消失」的佯谬提供去向：粒子变成非局域对象。底层模型足够简单，可用冷原子、离子阱或超导处理器直接检验。</p>
+        <p class="src"><span class="chip">University of Cambridge / Nature Physics</span><a href="https://www.cam.ac.uk/research/news/physicists-solve-40-year-old-magnetic-mystery">cam.ac.uk 新闻</a> · <a href="https://doi.org/10.1038/s41567-026-03390-5">doi.org/10.1038/s41567-026-03390-5</a></p>
+      </article>
+
+      <article class="item">
+        <h3>在红宝石晶格上「动态制备」量子自旋湖，384 原子模拟可覆盖半个系统</h3>
+        <p class="orig">Optimizing the Dynamical Preparation of Quantum Spin Lakes on the Ruby Lattice</p>
+        <p class="authors">DinhDuy Vu、Dominik S. Kufel、Jack Kemp、Lode Pollet、Chris R. Laumann、Norman Y. Yao。DOI: 10.1103/7dnl-6kg2</p>
+        <p>哈佛、剑桥与慕尼黑大学团队不寻找天然自旋液体基态，而是在里德堡模拟器对应的红宝石晶格上，用哈密顿量斜坡把系统「推入」短寿命的量子自旋湖。他们用近似对称的神经量子态做实时演化，模拟最多 384 个原子。</p>
+        <p>斜坡太慢会落到非自旋液体基态，太快则停在平凡初态；中等速率时，拓扑纠缠熵可接近 γ = ln 2（Z₂ 自旋液体特征），自旋液体性质可扩展到系统一半以上。Wilson 圈的面积律偏差用 anyon 气体图像解释。Quantum Zeitgeist 于 8月25日报道。</p>
+        <p class="src"><span class="chip">APS / Quantum Zeitgeist</span><a href="https://quantumzeitgeist.com/harvard-university-quantum-spin-liquids-optimize/">quantumzeitgeist.com 报道</a> · <a href="https://link.aps.org/doi/10.1103/7dnl-6kg2">link.aps.org/doi/10.1103/7dnl-6kg2</a></p>
+      </article>
+
+      <article class="item">
+        <h3>对称性分辨的 Krylov 复杂度：混沌系统晚期按算符空间维度「加权均分」</h3>
+        <p class="orig">Quantum chaos and late-time equipartition of symmetry-resolved Krylov complexity</p>
+        <p class="authors">Jayashish Das、Suman Das、Juan F. Pedraza、Le-Chen Qu。arXiv:2608.19346，2026年8月19日</p>
+        <p>作者研究有守恒荷的有限维混沌多体系统。哈密顿量与初算符都与守恒荷对易时，算符动力学拆成独立对称性扇区，各有一条 Krylov 链。饱和之后，未分辨的 Krylov 复杂度对各扇区可加；无额外 Liouville 简并时，维度为 d_q 的扇区贡献由 d_q(d_q−1) 控制，大扇区近似为 d_q² / Σ d²。</p>
+        <p>这与早期由初态投影权重决定的加权平均不同。他们在实/复 SYK、玻色自旋模型与混合场伊辛链上做了数值验证，并指出若把饱和值误读成总希尔伯特空间维数的平方，会系统性高估。Krylov 复杂度作为混沌诊断，必须先分辨精确对称性。</p>
+        <p class="src"><span class="chip">arXiv · hep-th</span><a href="https://arxiv.org/abs/2608.19346">arxiv.org/abs/2608.19346</a> · <a href="https://arxiv.org/pdf/2608.19346">PDF</a></p>
+      </article>
+
+      <article class="item">
+        <h3>从信息量子化规则导出「量子复杂度第二定律」：热寂之后仍按 C∝exp(−1/t) 增长</h3>
+        <p class="orig">‘It from Bit’: is there a second law of quantum complexity?</p>
+        <p class="authors">S. Davatolhagh、A. Sheykhi、M.H. Zarei（设拉子大学）。arXiv:2608.22977，2026年8月24日</p>
+        <p>Brown–Susskind 猜想混沌系统在热平衡后复杂度仍增长，直至约 exp(S_max)。本文把最小作用量原理解读为「最小熵增」，再用准静态信息量子化规则（Proc. R. Soc. A 480: 20240024）导出：热寂之后量子态复杂度按 C(t)=C_max exp(−1/t) 趋向饱和，C_max 对平衡熵指数敏感。</p>
+        <p>他们指出线性增长只是中间时刻近似（速率在 t=1/2 附近有平台），长期应以代数方式饱和。非平衡时复杂度反而可下降，不复杂度（计算资源）可以恢复。这是对黑洞内部体积/作用量在热平衡后仍增长这一悖论的信息论式推导，尚待模型数值模拟检验。</p>
+        <p class="src"><span class="chip">arXiv</span><a href="https://arxiv.org/abs/2608.22977">arxiv.org/abs/2608.22977</a> · <a href="https://arxiv.org/pdf/2608.22977">PDF</a></p>
+      </article>
+    </section>
+
+    <section id="s3">
+      <h2>3. 互联网产品与科技业界</h2>
+
+      <article class="item">
+        <h3>苹果推出首款 2 纳米 M6，以及四芯粒 M5 Ultra：桌面转向本地大模型</h3>
+        <p>苹果 8月25日发布搭载 M6 的新 Mac mini 与搭载 M5 Ultra 的新 Mac Studio。M6 是苹果 Mac 产品线首款 2nm 芯片：12 核 CPU（2 超核 + 4 性能 + 6 能效）、带 Neural Accelerator 的 12 核 GPU、双 16 核 Neural Engine，统一内存带宽最高约 170GB/s，容量最高 32GB。</p>
+        <p>M5 Ultra 用新一代 UltraFusion 把两颗双芯粒 M5 Max 连成四芯粒 SoC：最多 36 核 CPU、80 核 GPU，统一内存最高 512GB、带宽 1.2TB/s（比 M3 Ultra 高 50%）。苹果称其对 AI 的峰值 GPU 算力最高为 M3 Ultra 的 4.5 倍。预购即日开始，9月22日发货（512GB 配置约 10 月下旬），出厂系统为 macOS 27 Golden Gate。M6 mini 起价 899 美元，M5 Ultra Studio 起价 5,499 美元。</p>
+        <p class="src"><span class="chip">Apple Newsroom</span><a href="https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/">apple.com/newsroom · M6 / M5 Ultra</a></p>
+      </article>
+
+      <article class="item">
+        <h3>开发者已在用雷电 5 串起多台 Mac 做分布式本地推理</h3>
+        <p>Ars Technica 同日分析称，这次桌面更新几乎没有新形态功能，核心是规格与定位：统一内存加大、带宽加高，明确服务本地推理与开发。macOS 26.2 去年 12 月已允许雷电 5 主机之间低延迟通信，用于 MLX 分布式推理；爱好者与实验室开始把多台 mini / Studio 串起来跑单机装不下的开权重大模型。</p>
+        <p>M6 的 32GB 上限把「大模型本机」的真正容量交给 M5 Ultra 的最多 512GB。文章认为，云端编码代理 token 成本高企时，能在本地跑 Qwen、DeepSeek 等开源模型，是苹果这次规格选择的商业理由。机器也标配 Wi-Fi 7 / 蓝牙 6 的 N1 芯片，存储号称最高 15GB/s。</p>
+        <p class="src"><span class="chip">Ars Technica</span><a href="https://arstechnica.com/apple/2026/08/with-new-mac-studio-and-mac-mini-apple-leans-hard-into-local-ai-inference/">arstechnica.com · Mac mini / Studio 与本地推理</a></p>
+      </article>
+
+      <article class="item">
+        <h3>NVIDIA 发布 Jetson Orin Nano 2：同尺寸推理性能翻倍，2027 上半年供货</h3>
+        <p>8月25日，NVIDIA 宣布入门级边缘 AI 计算机 Jetson Orin Nano 2：78 TOPS、8GB 内存、8 核 Arm CPU，相对 Orin Nano Super 推理性能约 2 倍，同等性能下功耗低约 40%（15W 模式）。目标是机器人、配送与巡检无人机、视觉系统。软件栈可运行 Cosmos、Nemotron、Gemma 4、Qwen 3 等针对边缘优化的模型。</p>
+        <p>Cognex、Doosan Bobcat、Matic 等已在评估或采用；Alphabet 旗下无人机配送公司 Wing 计划在现有 Orin Nano Super 机队基础上评估新模块。模块与开发套件预计 2027 年上半年上市，官方新闻稿未公布价格。NVIDIA 称已有超过 300 万开发者基于其机器人软件栈开发。</p>
+        <p class="src"><span class="chip">NVIDIA Newsroom</span><a href="https://nvidianews.nvidia.com/news/nvidia-announces-jetson-orin-nano-2-robotics-computer-to-redefine-entry-level-edge-ai">nvidianews.nvidia.com · Jetson Orin Nano 2</a></p>
+      </article>
+
+      <article class="item">
+        <h3>Gemini for macOS 上线智能听写，可把语音写入任意桌面应用</h3>
+        <p>据 8月25日报道，Google 开始在 Gemini for macOS 中推出智能听写：把口语转成润色后的文本，并可写入任意桌面应用。目前全球先推英语，后续计划加语言。Gemini Mac 应用 2026 年 4 月上线，要求 macOS Sequoia 15.0 或更高、至少 8GB 内存，应用本身免费。</p>
+        <p>Google 在 7 月下旬已预告扩大 Gemini 语音能力。该功能直接对标 macOS 自带听写与微软 Copilot。用户需更新应用并在设置中打开听写。本条依据行业报道整理，未在本次检索中打开到独立的 Google 官方产品博文全文。</p>
+        <p class="src"><span class="chip">Blockchain.News</span><a href="https://blockchain.news/news/google-intelligent-dictation-gemini-macos">blockchain.news · Gemini macOS 智能听写</a></p>
+      </article>
+
+      <article class="item">
+        <h3>SpaceXAI 部署 NVIDIA Vera CPU：地面 Grok 工厂与轨道 Starmind 卫星共用架构</h3>
+        <p>8月24日，NVIDIA 宣布 SpaceXAI 将部署 Vera CPU，用于加速新一代智能体应用中模型调用之间的编排、代码执行、数据处理与仿真。NVIDIA 称 Vera 是「为 AI 智能体打造的第一款 CPU」：88 个自研 Olympus 核心、Spatial Multithreading、LPDDR5X 内存带宽最高 1.2TB/s，相对 x86 在智能体、强化学习与数据处理上任务完成速度最高约 1.8 倍。</p>
+        <p>SpaceXAI 同时把 Grok 背后的基础设施扩到 Vera Rubin 平台，规划向吉瓦级算力扩展，并把优化版 Vera Rubin NVL72 送入轨道：第一代 Starmind AI 卫星将基于该机架级系统。SpaceXAI 总裁 Mike Nicolls 表示，Vera 让 GPU 继续做最擅长的事，同时用 CPU 带宽跑海量编排。这是厂商公告，部署规模与发射时间表以后续独立报道为准。</p>
+        <p class="src"><span class="chip">NVIDIA Newsroom</span><a href="https://nvidianews.nvidia.com/news/spacexai-adopts-nvidia-vera-cpu-to-accelerate-agentic-ai-at-massive-scale">nvidianews.nvidia.com · SpaceXAI / Vera CPU</a></p>
+      </article>
+    </section>
+
+    <section id="s4">
+      <h2>4. 抗衰 / 长寿新论文</h2>
+      <p class="authors" style="margin-bottom:1rem;">近 24–48 小时：正式发表或权威媒体首发解读。不编造未检索到的预印本。</p>
+
+      <article class="item">
+        <h3>一种衰老保护益生菌及其代谢物 5-AVAB，在小鼠中对抗炎性衰老、延长健康寿命</h3>
+        <p class="orig">A geroprotective probiotic and its functional metabolite counteract inflammaging to extend healthspan</p>
+        <p class="authors">Xiaoyong Lu、Jun Ping、Zichu Han 等；通讯 Weiqi Zhang、Guang-Hui Liu 等。Nature Aging，2026年8月25日在线。DOI: 10.1038/s43587-026-01181-4</p>
+        <p>团队按肠型刻画衰老过程中的菌群重塑，并做微生物衰老时钟 MicroAge。在多个中国队列、两性中，双歧杆菌 Bifidobacterium pseudocatenulatum 随衰老一致下降。给自然衰老小鼠口服该菌，可挽救肠道稳态、减轻多器官炎性衰老、改善认知–运动，并延长健康寿命。</p>
+        <p>机制上，关键代谢物是 5-氨基戊酸甜菜碱（5-AVAB），其在衰老人体中生理下降；补 5-AVAB 能部分复现补菌的系统效益，包括改善认知运动、抑制多器官炎性衰老。作者把 B. pseudocatenulatum–5-AVAB 轴标为可干预靶点。数据与代码已公开（NGDC CRA028886 等；GitHub JackLu66/HumanCohortMetagenomeAnalysis）。</p>
+        <p class="src"><span class="chip">Nature Aging</span><a href="https://www.nature.com/articles/s43587-026-01181-4">nature.com/articles/s43587-026-01181-4</a></p>
+      </article>
+
+      <article class="item">
+        <h3>少突胶质细胞 NRF2 下调：髓鞘形成细胞可能主动参与人类衰老相关认知下降</h3>
+        <p class="orig">Oligodendrocyte dysfunction in human age-related cognitive decline</p>
+        <p class="authors">Georgina A. Craig、Véronique E. Miron 等。Nature Medicine。medicalxpress / News-Medical 于 8月25日报道。DOI: 10.1038/s41591-026-04608-y</p>
+        <p>研究用 Lothian Birth Cohort 1936 的终身认知轨迹，对照胼胝体白质病理与单核转录组。认知下降更陡的个体，意外地对应更小的有髓轴突直径、更厚的髓鞘（尤其大直径轴突 g ratio 下降），以及更多少突胶质细胞，且 NRF2 下调。</p>
+        <p>少突胶质细胞特异敲除 NRF2 的老年小鼠，认知随时间改善变钝，并复制人类白质改变。作者挑战「少突胶质细胞总是支持认知」的预设，把 NRF2 通路标为保护衰老认知的候选靶点。这不是简单的「髓鞘越多越好」：过量、不健康的髓鞘可能伤害大直径轴突。</p>
+        <p class="src"><span class="chip">Nature Medicine</span><a href="https://www.nature.com/articles/s41591-026-04608-y">nature.com/articles/s41591-026-04608-y</a> · <a href="https://medicalxpress.com/news/2026-08-brain-cells-cognitive-decline.html">medicalxpress.com 8月25日报道</a></p>
+      </article>
+
+      <article class="item">
+        <h3>组织驻留巨噬细胞的 EP2 信号妨碍清扫衰老中性粒细胞，或是多器官衰老的可逆开关</h3>
+        <p class="orig">Aging by impaired efferocytosis（评述） / Restored clearance of senescent neutrophils by tissue-resident macrophages limits organ aging（原研究）</p>
+        <p class="authors">评述：Stephanie Houston，Nature Immunology，2026年8月25日。原研究：Yuting Jessy Tan、Katrin I. Andreasson 等，Science 393, eaea3075 (2026)。</p>
+        <p>《自然免疫学》8月25日研究亮点评述斯坦福团队在《科学》的工作：组织驻留巨噬细胞（TRM）通过胞葬作用持续清除短寿命中性粒细胞。衰老时 PGE2–EP2 信号增强，TRM 数量与吞噬能力下降，衰老中性粒细胞在多器官堆积。</p>
+        <p>在 TRM 中删除 EP2，或给老年小鼠用 EP2 拮抗剂，可恢复胞葬、减少衰老中性粒细胞，并改善空间记忆、骨骼肌与心脏功能。人类数据集中，老年 TRM 的 EP2 升高、衰老中性粒细胞增多、TRM–中性粒细胞互作减少。评述把衰老重新框为「主动清除失败」，而非纯粹被动退化。</p>
+        <p class="src"><span class="chip">Nature Immunology / Science</span><a href="https://www.nature.com/articles/s41590-026-02647-8">nature.com 评述（8月25日）</a> · <a href="https://www.science.org/doi/10.1126/science.aea3075">Science 原文 DOI: 10.1126/science.aea3075</a> · <a href="https://med.stanford.edu/news/all-news/2026/07/immune-cells-aging.html">Stanford Medicine 介绍</a></p>
+      </article>
+
+      <article class="item">
+        <h3>51 项人类长寿干预对齐比较：死亡率/衰老速率时钟对干预最敏感</h3>
+        <p class="orig">Responsiveness of epigenetic aging biomarkers to longevity interventions in humans</p>
+        <p class="authors">Raghav Sehgal、Albert Higgins-Chen 等。Nature Medicine，2026年8月21日 Version of Record；News-Medical 8月25日系统报道。DOI: 10.1038/s41591-026-04562-9</p>
+        <p>作者整理 TranslAGE：51 项有血液 DNA 甲基化前后测的纵向干预，统一计算 16 种表观遗传时钟与 94 项其他 DNAm 生物标志物。训练目标为死亡率或衰老速率的第二代可靠时钟（DunedinPACE、PCGrimAge、GrimAgeV2、SystemsAge、PCPhenoAge）跨干预响应最强；药物与生活方式干预带动最大变化，疾病人群往往比健康人群更敏感。</p>
+        <p>51 项里 19 项显著降低表观遗传年龄、5 项显著升高。抗 TNF 与地中海饮食跨研究较一致；五种衰老细胞清除（senolytics）研究中时钟方向不一致。作者强调：响应不等于已验证的替代终点，仍需把时钟变化锚定到临床结局。今日媒体报道使该文进入本栏视野；论文正式发表日为 8月21日，略宽于 24 小时窗口，特此标明。</p>
+        <p class="src"><span class="chip">Nature Medicine / News-Medical</span><a href="https://www.nature.com/articles/s41591-026-04562-9">nature.com/articles/s41591-026-04562-9</a> · <a href="https://www.news-medical.net/news/20260825/Scientists-compared-51-longevity-studies-to-see-which-aging-biomarkers-respond-most-reliably.aspx">news-medical.net 8月25日报道</a></p>
+      </article>
+    </section>
+
+    <footer>
+      <p>样本简报 · 2026-08-26 · 时区 Asia/Shanghai。条目均来自本次检索到的公开网页与论文页面，标题、链接、作者与发现未编造。第 4 栏以 8月25–26 日发表或权威解读为主；TranslAGE 一文正式发表于 8月21日，已在文内注明。</p>
+      <p>文件：<code>/workspace/daily-briefing/2026-08-26.html</code> · 副本 <code>latest.html</code>。无需 JavaScript，最大宽度约 720px。</p>
+    </footer>
+  </div>
+</body>
+</html>

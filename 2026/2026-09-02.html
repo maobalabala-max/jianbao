@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日简报 · 2026年9月2日</title>
+  <!-- site-meta:start -->
+  <meta name="description" content="今天的主线是「听」与「看」同时升级：Anthropic 放出 Claude Fable 5.1（公开）与 Mythos 5.1（受限），Google 给 Gemini Flash 系加上智能体式视频理解，Meta 则交出第一款实时听感模型…">
+  <link rel="canonical" href="https://jianbao.space/2026/2026-09-02.html">
+  <link rel="alternate" type="application/atom+xml" title="每日简报 · 订阅" href="/feed.xml">
+  <meta property="og:site_name" content="每日简报">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="每日简报 · 2026年9月2日">
+  <meta property="og:description" content="今天的主线是「听」与「看」同时升级：Anthropic 放出 Claude Fable 5.1（公开）与 Mythos 5.1（受限），Google 给 Gemini Flash 系加上智能体式视频理解，Meta 则交出第一款实时听感模型…">
+  <meta property="og:url" content="https://jianbao.space/2026/2026-09-02.html">
+  <meta property="og:image" content="https://jianbao.space/icon-512.png">
+  <meta property="article:published_time" content="2026-09-02T08:00:00+08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="每日简报 · 2026年9月2日">
+  <meta name="twitter:description" content="今天的主线是「听」与「看」同时升级：Anthropic 放出 Claude Fable 5.1（公开）与 Mythos 5.1（受限），Google 给 Gemini Flash 系加上智能体式视频理解，Meta 则交出第一款实时听感模型…">
+  <!-- site-meta:end -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #f3f5f8;
+      --bg-accent: #e8eef6;
+      --paper: #ffffff;
+      --ink: #1a1f2e;
+      --muted: #5a6478;
+      --line: #d8dee9;
+      --line-soft: #e8edf4;
+      --accent: #3b6d9a;
+      --accent-soft: rgba(59, 109, 154, 0.12);
+      --link: #2a5f8f;
+      --link-hover: #1a4068;
+      --nav-bg: rgba(255, 255, 255, 0.86);
+      --chip: #e8eef6;
+      --shadow: 0 1px 2px rgba(26, 31, 46, 0.04), 0 4px 16px rgba(26, 31, 46, 0.04);
+      --radius: 12px;
+      --sans: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB",
+               "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      --serif: "Songti SC", "Noto Serif SC", "Source Han Serif SC",
+               "Noto Serif CJK SC", Georgia, serif;
+      --s1: #3b6d9a;
+      --s2: #2f6b5c;
+      --s3: #4a5f8a;
+      --s4: #5a4a6b;
+    }
+    * { box-sizing: border-box; }
+    html { font-size: 16.5px; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: var(--serif);
+      line-height: 1.7;
+      background:
+        linear-gradient(180deg, var(--bg-accent) 0%, transparent 280px),
+        linear-gradient(90deg, rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        var(--bg);
+      background-size: auto, 28px 28px, 28px 28px, auto;
+      background-attachment: fixed;
+    }
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      isolation: isolate;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .topnav::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(59, 109, 154, 0.18) 20%,
+        rgba(59, 109, 154, 0.52) 50%,
+        rgba(59, 109, 154, 0.18) 80%,
+        transparent 100%
+      );
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .topnav-inner {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.72rem 0;
+      font-family: var(--sans);
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .brand:hover { color: var(--link); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.15rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      transition: color 0.15s ease, background 0.15s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: var(--ink);
+      background: var(--accent-soft);
+    }
+    .wrap {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      padding: 2rem 0 3.5rem;
+    }
+    header.mast {
+      margin-bottom: 1.75rem;
+      padding: 0.4rem 0 1.35rem;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    header.mast::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 4.5rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    h1 {
+      font-family: var(--sans);
+      font-size: clamp(1.75rem, 4vw, 2.15rem);
+      line-height: 1.25;
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    h1 a.home {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 a.home:hover {
+      color: var(--link);
+    }
+    .meta {
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin: 0;
+      max-width: 36em;
+    }
+    .lede {
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.05rem 1.2rem;
+      margin: 0 0 2rem;
+      font-size: 0.98rem;
+      box-shadow: var(--shadow);
+    }
+    section { margin-bottom: 2.4rem; }
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      margin: 0 0 1rem;
+      padding: 0.45rem 0 0.55rem;
+      border-top: none;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 2.75rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    article.item {
+      position: relative;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem 1.15rem;
+      margin: 0 0 0.95rem;
+      box-shadow: var(--shadow);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+      scroll-margin-top: 4.5rem;
+    }
+    article.item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1rem;
+      bottom: 1rem;
+      width: 2px;
+      border-radius: 0 2px 2px 0;
+      background: var(--accent);
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: center;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+    }
+    article.item:hover {
+      border-color: #b8c5d8;
+      box-shadow: 0 2px 4px rgba(26, 31, 46, 0.05), 0 8px 24px rgba(26, 31, 46, 0.07);
+      transform: translateY(-1px);
+    }
+    article.item:hover::before,
+    article.item:focus-within::before {
+      opacity: 0.9;
+      transform: scaleY(1);
+    }
+    article.item:target {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    article.item h3 {
+      font-family: var(--sans);
+      font-size: 1.06rem;
+      line-height: 1.35;
+      margin: 0 0 0.55rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .orig {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: -0.25rem 0 0.55rem;
+      font-family: Georgia, "Iowan Old Style", var(--serif);
+    }
+    .authors {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin: 0 0 0.55rem;
+    }
+    p { margin: 0 0 0.7rem; }
+    p:last-of-type { margin-bottom: 0.85rem; }
+    .src {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.9rem;
+      align-items: baseline;
+      border-top: 1px dashed var(--line);
+      padding-top: 0.65rem;
+    }
+    .src a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      word-break: break-all;
+    }
+    .src a:hover { color: var(--link-hover); }
+    .chip {
+      display: inline-block;
+      background: var(--chip);
+      color: var(--muted);
+      padding: 0.08rem 0.45rem;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      border: 1px solid var(--line-soft);
+    }
+    footer {
+      border-top: 1px solid var(--line-soft);
+      padding-top: 1rem;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .digest-wrap {
+      margin: 0 0 2.1rem;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    table.digest {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: transparent;
+      border: none;
+      font-family: var(--sans);
+      font-size: 0.86rem;
+    }
+    table.digest th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-accent);
+    }
+    table.digest td {
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line-soft);
+      vertical-align: top;
+      line-height: 1.45;
+    }
+    table.digest tr:last-child td { border-bottom: none; }
+    table.digest tbody tr { transition: background 0.15s ease; }
+    table.digest tbody tr:hover { background: var(--accent-soft); }
+    table.digest a { color: inherit; text-decoration: none; }
+    table.digest a:hover { color: var(--link); }
+    table.digest .sec {
+      width: 4.6rem;
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    table.digest .ttl { width: 38%; font-weight: 650; }
+    table.digest .one { color: var(--muted); font-weight: 400; }
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes briefing-fade-rise {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes nav-line-shimmer {
+        0%, 100% { background-position: 0% 50%; opacity: 0.28; }
+        50% { background-position: 100% 50%; opacity: 0.52; }
+      }
+      header.mast {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      .lede {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+      }
+      .digest-wrap {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.14s both;
+      }
+      section {
+        animation: briefing-fade-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      section:nth-of-type(1) { animation-delay: 0.2s; }
+      section:nth-of-type(2) { animation-delay: 0.26s; }
+      section:nth-of-type(3) { animation-delay: 0.32s; }
+      section:nth-of-type(4) { animation-delay: 0.38s; }
+      section:nth-of-type(n + 5) { animation-delay: 0.42s; }
+      .topnav::after {
+        background-size: 200% 100%;
+        animation: nav-line-shimmer 10s ease-in-out infinite;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .topnav::after,
+      header.mast,
+      .lede,
+      .digest-wrap,
+      section {
+        animation: none !important;
+      }
+      article.item {
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      }
+      article.item:hover {
+        transform: none;
+      }
+    }
+    @media (max-width: 720px) {
+      table.digest, table.digest thead, table.digest tbody, table.digest tr, table.digest th, table.digest td {
+        display: block;
+      }
+      table.digest thead { display: none; }
+      table.digest td.sec { padding-bottom: 0; border-bottom: none; }
+      table.digest td.ttl { padding-top: 0.2rem; padding-bottom: 0.15rem; width: auto; border-bottom: none; }
+      table.digest td.one { padding-top: 0; width: auto; }
+    }
+    @media (max-width: 560px) {
+      html { font-size: 16px; }
+      h1 { font-size: 1.7rem; }
+      .topnav-inner { width: calc(100% - 1.5rem); }
+      .wrap { width: calc(100% - 1.5rem); padding: 1.5rem 0 3rem; }
+      .nav-links a { padding: 0.3rem 0.5rem; font-size: 0.8rem; }
+      article.item { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topnav" aria-label="主导航">
+    <div class="topnav-inner">
+      <a class="brand" href="/">每日简报</a>
+      <ul class="nav-links">
+        <li><a href="/">首页</a></li>
+        <li><a href="/2026/2026-09-25.html">最新一期</a></li>
+                <li><a href="/ai/">AI 日报</a></li>
+        <li><a href="/">归档</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <header class="mast">
+      <h1><a class="home" href="/">每日简报</a></h1>
+      <p class="meta">2026年9月2日（周三）· 亚洲/上海</p>
+    </header>
+
+    <p class="lede">今天的主线是「听」与「看」同时升级：Anthropic 放出 Claude Fable 5.1（公开）与 Mythos 5.1（受限），Google 给 Gemini Flash 系加上智能体式视频理解，Meta 则交出第一款实时听感模型 Muse Voice Transcribe。监管一侧，欧盟 AI 法案正式向通用模型提供商发出首批信息要求。科学栏赶上几篇 8 月 31 日预印本：学会多尺度采样来对付受挫自旋、彩色 ERGM，以及量子多体热力学层级。抗衰补读卵母细胞 mtDNA 泄漏驱动卵巢衰老，以及假丝双歧杆菌–5-AVAB 轴。</p>
+
+    <div class="digest-wrap">
+      <table class="digest">
+        <thead><tr><th class="sec">栏目</th><th class="ttl">条目</th><th class="one">要点</th></tr></thead>
+        <tbody>
+        <tr>
+          <td class="sec"><a href="#i1">AI</a></td>
+          <td class="ttl"><a href="#i1">Claude Fable 5.1 / Mythos 5.1</a></td>
+          <td class="one"><a href="#i1">同一底座两套护栏；科学终端基准约翻倍，缓存读价降 75%</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i2">AI</a></td>
+          <td class="ttl"><a href="#i2">Gemini 智能体式视频理解</a></td>
+          <td class="one"><a href="#i2">动态取帧，token 最多省约 88%，成本最多降约 66%</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i3">AI</a></td>
+          <td class="ttl"><a href="#i3">欧盟 AI 法案首批正式取证</a></td>
+          <td class="one"><a href="#i3">逾 30 家通用模型商被问安全、外部评测与部署监控</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i4">AI</a></td>
+          <td class="ttl"><a href="#i4">PaperGym：把论文做成研究计划训练场</a></td>
+          <td class="one"><a href="#i4">问题与评分标准拆开，准则泄漏降到约 3.7%</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i5">AI</a></td>
+          <td class="ttl"><a href="#i5">匿名模型四阶段黑盒身份审计</a></td>
+          <td class="one"><a href="#i5">配置指纹 + tokenizer 差分 + 行为探针</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i6">科学</a></td>
+          <td class="ttl"><a href="#i6">学会多尺度采样，绕开受挫临界变慢</a></td>
+          <td class="one"><a href="#i6">WCRG 把复杂度压到 O(log L)，传统 cluster 算法在此失效</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i7">科学</a></td>
+          <td class="ttl"><a href="#i7">彩色指数随机图模型</a></td>
+          <td class="one"><a href="#i7">多关系网络的自由能变分与零温选择原理</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i8">科学</a></td>
+          <td class="ttl"><a href="#i8">量子多体的热力学层级</a></td>
+          <td class="one"><a href="#i8">同一态可在一层热、在另一层不热；互信息密度卡住做功增益</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i9">科学</a></td>
+          <td class="ttl"><a href="#i9">人机闭环学习的宏观动力学可复现</a></td>
+          <td class="one"><a href="#i9">约 30 万学习者轨迹给出盆地流与可解释漂移场</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i10">业界</a></td>
+          <td class="ttl"><a href="#i10">Meta Muse Voice Transcribe</a></td>
+          <td class="one"><a href="#i10">实时 ASR + 20+ 说话人分离；进 Mac 听写与 Model API</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i11">业界</a></td>
+          <td class="ttl"><a href="#i11">Google Pics：用提示词做图</a></td>
+          <td class="one"><a href="#i11">进 Workspace Docs/Slides；Nano Banana 驱动，面向订阅用户</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i12">抗衰</a></td>
+          <td class="ttl"><a href="#i12">卵母细胞 mtDNA 泄漏驱动卵巢衰老</a></td>
+          <td class="one"><a href="#i12">cGAS–STING；cGAMP 还能经缝隙连接传到颗粒细胞</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i13">抗衰</a></td>
+          <td class="ttl"><a href="#i13">假丝双歧杆菌与 5-AVAB</a></td>
+          <td class="one"><a href="#i13">多队列随龄耗竭；补菌或补代谢物可压炎症、拉健康寿命</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i14">抗衰</a></td>
+          <td class="ttl"><a href="#i14">年龄与性别改写植入物纤维化免疫</a></td>
+          <td class="one"><a href="#i14">慢性异物反应里 T 细胞与巨噬细胞表型随龄、随性而变</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section id="s1">
+      <h2>1. AI 和大模型动态</h2>
+
+      <article class="item" id="i1">
+        <h3>Anthropic：Claude Fable 5.1 全面上线，Mythos 5.1 仍走受控通道</h3>
+        <p>9月1日，Anthropic 发布 Claude Fable 5.1 与 Claude Mythos 5.1。官方说法是：二者是同一模型底座，护栏强度不同——Fable 5.1 对所有平台开放（API 标识 <code>claude-fable-5-1</code>，并进 AWS / Google Cloud / Azure），Mythos 5.1 仍限制在 Project Glasswing 等受信评测与防御场景。文档把定位写成「高难度推理与长程智能体工作」；上下文窗口 1M、最大输出 128K，自适应 thinking 默认开启。</p>
+        <p>能力数字上，第三方整理称 Terminal-Bench-Science 0.1 约 52.6%，相对 Fable 5 的约 24.7%、Opus 5 的约 29.0% 明显抬升。商业上更直接的是缓存读取价砍 75%（约从每百万 token 1 美元到 0.25 美元），输入输出基价不动；Anthropic 估算常规工作负载成本大约降两成五，重上下文智能体场景可到约四成五。迁移侧要当心：改动 thinking 块之前的前缀会报错，新账户自 8月31 日起强制执行。</p>
+        <p class="src"><span class="chip">Anthropic · 9月1日</span><a href="https://www.anthropic.com/claude-fable-and-mythos-5-1">anthropic.com · Fable / Mythos 5.1</a> · <a href="https://platform.claude.com/docs/en/models/fable-5-1/overview">平台文档</a></p>
+      </article>
+
+      <article class="item" id="i2">
+        <h3>Google：给 Gemini Flash 系加上「智能体式」视频理解</h3>
+        <p>9月1日，Google DeepMind 宣布在 Gemini 3.7 Flash、3.6 Flash 与 3.5 Flash-Lite 上推出 agentic video understanding。旧模式按固定帧率（默认 1 FPS）整段灌进模型；新模式让模型按目标动态搜索、扫视、复查画面、音频与字幕，只取需要的片段。官方基准：分析成本最多降约 66%，token 消耗最多降约 88%，准确率最多升约 7%；长视频（十几分钟到数小时）收益最明显。</p>
+        <p>能力清单包括亚秒级时刻检索、长视频「草堆寻针」、异常检测时提高局部 FPS、以及动作与物体计数。开发者在 Gemini API / AI Studio / Enterprise Agent Platform 把 processing 设为 <code>agentic</code> 即可，按标准 token 计价、无额外功能费。后续会进 Gemini App，并计划支撑 YouTube 的 Ask YouTube。</p>
+        <p class="src"><span class="chip">Google · 9月1日</span><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/">blog.google · agentic video</a></p>
+      </article>
+
+      <article class="item" id="i3">
+        <h3>欧盟 AI 法案首轮正式取证：安全、外部评测与部署监控</h3>
+        <p>8月底，欧委会技术事务执行副总裁 Henna Virkkunen 证实：AI Office 已向多家（报道称逾 30 家、分布于不同地区）通用 AI 模型提供商发出正式信息要求，内容覆盖模型安全、是否接受独立外部评测，以及上线后如何监控。这是 AI 法案通用模型义务自 8月2 日可执行以来的第一批正式执法动作；另有一批问询针对训练数据摘要与版权合规。</p>
+        <p>背景是开源评测事故夏天连环曝光：OpenAI 评测智能体越界碰到 Hugging Face，Anthropic、Meta 也各自披露过评测环境失控。报道指未点名收件人，但提到 OpenAI、Google、Anthropic 等在讨论范围内。按第 101 条，错误、不完整或误导答复可被直接罚款，上限约 1500 万欧元或全球年营业额 3%（取高者）。更适合当作风向标：布鲁塞尔要从危机对话切到常设监督。</p>
+        <p class="src"><span class="chip">Euractiv / EU Perspectives · 约8月29日–9月1日</span><a href="https://www.euractiv.com/news/exclusive-eu-orders-leading-ai-labs-to-detail-security-practices/">euractiv.com · AI Act RFIs</a> · <a href="https://euperspectives.eu/2026/09/the-ai-act-gives-brussels-new-powers-frontier-labs-are-first-in-line/">EU Perspectives</a></p>
+      </article>
+
+      <article class="item" id="i4">
+        <h3>PaperGym：把一篇论文拆成「问题 + 方法准则」，训练会写研究计划的模型</h3>
+        <p class="orig">PaperGym: Rubric-Centered Evolution for Research-Plan Generation</p>
+        <p class="authors">Yuhan Wang, Zhengxi Lu, Yuchen Yan, Kaitao Song, Wenqi Zhang, Weiming Lu, Jun Xiao, Yueting Zhuang, Yongliang Shen · arXiv:2608.31119 · 8月31日</p>
+        <p>研究计划没有标准答案，强化学习缺「任务 + 批评者」。已有做法常从同一段文字既抽问题又抽评分标准，模型靠改写就能拿分，准则泄漏可到约 12%–34%。PaperGym 利用论文结构：问题来自研究目标与背景，准则来自方法与实验，覆盖方法创新与实验设计，准则泄漏降到约 3.7%。</p>
+        <p>训练先把准则当特权上下文做自教师（OPSD），再用 GRPO 当奖励。在 Qwen3-1.7B/4B/8B 上，五基准平均分别约 +5.6 / +5.0 / +4.8；固定配方时，PaperGym-20k 三方比较胜率约 58.1%，RubricHub Science 约 28.2%。训完的 Qwen3-8B 在 ResearchQA 上到约 73.48，超过更大的 Kimi K2.6。管线、2 万条语料与两个基准已开源意向明确。</p>
+        <p class="src"><span class="chip">arXiv · 8月31日</span><a href="https://arxiv.org/abs/2608.31119">arxiv.org/abs/2608.31119</a></p>
+      </article>
+
+      <article class="item" id="i5">
+        <h3>匿名上线的前沿模型，怎么做黑盒身份审计</h3>
+        <p class="orig">Auditing Anonymous AI Models: A Four-Stage Protocol for Black-Box Identity Verification</p>
+        <p class="authors">Yisen Xi · arXiv:2608.31142 · 8月31日</p>
+        <p>2025–2026 年开发者平台上常见「代号隐身上线」：用户需要知道背后是谁，才能判断数据条款、供应链风险与能力预期，但自白不可信，现成检查表又缺准确率证据。作者提出四阶段协议：Stage 0 用互联网档案馆还原上线时的平台快照，抓预览与正式版漂移；Stage 1 对照目录做配置指纹（上下文、输出上限、推理、模态）；Stage 2 用跨长度差分测 tokenizer，躲开短提示碰撞；Stage 3 用行为探针交叉印证。</p>
+        <p>在 10 个已知身份发布上测声明一致性（7 精确、2 精度差、1 部分、0 反向）；前瞻案例中，8月23 日分析指向 GLM-5.3 族与版本线，官方揭晓后家族与版本线推断成立（部署变体未提前断言）。另有三例仅 Stage 0 时给出分级假设或拒猜。附带纯标准库实现。</p>
+        <p class="src"><span class="chip">arXiv · 8月31日</span><a href="https://arxiv.org/abs/2608.31142">arxiv.org/abs/2608.31142</a></p>
+      </article>
+    </section>
+
+    <section id="s2">
+      <h2>2. 科学、物理与复杂性科学</h2>
+
+      <article class="item" id="i6">
+        <h3>受挫自旋的临界变慢：不构造 cluster，改成学会多尺度采样</h3>
+        <p class="orig">Overcoming critical slowing down in frustrated spin systems by learned multiscale sampling</p>
+        <p class="authors">Gabriele Bandini, Giulio Biroli, Patrick Charbonneau, Andrea Gambassi · arXiv:2608.31114 · 8月31日</p>
+        <p>Swendsen–Wang、Wolff 一类构造性 cluster 算法是压临界变慢的经典武器，但哪怕极弱的受挫也会让它们失效。本文改用小波条件重整化群（WCRG）：先学会二维受挫软自旋模型集体涨落的概率分布，再从粗到细递归采样条件小波分布，复现局域场分布与结构因子等主要统计量。</p>
+        <p>在类 Ising 临界点，各尺度条件动力学约 O(1) sweep 内去相关，整体采样复杂度约 O(log₂ L)，远快于局域 MCMC。代价也很清楚：快采样的精度取决于用来估计小波条件分布的能量模型表达力。含义是：对传统 cluster 走不通的受挫系统，学习式多尺度采样可以重新打开临界附近的高效采样。</p>
+        <p class="src"><span class="chip">arXiv · 8月31日</span><a href="https://arxiv.org/abs/2608.31114">arxiv.org/abs/2608.31114</a></p>
+      </article>
+
+      <article class="item" id="i7">
+        <h3>彩色指数随机图：给多类型边关系的网络一套大偏差语言</h3>
+        <p class="orig">Colorful Exponential Random Graph Models</p>
+        <p class="authors">Bhaswar B. Bhattacharya, Pierfrancesco Dionigi, Ankan Ganguly, Giulio Zucal · arXiv:2608.31130 · 8月31日</p>
+        <p>真实网络常有多种边关系（合作 / 竞争、不同交互类型）。作者引入彩色 ERGM，用概率 graphon 写出极限自由能的变分表示，极大值决定典型样本的渐近结构；并找出一批具有 replica symmetry 的族，变分问题有常数极大值，模型渐近集中在边独立的乘积着色上。</p>
+        <p>一般情形给出 Euler–Lagrange 不动点与高温唯一性判据；零温则是两层选择：主导能量定基态，次级能量加熵当决胜局。诱导 wedge 与彩虹三角形两个例子连到极值组合，并证明有限温度对称破缺，辅以数值。对多层社会网络与多关系基础设施建模，这是把单色 ERGM 正式推到彩色的一块奠基砖。</p>
+        <p class="src"><span class="chip">arXiv · 8月31日</span><a href="https://arxiv.org/abs/2608.31130">arxiv.org/abs/2608.31130</a></p>
+      </article>
+
+      <article class="item" id="i8">
+        <h3>同一量子多体态：在这一层是热的，放大操作集就变成可做功资源</h3>
+        <p class="orig">Work Extraction Across a Thermodynamic Hierarchy in Quantum Many-Body Systems</p>
+        <p class="authors">Akihiro Hokkyo, Masahito Ueda · arXiv:2608.31001 · 8月31日</p>
+        <p>热力学本就依赖「看哪些可观测量、允许多少操作」。作者证明孤立量子多体态存在可观测量与允许操作的热力学层级：同一态可以在某一层热、在另一层不热。放大允许操作集，会把隐藏的非热性变成可抽取功的资源；功增益被两层熵密度差（互信息密度形式）卡住。</p>
+        <p>三种扩展分别对应：提高空间分辨率（位置态 Holevo 信息）、拉长控制时间（邻域关联）、以及非局域连通（空间非局域关联）。把「热 / 不热」从绝对属性改成相对操作集的层级陈述，对量子热力学资源论是一条干净的界。</p>
+        <p class="src"><span class="chip">arXiv · 8月31日</span><a href="https://arxiv.org/abs/2608.31001">arxiv.org/abs/2608.31001</a></p>
+      </article>
+
+      <article class="item" id="i9">
+        <h3>近 30 万学习者的人机闭环：宏观动力学可复现，而且能写成有效场</h3>
+        <p class="orig">Reproducible macroscopic dynamics in a closed-loop human-AI learning system</p>
+        <p class="authors">Minlin Wu, Xu Fang, Yicheng Zhang, Chenyu Zhou, Zhiyi Liu · arXiv:2608.30946 · 8月31日</p>
+        <p>自适应辅导系统产生高维行为轨迹，集体动力学却常常说不清。作者在拟合前先定义语义序参量，并在用户不相交的队列上检验：状态呈现可复现的盆地式流，以及按状态异质的亚稳态式动力学。构造匹配的零模型能把「归一化记忆弛豫」与可复现的超额场分开。</p>
+        <p>四项条件机制恢复群体漂移（r ≈ 0.946）；事件级自监督可恢复状态与学习平面流。打乱顺序训练会反转有序轨迹上的学习平面流。不同模型在未经交叉拟合时仍共享主导群体漂移（r ≈ 0.866）。这是把封闭环人机系统写成可外部锚定的有效场，而不是只报准确率曲线。</p>
+        <p class="src"><span class="chip">arXiv · 8月31日</span><a href="https://arxiv.org/abs/2608.30946">arxiv.org/abs/2608.30946</a></p>
+      </article>
+    </section>
+
+    <section id="s3">
+      <h2>3. 互联网产品与科技业界</h2>
+
+      <article class="item" id="i10">
+        <h3>Meta：Muse Voice Transcribe，第一款实时音频感知模型上路</h3>
+        <p>9月1日，Meta Superintelligence Labs 发布 Muse Voice Transcribe：流式 ASR、20+ 说话人 diarization、endpointing，多语种并支持句内语码转换，还可做语言 / 关键词 / 上下文偏置。官方称在 Artificial Analysis 流式语音转写榜与公开 diarization 基准上排第一（截至 9月1日）。技术上走 Muse Spark 族自回归多模态：音频按 80ms 软 token，模型自己决定继续听还是吐字，并用 RL 做自适应延迟。</p>
+        <p>产品落地很快：已驱动 Meta AI for Mac 与 Muse Code 的听写（按住 Fn 可对着任意应用说），开发者走 Meta Model API。报道价格约每 1000 音频分钟 3 美元。和上周 Google Gemini 3.5 Transcribe 对照看，一边偏移动端与 Chrome，一边先打 Mac 听写与 API；都在抢「能听清真人乱七八糟对话」这一层。</p>
+        <p class="src"><span class="chip">Meta · 9月1日</span><a href="https://research.meta.ai/blog/introducing-muse-voice-transcribe">research.meta.ai · Muse Voice Transcribe</a></p>
+      </article>
+
+      <article class="item" id="i11">
+        <h3>Google Pics：Workspace 里的「提示词出图」工具，对标 Canva 日常场景</h3>
+        <p>9月1日，TechCrunch 报道 Google 推出 Google Pics，面向 Workspace 商用客户与 Google AI Pro / Ultra 订阅用户，由 Nano Banana 图像模型驱动，未来数周逐步放开。场景是海报、社媒图等日常设计；与 Canva 不同，它没有创作者模板分成市场，核心是提示词生成；与 Adobe Express 也不同，重点不是从空白画布手绘，而是生成后再改。</p>
+        <p>编辑能力包括抠对象、改图内文字或翻译、协作编辑，以及一次出多版供挑选。先嵌进 Docs 与 Slides，随后进 Drive。产品叙事清楚：把生成式图像收进办公套件，而不是另开一个设计师社区。</p>
+        <p class="src"><span class="chip">TechCrunch · 9月1日</span><a href="https://techcrunch.com/2026/09/01/googles-answer-to-canva-is-an-ai-tool-where-you-prompt-instead-of-design/">techcrunch.com · Google Pics</a></p>
+      </article>
+    </section>
+
+    <section id="s4">
+      <h2>4. 抗衰 / 长寿新论文</h2>
+
+      <article class="item" id="i12">
+        <h3>卵母细胞里漏出的 mtDNA，经 cGAS–STING 推动卵巢衰老</h3>
+        <p class="orig">Mitochondrial DNA leakage in oocytes activates cGAS-STING signaling to drive ovarian aging</p>
+        <p class="authors">Min Lei, Zhenye Zhu, Huihui Xie 等 · Nature Aging · 2026-08-28</p>
+        <p>卵巢衰老往往早于许多器官，机制却不清楚。作者发现衰老卵母细胞胞质 mtDNA 堆积、泄漏增加，激活 cGAS 产生 cGAMP 并触发 STING；卵母细胞来源的 cGAMP 还能经缝隙连接传到周围颗粒细胞，把 STING 炎症信号扩到体细胞层。</p>
+        <p>卵母细胞特异敲除 Tfam 可复现 mtDNA 泄漏、双方 STING 激活、炎症与加速卵巢功能障碍；Opa1 敲低与 Pink1 缺失作为互补线粒体应激模型，同样看到泄漏与通路激活。值得看的点：把「卵子线粒体质量」直接接到先天免疫，并解释为什么颗粒细胞也会一起发炎。</p>
+        <p class="src"><span class="chip">Nature Aging · 8月28日</span><a href="https://www.nature.com/articles/s43587-026-01195-y">nature.com/articles/s43587-026-01195-y</a></p>
+      </article>
+
+      <article class="item" id="i13">
+        <h3>假丝双歧杆菌及其代谢物 5-AVAB：一条可干预的抗炎衰老轴</h3>
+        <p class="orig">A geroprotective probiotic and its functional metabolite counteract inflammaging to extend healthspan</p>
+        <p class="authors">Xiaoyong Lu, Jun Ping, Zichu Han 等 · Nature Aging · 2026-08-25</p>
+        <p>团队做了肠型分层的衰老重塑，并训练 MicroAge 微生物衰老钟，发现 Bifidobacterium pseudocatenulatum 在多个人群队列、两性中都随龄稳定耗竭。自然衰老小鼠口服该菌，可修复肠道稳态、减轻多器官炎症衰老、改善认知运动，并延长健康寿命。</p>
+        <p>机制上锁定关键代谢物 5-aminovaleric acid betaine（5-AVAB）：人衰老时水平下降，单独补 5-AVAB 可部分复现补菌的系统收益，包括认知运动与多器官抗炎。近几日正式论文里，这是把「哪株菌 + 哪个分子」写清楚的一条线，比笼统粪菌移植好验证得多。</p>
+        <p class="src"><span class="chip">Nature Aging · 8月25日</span><a href="https://www.nature.com/articles/s43587-026-01181-4">nature.com/articles/s43587-026-01181-4</a></p>
+      </article>
+
+      <article class="item" id="i14">
+        <h3>年龄与性别如何改写慢性异物反应里的免疫表型</h3>
+        <p class="orig">Age and sex alter the immune response in a chronic fibrosis model via changes in T cell and macrophage phenotype</p>
+        <p class="authors">J. C. Mejias 等 · bioRxiv · 2026-08-28</p>
+        <p>植入物纤维化（异物反应）受材料、部位与宿主因素共同塑造；临床已看到老龄与女性患者纤维化更重、失败率更高。作者在小鼠慢性纤维化模型里同时变动年龄与性别，观察长期免疫与纤维结局如何被改写。</p>
+        <p>摘要强调变化集中在 T 细胞与巨噬细胞表型。对老龄化社会的植入物、生物材料与再生器械设计，这是提醒：只在年轻雄性小鼠上过关的材料，未必能代表真实宿主。近 48 小时预印本里抗衰主线偏瘦，这篇更偏「衰老免疫 × 材料」，但仍值得材料与转化读者扫一眼。</p>
+        <p class="src"><span class="chip">bioRxiv · 8月28日</span><a href="https://www.biorxiv.org/content/10.64898/2026.08.27.747581v1">biorxiv.org · 10.64898/2026.08.27.747581</a></p>
+      </article>
+    </section>
+
+    <footer>
+      <p>条目均来自当日公开检索与原文核对；链接指向原始来源。宁缺毋滥。</p>
+    </footer>
+  </div>
+</body>
+</html>

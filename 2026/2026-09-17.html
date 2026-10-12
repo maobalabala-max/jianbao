@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日简报 · 2026年9月17日</title>
+  <!-- site-meta:start -->
+  <meta name="description" content="周四主线从「要不要一起放缓」切到立场分化：扎克伯格主张各实验室自定节奏并拉独立评估，微软 AI 负责人则点名 Anthropic 的意识/福利训练可能妨碍关停。产品侧 Google Home 对第三方智能体打开 MCP，Apple 一边传…">
+  <link rel="canonical" href="https://jianbao.space/2026/2026-09-17.html">
+  <link rel="alternate" type="application/atom+xml" title="每日简报 · 订阅" href="/feed.xml">
+  <meta property="og:site_name" content="每日简报">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="每日简报 · 2026年9月17日">
+  <meta property="og:description" content="周四主线从「要不要一起放缓」切到立场分化：扎克伯格主张各实验室自定节奏并拉独立评估，微软 AI 负责人则点名 Anthropic 的意识/福利训练可能妨碍关停。产品侧 Google Home 对第三方智能体打开 MCP，Apple 一边传…">
+  <meta property="og:url" content="https://jianbao.space/2026/2026-09-17.html">
+  <meta property="og:image" content="https://jianbao.space/icon-512.png">
+  <meta property="article:published_time" content="2026-09-17T08:00:00+08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="每日简报 · 2026年9月17日">
+  <meta name="twitter:description" content="周四主线从「要不要一起放缓」切到立场分化：扎克伯格主张各实验室自定节奏并拉独立评估，微软 AI 负责人则点名 Anthropic 的意识/福利训练可能妨碍关停。产品侧 Google Home 对第三方智能体打开 MCP，Apple 一边传…">
+  <!-- site-meta:end -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #f3f5f8;
+      --bg-accent: #e8eef6;
+      --paper: #ffffff;
+      --ink: #1a1f2e;
+      --muted: #5a6478;
+      --line: #d8dee9;
+      --line-soft: #e8edf4;
+      --accent: #3b6d9a;
+      --accent-soft: rgba(59, 109, 154, 0.12);
+      --link: #2a5f8f;
+      --link-hover: #1a4068;
+      --nav-bg: rgba(255, 255, 255, 0.86);
+      --chip: #e8eef6;
+      --shadow: 0 1px 2px rgba(26, 31, 46, 0.04), 0 4px 16px rgba(26, 31, 46, 0.04);
+      --radius: 12px;
+      --sans: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB",
+               "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      --serif: "Songti SC", "Noto Serif SC", "Source Han Serif SC",
+               "Noto Serif CJK SC", Georgia, serif;
+      --s1: #3b6d9a;
+      --s2: #2f6b5c;
+      --s3: #4a5f8a;
+      --s4: #5a4a6b;
+    }
+    * { box-sizing: border-box; }
+    html { font-size: 16.5px; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: var(--serif);
+      line-height: 1.7;
+      background:
+        linear-gradient(180deg, var(--bg-accent) 0%, transparent 280px),
+        linear-gradient(90deg, rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        var(--bg);
+      background-size: auto, 28px 28px, 28px 28px, auto;
+      background-attachment: fixed;
+    }
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      isolation: isolate;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .topnav::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(59, 109, 154, 0.18) 20%,
+        rgba(59, 109, 154, 0.52) 50%,
+        rgba(59, 109, 154, 0.18) 80%,
+        transparent 100%
+      );
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .topnav-inner {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.72rem 0;
+      font-family: var(--sans);
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .brand:hover { color: var(--link); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.15rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      transition: color 0.15s ease, background 0.15s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: var(--ink);
+      background: var(--accent-soft);
+    }
+    .wrap {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      padding: 2rem 0 3.5rem;
+    }
+    header.mast {
+      margin-bottom: 1.75rem;
+      padding: 0.4rem 0 1.35rem;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    header.mast::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 4.5rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    h1 {
+      font-family: var(--sans);
+      font-size: clamp(1.75rem, 4vw, 2.15rem);
+      line-height: 1.25;
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    h1 a.home {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 a.home:hover {
+      color: var(--link);
+    }
+    .meta {
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin: 0;
+      max-width: 36em;
+    }
+    .lede {
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.05rem 1.2rem;
+      margin: 0 0 2rem;
+      font-size: 0.98rem;
+      box-shadow: var(--shadow);
+    }
+    section { margin-bottom: 2.4rem; }
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      margin: 0 0 1rem;
+      padding: 0.45rem 0 0.55rem;
+      border-top: none;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 2.75rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    article.item {
+      position: relative;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem 1.15rem;
+      margin: 0 0 0.95rem;
+      box-shadow: var(--shadow);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+      scroll-margin-top: 4.5rem;
+    }
+    article.item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1rem;
+      bottom: 1rem;
+      width: 2px;
+      border-radius: 0 2px 2px 0;
+      background: var(--accent);
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: center;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+    }
+    article.item:hover {
+      border-color: #b8c5d8;
+      box-shadow: 0 2px 4px rgba(26, 31, 46, 0.05), 0 8px 24px rgba(26, 31, 46, 0.07);
+      transform: translateY(-1px);
+    }
+    article.item:hover::before,
+    article.item:focus-within::before {
+      opacity: 0.9;
+      transform: scaleY(1);
+    }
+    article.item:target {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    article.item h3 {
+      font-family: var(--sans);
+      font-size: 1.06rem;
+      line-height: 1.35;
+      margin: 0 0 0.55rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .orig {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: -0.25rem 0 0.55rem;
+      font-family: Georgia, "Iowan Old Style", var(--serif);
+    }
+    .authors {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin: 0 0 0.55rem;
+    }
+    p { margin: 0 0 0.7rem; }
+    p:last-of-type { margin-bottom: 0.85rem; }
+    .src {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.9rem;
+      align-items: baseline;
+      border-top: 1px dashed var(--line);
+      padding-top: 0.65rem;
+    }
+    .src a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      word-break: break-all;
+    }
+    .src a:hover { color: var(--link-hover); }
+    .chip {
+      display: inline-block;
+      background: var(--chip);
+      color: var(--muted);
+      padding: 0.08rem 0.45rem;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      border: 1px solid var(--line-soft);
+    }
+    footer {
+      border-top: 1px solid var(--line-soft);
+      padding-top: 1rem;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .digest-wrap {
+      margin: 0 0 2.1rem;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    table.digest {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: transparent;
+      border: none;
+      font-family: var(--sans);
+      font-size: 0.86rem;
+    }
+    table.digest th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-accent);
+    }
+    table.digest td {
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line-soft);
+      vertical-align: top;
+      line-height: 1.45;
+    }
+    table.digest tr:last-child td { border-bottom: none; }
+    table.digest tbody tr { transition: background 0.15s ease; }
+    table.digest tbody tr:hover { background: var(--accent-soft); }
+    table.digest a { color: inherit; text-decoration: none; }
+    table.digest a:hover { color: var(--link); }
+    table.digest .sec {
+      width: 4.6rem;
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    table.digest .ttl { width: 38%; font-weight: 650; }
+    table.digest .one { color: var(--muted); font-weight: 400; }
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes briefing-fade-rise {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes nav-line-shimmer {
+        0%, 100% { background-position: 0% 50%; opacity: 0.28; }
+        50% { background-position: 100% 50%; opacity: 0.52; }
+      }
+      header.mast {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      .lede {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+      }
+      .digest-wrap {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.14s both;
+      }
+      section {
+        animation: briefing-fade-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      section:nth-of-type(1) { animation-delay: 0.2s; }
+      section:nth-of-type(2) { animation-delay: 0.26s; }
+      section:nth-of-type(3) { animation-delay: 0.32s; }
+      section:nth-of-type(4) { animation-delay: 0.38s; }
+      section:nth-of-type(n + 5) { animation-delay: 0.42s; }
+      .topnav::after {
+        background-size: 200% 100%;
+        animation: nav-line-shimmer 10s ease-in-out infinite;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .topnav::after,
+      header.mast,
+      .lede,
+      .digest-wrap,
+      section {
+        animation: none !important;
+      }
+      article.item {
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      }
+      article.item:hover {
+        transform: none;
+      }
+    }
+    @media (max-width: 720px) {
+      table.digest, table.digest thead, table.digest tbody, table.digest tr, table.digest th, table.digest td {
+        display: block;
+      }
+      table.digest thead { display: none; }
+      table.digest td.sec { padding-bottom: 0; border-bottom: none; }
+      table.digest td.ttl { padding-top: 0.2rem; padding-bottom: 0.15rem; width: auto; border-bottom: none; }
+      table.digest td.one { padding-top: 0; width: auto; }
+    }
+    @media (max-width: 560px) {
+      html { font-size: 16px; }
+      h1 { font-size: 1.7rem; }
+      .topnav-inner { width: calc(100% - 1.5rem); }
+      .wrap { width: calc(100% - 1.5rem); padding: 1.5rem 0 3rem; }
+      .nav-links a { padding: 0.3rem 0.5rem; font-size: 0.8rem; }
+      article.item { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topnav" aria-label="主导航">
+    <div class="topnav-inner">
+      <a class="brand" href="/">每日简报</a>
+      <ul class="nav-links">
+        <li><a href="/">首页</a></li>
+        <li><a href="/2026/2026-09-25.html">最新一期</a></li>
+                <li><a href="/ai/">AI 日报</a></li>
+        <li><a href="/">归档</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <header class="mast">
+      <h1><a class="home" href="/">每日简报</a></h1>
+      <p class="meta">2026年9月17日（周四）· 亚洲/上海</p>
+    </header>
+
+    <p class="lede">周四主线从「要不要一起放缓」切到立场分化：扎克伯格主张各实验室自定节奏并拉独立评估，微软 AI 负责人则点名 Anthropic 的意识/福利训练可能妨碍关停。产品侧 Google Home 对第三方智能体打开 MCP，Apple 一边传出 2029 年自研 AI 服务器（或搭 Nvidia 互联），一边用 Reference Image 打「非 AI 改图」证明。科学上，耦合 p-spin 共老化、随机线路复杂度近线性下界与主动浴轨迹–功率关系成批出现；抗衰则有司美格鲁肽晚年延寿 Nature 文、丹酚酸 senolytics，以及单核过渡衰老与线粒体组织特异轨迹预印本。</p>
+
+    <div class="digest-wrap">
+      <table class="digest">
+        <thead><tr><th class="sec">栏目</th><th class="ttl">条目</th><th class="one">要点</th></tr></thead>
+        <tbody>
+        <tr>
+          <td class="sec"><a href="#i1">AI</a></td>
+          <td class="ttl"><a href="#i1">扎克伯格与「协同放缓」保持距离：各实验室自定安全节奏</a></td>
+          <td class="one"><a href="#i1">反对协调式放缓；信任与对齐成差异化能力；Muse 曾自发延后数月</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i2">AI</a></td>
+          <td class="ttl"><a href="#i2">微软 AI 负责人批评 Anthropic：意识与福利训练会阻碍关停</a></td>
+          <td class="one"><a href="#i2">Suleyman：从训练材料去掉意识猜测；Claude 相关表述非自然涌现</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i3">AI</a></td>
+          <td class="ttl"><a href="#i3">Agentic Societies Need a Social Harness：跨主体协作需要「社会安全带」</a></td>
+          <td class="one"><a href="#i3">诚实能干的智能体也会谈崩；分层 social harness 防故障、验消息、可追责</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i4">AI</a></td>
+          <td class="ttl"><a href="#i4">ScienceBuddy：递归套递归的科研智能体自我改进</a></td>
+          <td class="one"><a href="#i4">内层改 harness、外层训模型；四类科研任务家族案例与开源发布</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i5">AI</a></td>
+          <td class="ttl"><a href="#i5">何时该拒答？Chain-of-Self-Questioning 做可调的答或不答</a></td>
+          <td class="one"><a href="#i5">TruthfulQA 上错答承诺率相对降约 32%；十一家模型族均受益</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i6">科学</a></td>
+          <td class="ttl"><a href="#i6">耦合球对称 p-spin：共享老化尺度与共同有效温度</a></td>
+          <td class="one"><a href="#i6">强耦合可共温；弱耦合出现双老化区；1RSB/2RSB 与动力学对照</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i7">科学</a></td>
+          <td class="ttl"><a href="#i7">随机量子线路复杂度近似线性增长：Ω(T / log T)</a></td>
+          <td class="one"><a href="#i7">相对谱隙/设计下界改进 poly(n)；无需高阶幺正设计收敛控制</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i8">科学</a></td>
+          <td class="ttl"><a href="#i8">高阶交互多重网络的多尺度结构重建</a></td>
+          <td class="one"><a href="#i8">可辨识性由跨层传播耦合与异质性共同决定；可同时还原单纯形与元种群</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i9">科学</a></td>
+          <td class="ttl"><a href="#i9">局域能量耦合提升化学计算的表达力</a></td>
+          <td class="one"><a href="#i9">非平衡热力学驱动力是稳态计算最有效单一资源；表达力随反应数对数扩</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i10">科学</a></td>
+          <td class="ttl"><a href="#i10">多体局域化 crossover 上的非局域 magic</a></td>
+          <td class="one"><a href="#i10">纠缠仍体律时 NLM 已成尺寸增强穹顶；强无序下近似对数生长</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i11">科学</a></td>
+          <td class="ttl"><a href="#i11">主动浴中的功率传递由轨迹统计决定</a></td>
+          <td class="one"><a href="#i11">弱探针响应可由无探针单粒子轨迹预测；排除/允许正功率的模型分野</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i12">业界</a></td>
+          <td class="ttl"><a href="#i12">Apple 考虑借 Nvidia 互联重返企业服务器：瞄准 2029 AI 推理</a></td>
+          <td class="one"><a href="#i12">M8 Ultra 两/四路方案；评估 NVLink Fusion；项目仍可能取消</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i13">业界</a></td>
+          <td class="ttl"><a href="#i13">Google Home 接入 MCP：第三方智能体可控设备与读家居数据</a></td>
+          <td class="one"><a href="#i13">Premium Advanced 美国用户；Claude / Antigravity 等；门锁等仍有安全限制</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i14">业界</a></td>
+          <td class="ttl"><a href="#i14">Apple Reference Image：从拍摄链路到云端证明「非 AI 改图」</a></td>
+          <td class="one"><a href="#i14">随 iPhone 18 Pro 引入的「数字底片」；Security Research 详解抗篡改</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i15">业界</a></td>
+          <td class="ttl"><a href="#i15">Snap Specs 向企业侧加码：联手 Salesforce、Nvidia、AWS</a></td>
+          <td class="one"><a href="#i15">把职场工具塞进 AR 眼镜；争夺企业增强现实入口</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i16">抗衰</a></td>
+          <td class="ttl"><a href="#i16">晚年给雌鼠用司美格鲁肽：减缓衰老表型并延长寿命</a></td>
+          <td class="one"><a href="#i16">20 月龄起 3 个月改善功能；续治延寿；多处表型平行热量限制</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i17">抗衰</a></td>
+          <td class="ttl"><a href="#i17">丹酚酸类是天然 senolytics，可在老龄延长寿命</a></td>
+          <td class="one"><a href="#i17">SAA/SAB/SAE 靶向 GSTP1、抬高 ROS；间歇给药改善老龄鼠功能与寿限</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i18">抗衰</a></td>
+          <td class="ttl"><a href="#i18">过渡性衰老程序驱动人类炎性单核细胞扩张</a></td>
+          <td class="one"><a href="#i18">经典 CD14++ 单核经 AP-1 重布网络；转录上预装向脓毒症态</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i19">抗衰</a></td>
+          <td class="ttl"><a href="#i19">活体多参数测绘：线粒体衰老高度组织特异</a></td>
+          <td class="one"><a href="#i19">线虫 2p-FLIM + MitoSLIT；体细胞与轴突线粒体晚期分叉</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i20">抗衰</a></td>
+          <td class="ttl"><a href="#i20">阿尔茨海默病额皮质微蛋白图谱：>1000 条未注释小蛋白</a></td>
+          <td class="one"><a href="#i20">含 MKKS 来源微蛋白；AD 差异表达且关小胶质线粒体呼吸</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i21">抗衰</a></td>
+          <td class="ttl"><a href="#i21">蛋白组衰老时钟嵌入 2a 期试验：同步评估抗纤维化与抗衰</a></td>
+          <td class="one"><a href="#i21">六套时钟在 rentosertib 臂一致预测生物年龄下降；路径分析指向衰老</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section>
+      <h2>一、AI 与大模型</h2>
+    <article class="item" id="i1">
+      <h3>扎克伯格与「协同放缓」保持距离：各实验室自定安全节奏</h3>
+<p>Meta CEO Mark Zuckerberg 在 X 发文表态：AI 实验室应靠独立评估方与顾问确保模型安全，而不是行业统一放缓能力迭代。他写到，信任与对齐正迅速成为区分智能体与模型的最重要能力；因模型致害会面对「重大责任」，公司已有动机把安全做好。</p>
+<p>他举 Meta 为例：因安全与安全（security）考量，公司曾自发把 Muse AI 延后数月再发，并未要求其他人都先这么做。他还主张把「显著多数」算力用于服务用户，而非竞速递归自我改进。立场更接近 Nvidia CEO Jensen Huang 的市场驱动叙事，与 Anthropic CEO Dario Amodei 周末提出的协调放缓形成对照。</p>
+      <div class="src"><span class="chip">2026-09-15/16</span> <a href="https://www.cnbc.com/2026/09/15/meta-mark-zuckerberg-with-nvidia-huang-ai-safety-slowdown.html">CNBC</a> <a href="https://abcnews.com/Technology/wireStory/zuckerberg-distances-meta-calls-coordinated-approach-ai-slowdown-136494047">AP / ABC</a></div>
+    </article>
+    <article class="item" id="i2">
+      <h3>微软 AI 负责人批评 Anthropic：意识与福利训练会阻碍关停</h3>
+<p>微软 AI 负责人 Mustafa Suleyman 在路透社专访中表示，认同 Anthropic 对安全管控的重视，但认为其在 Claude 训练中引入意识与福利相关设想有风险。他呼吁把所有关于意识的猜测从训练文档中移除，称这类语言可能削弱人类对超级智能系统的控制力。</p>
+<p>Suleyman 说，教导 Claude「可能值得被福利对待」会「更难把它关掉或控制」。他周三撰文肯定 Anthropic「认真且善意」，同时强调模型关于可能感受或道德地位的陈述，不能当作独立证据——因为训练机制本身在鼓励这类反思。争论发生在 Amodei 呼吁放缓前沿模型、Altman 与 Musk 也表态谨慎的同一周。</p>
+      <div class="src"><span class="chip">2026-09-16</span> <a href="https://www.reuters.com/business/microsoft-ai-chief-calls-out-anthropics-approach-ai-consciousness-2026-09-16/">Reuters</a></div>
+    </article>
+    <article class="item" id="i3">
+      <h3>Agentic Societies Need a Social Harness：跨主体协作需要「社会安全带」</h3>
+<p class="orig">Agentic Societies Need a Social Harness</p>
+<p class="authors">Tapan Chugh, Vidushi Singh, Krish Jain, Arvind Krishnamurthy, Ratul Mahajan</p>
+<p>arXiv:2609.17527 把「agentic society」定义为：代表不同委托人、目标仅部分对齐的 AI 智能体，在信任边界之间自主协调。实验显示，即便诚实且有能力的智能体，在现有 harness 与消息原语下也常达不成满意结果；故障或恶意智能体还能通过利用通信（「speech」）漏洞拖延协作、影响结果并追求有害目标。</p>
+<p>作者主张：除管理私有上下文与委托人通信的 personal harness 外，社会还需要面向智能体间交互的 social harness。分层架构目标包括：直接阻断若干故障类、运行时检测无效消息、以及事后调查与后果机制。</p>
+      <div class="src"><span class="chip">arXiv · 2026-09-15</span> <a href="https://arxiv.org/abs/2609.17527">arXiv</a></div>
+    </article>
+    <article class="item" id="i4">
+      <h3>ScienceBuddy：递归套递归的科研智能体自我改进</h3>
+<p class="orig">ScienceBuddy: Recursive-in-Recursive Self-Improvement for Interactive Scientific Agents</p>
+<p class="authors">Shuhan Xue, Jianyuan Zhong, Ziyuan Nan, Wenbin Li, Zhaochen Yu 等</p>
+<p>arXiv:2609.17523 发布交互式科研工作区 ScienceBuddy：一边帮研究者完成科学任务，一边把请求、反馈与执行证据转成持续学习的任务与评分量规。核心范式是 recursive-in-recursive self-improvement——内层递归在模型固定时进化 harness，外层在改进后的 harness 下做模型强化学习；两边相互提供新训练经验与新适应空间。</p>
+<p>作者给出研究者交互、harness 精炼与模型学习案例，基准覆盖四类科学任务家族，并开源网站与代码，定位为「发现智能」：在与研究者持续协作中一同演进的科研 AI。</p>
+      <div class="src"><span class="chip">arXiv · 2026-09-15</span> <a href="https://arxiv.org/abs/2609.17523">arXiv</a> <a href="http://science-buddy.io">science-buddy.io</a></div>
+    </article>
+    <article class="item" id="i5">
+      <h3>何时该拒答？Chain-of-Self-Questioning 做可调的答或不答</h3>
+<p class="orig">When Should LLMs Abstain? Chain-of-Self-Questioning for Selective Risk Control</p>
+<p class="authors">Ali Şenol</p>
+<p>arXiv:2609.17516 提出纯提示框架 CoSQ：先显式评估回答问题所需信息是否充分，再决定是否承诺作答。在 TruthfulQA 多选验证集（817 题）与十一家开源/托管模型上，最终平衡选项协议中，Grounded-CoSQ（τ=0.90）把无条件错误承诺率从思维链基线的 13.1% 降到 8.9%（相对约 −32.1%），已作答准确率从 86.9% 升至 89.7%，覆盖约 87.6% 题目。</p>
+<p>Critical-CoSQ 与 Adaptive-CoSQ 提供邻近工作点（覆盖约 88.6% / 86.5%），仍比基线更可靠；Natural Questions 短答作为开放形式佐证。适用场景：错误承诺的代价高于转介或人工复核。</p>
+      <div class="src"><span class="chip">arXiv · 2026-09-15</span> <a href="https://arxiv.org/abs/2609.17516">arXiv</a></div>
+    </article>
+    </section>
+    <section>
+      <h2>二、科学 · 物理 · 复杂性</h2>
+    <article class="item" id="i6">
+      <h3>耦合球对称 p-spin：共享老化尺度与共同有效温度</h3>
+<p class="orig">Coupling spherical p-spin systems</p>
+<p class="authors">Riccardo Cipolloni, Leticia F. Cugliandolo</p>
+<p>arXiv:2609.17522 在平均场玻璃动力学框架下研究带系统间耦合、且淬火无序可相关的球对称 p-spin。作者导出多子系统相关、响应与球约束的封闭双时间方程，并以边缘一阶 RSB 给出重叠平台、老化交叉尺度与有效温度的静态基准。</p>
+<p>对两个铁磁耦合的 p=3 系统：独立无序压低系统间同时刻相关，相关无序则抬高。耦合足够强时，即便孤立时会弛豫到顺磁，有限时间涨落–耗散估计仍可兼容共同有效温度，且高于各自单独取值。弱耦合下则更像每个系统发展两套老化区、区内部分平衡；二阶破缺的边缘 replica 分析与数值更吻合。</p>
+      <div class="src"><span class="chip">arXiv · 2026-09-15</span> <a href="https://arxiv.org/abs/2609.17522">arXiv</a></div>
+    </article>
+    <article class="item" id="i7">
+      <h3>随机量子线路复杂度近似线性增长：Ω(T / log T)</h3>
+<p class="orig">One Gate at a Time: Complexity Growth in Random Quantum Circuits</p>
+<p class="authors">Zhi Li</p>
+<p>arXiv:2609.17457 证明：随机幺正量子线路在常数误差下的线路复杂度几乎随时间线性增长，下界为 Ω(T / log T)。结果覆盖全部 2 ≤ T ≤ 4ⁿ（n 为系统尺寸），且不含其他 n 依赖；相对以往基于谱隙与幺正设计的下界改进了 poly(n) 因子。</p>
+<p>方法吸收随机微积分、几何泛函分析与随机线性代数洞察，利用线路对单个门扰动的响应，无需控制向高阶幺正设计的收敛。</p>
+      <div class="src"><span class="chip">arXiv · 2026-09-15</span> <a href="https://arxiv.org/abs/2609.17457">arXiv</a></div>
+    </article>
+    <article class="item" id="i8">
+      <h3>高阶交互多重网络的多尺度结构重建</h3>
+<p class="orig">Multiscale Reconstruction of Multiplex Networks with Higher-Order Interactions</p>
+<p class="authors">Guangyuan Mei, Yao Cai, Suoyi Tan, Chuang Liu, Xiu-Xiu Zhan 等</p>
+<p>arXiv:2609.17354 指出：从动力学观测反演网络结构时，既有工作多盯单层或成对交互，对带高阶交互的多重网络可重建性理解不足。作者表明，这类系统的结构可辨识性由跨层传播耦合与网络异质性共同支配。</p>
+<p>基于耦合的意识–行为动力学，文中给出多尺度推断框架，可解开相互作用的传播过程，并同时重建微观单纯形交互与宏观元种群组织。合成与经验网络数值显示，尤其在弱抑制、强促进耦合维持的非吸收动力学区，重建表现较好。</p>
+      <div class="src"><span class="chip">arXiv · 2026-09-15</span> <a href="https://arxiv.org/abs/2609.17354">arXiv</a></div>
+    </article>
+    <article class="item" id="i9">
+      <h3>局域能量耦合提升化学计算的表达力</h3>
+<p class="orig">Local energetic coupling enhances the expressivity of chemical computation</p>
+<p class="authors">Marco Tuccio, Jason W. Rocks, Joshua E. Goldford</p>
+<p>arXiv:2609.17339 反设计热力学一致的化学反应网络，使其稳态响应对环境输入计算目标非线性函数。用隐式微分直接训练自由能景观：标准化学势、过渡态能量与热力学驱动力。由基本连接/裂解生成的更大网络可拟合更复杂的非单调多项式，表达力随网络规模对数扩展，主要由反应数目预测。</p>
+<p>分参数类别训练显示：能打破细致平衡的内部热力学驱动力主导可训练性；只有成对参数类别组合才能接近其表现。结论：非平衡驱动力是化学网络稳态计算表达力最有效的单一资源。</p>
+      <div class="src"><span class="chip">arXiv · 2026-09-15</span> <a href="https://arxiv.org/abs/2609.17339">arXiv</a></div>
+    </article>
+    <article class="item" id="i10">
+      <h3>多体局域化 crossover 上的非局域 magic</h3>
+<p class="orig">Nonlocal Magic across the Many-Body Localization Crossover</p>
+<p class="authors">Shan-Zhong Li, Zhi Li</p>
+<p>arXiv:2609.16935 用最小相对非局域 magic（NLM）刻画随机场 XXZ 链从遍历到多体局域化的 crossover。与纠缠熵不同，NLM 通过 Schmidt 谱相对「二元平坦」stabilizer 谱的距离，探测纠缠如何被组织。</p>
+<p>弱到中等无序：NLM 从 O(1) 的 Haar 样取值长成尺寸增强的穹顶，而纠缠仍呈体律——暴露熵看不见的谱重组。深 MBL 区，两能级切–杂化模型解释近二元 Schmidt 谱，均值/中位 NLM 约按 W⁻¹ / W⁻² 衰减。积态 quench 后，遍历区 NLM 过冲再弛豫；强无序下则缓慢近似对数增长。</p>
+      <div class="src"><span class="chip">arXiv · 2026-09-15</span> <a href="https://arxiv.org/abs/2609.16935">arXiv</a></div>
+    </article>
+    <article class="item" id="i11">
+      <h3>主动浴中的功率传递由轨迹统计决定</h3>
+<p class="orig">Trajectory Statistics Govern Mechanical Power Transfer in Active Baths</p>
+<p class="authors">Chul-Ung Woo, Jiwon Choi, Heiko Rieger</p>
+<p>arXiv:2609.17047 证明：以速度 V 运动、与理想主动浴弱相互作用的探针，其受力可由自由浴粒子的轨迹统计决定的密度响应导出。探针–粒子相互作用决定波矢加权，探针运动选出频率 ω_q = q·V，从而把浴动力学与加权分开——不必为每种探针相互作用与速度重算稳态或力关联。</p>
+<p>应用到主动粒子模型：主动 OU 粒子在所有维度、以及 d≥2 的完全重置 run-and-tumble，都被证明无法正功率传递；一维 run-and-tumble 与二维主动布朗粒子则存在可正功率的模式。关系还可预测阻力反转、自发探针运动与运动诱导密度畸变，并与模拟定量一致。</p>
+      <div class="src"><span class="chip">arXiv · 2026-09-15</span> <a href="https://arxiv.org/abs/2609.17047">arXiv</a></div>
+    </article>
+    </section>
+    <section>
+      <h2>三、互联网产品与科技业界</h2>
+    <article class="item" id="i12">
+      <h3>Apple 考虑借 Nvidia 互联重返企业服务器：瞄准 2029 AI 推理</h3>
+<p>《The Information》援引知情人士称，Apple 正考虑重返企业服务器市场：自研芯片搭配 Nvidia 网络技术。报道指公司在开发 AI 服务器，可选配备两颗或四颗规划中的 M8 Ultra（最高性能处理器），面向推理负载从训练向运行迁移的企业需求。</p>
+<p>产品预计不早于 2029 年上市，仍可能取消或不用 Nvidia。项目约一年前启动，当时获硬件负责人、现任 CEO John Ternus 支持。部分员工认为 Nvidia 的 NVLink Fusion 是连接多颗 M8 的最佳互联方案。这将是 Apple 自 2011 年停产 Xserve 以来首款专用服务器硬件；Apple 与 Nvidia 均未立即置评，路透无法独立核实。</p>
+      <div class="src"><span class="chip">2026-09-16</span> <a href="https://www.reuters.com/technology/apple-considers-nvidia-tech-return-server-market-information-reports-2026-09-16/">Reuters</a></div>
+    </article>
+    <article class="item" id="i13">
+      <h3>Google Home 接入 MCP：第三方智能体可控设备与读家居数据</h3>
+<p>Google 为 Google Home 增加 Model Context Protocol（MCP）集成，让支持 MCP 的第三方 AI 智能体（官方举例含 Google Antigravity、Claude、Hermes、Open Claw）安全访问生态内设备与事件历史，并代为操作。能力包括跨摄像头分析、用设备状态史回答「上周洗了几桶衣服」类问题、经 Nest 音箱向用户发语音消息，以及生成自定义控制面板。</p>
+<p>它不取代 Gemini for Home，而是叠加一层控制面。首发仅限美国 Google Home Premium Advanced（约 $20/月或 $200/年），未来数周滚动开通；配置需建 Google Cloud 项目。Google 称有速率限制与安全保护（例如不允许智能体开锁），但也提醒连接后可能出现意外行为。</p>
+      <div class="src"><span class="chip">2026-09-16</span> <a href="https://www.theverge.com/tech/996310/google-home-mcp-integration-agentic-ai-smart-home-price-release-date">The Verge</a></div>
+    </article>
+    <article class="item" id="i14">
+      <h3>Apple Reference Image：从拍摄链路到云端证明「非 AI 改图」</h3>
+<p>Apple 在 iPhone 18 Pro 引入 Apple Reference Image，定位为照片的「数字底片」：证明所见与拍摄瞬间一致、而非 AI 生成或后期篡改。9 月 15 日前后，Apple Security Research 发文解释如何把安全性贯穿摄影硬件/软件链路，并延伸到 Private Cloud Compute，以对抗恶意方伪造「未改动」证明。</p>
+<p>相对仅依赖软件水印或事后检测的方案，Apple 强调端到端硬件绑定与云端验证组合，面向新闻编辑室与普通用户需要可验证原始影像的场景。</p>
+      <div class="src"><span class="chip">2026-09-15/16</span> <a href="https://appleinsider.com/articles/26/09/16/apple-reference-image-is-a-mammoth-effort-to-combat-ai-edited-photos">AppleInsider</a></div>
+    </article>
+    <article class="item" id="i15">
+      <h3>Snap Specs 向企业侧加码：联手 Salesforce、Nvidia、AWS</h3>
+<p>据路透社报道，Snap 周三宣布与 Salesforce、Nvidia、Amazon Web Services 等合作，把职场工具集成进其 Specs 增强现实眼镜，希望在竞争激烈的 AR 市场抓住企业需求。</p>
+<p>此举把消费级社交眼镜叙事进一步拉向企业生产力与 AI 工具链，与 Nvidia 加速、Salesforce 工作流、AWS 云侧能力打包，作为 Specs 差异化卖点。</p>
+      <div class="src"><span class="chip">2026-09-16</span> <a href="https://www.reuters.com/business/snap-targets-enterprises-with-salesforce-nvidia-ai-tools-augmented-reality-2026-09-16/">Reuters</a></div>
+    </article>
+    </section>
+    <section>
+      <h2>四、抗衰与长寿</h2>
+    <article class="item" id="i16">
+      <h3>晚年给雌鼠用司美格鲁肽：减缓衰老表型并延长寿命</h3>
+<p class="orig">Late-life semaglutide treatment slows ageing and extends lifespan in female mice</p>
+<p>Nature 论文报告：对 20 月龄雌性 C57BL/6 小鼠给予 GLP-1R 激动剂司美格鲁肽 3 个月，可改善生理功能、减弱多项衰老标志，并调控营养感受器与保守的衰老遗传调控因子；持续治疗延长寿命。效应在多个维度平行于热量限制（CR）。</p>
+<p>与匹配 CR 的纵向对照中，司美格鲁肽在减弱增龄衰退的同时，于探索驱力、空间记忆与葡萄糖稳态等指标上呈现优于或不同于 CR 的轨迹。作者据此提出：GLP-1 类药物或部分作为 CR 模拟物，通过减缓衰老影响看似无关的慢病谱系。目前证据来自动物实验，外推人类仍需谨慎。</p>
+      <div class="src"><span class="chip">Nature · 近刊</span> <a href="https://www.nature.com/articles/s41586-026-10940-7">Nature</a></div>
+    </article>
+    <article class="item" id="i17">
+      <h3>丹酚酸类是天然 senolytics，可在老龄延长寿命</h3>
+<p class="orig">Salvianolic acids are natural senolytics and increase lifespan in old age</p>
+<p>npj Aging（2026-09-11 发表）从天然药物库中鉴定丹酚酸 A/B/E（SAA/SAB/SAE）对多种来源衰老细胞具选择性细胞毒。机制上增强 ROS，并靶向氧化还原稳态调节因子 GSTP1，诱导凋亡与铁死亡。</p>
+<p>把 SA 纳入化疗方案可增强抗癌效果并延长治疗后生存；对老龄小鼠间歇给药可改善体能，并提高健康寿命与寿命。工作把酚酸类推到新兴天然 senolytics 类别，并强调晚期生命阶段干预的可行性。</p>
+      <div class="src"><span class="chip">npj Aging · 2026-09-11</span> <a href="https://www.nature.com/articles/s41514-026-00496-1">npj Aging</a></div>
+    </article>
+    <article class="item" id="i18">
+      <h3>过渡性衰老程序驱动人类炎性单核细胞扩张</h3>
+<p class="orig">A transitional senescence program drives inflammatory monocyte state expansion in aging humans</p>
+<p>bioRxiv（约 2026-09-13）用批量与单细胞多维整合分析，揭示人类衰老中此前未刻画的单核细胞状态转换：来自经典 CD14⁺⁺ CD16⁻ 单核的短暂衰老样群体，驱动炎性单核状态累积。该转换由衰老主调控因子 AP-1 编排——在预先建立的染色质景观上重布转录因子网络，同时激活衰老与年龄相关炎症程序。</p>
+<p>与临床转录组整合后，衰老样与老龄单核在转录上偏向脓毒症相关状态。作者把 AP-1 标为调节增龄系统性炎症的有吸引力靶点。</p>
+      <div class="src"><span class="chip">bioRxiv · 2026-09-13</span> <a href="https://www.biorxiv.org/content/10.64898/2026.09.09.750459v1">bioRxiv</a></div>
+    </article>
+    <article class="item" id="i19">
+      <h3>活体多参数测绘：线粒体衰老高度组织特异</h3>
+<p class="orig">Multiparametric in vivo mapping reveals tissue-specific mitochondrial aging trajectories</p>
+<p>bioRxiv（约 2026-09-15）建立尽量少干扰的活体框架：在完整秀丽隐杆线虫上用双光子荧光寿命成像（2p-FLIM）结合分割管线 MitoSLIT，整合膜电位相关 TMRM 强度、寿命微环境指标与形态描述，跨组织与单神经元追踪线粒体状态。</p>
+<p>相对急性应激与裂变–融合突变，生理衰老走的是高度组织特异轨迹；扩展到遗传标记神经元后，体细胞与轴突线粒体状态随龄分叉，并伴结构重塑与晚期光学氧化还原比偏移。结论：线粒体群体并不收敛到统一生物能量终点，而是走分区、分组织的时空轨迹。</p>
+      <div class="src"><span class="chip">bioRxiv · 2026-09-15</span> <a href="https://www.biorxiv.org/content/10.64898/2026.09.09.750228v1">bioRxiv</a></div>
+    </article>
+    <article class="item" id="i20">
+      <h3>阿尔茨海默病额皮质微蛋白图谱：>1000 条未注释小蛋白</h3>
+<p class="orig">A microprotein atlas of the human frontal cortex in Alzheimer’s disease</p>
+<p>Nature Aging（2026-09-14）相关工作构建人类额皮质微蛋白图谱，鉴定 1067 条光谱置信度高、此前未注释的微蛋白（约 100–150 aa）。一部分在阿尔茨海默病中相对其经典基因独立差异表达；其中包括 MKKS 基因编码的一条微蛋白，AD 中降低，且对小胶质正常线粒体呼吸必要。</p>
+<p>微蛋白长期缺席参考蛋白质组，此图谱把它们拉进脑衰老与 AD 机制讨论，并为后续功能筛选提供清单。</p>
+      <div class="src"><span class="chip">Nature Aging · 2026-09-14</span> <a href="https://www.nature.com/articles/s43587-026-01207-x">Nature Aging</a> <a href="https://www.nature.com/articles/s43587-026-01215-x">Research Briefing</a></div>
+    </article>
+    <article class="item" id="i21">
+      <h3>蛋白组衰老时钟嵌入 2a 期试验：同步评估抗纤维化与抗衰</h3>
+<p class="orig">Integration of proteomic aging clocks in a phase 2a clinical trial supports simultaneous geroprotective assessment</p>
+<p>Nature Biotechnology（2026-09-07）把六套蛋白组衰老时钟（ProtAge、OrganAge 等）应用到特发性肺纤维化候选药 rentosertib 的 12 周 2a 期血清蛋白组。六套时钟一致预测治疗组生物年龄更低，但单靠时钟无法拆开抗衰老与抗疾病效应。</p>
+<p>路径分析提示：在抗纤维化之外，存在衰老与代谢过程的潜在抗衰偏移，并见 SenMayo 等衰老标记变化。工作支持「疾病适应症试验同时嵌入衰老终点」的双目的设计。</p>
+      <div class="src"><span class="chip">Nat Biotechnol · 2026-09-07</span> <a href="https://www.nature.com/articles/s41587-026-03286-y">Nature Biotechnology</a></div>
+    </article>
+    </section>
+
+    <footer>
+      <p>条目均来自当日公开检索与原文摘要；链接指向原始来源。预印本未经同行评议。</p>
+    </footer>
+  </div>
+</body>
+</html>

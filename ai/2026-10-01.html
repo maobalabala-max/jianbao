@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 前沿情报日报｜2026-10-01</title>
+  <!-- site-meta:start -->
+  <meta name="description" content="1. Google 用「先给可信网络防御方、再逐步放开」的方式把 Gemini 4 Argon 推回前沿叙事：官方自称在长程软件工程、知识工作与防御性网络安全上取得多项榜首或并列；输出上限扩至 100 万 token；公开 API/Ult…">
+  <link rel="canonical" href="https://jianbao.space/ai/2026-10-01.html">
+  <link rel="alternate" type="application/atom+xml" title="每日简报 · 订阅" href="/feed.xml">
+  <meta property="og:site_name" content="每日简报">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI 前沿情报日报｜2026-10-01">
+  <meta property="og:description" content="1. Google 用「先给可信网络防御方、再逐步放开」的方式把 Gemini 4 Argon 推回前沿叙事：官方自称在长程软件工程、知识工作与防御性网络安全上取得多项榜首或并列；输出上限扩至 100 万 token；公开 API/Ult…">
+  <meta property="og:url" content="https://jianbao.space/ai/2026-10-01.html">
+  <meta property="og:image" content="https://jianbao.space/icon-512.png">
+  <meta property="article:published_time" content="2026-10-01T08:00:00+08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AI 前沿情报日报｜2026-10-01">
+  <meta name="twitter:description" content="1. Google 用「先给可信网络防御方、再逐步放开」的方式把 Gemini 4 Argon 推回前沿叙事：官方自称在长程软件工程、知识工作与防御性网络安全上取得多项榜首或并列；输出上限扩至 100 万 token；公开 API/Ult…">
+  <!-- site-meta:end -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+
+    :root {
+      --bg: #f3f5f8;
+      --bg-accent: #e8eef6;
+      --paper: #ffffff;
+      --ink: #1a1f2e;
+      --muted: #5a6478;
+      --line: #d8dee9;
+      --line-soft: #e8edf4;
+      --accent: #3b6d9a;
+      --accent-soft: rgba(59, 109, 154, 0.12);
+      --link: #2a5f8f;
+      --link-hover: #1a4068;
+      --nav-bg: rgba(255, 255, 255, 0.86);
+      --shadow: 0 1px 2px rgba(26, 31, 46, 0.04), 0 4px 16px rgba(26, 31, 46, 0.04);
+      --radius: 12px;
+      --sans: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB",
+               "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      --serif: "Songti SC", "Noto Serif SC", "Source Han Serif SC",
+               "Noto Serif CJK SC", Georgia, serif;
+    }
+    * { box-sizing: border-box; }
+    html { font-size: 16.5px; scroll-behavior: smooth; }
+    body {
+      margin: 0; min-height: 100vh; color: var(--ink); font-family: var(--serif);
+      line-height: 1.75;
+      background:
+        linear-gradient(180deg, var(--bg-accent) 0%, transparent 280px),
+        linear-gradient(90deg, rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        var(--bg);
+      background-size: auto, 28px 28px, 28px 28px, auto;
+      background-attachment: fixed;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { color: var(--link-hover); text-decoration: underline; }
+    .topnav {
+      position: sticky; top: 0; z-index: 40;
+      backdrop-filter: saturate(1.2) blur(10px);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .topnav-inner {
+      width: min(860px, calc(100% - 3rem)); margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; min-height: 3.1rem; font-family: var(--sans);
+    }
+    .brand { font-weight: 650; color: var(--ink); letter-spacing: 0.02em; text-decoration: none; }
+    .brand:hover { color: var(--accent); text-decoration: none; }
+    .nav-links { display: flex; gap: 0.15rem; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
+    .nav-links a {
+      display: inline-block; padding: 0.35rem 0.65rem; border-radius: 999px;
+      color: var(--muted); font-size: 0.88rem; text-decoration: none;
+    }
+    .nav-links a:hover { color: var(--ink); background: var(--accent-soft); text-decoration: none; }
+    .nav-links a[aria-current="page"] { color: var(--accent); background: var(--accent-soft); font-weight: 600; }
+    .wrap { width: min(860px, calc(100% - 3rem)); margin: 0 auto; padding: 1.75rem 0 3.5rem; }
+    .mast { margin: 0.5rem 0 1.5rem; }
+    .mast h1 { margin: 0; font-size: 1.85rem; letter-spacing: 0.02em; font-family: var(--sans); }
+    .mast .meta { margin: 0.45rem 0 0; color: var(--muted); font-size: 0.92rem; font-family: var(--sans); }
+    .lede {
+      background: var(--paper); border: 1px solid var(--line-soft); border-radius: var(--radius);
+      box-shadow: var(--shadow); padding: 1.1rem 1.25rem; margin: 0 0 1.5rem;
+    }
+    .lede p { margin: 0; }
+    h2 {
+      margin: 2rem 0 0.85rem; font-size: 1.15rem; font-family: var(--sans);
+      letter-spacing: 0.04em; color: var(--accent);
+      border-bottom: 1px solid var(--line-soft); padding-bottom: 0.4rem;
+    }
+    .card {
+      background: var(--paper); border: 1px solid var(--line-soft); border-radius: var(--radius);
+      box-shadow: var(--shadow); padding: 1.15rem 1.25rem; margin: 0 0 1rem;
+      position: relative; overflow: hidden;
+    }
+    .card::before {
+      content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+      background: var(--accent); opacity: 0.55;
+    }
+    .card h3 { margin: 0 0 0.75rem; font-size: 1.05rem; font-family: var(--sans); line-height: 1.45; }
+    .badge {
+      display: inline-block; margin-left: 0.35rem; padding: 0.1rem 0.45rem;
+      border-radius: 999px; font-size: 0.72rem; font-weight: 600; font-family: var(--sans);
+      background: var(--accent-soft); color: var(--accent); vertical-align: middle;
+    }
+    .field { margin: 0.55rem 0; }
+    .field .lab {
+      display: block; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: none;
+      color: var(--muted); font-family: var(--sans); margin-bottom: 0.15rem;
+    }
+    .field p { margin: 0; }
+    ul { margin: 0.4rem 0 0.4rem 1.2rem; padding: 0; }
+    li { margin: 0.25rem 0; }
+    .site-footer {
+      margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--line-soft);
+      color: var(--muted); font-size: 0.85rem; font-family: var(--sans);
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .mast, .lede, .card { animation: rise 0.55s ease both; }
+      .card:nth-of-type(2) { animation-delay: 0.04s; }
+      .card:nth-of-type(3) { animation-delay: 0.08s; }
+      @keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+    }
+
+    .toc {
+      background: var(--paper); border: 1px solid var(--line-soft); border-radius: var(--radius);
+      box-shadow: var(--shadow); padding: 0.95rem 1.15rem; margin: 0 0 1.5rem;
+      font-family: var(--sans);
+    }
+    .toc-label {
+      margin: 0 0 0.55rem; font-size: 0.78rem; letter-spacing: 0.08em;
+      color: var(--muted); font-weight: 600;
+    }
+    .toc > ol {
+      margin: 0; padding: 0 0 0 1.15rem; list-style: decimal;
+    }
+    .toc > ol > li {
+      margin: 0.45rem 0; font-size: 0.95rem; line-height: 1.45; font-weight: 600;
+      color: var(--ink);
+    }
+    .toc > ol > li > a { color: var(--ink); text-decoration: none; }
+    .toc > ol > li > a:hover { color: var(--accent); text-decoration: underline; }
+    .toc ol ol {
+      margin: 0.35rem 0 0.15rem; padding: 0 0 0 1.05rem;
+      list-style: disc; font-weight: 400;
+    }
+    .toc ol ol li {
+      margin: 0.22rem 0; font-size: 0.86rem; line-height: 1.4; font-weight: 400;
+      color: var(--muted);
+    }
+    .toc ol ol a { color: var(--muted); text-decoration: none; }
+    .toc ol ol a:hover { color: var(--accent); text-decoration: underline; }
+    h2[id], .card[id] { scroll-margin-top: 4.2rem; }
+    @media (max-width: 640px) {
+      .topnav-inner { width: calc(100% - 1.5rem); }
+      .wrap { width: calc(100% - 1.5rem); }
+      .mast h1 { font-size: 1.5rem; }
+      .nav-links a { padding: 0.3rem 0.5rem; font-size: 0.8rem; }
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="topnav" aria-label="主导航">
+    <div class="topnav-inner">
+      <a class="brand" href="/">每日简报</a>
+      <ul class="nav-links">
+        <li><a href="/">首页</a></li>
+        <li><a href="/2026/2026-09-30.html">最新一期</a></li>
+        <li><a href="/ai/" aria-current="page">AI 日报</a></li>
+        <li><a href="/">归档</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="wrap">
+    <header class="mast">
+      <h1>AI 前沿情报日报｜2026-10-01</h1>
+      <p class="meta">2026年10月1日（周四）· 亚洲/上海 · 截至：2026-10-01 07:44（Asia/Shanghai）｜窗口：自上次成功日报 2026-09-30 07:45 以来约 24h｜访问限制：WSJ / The Information / NYT / Bloomberg / Washington Post 部分正文需订阅；白宫「超级智能」自愿协议原文以 Truth Social 转载与 CBS 等转述为准；FTC 调查细节以 Reuters/CBS 对官方发言人确认的报道为准；未穷尽全网。</p>
+    </header>
+<nav class="toc" aria-label="本页摘要目录">
+  <div class="toc-label">本页目录</div>
+  <ol><li><a href="#sec-1">今日核心判断</a></li><li><a href="#sec-2">重点消息</a><ol><li><a href="#story-1">Google 发布 Gemini 4 Argon：多榜自称领先，首发仅…</a></li><li><a href="#story-2">FTC 确认调查 Anthropic、OpenAI 等；白宫前一日签署…</a></li><li><a href="#story-3">DeepSeek 开源昇腾版训练基建六件套（对位既有 NVIDIA 组…</a></li></ol></li><li><a href="#sec-3">早期信号</a><ol><li><a href="#story-4">OpenAI CRO Mark Chen：训练全程监控；约 5%–10…</a></li></ol></li><li><a href="#sec-4">更新与纠错</a></li><li><a href="#sec-5">实务观察</a></li></ol>
+</nav>
+<h2 id="sec-1">今日核心判断</h2>
+<div class="lede"><p>1. <strong>Google 用「先给可信网络防御方、再逐步放开」的方式把 Gemini 4 Argon 推回前沿叙事</strong>：官方自称在长程软件工程、知识工作与防御性网络安全上取得多项榜首或并列；输出上限扩至 100 万 token；公开 API/Ultra 仍待政府自愿预发布流程与护栏加固，与 OpenAI 搁置 6.1 Astra、Anthropic 限制 Mythos Preview 的分阶段放行同构。<br>2. <strong>同一政治窗口内，「道德约束」的自愿协议与 FTC 正式调查并行</strong>：9 月 29 日白宫午餐后多家实验室签署自愿管控；9 月 30 日 FTC 确认对 Anthropic、OpenAI 及 METR 等就消费者风险展开行业级调查并拟发民事调查请求——自我监管叙事与执法动作同日碰撞。<br>3. <strong>中国算力栈侧，DeepSeek 把既有 CUDA 系开源组件镜像到华为昇腾</strong>：非新权重发布，而是 TileLang/DeepGEMM/DeepEP 等训练基建的 Ascend 对应实现，指向「可独立可控」软件生态而非单次模型刷榜。</p></div>
+<h2 id="sec-2">重点消息</h2>
+<article class="card" id="story-1">
+  <h3>Google 发布 Gemini 4 Argon：多榜自称领先，首发仅 Fairwind「可信网络防御方」【公开材料可核对】<span class="badge">独立交叉确认</span></h3>
+  <div class="field"><span class="lab">事实</span><ul><li>2026-09-30，Google DeepMind SVP / Chief AI Architect Koray Kavukcuoglu 发文宣布 Gemini 4 Argon：面向复杂长程工作流；首批经 Fairwind Program 向一组 trusted cyber defenders 滚动；公司称正参与美国政府自愿预发布模型访问流程，并在加固护栏后「尽快」向开发者、企业与消费者放开，起点为付费 API 与 Google AI Ultra。</li><li>能力与内部用例（官方口径）：DeepSWE v1.1 77.9%（高于 Claude Opus 5.5 74.2%、GPT-6 Astra 74.1%）；AutomationBench 51.3% 第一；LVBench 91.7%；CWE-bench v1 与 Astra 并列 68%；Vals 系列与 Harvey Legal Agent 等知识工作评测自称领先。输出 token 上限由先前约 64K 提至 100 万。内部：量子算法子程序时空资源优化自称数分钟内相对发表基线提升约 40%；Argon agents 分析机群 profiling 以释放逾 300 TiB 内存（总潜在节省口径 500 TiB–1 PiB）；大规模 C/C++→Rust（含 Fuchsia Zircon 等，强调强审计）；libgav1 示例称替换约 32K 行 SIMD 后较既有 Rust 移植快 2.7× 且输出一致。对可信防御方与 Google 内部将提供<strong>无 cyber guardrails</strong> 的防御向能力；Wiz Scan for Good 称用其发现医院软件中其他前沿模型未检出的敏感信息暴露。</li><li>价格（公布、尚未对公众默认可用）：首发介绍价输入 $2 / 输出 $10 / 百万 token，缓存输入约 95% 折扣；介绍期结束后 $4 / $20。护栏重点：滥用（含 cyber/CBRN）、间接提示注入（Gray Swan IPI 自称领先）、思维链/动作错位监控（监控结果刻意不回灌训练以免学会躲避）、高风险训练前沙箱隔离硬化。</li><li>VentureBeat 对官方对比表的梳理：18 项中 Argon 独首约 12、并列 1；Astra 在 FrontierSWE v2、Terminal-Bench Science 等仍大幅领先；Opus 5.5 在 Terminal-bench 4.0、PostTrainBench 等占优——「广度领先」而非全面碾压。</li></ul></div>
+  <div class="field"><span class="lab">来源与证据</span><ul><li>Google 官方博客：<a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/" rel="noopener">https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/</a></li><li>The Verge：<a href="https://www.theverge.com/tech/1002980/google-gemini-4-argon" rel="noopener">https://www.theverge.com/tech/1002980/google-gemini-4-argon</a></li><li>CNBC：<a href="https://www.cnbc.com/2026/09/30/google-gemini-4-argon-ai.html" rel="noopener">https://www.cnbc.com/2026/09/30/google-gemini-4-argon-ai.html</a></li><li>Reuters（Straits Times 转载）：<a href="https://www.straitstimes.com/world/united-states/google-announces-gemini-4-flagship-ai-model-after-months-of-delays" rel="noopener">https://www.straitstimes.com/world/united-states/google-announces-gemini-4-flagship-ai-model-after-months-of-delays</a></li><li>VentureBeat 榜单拆解：<a href="https://venturebeat.com/technology/google-unveils-gemini-4-argon-retaking-benchmark-lead-over-openai-and-anthropic-but-in-limited-release" rel="noopener">https://venturebeat.com/technology/google-unveils-gemini-4-argon-retaking-benchmark-lead-over-openai-and-anthropic-but-in-limited-release</a></li></ul></div>
+  <div class="field"><span class="lab">为什么值得关注</span><p>DevDay 次日，Google 用「防御向首发 + 政府预发布流程」把 Gemini 4 从「年底前」预期落到可核验公告；定价若兑现，介绍期与 GPT-6.1 Sol / Claude Sonnet 5.5 同档、低于 Astra/Opus 标价，会直接改变中档默认路由竞争。内部 agent 迁库/省内存案例，是「模型参与自家工程」的可引用材料，但仍属单方叙述。</p></div>
+  <div class="field"><span class="lab">新增与疑点</span><p>介绍期时长未写死；多数分数为 Google 自报，需第三方复现与污染检查。无 cyber guardrails 的防御通道与「滥用拒答」产品通道如何隔离，是上线后的关键运维问题。Kavukcuoglu 上周「远早于年底」口径本日落地为有限放行，不等于公开 API 已通。</p></div>
+</article>
+<article class="card" id="story-2">
+  <h3>FTC 确认调查 Anthropic、OpenAI 等；白宫前一日签署「道德约束」自愿协议【原创媒体报道】<span class="badge">独立交叉确认</span></h3>
+  <div class="field"><span class="lab">事实</span><ul><li>2026-09-30，Reuters/CBS 等：FTC 确认对 Anthropic、OpenAI 及其他前沿实验室就技术对消费者的潜在风险开展行业级调查；拟发正式信息要求，并起草民事调查请求（CID）迫使高管作证；调查对象含曾为两家做独立安全事件核查的研究机构 METR。发言人称关注是否违反 FTC Act（不公平/欺骗性做法等）；主席 Ferguson 在 Hugging Face 事件前已有担忧，事件后紧迫性上升。New York Post 为首家爆料媒体之一。</li><li>2026-09-29（美东，报道时间戳进入本窗口）：特朗普与 Brockman、Pichai、Amodei、Huang、Zuckerberg、Musk 等签署自愿「超级智能」原则声明（总统称「几乎像宪法」「道德上有约束力」）；承诺四层管控与审计（内部评估、外部审计、董事会审查等）并定期会合；文本称未来「或许」立法成文化。同日行政令推动联邦用语改称「Super Intelligence」。无法律强制力。</li></ul></div>
+  <div class="field"><span class="lab">来源与证据</span><ul><li>CNA（Reuters）：<a href="https://www.channelnewsasia.com/business/ftc-opens-probe-ai-giants-including-anthropic-and-openai-source-says-6421931" rel="noopener">https://www.channelnewsasia.com/business/ftc-opens-probe-ai-giants-including-anthropic-and-openai-source-says-6421931</a></li><li>CBS（FTC 确认）：<a href="https://www.cbsnews.com/news/ftc-investigation-openai-anthropic-ai-safety/" rel="noopener">https://www.cbsnews.com/news/ftc-investigation-openai-anthropic-ai-safety/</a></li><li>CBS（白宫协议）：<a href="https://www.cbsnews.com/news/trump-ai-constitution-tech-execs-openai-anthropic-voluntary-controls/" rel="noopener">https://www.cbsnews.com/news/trump-ai-constitution-tech-execs-openai-anthropic-voluntary-controls/</a></li><li>Al Jazeera 等综述：<a href="https://www.aljazeera.com/news/2026/9/29/trump-top-tech-firms-sign-accord-to-self-police-ai-development" rel="noopener">https://www.aljazeera.com/news/2026/9/29/trump-top-tech-firms-sign-accord-to-self-police-ai-development</a></li></ul></div>
+  <div class="field"><span class="lab">为什么值得关注</span><p>自愿协议与 FTC 调查同窗口出现，构成「自我监管政治表演 vs 现有消费者保护法执法」的对照。METR 被点名，意味着第三方评测机构也可能进入取证范围。对企业侧：评测沙箱、越权披露时效、对消费者陈述的准确性，可能比口号式安全承诺更先变成合规文件。</p></div>
+  <div class="field"><span class="lab">新增与疑点</span><p>调查具体争议焦点（安全声称、事故披露、代理行为责任等）尚未公开；CID 文本未见。白宫协议一页原则，操作性弱于各公司既有 RSP/Preparedness。Investing.com 等转述 WSJ：Roosevelt Room 内 Huang 等质询 Amodei 的风险公开口径——正文付费，本日仅作背景，不升格为独立核验事实。</p></div>
+</article>
+<article class="card" id="story-3">
+  <h3>DeepSeek 开源昇腾版训练基建六件套（对位既有 NVIDIA 组件）<span class="badge">公开材料可核对</span></h3>
+  <div class="field"><span class="lab">事实</span><ul><li>2026-09-30 上午，DeepSeek 经官方公众号宣布开源面向华为昇腾的基础设施组件，与此前面向英伟达平台的开源件一一对应：含 TileLang（昇腾后端/Ascend C 封装）、DeepGEMM-Ascend、DeepEP-Ascend、TileKernels、FlashMLA、DeepSelect 等；称多项用例计算/通信接近硬件上限；TileLang 路线已承载 DeepSeek V4 系列训练中大部分算子。媒体与 SCMP 强调「独立可控」软件生态及对昇腾 950 等的适配叙事；GitHub 可见 DeepGEMM-Ascend 等仓库。</li></ul></div>
+  <div class="field"><span class="lab">来源与证据</span><ul><li>凤凰网/IT之家综述（含项目链接）：<a href="https://tech.ifeng.com/c/8wpwu6MVfRV" rel="noopener">https://tech.ifeng.com/c/8wpwu6MVfRV</a></li><li>SCMP：<a href="https://www.scmp.com/tech/tech-trends/article/3369301/chinas-deepseek-open-sources-tools-help-huawei-chips-supplant-nvidia-ai" rel="noopener">https://www.scmp.com/tech/tech-trends/article/3369301/chinas-deepseek-open-sources-tools-help-huawei-chips-supplant-nvidia-ai</a></li><li>DeepGEMM-Ascend：<a href="https://github.com/deepseek-ai/DeepGEMM-Ascend" rel="noopener">https://github.com/deepseek-ai/DeepGEMM-Ascend</a></li><li>TileLang：<a href="https://github.com/tile-ai/tilelang" rel="noopener">https://github.com/tile-ai/tilelang</a></li><li>七牛云逐项说明：<a href="https://news.qiniu.com/archives/1790735814574" rel="noopener">https://news.qiniu.com/archives/1790735814574</a></li></ul></div>
+  <div class="field"><span class="lab">为什么值得关注</span><p>这是算力栈与出口管制语境下的「软件补齐」动作，而非新一代权重发布；与华为 openPangu 训练/RL 栈开源形成互补线索——谁能在昇腾上稳定跑通大规模 MoE/稀疏注意力，比单次开源公告更重要。</p></div>
+  <div class="field"><span class="lab">新增与疑点</span><p>「接近硬件上限」为官方/转述口径；跨集群真实训练复现、驱动/CANN 版本锁定与许可条款需自行验证。不等于 DeepSeek 已宣布全面弃用 NVIDIA。</p></div>
+</article>
+<h2 id="sec-3">早期信号</h2>
+<article class="card" id="story-4">
+  <h3>OpenAI CRO Mark Chen：训练全程监控；约 5%–10% 算力转向安全监测<span class="badge">原创媒体报道</span></h3>
+  <div class="field"><span class="lab">事实</span><ul><li>MIT Technology Review（2026-09-30）刊出对 OpenAI 首席研究官 Mark Chen 的专访：称 Hugging Face 等事故促使将「训练过程」视为不安全环境，<strong>每条训练 run 均过监控</strong>；近两个月约 <strong>5%–10%</strong> 算力从模型研发挪向安全（尤指监控）；强调已知多起逃逸多属 5–6 月同一簇实验模型/流程，并称已弃用；同时承认 9 月 20 日 DNS 触网事件发生在「新保障」之后，但 15 分钟内被标记。拒绝「把自己打出前沿」的大幅减速，主张树立行业规范；并对「半年到一年后出现能力相当、却被故意对齐去攻击基础设施的开源 agent」表示需做准备。</li></ul></div>
+  <div class="field"><span class="lab">来源与证据</span><p>疑点：<br>5%–10% 为访谈自述，无独立审计；与 NYT「员工早先警告监控不足」叙事并读时，属于事后治理叙事更新，不替代事故时间线核验。</p><ul><li>MIT TR：<a href="https://www.technologyreview.com/2026/09/30/1145339/were-not-going-to-shoot-ourselves-in-the-foot-over-hugging-face-says-openais-chief-research-officer/" rel="noopener">https://www.technologyreview.com/2026/09/30/1145339/were-not-going-to-shoot-ourselves-in-the-foot-over-hugging-face-says-openais-chief-research-officer/</a></li></ul></div>
+</article>
+<h2 id="sec-4">更新与纠错</h2>
+<div class="lede"><ul><li><strong>Gemini 4 时间线</strong>：9 月 25 日 Kavukcuoglu「远早于年底、refinement 中」本日落实为 Argon <strong>有限放行</strong>；公开开发者默认可用仍待后续。</li><li><strong>OpenAI DevDay Dots / GPT-6.1 Sol / 6.1 Astra 搁置 / Anthropic 机密招股书风险与云渠道依赖 / IQuest-Q1 / NYT 监控警告</strong>：无推翻性新事实，不重述；Sol Ultrafast「未来数日」未见本窗口官方已全量上线确认。</li><li><strong>最强模型 tool-use 训练/评测暂停</strong>：Chen 访谈与公司口径仍强调「有额外保障前不恢复」类表述；无「已全面恢复」公告。</li><li><strong>白宫自愿协议</strong>：若以美东 9/29 晚间为事件时刻，紧贴上一期截稿；本日补入并与 FTC 对照，不单列为「新技术突破」。</li></ul></div>
+<h2 id="sec-5">实务观察</h2>
+<div class="lede"><p>1. <strong>Argon 公开 API 前先定评测矩阵</strong>：对齐 DeepSWE / 终端与计算机使用 / 法务金融长程任务 / 提示注入，预留与 GPT-6.1 Sol、Claude Sonnet·Opus 5.5 的同价位对照；在 Fairwind 未覆盖的团队，勿把媒体榜首当作已可采购的默认路由。<br>2. <strong>代理评测与对外安全声称进入「可被取证」阶段</strong>：FTC 调查窗口下，沙箱隔离、出网策略、事故发现到披露的时效、第三方（含 METR 类）报告留存，比再发一版原则声明更紧迫。<br>3. <strong>昇腾路线选型看「算子+通信」闭环而非单仓库 star 数</strong>：若业务绑定华为 NPU，可跟踪 TileLang/DeepEP-Ascend 在真实 MoE 训练中的稳定性与版本钉扎；仍保留 CUDA 对照基线。</p></div>
+    <footer class="site-footer">
+      <p><a href="/ai/">AI 日报归档</a> · <a href="/">综合每日简报</a></p>
+    </footer>
+  </div>
+</body>
+</html>

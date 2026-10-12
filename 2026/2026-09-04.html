@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日简报 · 2026年9月4日</title>
+  <!-- site-meta:start -->
+  <meta name="description" content="补发周五简报。主线是产品落地与平台并购并行：OpenAI 于 9 月 3 日正式开推 GPT-6 Astra，分阶段进入付费用户与 API；英伟达同日确认以约 129 亿美元收购 Hugging Face，并另推出把家里闲置机器拼成本地推…">
+  <link rel="canonical" href="https://jianbao.space/2026/2026-09-04.html">
+  <link rel="alternate" type="application/atom+xml" title="每日简报 · 订阅" href="/feed.xml">
+  <meta property="og:site_name" content="每日简报">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="每日简报 · 2026年9月4日">
+  <meta property="og:description" content="补发周五简报。主线是产品落地与平台并购并行：OpenAI 于 9 月 3 日正式开推 GPT-6 Astra，分阶段进入付费用户与 API；英伟达同日确认以约 129 亿美元收购 Hugging Face，并另推出把家里闲置机器拼成本地推…">
+  <meta property="og:url" content="https://jianbao.space/2026/2026-09-04.html">
+  <meta property="og:image" content="https://jianbao.space/icon-512.png">
+  <meta property="article:published_time" content="2026-09-04T08:00:00+08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="每日简报 · 2026年9月4日">
+  <meta name="twitter:description" content="补发周五简报。主线是产品落地与平台并购并行：OpenAI 于 9 月 3 日正式开推 GPT-6 Astra，分阶段进入付费用户与 API；英伟达同日确认以约 129 亿美元收购 Hugging Face，并另推出把家里闲置机器拼成本地推…">
+  <!-- site-meta:end -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #f3f5f8;
+      --bg-accent: #e8eef6;
+      --paper: #ffffff;
+      --ink: #1a1f2e;
+      --muted: #5a6478;
+      --line: #d8dee9;
+      --line-soft: #e8edf4;
+      --accent: #3b6d9a;
+      --accent-soft: rgba(59, 109, 154, 0.12);
+      --link: #2a5f8f;
+      --link-hover: #1a4068;
+      --nav-bg: rgba(255, 255, 255, 0.86);
+      --chip: #e8eef6;
+      --shadow: 0 1px 2px rgba(26, 31, 46, 0.04), 0 4px 16px rgba(26, 31, 46, 0.04);
+      --radius: 12px;
+      --sans: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB",
+               "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      --serif: "Songti SC", "Noto Serif SC", "Source Han Serif SC",
+               "Noto Serif CJK SC", Georgia, serif;
+      --s1: #3b6d9a;
+      --s2: #2f6b5c;
+      --s3: #4a5f8a;
+      --s4: #5a4a6b;
+    }
+    * { box-sizing: border-box; }
+    html { font-size: 16.5px; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: var(--serif);
+      line-height: 1.7;
+      background:
+        linear-gradient(180deg, var(--bg-accent) 0%, transparent 280px),
+        linear-gradient(90deg, rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        var(--bg);
+      background-size: auto, 28px 28px, 28px 28px, auto;
+      background-attachment: fixed;
+    }
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      isolation: isolate;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .topnav::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(59, 109, 154, 0.18) 20%,
+        rgba(59, 109, 154, 0.52) 50%,
+        rgba(59, 109, 154, 0.18) 80%,
+        transparent 100%
+      );
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .topnav-inner {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.72rem 0;
+      font-family: var(--sans);
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .brand:hover { color: var(--link); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.15rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      transition: color 0.15s ease, background 0.15s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: var(--ink);
+      background: var(--accent-soft);
+    }
+    .wrap {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      padding: 2rem 0 3.5rem;
+    }
+    header.mast {
+      margin-bottom: 1.75rem;
+      padding: 0.4rem 0 1.35rem;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    header.mast::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 4.5rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    h1 {
+      font-family: var(--sans);
+      font-size: clamp(1.75rem, 4vw, 2.15rem);
+      line-height: 1.25;
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    h1 a.home {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 a.home:hover {
+      color: var(--link);
+    }
+    .meta {
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin: 0;
+      max-width: 36em;
+    }
+    .lede {
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.05rem 1.2rem;
+      margin: 0 0 2rem;
+      font-size: 0.98rem;
+      box-shadow: var(--shadow);
+    }
+    section { margin-bottom: 2.4rem; }
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      margin: 0 0 1rem;
+      padding: 0.45rem 0 0.55rem;
+      border-top: none;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 2.75rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    article.item {
+      position: relative;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem 1.15rem;
+      margin: 0 0 0.95rem;
+      box-shadow: var(--shadow);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+      scroll-margin-top: 4.5rem;
+    }
+    article.item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1rem;
+      bottom: 1rem;
+      width: 2px;
+      border-radius: 0 2px 2px 0;
+      background: var(--accent);
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: center;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+    }
+    article.item:hover {
+      border-color: #b8c5d8;
+      box-shadow: 0 2px 4px rgba(26, 31, 46, 0.05), 0 8px 24px rgba(26, 31, 46, 0.07);
+      transform: translateY(-1px);
+    }
+    article.item:hover::before,
+    article.item:focus-within::before {
+      opacity: 0.9;
+      transform: scaleY(1);
+    }
+    article.item:target {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    article.item h3 {
+      font-family: var(--sans);
+      font-size: 1.06rem;
+      line-height: 1.35;
+      margin: 0 0 0.55rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .orig {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: -0.25rem 0 0.55rem;
+      font-family: Georgia, "Iowan Old Style", var(--serif);
+    }
+    .authors {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin: 0 0 0.55rem;
+    }
+    p { margin: 0 0 0.7rem; }
+    p:last-of-type { margin-bottom: 0.85rem; }
+    .src {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.9rem;
+      align-items: baseline;
+      border-top: 1px dashed var(--line);
+      padding-top: 0.65rem;
+    }
+    .src a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      word-break: break-all;
+    }
+    .src a:hover { color: var(--link-hover); }
+    .chip {
+      display: inline-block;
+      background: var(--chip);
+      color: var(--muted);
+      padding: 0.08rem 0.45rem;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      border: 1px solid var(--line-soft);
+    }
+    footer {
+      border-top: 1px solid var(--line-soft);
+      padding-top: 1rem;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .digest-wrap {
+      margin: 0 0 2.1rem;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    table.digest {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: transparent;
+      border: none;
+      font-family: var(--sans);
+      font-size: 0.86rem;
+    }
+    table.digest th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-accent);
+    }
+    table.digest td {
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line-soft);
+      vertical-align: top;
+      line-height: 1.45;
+    }
+    table.digest tr:last-child td { border-bottom: none; }
+    table.digest tbody tr { transition: background 0.15s ease; }
+    table.digest tbody tr:hover { background: var(--accent-soft); }
+    table.digest a { color: inherit; text-decoration: none; }
+    table.digest a:hover { color: var(--link); }
+    table.digest .sec {
+      width: 4.6rem;
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    table.digest .ttl { width: 38%; font-weight: 650; }
+    table.digest .one { color: var(--muted); font-weight: 400; }
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes briefing-fade-rise {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes nav-line-shimmer {
+        0%, 100% { background-position: 0% 50%; opacity: 0.28; }
+        50% { background-position: 100% 50%; opacity: 0.52; }
+      }
+      header.mast {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      .lede {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+      }
+      .digest-wrap {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.14s both;
+      }
+      section {
+        animation: briefing-fade-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      section:nth-of-type(1) { animation-delay: 0.2s; }
+      section:nth-of-type(2) { animation-delay: 0.26s; }
+      section:nth-of-type(3) { animation-delay: 0.32s; }
+      section:nth-of-type(4) { animation-delay: 0.38s; }
+      section:nth-of-type(n + 5) { animation-delay: 0.42s; }
+      .topnav::after {
+        background-size: 200% 100%;
+        animation: nav-line-shimmer 10s ease-in-out infinite;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .topnav::after,
+      header.mast,
+      .lede,
+      .digest-wrap,
+      section {
+        animation: none !important;
+      }
+      article.item {
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      }
+      article.item:hover {
+        transform: none;
+      }
+    }
+    @media (max-width: 720px) {
+      table.digest, table.digest thead, table.digest tbody, table.digest tr, table.digest th, table.digest td {
+        display: block;
+      }
+      table.digest thead { display: none; }
+      table.digest td.sec { padding-bottom: 0; border-bottom: none; }
+      table.digest td.ttl { padding-top: 0.2rem; padding-bottom: 0.15rem; width: auto; border-bottom: none; }
+      table.digest td.one { padding-top: 0; width: auto; }
+    }
+    @media (max-width: 560px) {
+      html { font-size: 16px; }
+      h1 { font-size: 1.7rem; }
+      .topnav-inner { width: calc(100% - 1.5rem); }
+      .wrap { width: calc(100% - 1.5rem); padding: 1.5rem 0 3rem; }
+      .nav-links a { padding: 0.3rem 0.5rem; font-size: 0.8rem; }
+      article.item { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topnav" aria-label="主导航">
+    <div class="topnav-inner">
+      <a class="brand" href="/">每日简报</a>
+      <ul class="nav-links">
+        <li><a href="/">首页</a></li>
+        <li><a href="/2026/2026-09-25.html">最新一期</a></li>
+                <li><a href="/ai/">AI 日报</a></li>
+        <li><a href="/">归档</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <header class="mast">
+      <h1><a class="home" href="/">每日简报</a></h1>
+      <p class="meta">2026年9月4日（周五）· 亚洲/上海</p>
+    </header>
+
+    <p class="lede">补发周五简报。主线是产品落地与平台并购并行：OpenAI 于 9 月 3 日正式开推 GPT-6 Astra，分阶段进入付费用户与 API；英伟达同日确认以约 129 亿美元收购 Hugging Face，并另推出把家里闲置机器拼成本地推理集群的 PAIR。Google 把语音对话助手放进 Gmail / Docs / Keep，Adobe 把 70 多项创意工具塞进 Slack。科学栏有 tipping 点的 Ruelle–Pollicott 统一框架、小样本热力学推断的浓度不等式，以及「热化本身就是最优近似纠错码」的结果；Quanta 访谈 Yale 物理系主任 Sarah Demers，谈粒子物理里 AI 能帮什么、不能替什么。抗衰近 48 小时新预印本仍薄，补读 8 月 31 日 Nature Aging 的 PathStAR 结构衰老图谱，以及卵母细胞 mtDNA 泄漏驱动卵巢衰老的论文。</p>
+
+    <div class="digest-wrap">
+      <table class="digest">
+        <thead><tr><th class="sec">栏目</th><th class="ttl">条目</th><th class="one">要点</th></tr></thead>
+        <tbody>
+        <tr>
+          <td class="sec"><a href="#i1">AI</a></td>
+          <td class="ttl"><a href="#i1">GPT-6 Astra 正式开推</a></td>
+          <td class="one"><a href="#i1">Brockman 称「AGI 时代」；先给有限组织，数日内扩到 Plus/Pro/企业与 API</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i2">AI</a></td>
+          <td class="ttl"><a href="#i2">Graph Machine：用边做稀疏预训练</a></td>
+          <td class="one"><a href="#i2">替换 Qwen3-0.6B 的 75% 稠密层；每头只取 2–4/4096 token，损失几乎不掉</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i3">AI</a></td>
+          <td class="ttl"><a href="#i3">AgentScope：诊断智能体失败</a></td>
+          <td class="one"><a href="#i3">把轨迹抽成结构化行为 + neural invariants；定位失败步骤与类型</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i4">AI</a></td>
+          <td class="ttl"><a href="#i4">H3-World：视频生成器变世界控制器</a></td>
+          <td class="one"><a href="#i4">8000 条游戏样本、0.199% 可训参数；时间注意力路由减少控制泄漏</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i5">科学</a></td>
+          <td class="ttl"><a href="#i5">Tipping 点的 RP 谱统一框架</a></td>
+          <td class="one"><a href="#i5">局部恢复变慢 ≠ 跃迁风险；B-tipping 与 N-tipping 共用 RP 语言</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i6">科学</a></td>
+          <td class="ttl"><a href="#i6">小样本热力学推断的浓度不等式</a></td>
+          <td class="one"><a href="#i6">给出轨迹「够长」的非渐近置信区间；平衡与非平衡涨落定性不同</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i7">科学</a></td>
+          <td class="ttl"><a href="#i7">量子热化 = 最优近似纠错</a></td>
+          <td class="one"><a href="#i7">无限温饱和 Singleton 界；有限温 Scrooge 系综同样最优</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i8">科学</a></td>
+          <td class="ttl"><a href="#i8">Kuramoto 网络：相位延迟决定盆地大小</a></td>
+          <td class="one"><a href="#i8">复合矩阵谱同时管线性稳定与吸引盆；可解析估计锁相态盆地</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i9">科学</a></td>
+          <td class="ttl"><a href="#i9">Quanta：物理学家问什么会留下来</a></td>
+          <td class="one"><a href="#i9">Demers 推 Mu2e 智能体调参，却从不让 LLM 写邮件；APS 政策约 2027 春</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i10">业界</a></td>
+          <td class="ttl"><a href="#i10">英伟达 129 亿美元买 Hugging Face</a></td>
+          <td class="one"><a href="#i10">Huang：仍是开放平台，不必绑定 Nvidia 算力；HF 年化收入约 1.5 亿</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i11">业界</a></td>
+          <td class="ttl"><a href="#i11">Gmail / Docs / Keep Live</a></td>
+          <td class="one"><a href="#i11">语音问收件箱、口述起草文档；先给 AI Plus/Pro/Ultra，英文明日端</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i12">业界</a></td>
+          <td class="ttl"><a href="#i12">Uber 裁员约 10%：3300 人</a></td>
+          <td class="one"><a href="#i12">管理层削薄 20%；微团队减半；远程岗压到不足 1%</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i13">业界</a></td>
+          <td class="ttl"><a href="#i13">Adobe for Slack + Nvidia PAIR</a></td>
+          <td class="one"><a href="#i13">70+ 创意工具进 Slackbot；PAIR 把家里闲置 GPU/M4 拼成本地推理网</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i14">抗衰</a></td>
+          <td class="ttl"><a href="#i14">PathStAR：器官结构衰老各有时间表</a></td>
+          <td class="one"><a href="#i14">血管 30 多岁加速；子宫阴道围绝经加速；多数组织双峰；卵巢像起搏器</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i15">抗衰</a></td>
+          <td class="ttl"><a href="#i15">卵母细胞 mtDNA 泄漏驱动卵巢衰老</a></td>
+          <td class="one"><a href="#i15">cGAS–STING 经缝隙连接传到颗粒细胞；敲 cGAS 或 H-151 可缓解小鼠模型</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i16">抗衰</a></td>
+          <td class="ttl"><a href="#i16">人类细胞衰老的模块架构</a></td>
+          <td class="one"><a href="#i16">128 器官–细胞对 → 14 个模块；34% 个体至少一模块极端偏离</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section>
+      <h2>AI 和大模型</h2>
+
+      <article class="item" id="i1">
+        <h3>GPT-6 Astra 正式开推：Brockman 说「我们大概进了 AGI 时代」</h3>
+        <p class="orig">GPT-6 Astra: A new generation of intelligence</p>
+        <p class="authors">OpenAI 官方；Hayden Field · The Verge · 2026-09-03</p>
+        <p>距 GPT-5.6 约两个月，OpenAI 于周四推出 GPT-6 Astra，定位为编程、科研、电脑操控与专业工作上的「代际跃迁」。官方称它在计算机与浏览器使用、软件工程与专业文书上达到新前沿：能完成多步智能体任务、搭可运行网站、按模板生成润色过的文档 / 表格 / 演示，并在真实代码库的复杂任务上表现强于前代。评测数字上，FrontierMath Tier 4 报 98%、ARC-AGI-3 报 99.9%；Terminal-Bench Science 0.1 报 64.6%，Agents’ Last Exam 报 59.3%，OSWorld 2.0 模拟约 72.6%（约 40 分钟/任务）。</p>
+        <p>发布按阶段走：当日先给有限组织（含网络安全相关客户），未来数日扩到 ChatGPT Plus、Pro、Business、Enterprise，以及 OpenAI API 与 AWS；Pro / Business / Enterprise 还将获得 GPT-6 Astra Pro，企业默认关闭、需管理员打开。API 侧新增异步工具调用、回合中途转向、中途调整推理力度等长程控制。总统 Greg Brockman 在媒体会上说，若若干年后回头问「AGI 大概是什么时候造出来的」，他觉得「大概就是现在、大概就是这个模型」；研究训练副总裁 Aidan Clark 则称，Astra 是前代模型在监督训练里扮演「大角色」的第一款 OpenAI 模型——训练末段硬件故障后，常能在数秒内自行恢复进度。</p>
+        <p class="src"><span class="chip">官方</span> <a href="https://openai.com/index/gpt-6-astra/">openai.com/index/gpt-6-astra</a> <a href="https://www.theverge.com/ai-artificial-intelligence/989601/openai-gpt-6-astra-release">The Verge</a></p>
+      </article>
+
+      <article class="item" id="i2">
+        <h3>Graph Machine：用可微「边」做稀疏路由，预训练几乎不掉点</h3>
+        <p class="orig">Graph Machine: Towards Better Pretraining via Edges</p>
+        <p class="authors">Lintai Hou · arXiv:2609.02881 · 2026-09-02</p>
+        <p>作者提出 Graph Machine（GM）：维护 O(n) 大小的状态，通过稀疏、动态路由访问；与固定大小状态或静态稀疏路由不同，稀疏层仍是 O(n) 复杂度，却不把可访问状态限制在 O(1)。核心对象是「边」——像指针一样的结构，由类似 pointer chasing 的 referral 机制可微更新：稀疏注意力沿边传特征更新节点，referral 沿边传地址形成新边。</p>
+        <p>实验把 Qwen3-0.6B 中 75% 的稠密 Transformer 层换成 GM 稀疏层，从零预训练 15.7B token。每个稀疏层、每个 KV 头只检索 4096 个位置里的 2 个 token 时，损失仅轻微变差；取 4 个时，最优模型的最终损失还略好。结果表明：在标准语言模型预训练设定下，大多数位置可以不被每层稠密看见，同时明显省算力。</p>
+        <p class="src"><span class="chip">预印本</span> <a href="https://arxiv.org/abs/2609.02881">arxiv.org/abs/2609.02881</a></p>
+      </article>
+
+      <article class="item" id="i3">
+        <h3>AgentScope：用行为抽象 + neural invariants 诊断智能体失败</h3>
+        <p class="orig">Diagnosing with Insights: Structured Analysis of Agent Failures via Behavioral Abstractions</p>
+        <p class="authors">Jiayi Bi, Yanjie Gao, Yuanmin Xie, Liqun Li, Tianyin Xu, Fan Yang, Mao Yang · arXiv:2609.02371 · 2026-09-02</p>
+        <p>LLM 智能体失败常藏在很长的轨迹里，手工找针不现实；传统软件调试对不上，纯靠 LLM-as-judge 又不稳定。作者提出神经–符号方法 AgentScope：先把智能体轨迹抽象成结构化行为表示，再引入 neural invariants 刻画应满足的行为性质，最后在结构化表示上用 LLM 引导推理，同时定位失败步骤与失败类型。</p>
+        <p>在公开 Who&amp;When 数据集以及作者自建的更全面 AgentErrata 上，故障定位与归因准确率显著优于现有方法。论点是：结构化抽象 + LLM 推理，才能让智能体失败诊断既有效又相对可解释。</p>
+        <p class="src"><span class="chip">预印本</span> <a href="https://arxiv.org/abs/2609.02371">arxiv.org/abs/2609.02371</a></p>
+      </article>
+
+      <article class="item" id="i4">
+        <h3>H3-World：把大视频生成器拧成可交互的世界控制器</h3>
+        <p class="orig">H3-World: Turning Language Understanding into World Control</p>
+        <p class="authors">Danze Chen, Zeqing Wang, Ziyue Lin, Xingyi Yang, Yeying Jin · 腾讯 / 新加坡国立大学 / 港理工 · arXiv:2609.01560</p>
+        <p>作者把 33B 的 MiniMax-H3 视频生成器改造成交互式世界模型。关键观察是：大视频模型已经能用自然语言粗控角色行为与镜头；H3-World 把动作写成「角色指令 + 镜头指令」的结构化组合，并与对应时间段的视频 latent 对齐。为压时间串扰，引入 temporal attention routing，让每条指令只作用在目标时间窗。</p>
+        <p>方法直接复用大规模视频预训练学到的语义表示，只需轻量适配：约 8000 条游戏样本、10000 步 LoRA、可训参数仅 0.199%，就能做到有效的角色与相机控制并保持生成质量，还能泛化到未见场景。结论偏工程：控制能力正在从视频生成器里「长出来」，不必再堆一整套专用动作模块。</p>
+        <p class="src"><span class="chip">预印本</span> <a href="https://arxiv.org/abs/2609.01560">arxiv.org/abs/2609.01560</a></p>
+      </article>
+    </section>
+
+    <section>
+      <h2>科学、物理与复杂性</h2>
+
+      <article class="item" id="i5">
+        <h3>Tipping 点：用 Ruelle–Pollicott 谱把「变慢」和「会不会翻」拆开</h3>
+        <p class="orig">Ruelle–Pollicott Theory for Metastable Systems: A Unified Framework for Tipping Transitions</p>
+        <p class="authors">Mickaël D. Chekroun, Valerio Lucarini · arXiv:2609.02614 · 2026-09-02</p>
+        <p>经典早期预警靠临界变慢：恢复变慢、自相关与方差上升、频谱变红。这对简单平衡分岔很管用，却不是随机、多稳态或亚稳态系统的一般理论。作者从 hypoelliptic Itô 扩散的 Kolmogorov 生成元之 Ruelle–Pollicott（RP）谱出发，证明不变统计量对扰动的敏感度可因子化为「谱分母 × 残差」：分母变小允许大响应，残差才能真正造出响应——因此「谱隙在关」本身并不足够构成预警，残差变大也可以制造经典信号。</p>
+        <p>对亚稳态系统，局部临界变慢与跃迁风险是不同的谱对象；分岔诱导（B-）与噪声诱导（N-）tipping 被放在同一 RP 语言下。一维亚稳态 fold 上，局部恢复按 (ε<sub>c</sub>−ε)<sup>1/2</sup> 标度，准势势垒按 (ε<sub>c</sub>−ε)<sup>3/2</sup> 标度，说明「恢复能力丧失」与「逃逸风险」可操作地分离。Doob 漂移还作为最优 Girsanov 重要性采样控制的长时极限出现，给出计算诊断的直接路径。</p>
+        <p class="src"><span class="chip">预印本</span> <a href="https://arxiv.org/abs/2609.02614">arxiv.org/abs/2609.02614</a></p>
+      </article>
+
+      <article class="item" id="i6">
+        <h3>热力学推断：短轨迹、小样本时，偏差概率能被非渐近地卡住</h3>
+        <p class="orig">Thermodynamic Concentration Inequalities: Controlling Uncertainty in Finite-Time and Small-Sample Thermodynamic Inference</p>
+        <p class="authors">Rick Bebon, Aljaž Godec · arXiv:2609.04162 · 2026-09-03</p>
+        <p>作者给几何遍历扩散上广义电流（任意观测时长）及其任意样本量样本均值，推导偏离稳态均值超过给定阈值的非渐近上界。浓度行为由弛豫时间、局部耗散率与可观测量的内禀局部涨落共同决定；平衡与非平衡下的涨落有鲜明的定性与定量差异。文中还给出 refined inverse thermodynamic uncertainty relations，从上界约束广义电流方差。</p>
+        <p>实用上，他们构造小数据热力学推断的非渐近置信区间，并声称首次定量回答「轨迹多长、样本多大才够」。二维 Ornstein–Uhlenbeck 过程的平衡 / 非平衡电流示例表明，这些界可用于严格检测细致平衡破缺。</p>
+        <p class="src"><span class="chip">预印本</span> <a href="https://arxiv.org/abs/2609.04162">arxiv.org/abs/2609.04162</a></p>
+      </article>
+
+      <article class="item" id="i7">
+        <h3>量子热化自己长出最优近似纠错码</h3>
+        <p class="orig">Quantum thermalization achieves optimal approximate quantum error correction</p>
+        <p class="authors">Aditi Venkatesh, Richard R. Allen, Saúl Pilatowsky-Cameo, Bingtian Ye, Soonwon Choi · arXiv:2609.04121 · 2026-09-03</p>
+        <p>热化让初态信息对局域测量不可及——这正是量子纠错用非局域编码保护信息的机制。作者把典型晚期态当作码字，把近似量子纠错的严格框架搬到热化动力学上。数值上，编码率、距离与热熵密度之间出现普适关系：无限温度下该曲线饱和量子 Singleton 界，与 Haar 随机码达到同一最优极限。</p>
+        <p>有限温度引入基于 Scrooge 系综（Haar 的热类比）的码族，并证明它饱和熵版 Singleton 界；抽取的普适曲线独立饱和同一界，说明有限温热化本身就是最优的。守恒量会限制纠错：能量或其他荷不同的码字只泄漏经典信息，可纠正性维持到差值达到热涨落尺度。结果一边揭示热化动力学里的普适最优编码结构，一边给出达到近似纠错基本极限的新码。</p>
+        <p class="src"><span class="chip">预印本</span> <a href="https://arxiv.org/abs/2609.04121">arxiv.org/abs/2609.04121</a></p>
+      </article>
+
+      <article class="item" id="i8">
+        <h3>相位延迟如何重写 Kuramoto 网络的多稳态与吸引盆</h3>
+        <p class="orig">Phase-delays shape multistability and basin sizes in Kuramoto networks: analytical estimates from network structure</p>
+        <p class="authors">Kalel L. Rossi, Antonio Mihara, Lyle E. Muller, Rene O. Medrano-T, Roberto C. Budzinski · arXiv:2609.02047 · 2026-09-02</p>
+        <p>相位延迟能破坏全局同步、促成带均匀相位梯度的锁相图案，但连接方式与延迟如何 jointly 决定网络选哪个态，此前不清楚。作者证明：把连接与相位延迟合在一起的复合矩阵，其谱不仅决定集体态的线性稳定性，还决定吸引盆大小——从而可以只凭连接与延迟，解析估计具体网络上锁相态的盆地尺寸。</p>
+        <p>应用到非局域与全局网络（含随机相位延迟）时，框架揭示多稳态与盆地大小的强烈不对称，以及常规稳定性分析看不到的手性动力学。对带距离依赖延迟的非局域网络，相位同步被破坏，代之以稳定性依赖耦合范围的 q-态；同一谱信息同时给出盆地估计。</p>
+        <p class="src"><span class="chip">预印本</span> <a href="https://arxiv.org/abs/2609.02047">arxiv.org/abs/2609.02047</a></p>
+      </article>
+
+      <article class="item" id="i9">
+        <h3>Quanta 访谈：Yale 物理系主任问，AI 时代物理还剩什么会留下来</h3>
+        <p class="orig">In an Age of AI, a Physicist Seeks What Endures</p>
+        <p class="authors">Quanta Magazine · 2026-09-03</p>
+        <p>美国能源部 Genesis Mission 选了 278 个项目把 AI 嵌进科学流程；其中一项用智能体帮助 Fermilab Mu2e 实验拧磁铁时长、靶位置等旋钮。Yale 物理系主任、Mu2e 成员 Sarah Demers 说这是「天赐」——调机器有时更像艺术。但她本人从未往 Claude 或 ChatGPT 里打过字：反对训练数据不标注知识产权，也认为难写的邮件正是自己该想清楚的谈判，不该外包。</p>
+        <p>她认为理论粒子物理被 LLM 加速得最快，实验侧仍在摸：ATLAS 数据整形、复活旧实验代码、从消化过的图里追问新问题都有潜力。她正在牵头 APS 的 AI 政策声明（预计约 2027 年春），共识之一是：署名者必须能验证模型输出，否则只是往文献里加噪声。「Human physics is not over」——归因与对话若丢了，科学基础也会松。</p>
+        <p class="src"><span class="chip">访谈</span> <a href="https://www.quantamagazine.org/in-an-age-of-ai-a-physicist-seeks-what-endures-20260903/">Quanta Magazine</a></p>
+      </article>
+    </section>
+
+    <section>
+      <h2>互联网产品与科技业界</h2>
+
+      <article class="item" id="i10">
+        <h3>英伟达确认以 129.3 亿美元收购 Hugging Face</h3>
+        <p class="authors">Ivan Mehta · TechCrunch · 2026-09-03</p>
+        <p>传闻数周后，Nvidia 确认收购 Hugging Face，交易额 129.3 亿美元。HF 平台托管约 300 万模型、100 万应用（逾 1800 万开发者）与 50 万数据集；累计融资逾 3.95 亿美元，上轮 2023 年由 Salesforce Ventures 领投 2.35 亿，Google、Amazon、IBM、Nvidia 均有参与。The Information 上月称其年化收入约 1.5 亿美元；CEO Clem Delangue 七月对 TechCrunch 称增长已「接近盈利」。</p>
+        <p>Jensen Huang 博客强调 Hugging Face 仍是整个 AI 生态的开放平台：开发者自选模型、框架、云与推理服务，「构建或部署不必绑定 Nvidia 算力」。他同时点出公司已在 HF 上放出 500+ 模型与 250 个开放数据集。对 Nvidia 而言，控制一个开放生态有利于芯片平台，也可把闲置产能与 HF 产品打包卖给企业。Delangue 在 X 上说，要让开源替代闭源 API 真正规模化，需要更多算力与协作，「所以我们去找了 Jensen」。</p>
+        <p class="src"><span class="chip">报道</span> <a href="https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/">TechCrunch</a></p>
+      </article>
+
+      <article class="item" id="i11">
+        <h3>Google 把语音对话助手放进 Gmail、Docs 和 Keep</h3>
+        <p class="authors">TechCrunch · 2026-09-03</p>
+        <p>Google 推出 Docs Live、Gmail Live、Keep Live（I/O 预览过）：用自然语言与 Gemini 助手对话完成任务。Gmail 里可对着收件箱提问并看实时转写；Docs 里可口述要写什么，助手结合 Gmail、Drive、Chat 与网页起草；Keep Live 当语音便签本，例如口述「列 shakshouka 食材」。</p>
+        <p>Gmail Live 对 Google AI Plus / Pro / Ultra 开放；Docs Live 与 Keep Live 对 Pro / Ultra 开放。目前英文字幕下的 iOS 与 Android，Workplace Business 客户「即将」跟进。同系列还有 Mac 跨应用听写、Pixel 11 的 Rambler（去口头禅）以及八月的 Gemini 3.5 Transcribe。</p>
+        <p class="src"><span class="chip">报道</span> <a href="https://techcrunch.com/2026/09/03/google-launches-ai-voice-features-in-gmail-docs-and-keep/">TechCrunch</a></p>
+      </article>
+
+      <article class="item" id="i12">
+        <h3>Uber 裁约 3300 人：削管理层、并业务、远程岗几乎清零</h3>
+        <p class="authors">TechCrunch / The Guardian · 2026-09-02</p>
+        <p>CEO Dara Khosrowshahi 内部信宣布裁员约 3300 人，约占全球编制 10%，把员工数压回约 2021 年水平（略低于 3 万）。目标是「更简单、更快」：管理层数量削减约 20%（部分经理改回个人贡献者），1–2 人微团队减半，距 CEO 七层以上的岗位收缩；工程、科学与配送相关建制合并，餐饮 / 零售 / 直送运营收拢。</p>
+        <p>公司还要求几乎所有人回指定 hub 办公，远程岗压到不足 1%。信中写：增长带来更多层级、协调与碎片化所有权，「小业务时合理的结构」已不适配当前规模。资源将更集中到网约车、配送与 robotaxi。这是疫情后 Uber 最大规模编制收缩之一。</p>
+        <p class="src"><span class="chip">报道</span> <a href="https://techcrunch.com/2026/09/02/uber-is-laying-off-10-of-staff-or-3300-people/">TechCrunch</a> <a href="https://www.theguardian.com/technology/2026/sep/02/uber-to-cut-3300-corporate-jobs-in-management-overhaul">The Guardian</a></p>
+      </article>
+
+      <article class="item" id="i13">
+        <h3>两条「把算力/创意塞进日常会话」：Adobe for Slack 与 Nvidia PAIR</h3>
+        <p class="authors">Adobe 博客 / TechCrunch · 2026-09-02；Antonio G. Di Benedetto · The Verge · 2026-09-03</p>
+        <p>Adobe for Slack 对 Business+ / Enterprise+ 开放：在 Slackbot 里用自然语言调用 Firefly、Express、Photoshop、Premiere、Acrobat、InDesign 等 70 多项工具，并可拉取频道、Canvas、文件上下文生成 PDF、图与视频；也可从 Creative Cloud 素材库拉资产继续改。Adobe 八月已接 ChatGPT，Gemini「很快」。Agentic AI 高级总监 Deepti Pradeep 说用户要的是「少微观管理每一步、在已经工作的地方用到 Adobe」。</p>
+        <p>同日 IFA 侧，Nvidia 开源推出 Personal AI Router（PAIR，软件而非硬件路由）：在家庭局域网发现兼容机（GeForce RTX 20 系及以上、RTX Pro、DGX Spark，以及 Apple M4+），六位码配对 + mTLS，把空闲算力分给 Ollama / LM Studio 等前端上的智能体子任务；有人开游戏时弹性让出 GPU。产品经理 Seth Schneider 设想「一台笔记本 + 一台游戏机」是典型用户；极端演示家庭可挤出约 165 TFLOPS「闲置 token」。Windows / Linux / macOS beta 当日可用。</p>
+        <p class="src"><span class="chip">报道</span> <a href="https://blog.adobe.com/en/publish/2026/09/02/introducing-adobe-for-slack">Adobe 博客</a> <a href="https://techcrunch.com/2026/09/02/adobe-is-making-its-tools-available-in-slack/">TechCrunch：Adobe</a> <a href="https://www.theverge.com/ai-artificial-intelligence/989435/nvidia-pair-personal-ai-router-home-local-llm-compute-tool-rtx-macbook">The Verge：PAIR</a></p>
+      </article>
+    </section>
+
+    <section>
+      <h2>抗衰与长寿</h2>
+      <p class="lede" style="margin-bottom:1.05rem;">近 24–48 小时 bioRxiv / medRxiv 上像样的抗衰新预印本仍偏少。下面三条取自 8 月 28–31 日前后、尚未进过本栏的 Nature Aging 与 bioRxiv 工作：结构衰老图谱、卵母细胞 mtDNA–cGAS–STING，以及跨器官细胞衰老模块。</p>
+
+      <article class="item" id="i14">
+        <h3>PathStAR：从病理切片读出器官结构衰老的三种时间表</h3>
+        <p class="orig">Mapping structural aging across human tissues reveals tissue-specific trajectories and coordinated deterioration</p>
+        <p class="authors">Anamika Yadav, Kyle Alvarez, Anna Chechenina, Kevin Y. Yip, Eytan Ruppin, Alexandre Colas, Jacqueline C. Yano Maher, Veronica Gomez-Lobo, Caroline Kumsta, Sanju Sinha · Nature Aging · 2026-08-31</p>
+        <p>Sanford Burnham Prebys 与 NIH 合作，用 GTEx 中约 25306 张、970 名 21–70 岁捐献者、40 种组织的死后活检病理图，训练 Pathology-based Structural Aging Rate（PathStAR）。模型把切片切成逾 3000 万 patch，提取结构特征；不预测实足年龄，却能量出结构何时变。卵巢试点已再现 35–40 岁生育力下降与 55–60 岁绝经后两段加速。</p>
+        <p>在样本足够（≥200）的 15 类组织上分出三型：血管等「早衰」组织在 30–39 岁加速后放缓；子宫与阴道「晚衰」，约 50–55 岁（围绝经）最快；多数（含消化与男性生殖）呈双峰 biphasic。加速期共同分子签名是炎症基因表达上升，伴随能量产生、生长与质量控制基因受抑。个体内器官协同恶化；作者称一半以上组织轨迹跟随卵巢，把卵巢看作全身结构衰老的「起搏器」，并提示保护生殖衰老或可外溢到其他器官。</p>
+        <p class="src"><span class="chip">期刊</span> <a href="https://www.nature.com/articles/s43587-026-01200-4">Nature Aging</a> <a href="https://sbpdiscovery.org/press/every-organ-ages-on-its-own-schedule-and-the-schedules-are-in-sync/">研究所新闻稿</a></p>
+      </article>
+
+      <article class="item" id="i15">
+        <h3>卵母细胞里漏出的线粒体 DNA，经 cGAS–STING 加速卵巢衰老</h3>
+        <p class="orig">Mitochondrial DNA leakage in oocytes activates cGAS-STING signaling to drive ovarian aging</p>
+        <p class="authors">Min Lei, Zhenye Zhu, Huihui Xie, Chenlu Wei, Jiajia Zhu 等 · Nature Aging · 2026-08-28 · DOI: 10.1038/s43587-026-01195-y</p>
+        <p>衰老卵母细胞胞质中堆积漏出的 mtDNA，激活 cGAS → 产生 cGAMP → 激活 STING，诱发无菌炎症。cGAMP 还能经缝隙连接传到周围颗粒细胞，使支持细胞一并拉响警报。卵母细胞特异性敲除 Tfam（以及削弱 Opa1、敲除 Pink1）均复现 mtDNA 泄漏与通路激活；在 Tfam 模型里再敲卵母细胞 Cgas，或用 STING 抑制剂 H-151，均可缓解卵巢功能障碍。</p>
+        <p>工作把线粒体损伤、固有免疫与卵泡协作放在同一条因果链上，解释「少数卵母细胞的局部损伤如何变成组织级衰退」。作者与综述都强调：尚未证明可平移到人，长期抑制 STING 的生殖系统安全性未知；但「损伤已发生后仍可挡下游炎症」提供了与直接修线粒体不同的干预角度。这与昨日简报里「全身敲 cGAS 反而加速衰老」不是同一篇，靶点组织与表型方向也不同。</p>
+        <p class="src"><span class="chip">期刊</span> <a href="https://www.nature.com/articles/s43587-026-01195-y">Nature Aging</a></p>
+      </article>
+
+      <article class="item" id="i16">
+        <h3>跨器官单细胞 + 血浆蛋白：人类细胞衰老呈 14 个模块</h3>
+        <p class="orig">A modular architecture of human cellular aging across organs and diseases</p>
+        <p class="authors">bioRxiv 2026.08.12.744367 · 2026-08-13</p>
+        <p>作者把多器官人类单细胞转录组图谱与约 5 万名参与者的血浆蛋白对接，在群体尺度重建细胞衰老状态：覆盖 128 个器官–细胞类型对，归纳出 14 个细胞衰老模块——既有跨器官保守程序，也有器官特异状态。细胞身份是主导组织轴，可跨越解剖边界；34% 个体至少在一个模块上呈极端衰老偏离。</p>
+        <p>模块时间轨迹不同：结构与组织驻留模块往往早于免疫谱系重塑。加速的特定模块（尤其上皮衰老）与疾病负担、死亡风险相关；纵向分析显示模块状态相对稳定且有临床相关性，生活方式、代谢与药物则选择性地关联个别程序。工作提供「模块化」而非单一生物年龄分数的健康寿命解释框架；仍是预印本，结论待同行评审。</p>
+        <p class="src"><span class="chip">预印本</span> <a href="https://www.biorxiv.org/content/10.64898/2026.08.12.744367v1">bioRxiv 2026.08.12.744367</a></p>
+      </article>
+    </section>
+
+    <footer>
+      <p>条目均来自当日公开检索与原文核对；链接指向原始来源。宁缺毋滥。本页为补发的周五简报。</p>
+    </footer>
+  </div>
+</body>
+</html>

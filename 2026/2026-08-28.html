@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日简报 · 2026年8月28日</title>
+  <!-- site-meta:start -->
+  <meta name="description" content="今天的主线是智能体从屏幕走进实验室，评测则开始用密码学把「偷看考题」堵上。Anthropic 放出 Model Hardware Standard 研究预览，让模型通过统一驱动操作显微镜、移液台和机械臂；DeepMind 用机密计算做前沿…">
+  <link rel="canonical" href="https://jianbao.space/2026/2026-08-28.html">
+  <link rel="alternate" type="application/atom+xml" title="每日简报 · 订阅" href="/feed.xml">
+  <meta property="og:site_name" content="每日简报">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="每日简报 · 2026年8月28日">
+  <meta property="og:description" content="今天的主线是智能体从屏幕走进实验室，评测则开始用密码学把「偷看考题」堵上。Anthropic 放出 Model Hardware Standard 研究预览，让模型通过统一驱动操作显微镜、移液台和机械臂；DeepMind 用机密计算做前沿…">
+  <meta property="og:url" content="https://jianbao.space/2026/2026-08-28.html">
+  <meta property="og:image" content="https://jianbao.space/icon-512.png">
+  <meta property="article:published_time" content="2026-08-28T08:00:00+08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="每日简报 · 2026年8月28日">
+  <meta name="twitter:description" content="今天的主线是智能体从屏幕走进实验室，评测则开始用密码学把「偷看考题」堵上。Anthropic 放出 Model Hardware Standard 研究预览，让模型通过统一驱动操作显微镜、移液台和机械臂；DeepMind 用机密计算做前沿…">
+  <!-- site-meta:end -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #f3f5f8;
+      --bg-accent: #e8eef6;
+      --paper: #ffffff;
+      --ink: #1a1f2e;
+      --muted: #5a6478;
+      --line: #d8dee9;
+      --line-soft: #e8edf4;
+      --accent: #3b6d9a;
+      --accent-soft: rgba(59, 109, 154, 0.12);
+      --link: #2a5f8f;
+      --link-hover: #1a4068;
+      --nav-bg: rgba(255, 255, 255, 0.86);
+      --chip: #e8eef6;
+      --shadow: 0 1px 2px rgba(26, 31, 46, 0.04), 0 4px 16px rgba(26, 31, 46, 0.04);
+      --radius: 12px;
+      --sans: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB",
+               "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      --serif: "Songti SC", "Noto Serif SC", "Source Han Serif SC",
+               "Noto Serif CJK SC", Georgia, serif;
+      --s1: #3b6d9a;
+      --s2: #2f6b5c;
+      --s3: #4a5f8a;
+      --s4: #5a4a6b;
+    }
+    * { box-sizing: border-box; }
+    html { font-size: 16.5px; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: var(--serif);
+      line-height: 1.7;
+      background:
+        linear-gradient(180deg, var(--bg-accent) 0%, transparent 280px),
+        linear-gradient(90deg, rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(59, 109, 154, 0.03) 1px, transparent 1px),
+        var(--bg);
+      background-size: auto, 28px 28px, 28px 28px, auto;
+      background-attachment: fixed;
+    }
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      isolation: isolate;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .topnav::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(59, 109, 154, 0.18) 20%,
+        rgba(59, 109, 154, 0.52) 50%,
+        rgba(59, 109, 154, 0.18) 80%,
+        transparent 100%
+      );
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .topnav-inner {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.72rem 0;
+      font-family: var(--sans);
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .brand:hover { color: var(--link); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.15rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      transition: color 0.15s ease, background 0.15s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: var(--ink);
+      background: var(--accent-soft);
+    }
+    .wrap {
+      width: min(1040px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      padding: 2rem 0 3.5rem;
+    }
+    header.mast {
+      margin-bottom: 1.75rem;
+      padding: 0.4rem 0 1.35rem;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    header.mast::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 4.5rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    h1 {
+      font-family: var(--sans);
+      font-size: clamp(1.75rem, 4vw, 2.15rem);
+      line-height: 1.25;
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    h1 a.home {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 a.home:hover {
+      color: var(--link);
+    }
+    .meta {
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin: 0;
+      max-width: 36em;
+    }
+    .lede {
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.05rem 1.2rem;
+      margin: 0 0 2rem;
+      font-size: 0.98rem;
+      box-shadow: var(--shadow);
+    }
+    section { margin-bottom: 2.4rem; }
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      margin: 0 0 1rem;
+      padding: 0.45rem 0 0.55rem;
+      border-top: none;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 2.75rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    article.item {
+      position: relative;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem 1.15rem;
+      margin: 0 0 0.95rem;
+      box-shadow: var(--shadow);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+      scroll-margin-top: 4.5rem;
+    }
+    article.item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1rem;
+      bottom: 1rem;
+      width: 2px;
+      border-radius: 0 2px 2px 0;
+      background: var(--accent);
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: center;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+    }
+    article.item:hover {
+      border-color: #b8c5d8;
+      box-shadow: 0 2px 4px rgba(26, 31, 46, 0.05), 0 8px 24px rgba(26, 31, 46, 0.07);
+      transform: translateY(-1px);
+    }
+    article.item:hover::before,
+    article.item:focus-within::before {
+      opacity: 0.9;
+      transform: scaleY(1);
+    }
+    article.item:target {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    article.item h3 {
+      font-family: var(--sans);
+      font-size: 1.06rem;
+      line-height: 1.35;
+      margin: 0 0 0.55rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .orig {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: -0.25rem 0 0.55rem;
+      font-family: Georgia, "Iowan Old Style", var(--serif);
+    }
+    .authors {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin: 0 0 0.55rem;
+    }
+    p { margin: 0 0 0.7rem; }
+    p:last-of-type { margin-bottom: 0.85rem; }
+    .src {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.9rem;
+      align-items: baseline;
+      border-top: 1px dashed var(--line);
+      padding-top: 0.65rem;
+    }
+    .src a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      word-break: break-all;
+    }
+    .src a:hover { color: var(--link-hover); }
+    .chip {
+      display: inline-block;
+      background: var(--chip);
+      color: var(--muted);
+      padding: 0.08rem 0.45rem;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      border: 1px solid var(--line-soft);
+    }
+    footer {
+      border-top: 1px solid var(--line-soft);
+      padding-top: 1rem;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .digest-wrap {
+      margin: 0 0 2.1rem;
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    table.digest {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: transparent;
+      border: none;
+      font-family: var(--sans);
+      font-size: 0.86rem;
+    }
+    table.digest th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-accent);
+    }
+    table.digest td {
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid var(--line-soft);
+      vertical-align: top;
+      line-height: 1.45;
+    }
+    table.digest tr:last-child td { border-bottom: none; }
+    table.digest tbody tr { transition: background 0.15s ease; }
+    table.digest tbody tr:hover { background: var(--accent-soft); }
+    table.digest a { color: inherit; text-decoration: none; }
+    table.digest a:hover { color: var(--link); }
+    table.digest .sec {
+      width: 4.6rem;
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    table.digest .ttl { width: 38%; font-weight: 650; }
+    table.digest .one { color: var(--muted); font-weight: 400; }
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes briefing-fade-rise {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes nav-line-shimmer {
+        0%, 100% { background-position: 0% 50%; opacity: 0.28; }
+        50% { background-position: 100% 50%; opacity: 0.52; }
+      }
+      header.mast {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      .lede {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+      }
+      .digest-wrap {
+        animation: briefing-fade-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.14s both;
+      }
+      section {
+        animation: briefing-fade-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      section:nth-of-type(1) { animation-delay: 0.2s; }
+      section:nth-of-type(2) { animation-delay: 0.26s; }
+      section:nth-of-type(3) { animation-delay: 0.32s; }
+      section:nth-of-type(4) { animation-delay: 0.38s; }
+      section:nth-of-type(n + 5) { animation-delay: 0.42s; }
+      .topnav::after {
+        background-size: 200% 100%;
+        animation: nav-line-shimmer 10s ease-in-out infinite;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .topnav::after,
+      header.mast,
+      .lede,
+      .digest-wrap,
+      section {
+        animation: none !important;
+      }
+      article.item {
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      }
+      article.item:hover {
+        transform: none;
+      }
+    }
+    @media (max-width: 720px) {
+      table.digest, table.digest thead, table.digest tbody, table.digest tr, table.digest th, table.digest td {
+        display: block;
+      }
+      table.digest thead { display: none; }
+      table.digest td.sec { padding-bottom: 0; border-bottom: none; }
+      table.digest td.ttl { padding-top: 0.2rem; padding-bottom: 0.15rem; width: auto; border-bottom: none; }
+      table.digest td.one { padding-top: 0; width: auto; }
+    }
+    @media (max-width: 560px) {
+      html { font-size: 16px; }
+      h1 { font-size: 1.7rem; }
+      .topnav-inner { width: calc(100% - 1.5rem); }
+      .wrap { width: calc(100% - 1.5rem); padding: 1.5rem 0 3rem; }
+      .nav-links a { padding: 0.3rem 0.5rem; font-size: 0.8rem; }
+      article.item { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topnav" aria-label="主导航">
+    <div class="topnav-inner">
+      <a class="brand" href="/">每日简报</a>
+      <ul class="nav-links">
+        <li><a href="/">首页</a></li>
+        <li><a href="/2026/2026-09-25.html">最新一期</a></li>
+                <li><a href="/ai/">AI 日报</a></li>
+        <li><a href="/">归档</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <header class="mast">
+      <h1><a class="home" href="/">每日简报</a></h1>
+      <p class="meta">2026年8月28日（周五）· 亚洲/上海</p>
+    </header>
+
+    <p class="lede">今天的主线是智能体从屏幕走进实验室，评测则开始用密码学把「偷看考题」堵上。Anthropic 放出 Model Hardware Standard 研究预览，让模型通过统一驱动操作显微镜、移液台和机械臂；DeepMind 用机密计算做前沿模型的双盲评测；Gemini Omni 1.1 把视频续写做到可生产。业界一侧，Nvidia 据报以约 129 亿美元买 Hugging Face，Google 用 2.6 亿英镑和解英国 Play 商店集体诉讼。物理上，光子气体第一次给出玻色气体普适类的临界指数，光学马格努斯效应也被阱中钙离子看见。抗衰栏目近 48 小时像样新文偏少，收入肠道分泌磷酸酶延寿、SGLT2 抑制剂心脏脱靶靶点和累积衰弱队列三篇。</p>
+
+    <div class="digest-wrap">
+      <table class="digest">
+        <thead><tr><th class="sec">栏目</th><th class="ttl">条目</th><th class="one">要点</th></tr></thead>
+        <tbody>
+        <tr>
+          <td class="sec"><a href="#i1">AI</a></td>
+          <td class="ttl"><a href="#i1">Anthropic 发布实验室设备统一驱动 MHS</a></td>
+          <td class="one"><a href="#i1">智能体用同一套读/写原语操作显微镜、移液台和机械臂</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i2">AI</a></td>
+          <td class="ttl"><a href="#i2">DeepMind 试点双盲前沿模型评测</a></td>
+          <td class="one"><a href="#i2">考题和权重互相看不见，用来堵 benchmark 污染</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i3">AI</a></td>
+          <td class="ttl"><a href="#i3">Gemini Omni 1.1 Flash 视频续写</a></td>
+          <td class="one"><a href="#i3">读前 10 秒、最长 40 秒，草稿 360p、成片可到 4K</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i4">AI</a></td>
+          <td class="ttl"><a href="#i4">Prefix Sliding：长思维不必整段进注意力</a></td>
+          <td class="one"><a href="#i4">只留前缀和滑动窗口，推理显存近似恒定</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i5">科学</a></td>
+          <td class="ttl"><a href="#i5">光子气体测到玻色气体临界标度</a></td>
+          <td class="one"><a href="#i5">ν = 0.52(3)，第一次给出这一普适类的实验证据</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i6">科学</a></td>
+          <td class="ttl"><a href="#i6">阱中钙离子看见光学马格努斯效应</a></td>
+          <td class="one"><a href="#i6">作用最强点偏光束中心数百纳米，离子比特或受影响</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i7">科学</a></td>
+          <td class="ttl"><a href="#i7">杨–李临界写成耗散动力学相变</a></td>
+          <td class="one"><a href="#i7">不必后选择，可用开放系统局域门和工程耗散模拟</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i8">科学</a></td>
+          <td class="ttl"><a href="#i8">手性主动物质的拓扑住在涨落里</a></td>
+          <td class="one"><a href="#i8">确定性力学平凡，涨落谱却可以带非零切恩数</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i9">科学</a></td>
+          <td class="ttl"><a href="#i9">同域物种形成的临界基因组长度</a></td>
+          <td class="one"><a href="#i9">给出闭式：瞬时谱系方差和确定性分离相竞争</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i10">业界</a></td>
+          <td class="ttl"><a href="#i10">Nvidia 据报 129 亿美元买 Hugging Face</a></td>
+          <td class="one"><a href="#i10">双方未确认，协议也可能谈崩</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i11">业界</a></td>
+          <td class="ttl"><a href="#i11">Google 拟 2.6 亿英镑和解 Play 诉讼</a></td>
+          <td class="one"><a href="#i11">英国开发者集体诉讼，尚待法庭批准</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i12">业界</a></td>
+          <td class="ttl"><a href="#i12">苹果 9 月 9 日 Surprise and shine</a></td>
+          <td class="one"><a href="#i12">Ternus 接任后第一场发布会，产品名单未官宣</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i13">业界</a></td>
+          <td class="ttl"><a href="#i13">Android 17 四项网络安全</a></td>
+          <td class="one"><a href="#i13">ECH、本地网络权限、证书透明、运营商可关 2G</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i14">业界</a></td>
+          <td class="ttl"><a href="#i14">搜索 AI Mode 能盯机票并订酒店</a></td>
+          <td class="one"><a href="#i14">价格追踪、里程报价，美国英语可直接订酒店</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i15">抗衰</a></td>
+          <td class="ttl"><a href="#i15">肠道分泌磷酸酶 ACP7 才延寿</a></td>
+          <td class="one"><a href="#i15">线虫过表达且分泌出去，寿命才会延长</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i16">抗衰</a></td>
+          <td class="ttl"><a href="#i16">SGLT2 抑制剂心脏靶点是 PANK1</a></td>
+          <td class="one"><a href="#i16">提高辅酶 A 合成和心肌收缩，不是靠心脏里的 SGLT2</a></td>
+        </tr>
+        <tr>
+          <td class="sec"><a href="#i17">抗衰</a></td>
+          <td class="ttl"><a href="#i17">累积衰弱预测认知下降与死亡</a></td>
+          <td class="one"><a href="#i17">比单次衰弱评分更能预示痴呆和全因死亡</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section id="s1">
+      <h2>1. AI 和大模型动态</h2>
+
+      <article class="item" id="i1">
+        <h3>Anthropic 发布 Model Hardware Standard：给智能体一套操作实验室设备的统一驱动</h3>
+        <p>8月27日，Anthropic 向首批科研实验室和先进制造伙伴开放 Model Hardware Standard（MHS）研究预览。规格始于与霍华德·休斯医学研究所 Janelia 研究院的合作，目标是让智能体并行操作显微镜、移液工作站、机械臂等可编程仪器，覆盖从常规药物筛选到量子计算机激光校准一类任务。公司称，实验室通常要花数周到数月做硬件集成；MHS 把「读/写」原语和设备特征标签做成标准驱动，使发现、编排和安全限位能在数小时到数分钟内完成。</p>
+        <p>接口与模型无关，可通过 MCP、命令行或代码文件调用。早期案例包括 Genentech 用机械臂+移液台+读板仪跑 BCA 蛋白定量；卡内基梅隆把剂量–反应实验提速约三倍；QuEra 让智能体在 99.3% 的情况下自动恢复中性原子量子机的激光锁。Hugging Face 计划把 MHS 写进 LeRobot，树莓派已验证相机驱动。目前仍是研究预览，尚不支持无编程接口的设备，开源时间表未定；官方强调空间推理仍需专家监督。</p>
+        <p class="src"><span class="chip">Anthropic · 8月27日</span><a href="https://www.anthropic.com/news/model-hardware-standard-research-preview">anthropic.com · Model Hardware Standard</a></p>
+      </article>
+
+      <article class="item" id="i2">
+        <h3>DeepMind 试点「双盲」前沿模型评测：考题和权重互相看不见</h3>
+        <p>同日，Google DeepMind 宣布与新加坡 AI 安全研究所、OpenMined、AVERI 和 MLCommons 合作，对一款 Gemini Flash Lite 做据称是业界首次针对专有前沿级模型的双盲评测。评测跑在 Google Cloud Confidential Computing 的 Confidential Space 里：评估方看不到模型权重，Google 看不到对方的机密基准题。目的是堵住 benchmark 污染——模型事先见过考题会虚高分数。</p>
+        <p>以往高风险外部评测只能二选一：要么交出提示词，要么交出权重。密码学证据把两边同时锁在「盒子」里。试点面向网络安全、政府机构等敏感场景。这是方法学试点，不是新模型发布；技术报告另附。</p>
+        <p class="src"><span class="chip">Google DeepMind · 8月27日</span><a href="https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/">deepmind.google · double-blind evaluations</a></p>
+      </article>
+
+      <article class="item" id="i3">
+        <h3>Gemini Omni 1.1 Flash：场景可续写到 40 秒，草稿 360p、成片可升到 4K</h3>
+        <p>Google 8月27日把 Gemini Omni 更新到 1.1 Flash，面向开发者的生成视频能力。场景续写现在会读最多 10 秒前序画面（前代只看最后 1 秒），按 10 秒一段叠加，累计最长 40 秒。还可指定首尾帧做轨道运镜或循环，用最多 3 秒视频作参考保持角色一致。360p 预览官方称比标准 720p 吞吐快最多约 60%、成本约三分之一；定稿可升到 1080p 或 4K。</p>
+        <p>入口是 Google AI Studio 的 Gemini API 与 Gemini Enterprise Agent Platform。Google AI Plus / Pro / Ultra 用户可在 Flow 使用 Omni 1.1；Gemini 应用的场景续写同步对上述订阅全球开放。Adobe Firefly、Figma Weave、Runway 已接入前代 Omni Flash。数字来自厂商自述。</p>
+        <p class="src"><span class="chip">Google · 8月27日</span><a href="https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/">blog.google · Omni 1.1 Flash</a></p>
+      </article>
+
+      <article class="item" id="i4">
+        <h3>Prefix Sliding：推理时只保留前缀和滑动窗口，长思维不必把整段 CoT 都放进注意力</h3>
+        <p class="orig">Prefix Sliding for efficient test-time scaling</p>
+        <p class="authors">Niklas Muennighoff、Zhengyang Wang、Zeyi Chen、Weijia Shi 等（斯坦福、华盛顿大学、Prime Intellect 等）。arXiv:2608.26070，2026年8月26日。</p>
+        <p>测试时加长思考会让注意力窗口线性膨胀。作者观察到中间推理 token 很快失去重要性，真正一直被看的是系统/任务前缀和最近几千 token。Prefix Sliding 在生成中丢掉既不在前缀、也不在最近窗口里的 token，把显存钉死在「前缀 + 窗口」，从而让每一步新 token 的代价近似恒定。</p>
+        <p>不训练即可接到现有模型上，文中报告约 3 倍加速且分数接近全注意力；再用强化学习训练，可把思维链推过十万 token。对照显示它优于「只留最后 k 个 token」、中途摘要压缩，以及没有前缀的纯滑动窗口。代码公开在 GitHub。预印本，尚未同行评议。</p>
+        <p class="src"><span class="chip">arXiv · 8月26日</span><a href="https://arxiv.org/abs/2608.26070">arxiv.org/abs/2608.26070</a> · <a href="https://github.com/Muennighoff/prefix-sliding">github.com/Muennighoff/prefix-sliding</a></p>
+      </article>
+    </section>
+
+    <section id="s2">
+      <h2>2. 科学、物理与复杂性科学</h2>
+
+      <article class="item" id="i5">
+        <h3>二维光子气体首次测到玻色气体普适类的临界标度</h3>
+        <p class="orig">Observation of critical scaling in the Bose gas universality class</p>
+        <p class="authors">Leon Kleebank、Frank Vewinger、Arturo Camacho-Guardian、Victor Romero-Rochín、Rosario Paredes、Martin Weitz、Julian Schmitt（波恩大学、海德堡大学、墨西哥国立自治大学）。Science Advances (2026)。DOI: 10.1126/sciadv.aee2942。phys.org 于 8月27日报道。</p>
+        <p>靠粒子间相互作用热化的量子气体通常落在 XY 模型普适类；理想玻色气体被预言是另一类，但此前没有实验证据。团队把近乎无相互作用的光子关在染料填充的光学微腔镜盒里，经分子吸收/发射热化，在玻色–爱因斯坦凝聚临界点测量空间关联，得到关联长度临界指数 ν = 0.52(3)。</p>
+        <p>这是第一次表明光子气体构成独立的、更宽的普适类：临界点附近关联长度发散，类似流体临界乳光。论文也指出，下一步可看不完全热化下的非平衡标度。</p>
+        <p class="src"><span class="chip">Science Advances / phys.org · 8月27日</span><a href="https://phys.org/news/2026-08-particles-reveal-critical-scaling-dimensional.html">phys.org 报道</a> · <a href="https://doi.org/10.1126/sciadv.aee2942">doi.org/10.1126/sciadv.aee2942</a></p>
+      </article>
+
+      <article class="item" id="i6">
+        <h3>阱中钙离子第一次直接看见光学马格努斯效应</h3>
+        <p class="orig">Direct Observation of the Optical Magnus Effect with a Trapped Ion</p>
+        <p class="authors">Philip Leindecker、Louis P.H. Gallagher、Edgar Brucke 等（PSI / ETH Zurich / 阿姆斯特丹大学）。Physical Review Letters，2026年8月6日在线。DOI: 10.1103/kj5p-qqs5。PSI 于今日前后发新闻稿。</p>
+        <p>经典马格努斯效应让旋转的球拐弯。光学对应物是：紧聚焦激光的纵向电场使原子–光相互作用最强点偏离光束中心。团队用阱中单颗 <sup>40</sup>Ca<sup>+</sup> 当探针，在四极跃迁上画出相互作用剖面，测到最大作用点横向偏移数百纳米；偏移量只取决于波长，不取决于聚焦有多紧。</p>
+        <p>对用激光操控离子比特的量子计算机，忽略这一偏移会贡献控制误差；作者也提到，由此产生的力或许能用来耦合比特。阿姆斯特丹组此前给出理论预言，此次是首次直接观测。</p>
+        <p class="src"><span class="chip">PSI / PRL · 8月27日报道</span><a href="https://www.psi.ch/en/news/media-releases/a-surprising-twist-in-the-quantum-world">psi.ch 新闻稿</a> · <a href="https://doi.org/10.1103/kj5p-qqs5">doi.org/10.1103/kj5p-qqs5</a></p>
+      </article>
+
+      <article class="item" id="i7">
+        <h3>杨–李临界不必做后选择：可写成开放系统的耗散动力学相变</h3>
+        <p class="orig">Yang-Lee Criticality as a Dissipative Dynamical Phase Transition: Quantum Simulation of non-Hermitian Physics without Post-selection</p>
+        <p class="authors">Stephen W. Yan。arXiv:2608.26082，2026年8月26日。</p>
+        <p>描述虚磁场中经典伊辛自旋的杨–李理论，通常要靠非厄米演化或事后筛选成功轨迹，实验上很贵。本文证明：d+0 维杨–李理论可以无后选择地嵌进 (d−1)+1 维开放量子系统，动力学只有局域幺正门和工程耗散。</p>
+        <p>相干与耗散竞争会把一类线性可观测量从欠阻尼振荡切到过阻尼指数衰减，有效生成元正是杨–李转移矩阵。作者给出用局域两比特门实现所需耗散通道的方案，并推广到把任意非厄米哈密顿量嵌进林德布拉德演化。预印本。</p>
+        <p class="src"><span class="chip">arXiv · quant-ph · 8月26日</span><a href="https://arxiv.org/abs/2608.26082">arxiv.org/abs/2608.26082</a></p>
+      </article>
+
+      <article class="item" id="i8">
+        <h3>手性主动物质的拓扑可以住在涨落里，而不在确定性力学里</h3>
+        <p class="orig">Topology of Fluctuation Bands in Chiral Active Matter</p>
+        <p class="authors">Raphaël Maire（巴塞罗那大学）。arXiv:2608.26055，2026年8月26日。投稿 SciPost Physics。</p>
+        <p>能带拓扑通常算在确定性动力学算符上。作者考虑互易弹簧蜂窝格子，格子本身切恩数平凡，用手性 Ornstein–Uhlenbeck 主动噪声驱动。位移涨落谱的本征矢量却可以带非零切恩数：手性随机力和非共线弹性传播在关联矩阵里生成类 Haldane 的有效次近邻耦合。</p>
+        <p>拓扑相变由驱动手性、持续时间和观测频率共同控制——同一稳态在频率 ω<sub>1</sub> 可以平凡，在 ω<sub>2</sub> 非平凡。体边对应给出边界局域的涨落模式，但它们不是单向机械输运。预印本。</p>
+        <p class="src"><span class="chip">arXiv · 8月26日</span><a href="https://arxiv.org/abs/2608.26055">arxiv.org/abs/2608.26055</a></p>
+      </article>
+
+      <article class="item" id="i9">
+        <h3>同域物种形成的临界基因组长度：给出闭式，并指出瞬时谱系方差是关键</h3>
+        <p class="orig">What sets the critical genome length for sympatric speciation? A closed form and asymptotic theory</p>
+        <p class="authors">Dan Braha、Marcus A. M. de Aguiar、Vitor M. Marquioni。arXiv:2608.25995，2026年8月26日。</p>
+        <p>Derrida–Higgs 模型里，有限二进制基因组的有性种群只有遗传重叠超过阈值才能交配。基因组长度 L 超过临界值 L<sub>c</sub> 时，种群会碎成生殖隔离的物种。先前估计 L<sub>c</sub> 要数值迭代矩方程。</p>
+        <p>作者先修正无约束矩方程里一处隐含假设，再给出 L<sub>c</sub> 的显式公式：临界点由「离开无约束平衡的确定性分离」与「重叠分布的瞬时谱系方差」竞争决定。确定性主导时 L<sub>c</sub> 几乎与种群规模无关、随突变率 μ<sup>−2</sup> 标度；方差主导时按 M<sup>3/2</sup> 或 √M/μ 增长。模拟支持这些渐近。预印本。</p>
+        <p class="src"><span class="chip">arXiv · q-bio.PE · 8月26日</span><a href="https://arxiv.org/abs/2608.25995">arxiv.org/abs/2608.25995</a></p>
+      </article>
+    </section>
+
+    <section id="s3">
+      <h2>3. 互联网产品与科技业界</h2>
+
+      <article class="item" id="i10">
+        <h3>Nvidia 据报以 129 亿美元收购 Hugging Face；双方均未确认，协议也可能谈崩</h3>
+        <p>The Information 8月26日晚报道，Nvidia 已同意以 129 亿美元收购开源模型托管平台 Hugging Face。TechCrunch 同夜跟进：Business Insider 称谈判估值超过 130 亿美元，但尚未签署，仍可能散。两家公司至发稿均未公开置评。若成交，这将是 Nvidia 最大收购之一，把芯片之外的模型分发层收进自己手里。</p>
+        <p>Hugging Face 2023 年一轮融资估值 45 亿美元，近期年收入约 1.5 亿美元。去年它曾拒绝 Nvidia 一笔估值 70 亿美元、投资 5 亿美元的提议。交易动机被解读为：封闭实验室都在自研芯片，Nvidia 需要维持开放模型生态对自家 GPU 的依赖，并给闲置云算力找出口。在 OpenAI 七月事故之后，Hugging Face 同时处在聚光灯下。数字来自未具名知情人士，落地以官方公告为准。</p>
+        <p class="src"><span class="chip">TechCrunch / The Information · 8月26–27日</span><a href="https://techcrunch.com/2026/08/26/nvidia-closes-in-on-hugging-face-acquisition/">techcrunch.com</a> · <a href="https://www.forbes.com/sites/siladityaray/2026/08/27/nvidia-has-reportedly-agreed-to-buy-ai-model-hosting-platform-hugging-face-for-13-billion/">forbes.com</a></p>
+      </article>
+
+      <article class="item" id="i11">
+        <h3>Google 拟以 2.6 亿英镑和解英国 Play 商店开发者集体诉讼</h3>
+        <p>路透社 8月27日报道，Google 同意就伦敦一起代表应用开发者的大规模诉讼达成 2.6 亿英镑（约 3.53 亿美元）和解，协议已公开，尚待竞争上诉法庭（CAT）批准。原告由学者 Barry Rodger 牵头，原索赔逾 10 亿英镑，指控 Google 滥用支配地位、阻止开发者走替代分发渠道，并收取通常 30% 的不公平佣金。案件原定下月开庭。</p>
+        <p>Google 不承认责任。2.6 亿英镑中，1.6 亿将提供给 2018年8月至 2026年7月在英国 Play 商店售卖应用的开发者，另外 1 亿用于诉讼与融资成本。这是 2025 年以来英国同类案件中第四起针对大型科技公司的诉讼，此前已有针对 Apple、Qualcomm 和 Sony 的案子。</p>
+        <p class="src"><span class="chip">Reuters · 8月27日</span><a href="https://www.thestar.com.my/tech/tech-news/2026/08/28/google-agrees-to-settle-uk-app-developers039-lawsuit-for-353-million">路透社转载</a></p>
+      </article>
+
+      <article class="item" id="i12">
+        <h3>苹果发出 9月9日「Surprise and shine」邀请函：Ternus 接任后的第一场 iPhone 发布会</h3>
+        <p>苹果已确定 9月9日 10:00 PT 在 Apple Park 的 Steve Jobs Theater 举行特别活动，口号「Surprise and shine」，将在 apple.com 直播。邀请函不提具体产品。John Ternus 9月1日接替 Tim Cook 出任 CEO，这将是他的首场大型硬件发布。</p>
+        <p>外界普遍预期会有 iPhone 18 Pro 系列，以及传闻已久的折叠 iPhone；CNN、USA Today 等均如此报道，但苹果没有确认折叠机、名称或价格。分析师郭明錤此前称折叠机可能像当年 iPhone X 一样先发布、晚开售。条目只记录官方已确认的日期与口号，产品名单以当天发布为准。</p>
+        <p class="src"><span class="chip">CNN / USA Today · 8月26日</span><a href="https://www.cnn.com/2026/08/26/tech/apple-iphone-launch-john-ternus">cnn.com</a> · <a href="https://www.usatoday.com/story/tech/2026/08/26/apple-event-date-september-2026-announced/91475540007/">usatoday.com</a></p>
+      </article>
+
+      <article class="item" id="i13">
+        <h3>Android 17 四项网络安全：ECH、本地网络权限、证书透明、运营商一键关 2G</h3>
+        <p>Google 8月27日介绍 Android 17 的网络防护。Encrypted Client Hello（ECH）配合私有 DNS，从握手起加密要访问的域名；官方称这是第一款大规模启用 ECH 的主流移动操作系统。Local Network Protection 开始强制执行：应用扫描或连接家庭局域网其他设备须先要权限，投屏应走系统选择器而不是把整网设备列表交给 App。</p>
+        <p>证书透明（CT）默认开启，证书须记入公共日志。针对伪基站/SMS blaster 把手机打回 2G 再发钓鱼短信：Android 12 已有用户手动关 2G，17 允许运营商为用户默认关闭 2G。开发者被要求升级到 OkHttp 5.5.0 以启用 ECH。</p>
+        <p class="src"><span class="chip">Google · 8月27日</span><a href="https://blog.google/security/new-android-network-security-protections/">blog.google · Android 17 网络防护</a></p>
+      </article>
+
+      <article class="item" id="i14">
+        <h3>Google 搜索 AI Mode 能盯机票价、看里程、并直接订酒店</h3>
+        <p>同日，Search 的 AI Mode 加上三项旅行能力。机票价格追踪从 Google Flights 搬进对话：确认后价格变动发邮件，覆盖 180 多个国家和地区（不含欧洲经济区）。积分/里程报价全球可用，首批伙伴包括 Alaska/Hawaiian、美国航空、Choice、Hilton、Wyndham，后续还有 Accor、Flying Blue、Hyatt、LATAM 和汉莎集团。</p>
+        <p>酒店预订先在美国英语推出：对话里选出酒店后点「Continue on Google」，用 Google Pay 完成；酒店或预订平台是商户、负责客服。伙伴包括 Booking.com、Expedia、Hilton、Hotels.com、IHG、Marriott、Priceline、Trip.com、Wyndham 等。</p>
+        <p class="src"><span class="chip">Google · 8月27日</span><a href="https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/">blog.google · AI Mode 旅行预订</a></p>
+      </article>
+    </section>
+
+    <section id="s4">
+      <h2>4. 抗衰 / 长寿新论文</h2>
+      <p class="authors" style="margin-bottom:1rem;">近 24–48 小时 Nature Aging / bioRxiv 上像样的机制新文偏少。下列三篇均在窗口内正式见刊或可检索到摘要，宁缺毋滥，不拿上周已报过的 CDK4/6、步态钟凑数。</p>
+
+      <article class="item" id="i15">
+        <h3>线虫肠道分泌的磷酸酶 ACP7：过表达且分泌出去，寿命才会延长</h3>
+        <p class="orig">An in vivo resource of age-regulated C. elegans intestinal secretory-pathway proteins highlights secreted enzymes associated with lifespan regulation</p>
+        <p class="authors">J. W. Miklas、K. Papsdorf、E. D. Sun、A. Tsenter 等。Cell Reports，2026年8月27日。DOI: 10.1016/j.celrep.2026.117902。PMID: 42658673。</p>
+        <p>胞外蛋白如何参与衰老一直被低估。作者用邻近标记加定量蛋白质组，系统刻画秀丽隐杆线虫肠道分泌通路，找出随年龄变化、并在体内验证确被分泌的蛋白。其中 ACP7 在人类中保守；过表达可延长寿命，且这一效应依赖分泌——留在细胞内不够。</p>
+        <p>ACP7 在胞外作为磷酸酶起作用。文中还标出分泌通路上其他影响寿命的蛋白，给肠道–体液通信这条抗衰轴一份可查的体内资源。这是同行评议论文，不是预印本。</p>
+        <p class="src"><span class="chip">Cell Reports · 8月27日</span><a href="https://pubmed.ncbi.nlm.nih.gov/42658673/">pubmed.ncbi.nlm.nih.gov/42658673</a> · <a href="https://doi.org/10.1016/j.celrep.2026.117902">doi.org/10.1016/j.celrep.2026.117902</a></p>
+      </article>
+
+      <article class="item" id="i16">
+        <h3>SGLT2 抑制剂在人心脏里的脱靶靶点是泛酸激酶 PANK1，足以提高心肌收缩</h3>
+        <p class="orig">SGLT2 inhibitors activate pantothenate kinase in the human heart</p>
+        <p class="authors">N. Forelli、T. Thome、D. M. Eaton、K. Schultz 等。Science，2026年8月27日。DOI: 10.1126/science.aeh4856。</p>
+        <p>SGLT2 抑制剂能降低心衰死亡，但药理靶点并不清楚——心脏几乎不表达 SGLT2。作者证明它们直接激活辅酶 A 合成的限速酶泛酸激酶 PANK1：稳定同位素输注显示人心脏组织里 CoA 合成和燃料利用被广泛上调；生理浓度即可结合 PANK1、诱导构象变化并提高酶活。</p>
+        <p>计算建模标出结合位点，突变验证；PANK 激活对人心肌细胞收缩力的提升是必要且充分的。这把一类已上市心血管药的部分获益，从「降糖」改写成心脏代谢重编程。是否直接可移植到衰老心脏干预，文中未做寿命实验。</p>
+        <p class="src"><span class="chip">Science · 8月27日</span><a href="https://www.science.org/doi/10.1126/science.aeh4856">science.org/doi/10.1126/science.aeh4856</a></p>
+      </article>
+
+      <article class="item" id="i17">
+        <h3>累积衰弱，而不只是某一次评分，预测随后的认知下降、痴呆和死亡</h3>
+        <p class="orig">The association of cumulative frailty with subsequent cognitive decline, dementia incidence, and all-cause mortality: a longitudinal cohort study</p>
+        <p class="authors">T. Li、Z. Zhang、T. Zou、H. Chu。Aging &amp; Mental Health，2026年8月27日。DOI: 10.1080/13607863.2026.2720599。</p>
+        <p>衰弱是动态的，但「一路累积了多少衰弱」与后来认知、痴呆、死亡的关系并不清楚。作者用欧洲 SHARE 第 4–8 波：把第 4–6 波五组分衰弱评分的曲线下面积定义为累积衰弱，再看第 7–8 波认知变化、新发痴呆和全因死亡。</p>
+        <p>认知、痴呆、死亡分析分别纳入 11,846、12,108、22,696 人。累积衰弱每高 1 个标准差，即刻记忆、延迟记忆和整体认知的年下降更快；相对稳健者，衰弱者痴呆风险 HR 5.307（3.504–8.036），死亡 HR 2.922。这是流行病学关联，不是干预试验，但对「一次横断面衰弱评分不够」给出了定量证据。</p>
+        <p class="src"><span class="chip">Aging &amp; Mental Health · 8月27日</span><a href="https://pubmed.ncbi.nlm.nih.gov/42659046/">pubmed.ncbi.nlm.nih.gov/42659046</a> · <a href="https://doi.org/10.1080/13607863.2026.2720599">doi.org/10.1080/13607863.2026.2720599</a></p>
+      </article>
+    </section>
+
+    <footer>
+      <p>每日简报 · 2026-08-28 · 时区 Asia/Shanghai。条目均来自本次打开或检索到的公开网页与论文页面，标题、链接、作者与结论未编造。昨日已收录的 OpenAI Hugging Face 事故、Jalapeño、Gemini 3.5 Transcribe、法律版 Gemini Enterprise 等未重复。抗衰栏近 48 小时机制新文偏少，只收窗口内三篇，不凑数。</p>
+    </footer>
+  </div>
+</body>
+</html>
