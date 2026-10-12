@@ -17,7 +17,7 @@ PER_PAGE = 14  # ~12–16 entries per page
 import sys as _sys
 _sys.dont_write_bytecode = True
 _sys.path.insert(0, str(ROOT / "tools"))
-from briefing_common import HEAD_ICONS, SECTIONS, bar_html, css_href, week_archive_html  # noqa: E402  (shared v2 design helpers)
+from briefing_common import HEAD_ICONS, SECTIONS, bar_html, css_href, site_foot_html, subscribe_html, week_archive_html  # noqa: E402  (shared v2 design helpers)
 import validate_briefing as V  # noqa: E402  (data-file loader: assigns story ids)
 import os  # noqa: E402
 
@@ -227,7 +227,7 @@ def render_page(page_num, total_pages, page_entries, newest_href, entries_all=No
     cards_html = render_cards(page_entries)
     pager_html = render_pager(page_num, total_pages, len(page_entries))
     hero = latest_hero(entries_all[0]) if page_num == 1 and entries_all else ""
-    links = [("最新一期", newest_href, False), ("AI 日报", "/ai/", False), ("订阅", "/feed.xml", False)]
+    links = [("最新一期", newest_href, False), ("AI 日报", "/ai/", False), ("关于", "/about.html", False), ("订阅", "/feed.xml", False)]
     arch_h = ('    <div class="hm-arch-h"><h2>往期</h2><p class="hm-legend"><i></i>有同日 AI 日报</p></div>'
               if page_num == 1 else "")
     body_cls = "idx home" + (" hm-arch-page" if page_num > 1 else "")
@@ -252,8 +252,9 @@ def render_page(page_num, total_pages, page_entries, newest_href, entries_all=No
 {cards_html}
 {pager_html}
   </section>
+{subscribe_html("card") if page_num == 1 else ""}
 </main>
-<footer class="hm-foot"><span>每日简报 · 共 {len(entries_all)} 期</span><span><a href="/feed.xml">Atom 订阅</a> · <a href="/ai/">AI 前沿情报日报</a></span></footer>
+{site_foot_html(f"每日简报 · 共 {len(entries_all)} 期")}
 </body>
 </html>
 """
@@ -286,6 +287,10 @@ def main():
     print(f"wrote {len(written)} page(s) with {total} entries ({PER_PAGE}/page):")
     for w in written:
         print(f"  {w}")
+
+    # static pages: /about.html + auto-generated /corrections.html (idempotent)
+    import build_pages
+    build_pages.main(ROOT)
 
     # SEO/social tags on all pages + feed.xml / sitemap.xml / robots.txt (idempotent)
     import sys

@@ -21,6 +21,7 @@ from pathlib import Path
 sys.dont_write_bytecode = True
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from briefing_common import (  # noqa: E402
+    site_foot_html, subscribe_html,
     HEAD_ICONS, SECTIONS, SITE, bar_html, css_href, date_cn, reading_minutes, tag_html,
 )
 import validate_briefing as V  # noqa: E402
@@ -128,8 +129,8 @@ def render(data: dict, site: Path) -> str:
         rail_html += f'<li><a href="#{iid}">{E(title)}</a></li>'
     rail_html += "</ol>" if cur else ""
 
-    corr = "".join(f'<aside class="corr"><b>更正</b>{E(c["text"])}（<a href="{E(c["source"]["url"])}">'
-                   f'{E(c["source"]["name"])}</a>）</aside>' for c in data.get("corrections") or [])
+    corr = "".join(f'<aside class="corr" id="corr-{i + 1}"><b>更正</b>{E(c["text"])}（<a href="{E(c["source"]["url"])}">'
+                   f'{E(c["source"]["name"])}</a>）</aside>' for i, c in enumerate(data.get("corrections") or []))
     notes = f'<p class="notes"><b>本期说明</b>{E(data["notes"])}</p>' if data.get("notes") else ""
 
     prev, nxt, _ = neighbours(site, d)
@@ -183,10 +184,11 @@ def render(data: dict, site: Path) -> str:
       {notes}
       <details><summary>证据标签怎么读</summary><ul class="legend">{legend}</ul></details>
       <p class="pn">{prev_a}<a href="/">全部往期</a>{next_a}</p>
-      <p class="disc">来源为公开报道、期刊与预印本。仅供阅读参考，不构成投资或医疗建议。</p>
+      {subscribe_html("slim")}
     </footer>
   </main>
 </div>
+{site_foot_html()}
 </body>
 </html>
 '''

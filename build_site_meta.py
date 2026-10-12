@@ -36,7 +36,9 @@ FALLBACK = {
     "ai": "AI 前沿情报日报：事实与推断分开，宁缺毋滥。",
     "index": "每日简报归档：覆盖 AI、科学、科技业界与抗衰论文。",
     "ai-index": "AI 前沿情报日报归档：事实与推断分开，宁缺毋滥。",
+    "page": "每日简报：覆盖 AI、科学、科技业界与抗衰论文。",
 }
+STATIC_PAGES = ["about.html", "corrections.html"]  # written by tools/build_pages.py
 
 
 # ---------------------------------------------------------------- discovery
@@ -52,6 +54,7 @@ def index_pages() -> list[Path]:
     out = [ROOT / "index.html"]
     out += sorted((ROOT / "page").glob("*.html"), key=lambda p: int(p.stem) if p.stem.isdigit() else 0)
     out.append(ROOT / "ai" / "index.html")
+    out += [ROOT / n for n in STATIC_PAGES]
     return [p for p in out if p.exists()]
 
 
@@ -68,6 +71,8 @@ def kind_of(p: Path) -> str:
     rel = p.relative_to(ROOT).as_posix()
     if rel == "ai/index.html":
         return "ai-index"
+    if rel in STATIC_PAGES:
+        return "page"
     if rel == "index.html" or rel.startswith("page/"):
         return "index"
     if rel.startswith("ai/"):
@@ -98,7 +103,7 @@ def page_title(text: str) -> str:
 def description(text: str, kind: str) -> str:
     body = text.split("</head>", 1)[-1]
     m = None
-    if kind == "briefing":
+    if kind in ("briefing", "page"):
         m = re.search(r'<p class="lede">(.*?)</p>', body, re.S)
     elif kind == "ai":
         m = re.search(r'<div class="lede">(.*?)</div>', body, re.S)

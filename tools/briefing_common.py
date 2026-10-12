@@ -235,3 +235,42 @@ def week_archive_html(items: list[dict], side_label: str, side_missing: str = ""
             f'<ul class="hm-rows">{"".join(lis)}</ul></section>'
         )
     return "\n".join(out)
+
+
+# ---- public-site components: subscribe block, site footer, disclaimer ------------------------
+# Email subscription is built but OFF until a real provider is wired. To enable: set "enabled": True
+# and fill "action" (form POST URL of the newsletter provider); field name defaults to "email".
+EMAIL_SUBSCRIBE = {"enabled": False, "action": "", "field": "email", "button": "订阅"}
+DISCLAIMER = ("摘要为本站原创编写，链接指向原始来源；不转载付费内容。仅供阅读参考，"
+              "不构成投资建议；抗衰老栏目不构成医疗建议。")
+
+
+def subscribe_html(variant: str = "card") -> str:
+    """Subscribe block. variant="card" (homepage) or "slim" (content-page footer). RSS always;
+    the email form only renders when EMAIL_SUBSCRIBE["enabled"] and an action URL are set."""
+    cfg = EMAIL_SUBSCRIBE
+    email = ""
+    if cfg.get("enabled") and cfg.get("action"):
+        email = (f'<form class="sub-form" action="{html.escape(cfg["action"])}" method="post">'
+                 f'<label class="sub-sr" for="sub-email-{variant}">邮箱地址</label>'
+                 f'<input id="sub-email-{variant}" type="email" name="{html.escape(cfg.get("field", "email"))}" '
+                 f'placeholder="you@example.com" required autocomplete="email">'
+                 f'<button type="submit">{html.escape(cfg.get("button", "订阅"))}</button></form>')
+    rss = ('<a class="sub-rss" href="/feed.xml"><svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true">'
+           '<circle cx="3.5" cy="12.5" r="1.6" fill="currentColor"/><path d="M2 7.2a6.8 6.8 0 0 1 6.8 6.8M2 2.6A11.4 11.4 0 0 1 13.4 14" '
+           'fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>RSS / Atom 订阅</a>')
+    if variant == "slim":
+        return (f'<aside class="sub sub-slim" aria-label="订阅"><p><b>每个工作日一期。</b>'
+                f'用 RSS 阅读器订阅，新一期自动送达。</p><div class="sub-act">{email}{rss}</div></aside>')
+    return (f'<aside class="sub sub-card" aria-label="订阅"><div class="sub-tx"><h2>订阅每日简报</h2>'
+            f'<p>每个工作日一期，综合简报与 AI 日报同一个订阅源。复制 <code>jianbao.space/feed.xml</code> '
+            f'到任意 RSS 阅读器即可。</p></div><div class="sub-act">{email}{rss}</div></aside>')
+
+
+def site_foot_html(left: str = "") -> str:
+    """Site-wide footer for new-template pages: links + disclaimer."""
+    left = left or "jianbao.space"
+    return (f'<footer class="hm-foot site-foot"><div class="sf-row"><span>{left}</span>'
+            f'<nav class="sf-links" aria-label="站点"><a href="/">每日简报</a><a href="/ai/">AI 日报</a>'
+            f'<a href="/about.html">关于</a><a href="/corrections.html">更正记录</a><a href="/feed.xml">订阅</a></nav></div>'
+            f'<p class="sf-disc">{DISCLAIMER}</p></footer>')
