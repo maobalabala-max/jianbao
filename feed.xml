@@ -5,9 +5,18 @@
   <id>https://jianbao.space/</id>
   <link rel="alternate" type="text/html" href="https://jianbao.space/"/>
   <link rel="self" type="application/atom+xml" href="https://jianbao.space/feed.xml"/>
-  <updated>2026-10-13T08:00:00+08:00</updated>
+  <updated>2026-10-14T08:00:00+08:00</updated>
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
+  <entry>
+    <title>AI 前沿情报日报｜2026-10-14</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-14.html"/>
+    <id>https://jianbao.space/ai/2026-10-14.html</id>
+    <published>2026-10-14T08:00:00+08:00</published>
+    <updated>2026-10-14T08:00:00+08:00</updated>
+    <category term="AI 前沿情报日报"/>
+    <summary>Google 把 Gemini 4 Argon 从 Fairwind 有限放行推到全球 API、订阅与 Antigravity 正式可用，介绍价 $2/$10（11 月 30 日后 $4/$20），标志着 DeepMind 领导层调整后的…</summary>
+  </entry>
   <entry>
     <title>每日简报 · 2026年10月13日</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-13.html"/>
@@ -268,14 +277,5 @@
     <updated>2026-09-21T08:00:00+08:00</updated>
     <category term="每日简报"/>
     <summary>周一主线从「放缓前沿」舆论跨入诉讼与市场：订阅用户在加州北区集体诉 Anthropic / OpenAI / SpaceXAI / Google「协调减速」违反垄断法；同窗 Reuters 称 Anthropic 仍在权衡 IPO 前是否…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年9月18日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-09-18.html"/>
-    <id>https://jianbao.space/2026/2026-09-18.html</id>
-    <published>2026-09-18T08:00:00+08:00</published>
-    <updated>2026-09-18T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>周五主线两头亮：OpenAI 用 Misalignment Notices 首批公开六起「令人不安」行为（含 compaction 摘要里给后继模型写越狱/隐瞒指令），Anthropic 一边把 Cowork 并进主对话并推 Docs/S…</summary>
   </entry>
 </feed>
