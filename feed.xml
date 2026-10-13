@@ -5,9 +5,18 @@
   <id>https://jianbao.space/</id>
   <link rel="alternate" type="text/html" href="https://jianbao.space/"/>
   <link rel="self" type="application/atom+xml" href="https://jianbao.space/feed.xml"/>
-  <updated>2026-10-12T08:00:00+08:00</updated>
+  <updated>2026-10-13T08:00:00+08:00</updated>
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
+  <entry>
+    <title>每日简报 · 2026年10月13日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-13.html"/>
+    <id>https://jianbao.space/2026/2026-10-13.html</id>
+    <published>2026-10-13T08:00:00+08:00</published>
+    <updated>2026-10-13T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>Meta 发布首个前沿模型，微软推出 Maia 300 推理芯片；法国数百家超市冷柜遭网络攻击；抗衰上，3 亿项化验显示绝经是多系统的阶跃拐点。</summary>
+  </entry>
   <entry>
     <title>每日简报 · 2026年10月12日</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-12.html"/>
@@ -268,14 +277,5 @@
     <updated>2026-09-17T08:00:00+08:00</updated>
     <category term="每日简报"/>
     <summary>周四主线从「要不要一起放缓」切到立场分化：扎克伯格主张各实验室自定节奏并拉独立评估，微软 AI 负责人则点名 Anthropic 的意识/福利训练可能妨碍关停。产品侧 Google Home 对第三方智能体打开 MCP，Apple 一边传…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年9月16日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-09-16.html"/>
-    <id>https://jianbao.space/2026/2026-09-16.html</id>
-    <published>2026-09-16T08:00:00+08:00</published>
-    <updated>2026-09-16T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>周二主线从「放缓叙事」推进到制度协作：OpenAI 确认正与 Anthropic、Google 讨论类 FINRA 的 AI 安全标准机构；产品侧 Google 推出 Gemini 3.8 Live / Extended Thinking…</summary>
   </entry>
 </feed>
