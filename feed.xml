@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年10月14日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-14.html"/>
+    <id>https://jianbao.space/2026/2026-10-14.html</id>
+    <published>2026-10-14T08:00:00+08:00</published>
+    <updated>2026-10-14T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>Gemini 4 Argon 全球放开；英议会听证暴露监管分歧；苹果推出 299 美元 HomeView；抗衰上，小鼠再生出现短暂「变年轻」。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-10-14</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-14.html"/>
     <id>https://jianbao.space/ai/2026-10-14.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-09-22T08:00:00+08:00</updated>
     <category term="每日简报"/>
     <summary>周二主线是「资本加厚 + 安全治理定责 + 代理商务割据」：软银发约 110 亿美元债为 OpenAI 第三期跟投再融资；OpenAI 在联大周呼吁美主导全球安全联盟，同时 The Information 披露其与 Anthropic 早…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年9月21日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-09-21.html"/>
-    <id>https://jianbao.space/2026/2026-09-21.html</id>
-    <published>2026-09-21T08:00:00+08:00</published>
-    <updated>2026-09-21T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>周一主线从「放缓前沿」舆论跨入诉讼与市场：订阅用户在加州北区集体诉 Anthropic / OpenAI / SpaceXAI / Google「协调减速」违反垄断法；同窗 Reuters 称 Anthropic 仍在权衡 IPO 前是否…</summary>
   </entry>
 </feed>
