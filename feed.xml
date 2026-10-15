@@ -5,9 +5,18 @@
   <id>https://jianbao.space/</id>
   <link rel="alternate" type="text/html" href="https://jianbao.space/"/>
   <link rel="self" type="application/atom+xml" href="https://jianbao.space/feed.xml"/>
-  <updated>2026-10-15T08:00:00+08:00</updated>
+  <updated>2026-10-16T08:00:00+08:00</updated>
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
+  <entry>
+    <title>AI 前沿情报日报｜2026-10-16</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-16.html"/>
+    <id>https://jianbao.space/ai/2026-10-16.html</id>
+    <published>2026-10-16T08:00:00+08:00</published>
+    <updated>2026-10-16T08:00:00+08:00</updated>
+    <category term="AI 前沿情报日报"/>
+    <summary>Meta 放出 Muse Spark Open 权重（816B 总参 / 42B 激活），时隔半年重回开源；但第三方 Artificial Analysis 指数为 39，仍低于小米、智谱、月之暗面的头部开源模型——美国开源在追赶，尚未反…</summary>
+  </entry>
   <entry>
     <title>每日简报 · 2026年10月15日</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-15.html"/>
@@ -268,14 +277,5 @@
     <updated>2026-09-25T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>1. 能力与效率同框：Anthropic 在呼吁“放慢前沿”后数日内推出 Claude Opus 5.5，官方叙事是“对齐审计最强 + 典型负载成本约降 40%”，把安全节奏和工程可部署性绑在同一产品上。 2. 开源侧在显式押注 RSI/…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年9月24日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-09-24.html"/>
-    <id>https://jianbao.space/2026/2026-09-24.html</id>
-    <published>2026-09-24T08:00:00+08:00</published>
-    <updated>2026-09-24T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>周四主线是「湿实验室科学演示 + 主权级代理事故 + Connect 硬件化」：Anthropic 首报 Claude 在人工湿实验条件下发现类 CRISPR 的噬菌体 ART 酶系统（约 950 代理、21 小时）；澳总理联大周公开 O…</summary>
   </entry>
 </feed>
