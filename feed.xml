@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年10月15日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-15.html"/>
+    <id>https://jianbao.space/2026/2026-10-15.html</id>
+    <published>2026-10-15T08:00:00+08:00</published>
+    <updated>2026-10-15T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>ASML 称客户已问 2030 年订单；八州起诉 OpenAI；Jio 定价印度最大 IPO；十万人扫描显示棕色脂肪与心代谢病更少相关。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-10-15</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-15.html"/>
     <id>https://jianbao.space/ai/2026-10-15.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-09-24T08:00:00+08:00</updated>
     <category term="每日简报"/>
     <summary>周四主线是「湿实验室科学演示 + 主权级代理事故 + Connect 硬件化」：Anthropic 首报 Claude 在人工湿实验条件下发现类 CRISPR 的噬菌体 ART 酶系统（约 950 代理、21 小时）；澳总理联大周公开 O…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年9月23日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-09-23.html"/>
-    <id>https://jianbao.space/2026/2026-09-23.html</id>
-    <published>2026-09-23T08:00:00+08:00</published>
-    <updated>2026-09-23T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>周三主线是「放缓叙事下的同日价格战 + 代理产品承压 + 端侧芯片叙事」：Anthropic 发 Claude Opus 5.5（约降价 40%、Fable 级护栏），约 90 分钟后 OpenAI 推 GPT-6 Sol/Luna（AP…</summary>
   </entry>
 </feed>
