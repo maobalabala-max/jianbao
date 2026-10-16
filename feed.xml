@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年10月16日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-16.html"/>
+    <id>https://jianbao.space/2026/2026-10-16.html</id>
+    <published>2026-10-16T08:00:00+08:00</published>
+    <updated>2026-10-16T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>台积电营收超指引，AI 芯片股却一周蒸发逾万亿美元；Meta 开源 816B 权重；谷歌魔法态与 AI 设计蛋白酶同日见刊；SRSF1 延长小鼠寿命。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-10-16</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-16.html"/>
     <id>https://jianbao.space/ai/2026-10-16.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-09-25T08:00:00+08:00</updated>
     <category term="每日简报"/>
     <summary>周五主线是「Google 产品线密集落地 + 美英模型共享摩擦 + 产业自建安全标准」：Gemini「Call for Me」电话代理在美区 Pixel 试点、3.8 Live Avatar 为企业对话「有脸」、DeepMind 新掌门确…</summary>
-  </entry>
-  <entry>
-    <title>AI 前沿情报日报｜2026-09-25</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-09-25.html"/>
-    <id>https://jianbao.space/ai/2026-09-25.html</id>
-    <published>2026-09-25T08:00:00+08:00</published>
-    <updated>2026-09-25T08:00:00+08:00</updated>
-    <category term="AI 前沿情报日报"/>
-    <summary>1. 能力与效率同框：Anthropic 在呼吁“放慢前沿”后数日内推出 Claude Opus 5.5，官方叙事是“对齐审计最强 + 典型负载成本约降 40%”，把安全节奏和工程可部署性绑在同一产品上。 2. 开源侧在显式押注 RSI/…</summary>
   </entry>
 </feed>
