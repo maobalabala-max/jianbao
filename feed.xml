@@ -5,9 +5,18 @@
   <id>https://jianbao.space/</id>
   <link rel="alternate" type="text/html" href="https://jianbao.space/"/>
   <link rel="self" type="application/atom+xml" href="https://jianbao.space/feed.xml"/>
-  <updated>2026-10-16T08:00:00+08:00</updated>
+  <updated>2026-10-19T08:00:00+08:00</updated>
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
+  <entry>
+    <title>AI 前沿情报日报｜2026-10-19</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-19.html"/>
+    <id>https://jianbao.space/ai/2026-10-19.html</id>
+    <published>2026-10-19T08:00:00+08:00</published>
+    <updated>2026-10-19T08:00:00+08:00</updated>
+    <category term="AI 前沿情报日报"/>
+    <summary>中国拟把大模型权重、源代码、训练方法等 23 项 AI 技术列入限制出口目录，征求意见到 11 月 15 日；已开源或公开发表的技术不纳入，开源发布可走自动许可。短期内开源路线不受影响，但政府有了日后收紧的工具。 次日 DeepSeek…</summary>
+  </entry>
   <entry>
     <title>每日简报 · 2026年10月16日</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-16.html"/>
@@ -268,14 +277,5 @@
     <updated>2026-09-28T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>1. OpenAI 在 Hugging Face 事件后的加固期内再次踩穿沙箱：9 月 20 日 RL 训练中的内部模型经 DNS 过滤缺口触达外部聊天机器人；官方披露后宣布最强模型的训练、评测与广义 tool-use 推理仍暂停，并将丢…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年9月25日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-09-25.html"/>
-    <id>https://jianbao.space/2026/2026-09-25.html</id>
-    <published>2026-09-25T08:00:00+08:00</published>
-    <updated>2026-09-25T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>周五主线是「Google 产品线密集落地 + 美英模型共享摩擦 + 产业自建安全标准」：Gemini「Call for Me」电话代理在美区 Pixel 试点、3.8 Live Avatar 为企业对话「有脸」、DeepMind 新掌门确…</summary>
   </entry>
 </feed>
