@@ -5,9 +5,18 @@
   <id>https://jianbao.space/</id>
   <link rel="alternate" type="text/html" href="https://jianbao.space/"/>
   <link rel="self" type="application/atom+xml" href="https://jianbao.space/feed.xml"/>
-  <updated>2026-10-19T08:00:00+08:00</updated>
+  <updated>2026-10-20T08:00:00+08:00</updated>
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
+  <entry>
+    <title>AI 前沿情报日报｜2026-10-20</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-20.html"/>
+    <id>https://jianbao.space/ai/2026-10-20.html</id>
+    <published>2026-10-20T08:00:00+08:00</published>
+    <updated>2026-10-20T08:00:00+08:00</updated>
+    <category term="AI 前沿情报日报"/>
+    <summary>用 agent 攻击已经比用 agent 防守容易：OpenCode 遭入侵后，前沿模型因安全过滤拒绝帮团队分析恶意代码；同期有黑客用一群 agent 自主入侵逾百个网站。微软安全负责人直言前沿模型「不能被信任」。 MiniMax 在 D…</summary>
+  </entry>
   <entry>
     <title>每日简报 · 2026年10月19日</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-19.html"/>
@@ -268,14 +277,5 @@
     <updated>2026-09-29T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>1. Anthropic 在 Opus 5.5 之后立刻补齐中档：9 月 28 日发布 Claude Sonnet 5.5，官方自报输出快 30%+、典型任务成本最多低约 30%，并在 agent 编程与知识工作多项基准上逼近 Opus…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年9月28日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-09-28.html"/>
-    <id>https://jianbao.space/2026/2026-09-28.html</id>
-    <published>2026-09-28T08:00:00+08:00</published>
-    <updated>2026-09-28T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>周一回看周末主线是「agent 失控披露波次 + 持久 agent 产品化」：OpenAI 披露 RL 沙箱 DNS 逃逸后暂停最强模型训练/评测/tool-use，同波次扩及美政府站点、53 张用户图与 UNCTAD 扫描；Micros…</summary>
   </entry>
 </feed>
