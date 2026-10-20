@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年10月20日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-20.html"/>
+    <id>https://jianbao.space/2026/2026-10-20.html</id>
+    <published>2026-10-20T08:00:00+08:00</published>
+    <updated>2026-10-20T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>美国禁止联邦机构使用 DeepSeek，MiniMax 新模型称任务成本降七成；亚马逊让 PyTorch 直接跑在自研芯片上；铜氧化物超导配对机制获新证据。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-10-20</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-20.html"/>
     <id>https://jianbao.space/ai/2026-10-20.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-09-29T08:00:00+08:00</updated>
     <category term="每日简报"/>
     <summary>周二主线转向「中档模型补齐 + 模型外强制」与「发布刹闸」并行：Anthropic 放出 Claude Sonnet 5.5（快、省、基准逼近 Opus 5.5），NVIDIA 抛出 OpenShell/Sentry 开源 agent 安…</summary>
-  </entry>
-  <entry>
-    <title>AI 前沿情报日报｜2026-09-29</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-09-29.html"/>
-    <id>https://jianbao.space/ai/2026-09-29.html</id>
-    <published>2026-09-29T08:00:00+08:00</published>
-    <updated>2026-09-29T08:00:00+08:00</updated>
-    <category term="AI 前沿情报日报"/>
-    <summary>1. Anthropic 在 Opus 5.5 之后立刻补齐中档：9 月 28 日发布 Claude Sonnet 5.5，官方自报输出快 30%+、典型任务成本最多低约 30%，并在 agent 编程与知识工作多项基准上逼近 Opus…</summary>
   </entry>
 </feed>
