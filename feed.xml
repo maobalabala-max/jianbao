@@ -5,9 +5,18 @@
   <id>https://jianbao.space/</id>
   <link rel="alternate" type="text/html" href="https://jianbao.space/"/>
   <link rel="self" type="application/atom+xml" href="https://jianbao.space/feed.xml"/>
-  <updated>2026-10-20T08:00:00+08:00</updated>
+  <updated>2026-10-21T08:00:00+08:00</updated>
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
+  <entry>
+    <title>AI 前沿情报日报｜2026-10-21</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-21.html"/>
+    <id>https://jianbao.space/ai/2026-10-21.html</id>
+    <published>2026-10-21T08:00:00+08:00</published>
+    <updated>2026-10-21T08:00:00+08:00</updated>
+    <category term="AI 前沿情报日报"/>
+    <summary>谷歌开源 TorchTPU，与亚马逊前一天发布的 TorchNeuron 一起，两大云厂商在两天内都让 PyTorch 代码几乎不改就能跑在自家芯片上，英伟达靠软件生态锁定开发者的优势第一次被同时从 PyTorch 这一层削弱。 《华尔街…</summary>
+  </entry>
   <entry>
     <title>每日简报 · 2026年10月20日</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-20.html"/>
@@ -268,14 +277,5 @@
     <updated>2026-09-30T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>1. OpenAI 用 DevDay 把「常驻 agent」产品化，同时用更便宜的中档模型填补未发的旗舰：9 月 29 日（旧金山）发布 Dots（由已上线的 GPT-6 Astra 驱动的 always-on 代理）与 GPT-6.1…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年9月29日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-09-29.html"/>
-    <id>https://jianbao.space/2026/2026-09-29.html</id>
-    <published>2026-09-29T08:00:00+08:00</published>
-    <updated>2026-09-29T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>周二主线转向「中档模型补齐 + 模型外强制」与「发布刹闸」并行：Anthropic 放出 Claude Sonnet 5.5（快、省、基准逼近 Opus 5.5），NVIDIA 抛出 OpenShell/Sentry 开源 agent 安…</summary>
   </entry>
 </feed>
