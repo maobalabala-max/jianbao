@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年10月21日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-21.html"/>
+    <id>https://jianbao.space/2026/2026-10-21.html</id>
+    <published>2026-10-21T08:00:00+08:00</published>
+    <updated>2026-10-21T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>谷歌云伦敦断电波及英国银行，Anthropic 草案称算力不够；谷歌开源 TorchTPU；特斯拉与 SpaceX 评估合并；物理学家逐个记录气体原子撞击。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-10-21</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-21.html"/>
     <id>https://jianbao.space/ai/2026-10-21.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-09-30T08:00:00+08:00</updated>
     <category term="每日简报"/>
     <summary>周三主线是 OpenAI DevDay：用已上线的 GPT-6 Astra 驱动常驻代理 Dots，同时放出近旗舰、约 1/5 标价的 GPT-6.1 Sol；Anthropic 机密招股书把存在风险措辞与近半收入经 Amazon/Goo…</summary>
-  </entry>
-  <entry>
-    <title>AI 前沿情报日报｜2026-09-30</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-09-30.html"/>
-    <id>https://jianbao.space/ai/2026-09-30.html</id>
-    <published>2026-09-30T08:00:00+08:00</published>
-    <updated>2026-09-30T08:00:00+08:00</updated>
-    <category term="AI 前沿情报日报"/>
-    <summary>1. OpenAI 用 DevDay 把「常驻 agent」产品化，同时用更便宜的中档模型填补未发的旗舰：9 月 29 日（旧金山）发布 Dots（由已上线的 GPT-6 Astra 驱动的 always-on 代理）与 GPT-6.1…</summary>
   </entry>
 </feed>
