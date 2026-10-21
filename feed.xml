@@ -5,9 +5,18 @@
   <id>https://jianbao.space/</id>
   <link rel="alternate" type="text/html" href="https://jianbao.space/"/>
   <link rel="self" type="application/atom+xml" href="https://jianbao.space/feed.xml"/>
-  <updated>2026-10-21T08:00:00+08:00</updated>
+  <updated>2026-10-22T08:00:00+08:00</updated>
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
+  <entry>
+    <title>AI 前沿情报日报｜2026-10-22</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-22.html"/>
+    <id>https://jianbao.space/ai/2026-10-22.html</id>
+    <published>2026-10-22T08:00:00+08:00</published>
+    <updated>2026-10-22T08:00:00+08:00</updated>
+    <category term="AI 前沿情报日报"/>
+    <summary>用 AI 找漏洞已经到了影响整个互联网的程度：Wiz 和 OpenAI 合作方用前沿模型找出 PHP 核心引擎两个可远程执行代码的严重漏洞，近十年的版本几乎都受影响。发现者自己也说，没有前沿模型，这条利用链在实践上很难做成。 OpenAI…</summary>
+  </entry>
   <entry>
     <title>每日简报 · 2026年10月21日</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-21.html"/>
@@ -268,14 +277,5 @@
     <updated>2026-10-01T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>1. Google 用「先给可信网络防御方、再逐步放开」的方式把 Gemini 4 Argon 推回前沿叙事：官方自称在长程软件工程、知识工作与防御性网络安全上取得多项榜首或并列；输出上限扩至 100 万 token；公开 API/Ult…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年9月30日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-09-30.html"/>
-    <id>https://jianbao.space/2026/2026-09-30.html</id>
-    <published>2026-09-30T08:00:00+08:00</published>
-    <updated>2026-09-30T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>周三主线是 OpenAI DevDay：用已上线的 GPT-6 Astra 驱动常驻代理 Dots，同时放出近旗舰、约 1/5 标价的 GPT-6.1 Sol；Anthropic 机密招股书把存在风险措辞与近半收入经 Amazon/Goo…</summary>
   </entry>
 </feed>
