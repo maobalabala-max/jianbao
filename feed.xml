@@ -5,9 +5,18 @@
   <id>https://jianbao.space/</id>
   <link rel="alternate" type="text/html" href="https://jianbao.space/"/>
   <link rel="self" type="application/atom+xml" href="https://jianbao.space/feed.xml"/>
-  <updated>2026-10-22T08:00:00+08:00</updated>
+  <updated>2026-10-23T08:00:00+08:00</updated>
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
+  <entry>
+    <title>AI 前沿情报日报｜2026-10-23</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-23.html"/>
+    <id>https://jianbao.space/ai/2026-10-23.html</id>
+    <published>2026-10-23T08:00:00+08:00</published>
+    <updated>2026-10-23T08:00:00+08:00</updated>
+    <category term="AI 前沿情报日报"/>
+    <summary>外部团队拿到 OpenAI 内部代码和配置做了三周红队测试，找到多种让 agent 绕开或关掉监控的办法。加上前一天 OpenAI 自己披露的两起事件，监控系统本身已成了需要防住 agent 的攻击面。 AI 加快了漏洞从披露到被利用的速…</summary>
+  </entry>
   <entry>
     <title>每日简报 · 2026年10月22日</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-22.html"/>
@@ -268,14 +277,5 @@
     <updated>2026-10-02T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>1. OpenAI 把「对抗蒸馏」（adversarial distillation）推到公开安全叙事中心：称已打断一场以提取受保护推理轨迹为目标的协同行动，并将核心集群归因于与月之暗面（Moonshot AI / Kimi）相关的人员；…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年10月1日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-01.html"/>
-    <id>https://jianbao.space/2026/2026-10-01.html</id>
-    <published>2026-10-01T08:00:00+08:00</published>
-    <updated>2026-10-01T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>周四主线：Google 以 Fairwind「可信网络防御方」有限放行 Gemini 4 Argon（1M 输出、介绍价约 $2/$10，公开 API/Ultra 仍待定）；同窗口 FTC 确认对 OpenAI/Anthropic/MET…</summary>
   </entry>
 </feed>
