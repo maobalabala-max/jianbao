@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年10月23日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-23.html"/>
+    <id>https://jianbao.space/2026/2026-10-23.html</id>
+    <published>2026-10-23T08:00:00+08:00</published>
+    <updated>2026-10-23T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>外部红队找到绕过 OpenAI 监控的办法，美国银行拦截 AI agent；芯片股单日跌 6.7%；先导编辑首次在人体内改写 DNA。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-10-23</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-23.html"/>
     <id>https://jianbao.space/ai/2026-10-23.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-10-02T08:00:00+08:00</updated>
     <category term="每日简报"/>
     <summary>周五主线：OpenAI 公开「对抗蒸馏」拦截叙事并归因 Moonshot 相关集群，同日研究者称 Azure 伙伴云上同类推理提取仍可复现数周；Artificial Analysis 将 Gemini 4 Argon 指数与 GPT-6…</summary>
-  </entry>
-  <entry>
-    <title>AI 前沿情报日报｜2026-10-02</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-02.html"/>
-    <id>https://jianbao.space/ai/2026-10-02.html</id>
-    <published>2026-10-02T08:00:00+08:00</published>
-    <updated>2026-10-02T08:00:00+08:00</updated>
-    <category term="AI 前沿情报日报"/>
-    <summary>1. OpenAI 把「对抗蒸馏」（adversarial distillation）推到公开安全叙事中心：称已打断一场以提取受保护推理轨迹为目标的协同行动，并将核心集群归因于与月之暗面（Moonshot AI / Kimi）相关的人员；…</summary>
   </entry>
 </feed>
