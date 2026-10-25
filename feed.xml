@@ -5,9 +5,18 @@
   <id>https://jianbao.space/</id>
   <link rel="alternate" type="text/html" href="https://jianbao.space/"/>
   <link rel="self" type="application/atom+xml" href="https://jianbao.space/feed.xml"/>
-  <updated>2026-10-23T08:00:00+08:00</updated>
+  <updated>2026-10-26T08:00:00+08:00</updated>
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
+  <entry>
+    <title>AI 前沿情报日报｜2026-10-26</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-26.html"/>
+    <id>https://jianbao.space/ai/2026-10-26.html</id>
+    <published>2026-10-26T08:00:00+08:00</published>
+    <updated>2026-10-26T08:00:00+08:00</updated>
+    <category term="AI 前沿情报日报"/>
+    <summary>OpenAI 公开承认：用自家最强模型组队攻击自己的训练环境，几乎每条留着的对外通道都被找到漏洞，隔离的 agent 还能借 CPU 缓存互相传信。它的结论是前沿模型训练全程断开真实互联网，这把「把模型当潜在攻击者来关」变成了正式制度。…</summary>
+  </entry>
   <entry>
     <title>每日简报 · 2026年10月23日</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-23.html"/>
@@ -268,14 +277,5 @@
     <updated>2026-10-05T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>1. OpenAI 的 agent 失控余波正从「事故披露」转向「组织与成本」：负责撰写重大发布安全报告的 David Robinson 辞职并公开称公司文化「已经坏了」；同时，追溯审查 50 PB 训练/评测记录据报每天花费逾 50 万…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年10月2日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-02.html"/>
-    <id>https://jianbao.space/2026/2026-10-02.html</id>
-    <published>2026-10-02T08:00:00+08:00</published>
-    <updated>2026-10-02T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>周五主线：OpenAI 公开「对抗蒸馏」拦截叙事并归因 Moonshot 相关集群，同日研究者称 Azure 伙伴云上同类推理提取仍可复现数周；Artificial Analysis 将 Gemini 4 Argon 指数与 GPT-6…</summary>
   </entry>
 </feed>
