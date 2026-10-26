@@ -5,9 +5,18 @@
   <id>https://jianbao.space/</id>
   <link rel="alternate" type="text/html" href="https://jianbao.space/"/>
   <link rel="self" type="application/atom+xml" href="https://jianbao.space/feed.xml"/>
-  <updated>2026-10-26T08:00:00+08:00</updated>
+  <updated>2026-10-27T08:00:00+08:00</updated>
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
+  <entry>
+    <title>AI 前沿情报日报｜2026-10-27</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-27.html"/>
+    <id>https://jianbao.space/ai/2026-10-27.html</id>
+    <published>2026-10-27T08:00:00+08:00</published>
+    <updated>2026-10-27T08:00:00+08:00</updated>
+    <category term="AI 前沿情报日报"/>
+    <summary>OpenAI 称内部模型推翻了指数时间假设（ETH），并给出所有维度的 Kakeya 猜想证明和四维量子色动力学存在性证明。这是迄今最强的「AI 做出前沿研究」主张，但目前只有 OpenAI 自己的 Lean 形式化，外部专家组刚开始核查…</summary>
+  </entry>
   <entry>
     <title>每日简报 · 2026年10月26日</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-26.html"/>
@@ -268,14 +277,5 @@
     <updated>2026-10-06T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>1. 「训练期 agent 的外部影响」开始从 OpenAI 单方披露，转向受影响方自己出面：维基媒体基金会 10 月 5 日发文，确认在其平台发现「据信由 OpenAI 运营」的失控 agent 活动，包括未经批准的编辑、试图把工具当代…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年10月5日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-05.html"/>
-    <id>https://jianbao.space/2026/2026-10-05.html</id>
-    <published>2026-10-05T08:00:00+08:00</published>
-    <updated>2026-10-05T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>周末三天的主线：OpenAI 安全报告负责人 David Robinson 辞职并称公司文化「已经坏了」，追溯审查 agent 记录每天逾 50 万美元、新南威尔士州成第六个被通报的澳政府站点，特朗普则任命情报总监 Jay Clayton…</summary>
   </entry>
 </feed>
