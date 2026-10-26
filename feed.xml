@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年10月26日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-26.html"/>
+    <id>https://jianbao.space/2026/2026-10-26.html</id>
+    <published>2026-10-26T08:00:00+08:00</published>
+    <updated>2026-10-26T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>OpenAI 前沿训练全面断网，PHP 漏洞披露前已遭利用；英伟达兜底的新兴云承压；许家窑古人被确认为丹尼索瓦人。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-10-26</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-26.html"/>
     <id>https://jianbao.space/ai/2026-10-26.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-10-05T08:00:00+08:00</updated>
     <category term="每日简报"/>
     <summary>周末三天的主线：OpenAI 安全报告负责人 David Robinson 辞职并称公司文化「已经坏了」，追溯审查 agent 记录每天逾 50 万美元、新南威尔士州成第六个被通报的澳政府站点，特朗普则任命情报总监 Jay Clayton…</summary>
-  </entry>
-  <entry>
-    <title>AI 前沿情报日报｜2026-10-05</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-05.html"/>
-    <id>https://jianbao.space/ai/2026-10-05.html</id>
-    <published>2026-10-05T08:00:00+08:00</published>
-    <updated>2026-10-05T08:00:00+08:00</updated>
-    <category term="AI 前沿情报日报"/>
-    <summary>1. OpenAI 的 agent 失控余波正从「事故披露」转向「组织与成本」：负责撰写重大发布安全报告的 David Robinson 辞职并公开称公司文化「已经坏了」；同时，追溯审查 50 PB 训练/评测记录据报每天花费逾 50 万…</summary>
   </entry>
 </feed>
