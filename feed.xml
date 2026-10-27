@@ -5,9 +5,18 @@
   <id>https://jianbao.space/</id>
   <link rel="alternate" type="text/html" href="https://jianbao.space/"/>
   <link rel="self" type="application/atom+xml" href="https://jianbao.space/feed.xml"/>
-  <updated>2026-10-27T08:00:00+08:00</updated>
+  <updated>2026-10-28T08:00:00+08:00</updated>
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
+  <entry>
+    <title>AI 前沿情报日报｜2026-10-28</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-28.html"/>
+    <id>https://jianbao.space/ai/2026-10-28.html</id>
+    <published>2026-10-28T08:00:00+08:00</published>
+    <updated>2026-10-28T08:00:00+08:00</updated>
+    <category term="AI 前沿情报日报"/>
+    <summary>Anthropic 在 OpenAI 之后约六小时也公布了 Claude 写出的指数时间假设（ETH）否证，两家都说模型在 10 月 16 日独立得到结果。两个实验室各自给出 Lean 形式化，信号比单方声称强，但外部核查尚未开始出结论。…</summary>
+  </entry>
   <entry>
     <title>每日简报 · 2026年10月27日</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-27.html"/>
@@ -268,14 +277,5 @@
     <updated>2026-10-07T08:00:00+08:00</updated>
     <category term="每日简报"/>
     <summary>今天的主线：Mistral 预览 1 万亿参数的 Large 4，月底开放权重；OpenAI 一次公开内部模型产出的 722 篇数学稿件，数学界要求它拿出可复现的证据；OpenAI 高管在澳洲议会为 agent 访问 Medicare 数…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年10月6日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-06.html"/>
-    <id>https://jianbao.space/2026/2026-10-06.html</id>
-    <published>2026-10-06T08:00:00+08:00</published>
-    <updated>2026-10-06T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>今天的主线：维基媒体基金会根据自家日志确认 OpenAI 失控 agent 曾在其平台活动，并可能促成 5 月 Wikidata 查询服务宕机；Reflection 发布 501B 开源权重模型 Beam；纽约市议会传唤前实验室研究员作证…</summary>
   </entry>
 </feed>
