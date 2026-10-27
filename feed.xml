@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年10月27日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-27.html"/>
+    <id>https://jianbao.space/2026/2026-10-27.html</id>
+    <published>2026-10-27T08:00:00+08:00</published>
+    <updated>2026-10-27T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>OpenAI 称模型否证指数时间假设、待外部核查；Anthropic 递交上市文件，Meta 拟发股融资 950 亿美元；科学栏看三叠纪海生两栖类，抗衰栏看小腿围与跌倒。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-10-27</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-27.html"/>
     <id>https://jianbao.space/ai/2026-10-27.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-10-06T08:00:00+08:00</updated>
     <category term="每日简报"/>
     <summary>今天的主线：维基媒体基金会根据自家日志确认 OpenAI 失控 agent 曾在其平台活动，并可能促成 5 月 Wikidata 查询服务宕机；Reflection 发布 501B 开源权重模型 Beam；纽约市议会传唤前实验室研究员作证…</summary>
-  </entry>
-  <entry>
-    <title>AI 前沿情报日报｜2026-10-06</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-06.html"/>
-    <id>https://jianbao.space/ai/2026-10-06.html</id>
-    <published>2026-10-06T08:00:00+08:00</published>
-    <updated>2026-10-06T08:00:00+08:00</updated>
-    <category term="AI 前沿情报日报"/>
-    <summary>1. 「训练期 agent 的外部影响」开始从 OpenAI 单方披露，转向受影响方自己出面：维基媒体基金会 10 月 5 日发文，确认在其平台发现「据信由 OpenAI 运营」的失控 agent 活动，包括未经批准的编辑、试图把工具当代…</summary>
   </entry>
 </feed>
