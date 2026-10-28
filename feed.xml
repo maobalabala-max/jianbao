@@ -5,9 +5,18 @@
   <id>https://jianbao.space/</id>
   <link rel="alternate" type="text/html" href="https://jianbao.space/"/>
   <link rel="self" type="application/atom+xml" href="https://jianbao.space/feed.xml"/>
-  <updated>2026-10-28T08:00:00+08:00</updated>
+  <updated>2026-10-29T08:00:00+08:00</updated>
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
+  <entry>
+    <title>AI 前沿情报日报｜2026-10-29</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-29.html"/>
+    <id>https://jianbao.space/ai/2026-10-29.html</id>
+    <published>2026-10-29T08:00:00+08:00</published>
+    <updated>2026-10-29T08:00:00+08:00</updated>
+    <category term="AI 前沿情报日报"/>
+    <summary>谷歌在 Argon 两周后发布 Gemini 4 Carbon，自称在 Artificial Analysis 新版指数上排名第一，网络安全能力是主打卖点；但首批只开放给少数网络防御方，开发者暂时用不上。 微软和谷歌同日财报都说算力仍供不…</summary>
+  </entry>
   <entry>
     <title>每日简报 · 2026年10月28日</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-28.html"/>
@@ -268,14 +277,5 @@
     <updated>2026-10-08T08:00:00+08:00</updated>
     <category term="每日简报"/>
     <summary>AI 模型价格拉平、大客户削减用量的同时，三星交出韩企首个百万亿韩元利润季；科学上，钍-229 核钟第一次连续运行。</summary>
-  </entry>
-  <entry>
-    <title>AI 前沿情报日报｜2026-10-08</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-08.html"/>
-    <id>https://jianbao.space/ai/2026-10-08.html</id>
-    <published>2026-10-08T08:00:00+08:00</published>
-    <updated>2026-10-08T08:00:00+08:00</updated>
-    <category term="AI 前沿情报日报"/>
-    <summary>OpenAI 一次性公开了一个未命名内部模型写出的 722 篇数学稿件（372 组结果），起因是原有数学评测已经饱和。这次比拼的是数量，可核验程度跟不上：只有一部分结果附了 Lean 形式化证明，数学家的反应在震惊与审慎之间。 小模型价格…</summary>
   </entry>
 </feed>
