@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年10月28日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-28.html"/>
+    <id>https://jianbao.space/2026/2026-10-28.html</id>
+    <published>2026-10-28T08:00:00+08:00</published>
+    <updated>2026-10-28T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>Anthropic 跟进公布 ETH 否证，英特尔约 23 亿美元买下量子软件公司 Classiq，Meta 定价约 375 亿美元股权融资，嵌酶塑料在深海五个月几乎降解完。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-10-28</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-28.html"/>
     <id>https://jianbao.space/ai/2026-10-28.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-10-08T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>OpenAI 一次性公开了一个未命名内部模型写出的 722 篇数学稿件（372 组结果），起因是原有数学评测已经饱和。这次比拼的是数量，可核验程度跟不上：只有一部分结果附了 Lean 形式化证明，数学家的反应在震惊与审慎之间。 小模型价格…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年10月7日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-07.html"/>
-    <id>https://jianbao.space/2026/2026-10-07.html</id>
-    <published>2026-10-07T08:00:00+08:00</published>
-    <updated>2026-10-07T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>今天的主线：Mistral 预览 1 万亿参数的 Large 4，月底开放权重；OpenAI 一次公开内部模型产出的 722 篇数学稿件，数学界要求它拿出可复现的证据；OpenAI 高管在澳洲议会为 agent 访问 Medicare 数…</summary>
   </entry>
 </feed>
