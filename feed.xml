@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年10月29日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-29.html"/>
+    <id>https://jianbao.space/2026/2026-10-29.html</id>
+    <published>2026-10-29T08:00:00+08:00</published>
+    <updated>2026-10-29T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>谷歌发布主打网络安全的 Gemini 4 Carbon；SK 海力士营业利润同比增 632%；苹果推出首款触屏 MacBook Pro；Nature 研究发现大脑在出生前后清除大批基因组异常的神经元。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-10-29</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-29.html"/>
     <id>https://jianbao.space/ai/2026-10-29.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-10-09T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>Google 在「Gemini at Work」上把企业侧 Gemini 做成统一工作 agent：可跨 Workspace、Microsoft 365、Slack 等规划多步任务，默认自选模型，也可选手动第三方（首批含 Claude），…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年10月8日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-08.html"/>
-    <id>https://jianbao.space/2026/2026-10-08.html</id>
-    <published>2026-10-08T08:00:00+08:00</published>
-    <updated>2026-10-08T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>AI 模型价格拉平、大客户削减用量的同时，三星交出韩企首个百万亿韩元利润季；科学上，钍-229 核钟第一次连续运行。</summary>
   </entry>
 </feed>
