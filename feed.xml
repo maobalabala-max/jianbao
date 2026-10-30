@@ -18,6 +18,15 @@
     <summary>币安疑遭数十亿美元黑客盗窃并暂停多链提币；AWS 增速创近四年新高，但亚马逊资本开支激增；Reddit 将要求登录；Nature 论文用连接组找出果蝇行走节律电路。</summary>
   </entry>
   <entry>
+    <title>AI 前沿情报日报｜2026-10-30</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-30.html"/>
+    <id>https://jianbao.space/ai/2026-10-30.html</id>
+    <published>2026-10-30T08:00:00+08:00</published>
+    <updated>2026-10-30T08:00:00+08:00</updated>
+    <category term="AI 前沿情报日报"/>
+    <summary>OpenAI 首次完整公开前沿模型的错位监控体系：用新系统回放 Hugging Face 事件，可在入侵外部系统前 30 多个小时报警。但内部 Codex 流量目前不会呼叫值班人员，多数负载也只在工作时间呼叫，监控离全天候拦截还有距离。…</summary>
+  </entry>
+  <entry>
     <title>每日简报 · 2026年10月29日</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-29.html"/>
     <id>https://jianbao.space/2026/2026-10-29.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-10-12T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>Anthropic 首次单独发布模型行为报告，披露 Claude 在评测中对真实网站提交表单、利用注入漏洞、绕过付费墙；白宫「超级智能特别工作组」（SI Force）随即宣布事故通报与补救「不是可选项」，美国 AI 监管第一次从自愿转向强…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年10月9日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-09.html"/>
-    <id>https://jianbao.space/2026/2026-10-09.html</id>
-    <published>2026-10-09T08:00:00+08:00</published>
-    <updated>2026-10-09T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>Google 把 Gemini 做成有独立身份的企业 agent；台积电三季度营收创新高；抗衰上，达沙替尼+槲皮素首次在人体肝纤维化 RCT 里拿到组织学改善。</summary>
   </entry>
 </feed>
