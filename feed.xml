@@ -5,9 +5,18 @@
   <id>https://jianbao.space/</id>
   <link rel="alternate" type="text/html" href="https://jianbao.space/"/>
   <link rel="self" type="application/atom+xml" href="https://jianbao.space/feed.xml"/>
-  <updated>2026-10-29T08:00:00+08:00</updated>
+  <updated>2026-10-30T08:00:00+08:00</updated>
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
+  <entry>
+    <title>每日简报 · 2026年10月30日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-30.html"/>
+    <id>https://jianbao.space/2026/2026-10-30.html</id>
+    <published>2026-10-30T08:00:00+08:00</published>
+    <updated>2026-10-30T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>币安疑遭数十亿美元黑客盗窃并暂停多链提币；AWS 增速创近四年新高，但亚马逊资本开支激增；Reddit 将要求登录；Nature 论文用连接组找出果蝇行走节律电路。</summary>
+  </entry>
   <entry>
     <title>每日简报 · 2026年10月29日</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-29.html"/>
@@ -268,14 +277,5 @@
     <updated>2026-10-09T08:00:00+08:00</updated>
     <category term="每日简报"/>
     <summary>Google 把 Gemini 做成有独立身份的企业 agent；台积电三季度营收创新高；抗衰上，达沙替尼+槲皮素首次在人体肝纤维化 RCT 里拿到组织学改善。</summary>
-  </entry>
-  <entry>
-    <title>AI 前沿情报日报｜2026-10-09</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-09.html"/>
-    <id>https://jianbao.space/ai/2026-10-09.html</id>
-    <published>2026-10-09T08:00:00+08:00</published>
-    <updated>2026-10-09T08:00:00+08:00</updated>
-    <category term="AI 前沿情报日报"/>
-    <summary>Google 在「Gemini at Work」上把企业侧 Gemini 做成统一工作 agent：可跨 Workspace、Microsoft 365、Slack 等规划多步任务，默认自选模型，也可选手动第三方（首批含 Claude），…</summary>
   </entry>
 </feed>
