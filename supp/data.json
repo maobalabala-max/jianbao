@@ -1,0 +1,1666 @@
+{
+ "version": "sample-0.1",
+ "updated": "2026-11-02",
+ "formula": "综合分 = 强度 × 证据 × 可达性 ÷ 27 × 100（四舍五入）",
+ "taxonomy": [
+  {
+   "group": "氧化还原 / 炎症",
+   "items": [
+    [
+     "nrf2",
+     "Nrf2/ARE 激活"
+    ],
+    [
+     "scav",
+     "直接自由基清除"
+    ],
+    [
+     "gsh",
+     "谷胱甘肽前体与抗氧化酶辅因子"
+    ],
+    [
+     "nfkb",
+     "NF-κB 抑制"
+    ],
+    [
+     "spm",
+     "脂质介质与促消退（SPM）"
+    ],
+    [
+     "nlrp3",
+     "NLRP3 炎症小体抑制"
+    ]
+   ]
+  },
+  {
+   "group": "免疫",
+   "items": [
+    [
+     "prr",
+     "模式识别受体免疫调节（Dectin-1/TLR）"
+    ],
+    [
+     "nr",
+     "免疫营养素与核受体（VDR/RAR）"
+    ],
+    [
+     "mast",
+     "肥大细胞稳定 / 抗组胺"
+    ]
+   ]
+  },
+  {
+   "group": "能量 / 线粒体",
+   "items": [
+    [
+     "mito",
+     "线粒体辅因子 / 电子传递链"
+    ],
+    [
+     "nad",
+     "NAD⁺ / Sirtuin"
+    ],
+    [
+     "ampk",
+     "AMPK / 胰岛素敏感性"
+    ],
+    [
+     "pcr",
+     "能量缓冲（磷酸肌酸）"
+    ],
+    [
+     "autoph",
+     "线粒体自噬 / 自噬"
+    ]
+   ]
+  },
+  {
+   "group": "神经内分泌",
+   "items": [
+    [
+     "nt",
+     "神经递质前体 / 调节"
+    ],
+    [
+     "hpa",
+     "HPA 轴 / 适应原"
+    ],
+    [
+     "horm",
+     "激素受体 / 代谢"
+    ]
+   ]
+  },
+  {
+   "group": "肠道",
+   "items": [
+    [
+     "gut",
+     "益生元 / 益生菌 / 后生元与屏障"
+    ]
+   ]
+  },
+  {
+   "group": "结构 / 修复",
+   "items": [
+    [
+     "struct",
+     "结构原料"
+    ],
+    [
+     "methyl",
+     "甲基化 / 一碳代谢 / DNA 修复"
+    ]
+   ]
+  },
+  {
+   "group": "其他机制（次要）",
+   "items": [
+    [
+     "osmo",
+     "渗透调节 / 膜"
+    ],
+    [
+     "ion",
+     "离子通道 / 矿物质"
+    ],
+    [
+     "glyc",
+     "抗糖化"
+    ],
+    [
+     "no",
+     "内皮功能 / NO"
+    ],
+    [
+     "thromb",
+     "抗血栓"
+    ],
+    [
+     "seno",
+     "清除衰老细胞（Senolytic）"
+    ]
+   ]
+  }
+ ],
+ "supplements": [
+  {
+   "id": "curcumin",
+   "zh": "姜黄素",
+   "en": "Curcumin",
+   "forms": "95% 姜黄素提取物；配胡椒碱；磷脂复合物；胶束/纳米等增溶制剂",
+   "primary": "nfkb",
+   "dose": "约 500–2000 mg/日 姜黄素（增溶制剂剂量更低，以产品研究剂量为准）",
+   "applic": "小样本 RCT 提示对骨关节炎疼痛/症状有帮助；对一般健康人群的“抗炎”获益缺乏证据。普通粉末口服后血中游离姜黄素极低，体外有效浓度很难在组织中达到。",
+   "safety": [
+    "与抗凝/抗血小板药合用需谨慎",
+    "胡椒碱会抑制药物代谢酶，影响其他药物浓度",
+    "有补充剂相关肝损伤个案报告",
+    "胆结石/胆道梗阻者慎用"
+   ],
+   "suppRefs": [],
+   "mechs": [
+    {
+     "mech": "nfkb",
+     "strength": 2,
+     "evidence": 2,
+     "reach": 1,
+     "note": "体外与动物模型中抑制 NF-κB 通路；人体关节炎症状改善有小型 RCT 荟萃支持，但并未证明经由 NF-κB 起效。",
+     "refs": [
+      17999464,
+      28074653,
+      27533649
+     ],
+     "disputed": "姜黄素被列为 PAINS/不稳定化合物，大量体外“多靶点”结果可能是检测干扰；口服生物利用度极低。",
+     "needsSource": false,
+     "score": 15
+    },
+    {
+     "mech": "nrf2",
+     "strength": 1,
+     "evidence": 1,
+     "reach": 1,
+     "note": "常被宣传为 Nrf2 激活剂（亲电 Michael 受体），但主要为体外数据，且同样受生物利用度限制。",
+     "refs": [
+      28074653
+     ],
+     "disputed": "同上：体外结果可信度受化学性质质疑。",
+     "needsSource": true,
+     "score": 4
+    }
+   ],
+   "top": 15
+  },
+  {
+   "id": "sulforaphane",
+   "zh": "萝卜硫素",
+   "en": "Sulforaphane",
+   "forms": "西兰花芽粉/提取物（萝卜硫苷 + 活性黑芥子酶）；稳定化萝卜硫素",
+   "primary": "nrf2",
+   "dose": "研究常用约 50–150 µmol/日 萝卜硫素当量（约 9–27 mg），或等效的萝卜硫苷+活性黑芥子酶",
+   "applic": "转化率取决于是否含活性黑芥子酶及个人肠道菌群，个体差异很大；只含萝卜硫苷、不含活性酶的产品生物利用度低 3–4 倍。",
+   "safety": [
+    "常见胃肠不适、胀气",
+    "高剂量长期安全性数据有限"
+   ],
+   "suppRefs": [
+    25313065
+   ],
+   "mechs": [
+    {
+     "mech": "nrf2",
+     "strength": 3,
+     "evidence": 3,
+     "reach": 2,
+     "note": "目前最强效的天然 Nrf2 诱导剂之一；人体 RCT 中西兰花芽饮品显著增加苯等空气污染物的解毒排泄（Nrf2 靶基因相关的结合/排泄通路）。",
+     "refs": [
+      24913818,
+      26524341
+     ],
+     "disputed": null,
+     "needsSource": false,
+     "score": 67
+    },
+    {
+     "mech": "nlrp3",
+     "strength": 2,
+     "evidence": 1,
+     "reach": 2,
+     "note": "体外（巨噬细胞）可抑制多种炎症小体，且不依赖 Nrf2；人体尚无直接证据。",
+     "refs": [
+      26269198
+     ],
+     "disputed": null,
+     "needsSource": false,
+     "score": 15
+    }
+   ],
+   "top": 67
+  },
+  {
+   "id": "nac",
+   "zh": "N-乙酰半胱氨酸（NAC）",
+   "en": "N-Acetylcysteine (NAC)",
+   "forms": "NAC 胶囊/泡腾片；与甘氨酸组合（GlyNAC）",
+   "primary": "gsh",
+   "dose": "600–1800 mg/日，分次；GlyNAC 研究按体重给药",
+   "applic": "主要对谷胱甘肽偏低者（老年、慢性氧化应激、对乙酰氨基酚过量）有意义；谷胱甘肽正常的年轻健康人提升有限。口服生物利用度仅约 4–10%，但足以提供半胱氨酸。",
+   "safety": [
+    "恶心、腹泻、硫磺味",
+    "与硝酸甘油合用可能加重低血压/头痛",
+    "哮喘者罕见支气管痉挛"
+   ],
+   "suppRefs": [
+    21795440
+   ],
+   "mechs": [
+    {
+     "mech": "gsh",
+     "strength": 3,
+     "evidence": 3,
+     "reach": 2,
+     "note": "提供谷胱甘肽合成的限速底物半胱氨酸；老年人 GlyNAC 补充可纠正谷胱甘肽缺乏（小型 RCT）。",
+     "refs": [
+      17602868,
+      33783984,
+      3803419
+     ],
+     "disputed": "GlyNAC 人体数据主要来自同一研究组的小样本试验，尚待独立重复。",
+     "needsSource": false,
+     "score": 67
+    },
+    {
+     "mech": "scav",
+     "strength": 1,
+     "evidence": 1,
+     "reach": 1,
+     "note": "NAC 本身可与部分自由基反应，但体内主要作用是作为半胱氨酸/谷胱甘肽前体，直接清除贡献很小。",
+     "refs": [
+      17602868
+     ],
+     "disputed": null,
+     "needsSource": false,
+     "score": 4
+    }
+   ],
+   "top": 67
+  },
+  {
+   "id": "fishoil",
+   "zh": "鱼油 EPA/DHA",
+   "en": "Fish oil (EPA/DHA)",
+   "forms": "甘油三酯型/再酯化型；乙酯型；处方高纯 EPA（二十碳五烯酸乙酯）；藻油 DHA",
+   "primary": "spm",
+   "dose": "一般 1–2 g/日 EPA+DHA；降甘油三酯 2–4 g/日（医生指导）",
+   "applic": "对高甘油三酯血症者获益最明确；在一般人群一级预防中（VITAL），主要心血管终点为阴性。",
+   "safety": [
+    "≥1 g/日 长期使用与房颤风险升高相关",
+    "大剂量与抗凝药合用注意出血",
+    "鱼过敏者避免"
+   ],
+   "suppRefs": [
+    30415637
+   ],
+   "mechs": [
+    {
+     "mech": "spm",
+     "strength": 2,
+     "evidence": 3,
+     "reach": 3,
+     "note": "EPA/DHA 掺入细胞膜，替代花生四烯酸，改变类二十烷酸谱并生成 E/D 系列促消退介质（SPM）；降甘油三酯效应有大量 RCT 支持。",
+     "refs": [
+      24899309,
+      31422671
+     ],
+     "disputed": "SPM 在人体血浆中的浓度与测定方法存在争议；脂质介质谱改变可靠，但“促消退”贡献多大尚不确定。",
+     "needsSource": false,
+     "score": 67
+    },
+    {
+     "mech": "thromb",
+     "strength": 1,
+     "evidence": 3,
+     "reach": 3,
+     "note": "轻度抑制血小板聚集；大剂量 RCT 中出血事件略增、房颤风险升高。",
+     "refs": [
+      30415628,
+      34612056
+     ],
+     "disputed": null,
+     "needsSource": false,
+     "score": 33
+    }
+   ],
+   "top": 67
+  },
+  {
+   "id": "betaglucan",
+   "zh": "β-葡聚糖",
+   "en": "Beta-glucan",
+   "forms": "酵母 β-1,3/1,6-葡聚糖（颗粒型）；菌菇来源；燕麦/大麦 β-葡聚糖（可溶性膳食纤维）",
+   "primary": "prr",
+   "dose": "酵母 β-葡聚糖 250–500 mg/日；燕麦 β-葡聚糖 ≥3 g/日",
+   "applic": "酵母/菌菇来源（免疫）与燕麦/大麦来源（降胆固醇、膳食纤维）机制完全不同，不可互换。",
+   "safety": [
+    "总体耐受良好",
+    "燕麦来源大剂量可致胀气",
+    "免疫抑制治疗者使用前咨询医生"
+   ],
+   "suppRefs": [],
+   "mechs": [
+    {
+     "mech": "prr",
+     "strength": 2,
+     "evidence": 2,
+     "reach": 2,
+     "note": "颗粒型 β-葡聚糖经 Dectin-1 被巨噬细胞识别；动物研究显示口服后被肠道巨噬细胞摄取并转运至骨髓，人体仅有少量厂商资助小型 RCT（如减少上呼吸道症状）。",
+     "refs": [
+      11544516,
+      15240666,
+      23378458
+     ],
+     "disputed": "人体结局研究多为厂商资助、小样本。",
+     "needsSource": false,
+     "score": 30
+    },
+    {
+     "mech": "gut",
+     "strength": 2,
+     "evidence": 3,
+     "reach": 3,
+     "note": "燕麦 β-葡聚糖为黏性可溶性纤维，增加黏度、结合胆汁酸并被菌群发酵；RCT 荟萃显示降低 LDL-C。",
+     "refs": [
+      25411276
+     ],
+     "disputed": null,
+     "needsSource": false,
+     "score": 67
+    }
+   ],
+   "top": 67
+  },
+  {
+   "id": "vitd3",
+   "zh": "维生素 D3",
+   "en": "Vitamin D3 (cholecalciferol)",
+   "forms": "D3（胆钙化醇）；D2（麦角钙化醇，效力较弱）；骨化二醇",
+   "primary": "nr",
+   "dose": "常见 1000–2000 IU/日，依 25(OH)D 检测调整；成人长期上限一般 4000 IU/日",
+   "applic": "主要对缺乏者获益：每日/每周补充对基线 25(OH)D 很低者预防急性呼吸道感染效果最明显；对非缺乏人群，癌症与心血管硬终点 RCT 多为阴性。",
+   "safety": [
+    "过量致高钙血症",
+    "每年一次超大剂量冲击反而增加跌倒/骨折",
+    "结节病、高钙血症、肾结石者慎用"
+   ],
+   "suppRefs": [
+    30415629,
+    20460620
+   ],
+   "mechs": [
+    {
+     "mech": "nr",
+     "strength": 3,
+     "evidence": 3,
+     "reach": 3,
+     "note": "经 VDR 核受体调控免疫与钙代谢基因（如抗菌肽）；RCT/个体数据荟萃支持对呼吸道感染与自身免疫病的适度保护作用。",
+     "refs": [
+      28202713,
+      35082139
+     ],
+     "disputed": "机制与可达性明确，但对“非缺乏”人群的普遍获益不成立——高分不等于人人需要高剂量。",
+     "needsSource": false,
+     "score": 100
+    }
+   ],
+   "top": 100
+  },
+  {
+   "id": "magnesium",
+   "zh": "镁",
+   "en": "Magnesium",
+   "forms": "甘氨酸镁；柠檬酸镁；L-苏糖酸镁；氧化镁（元素含量高但吸收较差）",
+   "primary": "ion",
+   "dose": "200–400 mg/日 元素镁",
+   "applic": "主要对摄入不足或镁丢失者（长期服 PPI/利尿剂、糖尿病、饮酒）有意义；血清镁不能准确反映体内总镁。",
+   "safety": [
+    "腹泻（尤其氧化镁、柠檬酸镁）",
+    "肾功能不全者慎用（高镁血症）",
+    "与四环素/喹诺酮/双膦酸盐需间隔服用"
+   ],
+   "suppRefs": [],
+   "mechs": [
+    {
+     "mech": "ion",
+     "strength": 3,
+     "evidence": 3,
+     "reach": 2,
+     "note": "数百种酶（含 ATP 相关反应）的辅因子，调节钙通道、NMDA 受体与血管张力；RCT 荟萃显示补镁轻度降低血压。",
+     "refs": [
+      25540137,
+      27402922
+     ],
+     "disputed": null,
+     "needsSource": false,
+     "score": 67
+    },
+    {
+     "mech": "ampk",
+     "strength": 1,
+     "evidence": 3,
+     "reach": 2,
+     "note": "补镁 ≥4 个月可改善 HOMA-IR 与空腹血糖（荟萃分析），短期无显著效果。",
+     "refs": [
+      27329332
+     ],
+     "disputed": null,
+     "needsSource": false,
+     "score": 22
+    },
+    {
+     "mech": "nt",
+     "strength": 1,
+     "evidence": 2,
+     "reach": 2,
+     "note": "NMDA 受体生理性阻断剂；单个小型 RCT 提示改善老年失眠指标。",
+     "refs": [
+      23853635
+     ],
+     "disputed": null,
+     "needsSource": false,
+     "score": 15
+    }
+   ],
+   "top": 67
+  },
+  {
+   "id": "zinc",
+   "zh": "锌",
+   "en": "Zinc",
+   "forms": "葡萄糖酸锌；醋酸锌含片；甘氨酸锌；吡啶甲酸锌",
+   "primary": "nr",
+   "dose": "日常 8–25 mg/日；感冒期醋酸锌含片约 75 mg/日 短期（≤1–2 周）",
+   "applic": "对锌缺乏者（老年、素食、酗酒、腹泻病）获益明确；感冒含片需感冒初起 24 小时内开始。",
+   "safety": [
+    "长期 >40 mg/日 可致铜缺乏（贫血、神经病变）",
+    "含片可致味觉异常、恶心",
+    "避免锌鼻喷剂（嗅觉丧失）",
+    "与喹诺酮/四环素间隔服用"
+   ],
+   "suppRefs": [
+    8172183
+   ],
+   "mechs": [
+    {
+     "mech": "nr",
+     "strength": 2,
+     "evidence": 3,
+     "reach": 3,
+     "note": "T 细胞发育、胸腺素活性与锌指转录因子所必需；高剂量醋酸锌含片荟萃显示缩短感冒病程。",
+     "refs": [
+      18385818,
+      28515951
+     ],
+     "disputed": "感冒含片的效果在不同荟萃/系统综述间结论不一，制剂与剂量差异大。",
+     "needsSource": false,
+     "score": 67
+    },
+    {
+     "mech": "gsh",
+     "strength": 1,
+     "evidence": 2,
+     "reach": 3,
+     "note": "Cu/Zn-SOD 等抗氧化酶的辅因子；老年人补锌 RCT 中氧化应激标志物下降（小样本）。",
+     "refs": [
+      17344507
+     ],
+     "disputed": null,
+     "needsSource": false,
+     "score": 22
+    }
+   ],
+   "top": 67
+  },
+  {
+   "id": "coq10",
+   "zh": "辅酶 Q10",
+   "en": "Coenzyme Q10",
+   "forms": "泛醌（氧化型）；泛醇（还原型）；增溶/软胶囊制剂",
+   "primary": "mito",
+   "dose": "100–300 mg/日，随含脂餐服用",
+   "applic": "可能对心衰、他汀相关肌肉症状者有帮助；健康人口服后血浆浓度上升，但多数组织（尤其肌肉、脑）中浓度难以显著提升。",
+   "safety": [
+    "可能减弱华法林作用",
+    "轻度胃肠不适"
+   ],
+   "suppRefs": [],
+   "mechs": [
+    {
+     "mech": "mito",
+     "strength": 2,
+     "evidence": 3,
+     "reach": 1,
+     "note": "电子传递链复合物 I/II→III 的电子载体；心衰 RCT（Q-SYMBIO）显示主要不良心血管事件减少，荟萃提示缓解他汀相关肌肉症状。",
+     "refs": [
+      25282031,
+      16551570,
+      30371340
+     ],
+     "disputed": "Q-SYMBIO 样本量有限、尚未被大型试验重复；他汀肌病荟萃结论在不同分析间不一致。分子量大、脂溶性高，吸收与组织摄取差。",
+     "needsSource": false,
+     "score": 22
+    }
+   ],
+   "top": 22
+  },
+  {
+   "id": "nad",
+   "zh": "NMN / NR（NAD⁺ 前体）",
+   "en": "NMN / Nicotinamide riboside",
+   "forms": "烟酰胺核糖（NR，氯化物）；烟酰胺单核苷酸（NMN）",
+   "primary": "nad",
+   "dose": "NR 300–1000 mg/日；NMN 250–1000 mg/日",
+   "applic": "能稳定提高血中 NAD⁺ 代谢物；但在健康人中的功能性获益（血压、肌力、胰岛素敏感性）大多不显著或仅见于小型试验。",
+   "safety": [
+    "短期研究耐受良好",
+    "长期（数年）安全性数据缺乏",
+    "理论上对肿瘤代谢的影响尚不清楚"
+   ],
+   "suppRefs": [
+    35235774
+   ],
+   "mechs": [
+    {
+     "mech": "nad",
+     "strength": 2,
+     "evidence": 3,
+     "reach": 2,
+     "note": "作为 NAD⁺ 合成前体提升血液 NAD⁺ 代谢组；老年肌肉中 NAD⁺ 代谢组上升，并见抗炎信号。",
+     "refs": [
+      29599478,
+      31412242
+     ],
+     "disputed": "生化靶点达成明确，但“激活 Sirtuin/延缓衰老”在人体缺乏直接证据。",
+     "needsSource": false,
+     "score": 44
+    },
+    {
+     "mech": "ampk",
+     "strength": 1,
+     "evidence": 2,
+     "reach": 2,
+     "note": "单个小型 RCT：NMN 改善糖尿病前期女性肌肉胰岛素敏感性；其他 NR 试验多未见类似效果。",
+     "refs": [
+      33888596
+     ],
+     "disputed": "单一小样本结果，与多数 NR 研究不一致。",
+     "needsSource": false,
+     "score": 15
+    }
+   ],
+   "top": 44
+  },
+  {
+   "id": "berberine",
+   "zh": "小檗碱（黄连素）",
+   "en": "Berberine",
+   "forms": "盐酸小檗碱；二氢小檗碱",
+   "primary": "ampk",
+   "dose": "500 mg，每日 2–3 次，随餐",
+   "applic": "对 2 型糖尿病/血脂异常者有 RCT 支持；口服绝对生物利用度 <1%，效应可能部分来自肠道局部作用（菌群、肠道葡萄糖吸收）与肝脏首过。",
+   "safety": [
+    "抑制 CYP2D6/2C9/3A4，影响多种药物浓度",
+    "便秘、腹胀等胃肠反应",
+    "孕妇、哺乳期及新生儿禁用",
+    "与降糖药合用注意低血糖"
+   ],
+   "suppRefs": [
+    21637946,
+    21870106
+   ],
+   "mechs": [
+    {
+     "mech": "ampk",
+     "strength": 2,
+     "evidence": 3,
+     "reach": 1,
+     "note": "抑制线粒体复合物 I → 激活 AMPK（细胞与动物）；人体 RCT 与荟萃显示降低血糖、HbA1c 与血脂。",
+     "refs": [
+      16873688,
+      18285556,
+      18442638
+     ],
+     "disputed": "临床降糖效果较一致，但血药浓度远低于体外激活 AMPK 所需浓度；可达性评分被低估还是高估存在争议。",
+     "needsSource": false,
+     "score": 22
+    },
+    {
+     "mech": "gut",
+     "strength": 2,
+     "evidence": 2,
+     "reach": 3,
+     "note": "口服后大部分留在肠道，可改变肠道菌群结构（动物研究）。",
+     "refs": [
+      26396057
+     ],
+     "disputed": null,
+     "needsSource": false,
+     "score": 44
+    }
+   ],
+   "top": 44
+  },
+  {
+   "id": "creatine",
+   "zh": "肌酸",
+   "en": "Creatine",
+   "forms": "一水肌酸（证据最充分）；其他盐型无明显优势",
+   "primary": "pcr",
+   "dose": "3–5 g/日（可省略负荷期）",
+   "applic": "对力量/高强度训练者、老年人配合抗阻训练、素食者获益较明显；对脑功能的作用证据有限，主要见于短期记忆且在素食者/应激时更明显。",
+   "safety": [
+    "初期水潴留致体重增加",
+    "血肌酐读数升高（不代表肾损伤）；已有肾病者慎用"
+   ],
+   "suppRefs": [
+    29704637
+   ],
+   "mechs": [
+    {
+     "mech": "pcr",
+     "strength": 3,
+     "evidence": 3,
+     "reach": 3,
+     "note": "增加肌肉磷酸肌酸储备，快速再生 ATP；大量 RCT 与荟萃一致支持提升力量与瘦体重（配合训练）。",
+     "refs": [
+      28615996,
+      29138605
+     ],
+     "disputed": null,
+     "needsSource": false,
+     "score": 100
+    }
+   ],
+   "top": 100
+  },
+  {
+   "id": "quercetin",
+   "zh": "槲皮素",
+   "en": "Quercetin",
+   "forms": "槲皮素苷元；异槲皮素/酶修饰异槲皮素（EMIQ）；磷脂复合物",
+   "primary": "mast",
+   "dose": "500–1000 mg/日",
+   "applic": "苷元吸收差且迅速被结合代谢，血中几乎都是葡萄糖醛酸/硫酸结合物；大多数体外机制所需浓度在人体难以达到。",
+   "safety": [
+    "可能抑制部分药物代谢酶/转运体",
+    "大剂量静脉使用曾有肾毒性报告（口服少见）"
+   ],
+   "suppRefs": [
+    11361045
+   ],
+   "mechs": [
+    {
+     "mech": "mast",
+     "strength": 2,
+     "evidence": 2,
+     "reach": 1,
+     "note": "体外抑制人肥大细胞炎症因子释放（强于色甘酸钠），两项开放标签小型试验改善接触性皮炎/光敏。",
+     "refs": [
+      22470478
+     ],
+     "disputed": "人体数据为开放标签小试验；口服可达浓度存疑。",
+     "needsSource": false,
+     "score": 15
+    },
+    {
+     "mech": "nfkb",
+     "strength": 1,
+     "evidence": 1,
+     "reach": 1,
+     "note": "体外抑制肥大细胞 NF-κB 活化。",
+     "refs": [
+      22470478
+     ],
+     "disputed": null,
+     "needsSource": false,
+     "score": 4
+    },
+    {
+     "mech": "no",
+     "strength": 1,
+     "evidence": 3,
+     "reach": 2,
+     "note": "RCT 荟萃：>500 mg/日 可轻度降低血压，可能与内皮功能/代谢物有关。",
+     "refs": [
+      27405810
+     ],
+     "disputed": null,
+     "needsSource": false,
+     "score": 22
+    },
+    {
+     "mech": "seno",
+     "strength": 1,
+     "evidence": 2,
+     "reach": 1,
+     "note": "与达沙替尼联用（D+Q）可清除衰老细胞；人体仅有小型开放标签试验，且均为联合用药。",
+     "refs": [
+      25754370,
+      31542391
+     ],
+     "disputed": "单用槲皮素的 senolytic 作用很弱，人体证据均来自 D+Q 联用。",
+     "needsSource": false,
+     "score": 7
+    }
+   ],
+   "top": 22
+  },
+  {
+   "id": "ashwagandha",
+   "zh": "南非醉茄",
+   "en": "Ashwagandha (Withania somnifera)",
+   "forms": "根提取物（如 KSM-66）；根+叶提取物（如 Sensoril）；其他标准化提取物",
+   "primary": "hpa",
+   "dose": "根提取物 240–600 mg/日",
+   "applic": "对主观压力、焦虑较高者有多项小型 RCT 与荟萃支持；不同提取物（部位、醉茄内酯含量）不可直接比较。",
+   "safety": [
+    "有胆汁淤积型肝损伤病例报告",
+    "可能升高甲状腺激素",
+    "孕期禁用",
+    "与镇静剂、免疫抑制剂合用谨慎"
+   ],
+   "suppRefs": [
+    31991029
+   ],
+   "mechs": [
+    {
+     "mech": "hpa",
+     "strength": 2,
+     "evidence": 3,
+     "reach": 2,
+     "note": "多项 RCT 中降低压力量表评分与血清皮质醇；荟萃支持抗焦虑/减压效果。",
+     "refs": [
+      23439798,
+      31517876,
+      36017529
+     ],
+     "disputed": "试验多为小样本、厂商资助，提取物差异大，存在发表偏倚可能。",
+     "needsSource": false,
+     "score": 44
+    },
+    {
+     "mech": "horm",
+     "strength": 1,
+     "evidence": 2,
+     "reach": 2,
+     "note": "单个 RCT：老年超重男性 DHEA-S 与睾酮小幅上升，主观活力无差异。",
+     "refs": [
+      30854916
+     ],
+     "disputed": null,
+     "needsSource": false,
+     "score": 15
+    }
+   ],
+   "top": 44
+  },
+  {
+   "id": "theanine",
+   "zh": "L-茶氨酸",
+   "en": "L-Theanine",
+   "forms": "L-茶氨酸（如 Suntheanine）；与咖啡因组合",
+   "primary": "nt",
+   "dose": "100–400 mg/日",
+   "applic": "对主观压力、睡眠质量的改善幅度小；与咖啡因组合用于提升注意力。",
+   "safety": [
+    "一般耐受良好",
+    "可能与降压药效应叠加"
+   ],
+   "suppRefs": [],
+   "mechs": [
+    {
+     "mech": "nt",
+     "strength": 2,
+     "evidence": 2,
+     "reach": 3,
+     "note": "可透过血脑屏障，调节谷氨酸受体与 GABA/多巴胺等神经递质（主要为动物研究）；人体小型 RCT 改善压力相关症状。",
+     "refs": [
+      17182482,
+      31623400
+     ],
+     "disputed": null,
+     "needsSource": false,
+     "score": 44
+    },
+    {
+     "mech": "hpa",
+     "strength": 1,
+     "evidence": 2,
+     "reach": 3,
+     "note": "小型人体试验：急性应激下降低心率和唾液免疫球蛋白 A 的应激反应。",
+     "refs": [
+      16930802
+     ],
+     "disputed": null,
+     "needsSource": false,
+     "score": 22
+    }
+   ],
+   "top": 44
+  },
+  {
+   "id": "probiotics",
+   "zh": "益生菌（按菌株类别）",
+   "en": "Probiotics (strain-specific)",
+   "forms": "乳杆菌类（如鼠李糖乳杆菌 LGG）；双歧杆菌类；布拉氏酵母菌（S. boulardii）；芽孢杆菌类",
+   "primary": "gut",
+   "dose": "按菌株与适应证；常见 10⁹–10¹⁰ CFU/日",
+   "applic": "效果高度依赖菌株：预防抗生素相关腹泻、艰难梭菌感染的证据最好（特定菌株，如 LGG、布拉氏酵母菌）；健康人“日常补充”的证据弱。",
+   "safety": [
+    "免疫严重低下、中心静脉置管、重症患者有菌血症/真菌血症风险",
+    "抗生素后服用可能延迟自身菌群恢复"
+   ],
+   "suppRefs": [
+    30193113
+   ],
+   "mechs": [
+    {
+     "mech": "gut",
+     "strength": 2,
+     "evidence": 3,
+     "reach": 3,
+     "note": "竞争定植、产生短链脂肪酸等代谢物、维护屏障；Cochrane 综述支持预防抗生素相关腹泻与艰难梭菌腹泻。",
+     "refs": [
+      24912386,
+      29257353,
+      31039287
+     ],
+     "disputed": "结论依赖具体菌株，不能推广到所有产品；部分研究显示抗生素后服用会延迟原有菌群恢复。",
+     "needsSource": false,
+     "score": 67
+    }
+   ],
+   "top": 67
+  },
+  {
+   "id": "glycine",
+   "zh": "甘氨酸",
+   "en": "Glycine",
+   "forms": "甘氨酸粉末；与 NAC 组合（GlyNAC）",
+   "primary": "nt",
+   "dose": "睡前 3 g；GlyNAC 研究按体重给药（远高于 3 g）",
+   "applic": "睡眠研究为小样本；谷胱甘肽相关获益主要见于谷胱甘肽偏低的老年人（与 NAC 联用）。",
+   "safety": [
+    "一般耐受良好",
+    "服用氯氮平者避免大剂量"
+   ],
+   "suppRefs": [],
+   "mechs": [
+    {
+     "mech": "nt",
+     "strength": 2,
+     "evidence": 2,
+     "reach": 3,
+     "note": "抑制性神经递质与 NMDA 共激动剂；动物研究显示经视交叉上核 NMDA 受体降低体核温度促眠，人体小型试验改善睡眠受限后的日间表现。",
+     "refs": [
+      25533534,
+      22529837
+     ],
+     "disputed": null,
+     "needsSource": false,
+     "score": 44
+    },
+    {
+     "mech": "gsh",
+     "strength": 2,
+     "evidence": 2,
+     "reach": 3,
+     "note": "谷胱甘肽合成底物之一；老年人谷胱甘肽合成不足可经补充半胱氨酸+甘氨酸纠正（小型研究）。",
+     "refs": [
+      21795440,
+      33783984
+     ],
+     "disputed": "人体数据主要来自同一研究组的 GlyNAC 小样本试验。",
+     "needsSource": false,
+     "score": 44
+    }
+   ],
+   "top": 44
+  },
+  {
+   "id": "collagen",
+   "zh": "胶原蛋白肽",
+   "en": "Collagen peptides",
+   "forms": "水解胶原蛋白肽（鱼/牛/猪来源）；未变性 II 型胶原（UC-II，机制不同，未纳入评分）",
+   "primary": "struct",
+   "dose": "2.5–10 g/日",
+   "applic": "主要证据为皮肤含水量、弹性；对关节疼痛证据较弱。若日常蛋白质摄入已充足，额外获益幅度不确定。",
+   "safety": [
+    "一般耐受良好",
+    "鱼/海鲜过敏者注意来源"
+   ],
+   "suppRefs": [
+    18416885
+   ],
+   "mechs": [
+    {
+     "mech": "struct",
+     "strength": 2,
+     "evidence": 3,
+     "reach": 2,
+     "note": "提供甘氨酸/脯氨酸/羟脯氨酸；口服后血中可检出 Pro-Hyp 等二肽，体外/动物中刺激成纤维细胞；RCT 荟萃显示改善皮肤含水量与弹性。",
+     "refs": [
+      16076145,
+      19128041,
+      33742704
+     ],
+     "disputed": "纳入试验多由厂商资助，存在发表偏倚可能；“信号肽”机制在人体尚未直接证实。",
+     "needsSource": false,
+     "score": 44
+    }
+   ],
+   "top": 44
+  },
+  {
+   "id": "folateb12",
+   "zh": "叶酸 / 维生素 B12（甲基化）",
+   "en": "Folate / Vitamin B12",
+   "forms": "叶酸；5-甲基四氢叶酸（5-MTHF）；甲钴胺；氰钴胺；腺苷钴胺；羟钴胺",
+   "primary": "methyl",
+   "dose": "叶酸 400–800 µg/日；B12 口服 500–1000 µg/日（吸收不良者大剂量口服亦可经被动扩散吸收）",
+   "applic": "主要对缺乏者、同型半胱氨酸升高者、备孕女性有意义；认知相关研究中获益集中于基线同型半胱氨酸较高者。",
+   "safety": [
+    "大剂量叶酸可掩盖 B12 缺乏导致的神经损害",
+    "与甲氨蝶呤、部分抗癫痫药存在相互作用"
+   ],
+   "suppRefs": [
+    23690582
+   ],
+   "mechs": [
+    {
+     "mech": "methyl",
+     "strength": 3,
+     "evidence": 3,
+     "reach": 3,
+     "note": "一碳代谢核心辅因子：叶酸与 B12 共同将同型半胱氨酸再甲基化为蛋氨酸（SAM 来源）；RCT 证实降低同型半胱氨酸、预防神经管缺陷、减缓 MCI 患者脑萎缩。",
+     "refs": [
+      16210710,
+      1677062,
+      20838622
+     ],
+     "disputed": null,
+     "needsSource": false,
+     "score": 100
+    }
+   ],
+   "top": 100
+  },
+  {
+   "id": "urolithina",
+   "zh": "尿石素 A",
+   "en": "Urolithin A",
+   "forms": "尿石素 A（纯品补充剂）；石榴/核桃等鞣花单宁（需肠道菌群转化，仅部分人能产生）",
+   "primary": "autoph",
+   "dose": "500–1000 mg/日",
+   "applic": "直接补充可绕开“产生者/非产生者”的菌群差异；人体试验显示线粒体相关生物标志物改善，但主要功能终点部分为阴性。",
+   "safety": [
+    "短期（≤4 个月）研究耐受良好",
+    "长期安全性数据有限"
+   ],
+   "suppRefs": [
+    35050355
+   ],
+   "mechs": [
+    {
+     "mech": "autoph",
+     "strength": 2,
+     "evidence": 2,
+     "reach": 3,
+     "note": "诱导线粒体自噬（线虫/啮齿类）；人体 RCT 显示血浆酰基肉碱下降、肌肉线粒体/自噬相关蛋白表达上升，耐力指标部分改善。",
+     "refs": [
+      27400265,
+      32694802,
+      35584623
+     ],
+     "disputed": "人体试验主要由产品厂商资助，主要终点结果不一。",
+     "needsSource": false,
+     "score": 44
+    }
+   ],
+   "top": 44
+  }
+ ],
+ "refs": {
+  "1677062": {
+   "pmid": 1677062,
+   "title": "Prevention of neural tube defects: results of the Medical Research Council Vitamin Study. MRC Vitamin Study Research Group",
+   "journal": "Lancet",
+   "year": "1991",
+   "first": "",
+   "doi": null
+  },
+  "3803419": {
+   "pmid": 3803419,
+   "title": "Pharmacokinetics of N-acetylcysteine in man",
+   "journal": "Eur J Clin Pharmacol",
+   "year": "1986",
+   "first": "Borgström L 等",
+   "doi": "10.1007/BF00606662"
+  },
+  "8172183": {
+   "pmid": 8172183,
+   "title": "Zinc-induced sideroblastic anemia: report of a case, review of the literature, and description of the hematologic syndrome",
+   "journal": "Am J Hematol",
+   "year": "1994",
+   "first": "Fiske DN 等",
+   "doi": "10.1002/ajh.2830460217"
+  },
+  "11361045": {
+   "pmid": 11361045,
+   "title": "Pharmacokinetics and bioavailability of quercetin glycosides in humans",
+   "journal": "J Clin Pharmacol",
+   "year": "2001",
+   "first": "Graefe EU 等",
+   "doi": "10.1177/00912700122010366"
+  },
+  "11544516": {
+   "pmid": 11544516,
+   "title": "Immune recognition. A new receptor for beta-glucans",
+   "journal": "Nature",
+   "year": "2001",
+   "first": "Brown GD 等",
+   "doi": "10.1038/35092620"
+  },
+  "15240666": {
+   "pmid": 15240666,
+   "title": "Mechanism by which orally administered beta-1,3-glucans enhance the tumoricidal activity of antitumor monoclonal antibodies in murine tumor models",
+   "journal": "J Immunol",
+   "year": "2004",
+   "first": "Hong F 等",
+   "doi": "10.4049/jimmunol.173.2.797"
+  },
+  "16076145": {
+   "pmid": 16076145,
+   "title": "Identification of food-derived collagen peptides in human blood after oral ingestion of gelatin hydrolysates",
+   "journal": "J Agric Food Chem",
+   "year": "2005",
+   "first": "Iwai K 等",
+   "doi": "10.1021/jf050206p"
+  },
+  "16210710": {
+   "pmid": 16210710,
+   "title": "Dose-dependent effects of folic acid on blood concentrations of homocysteine: a meta-analysis of the randomized trials",
+   "journal": "Am J Clin Nutr",
+   "year": "2005",
+   "first": "Homocysteine Lowering Trialists' Collaboration",
+   "doi": "10.1093/ajcn/82.4.806"
+  },
+  "16551570": {
+   "pmid": 16551570,
+   "title": "Coenzyme Q10: absorption, tissue uptake, metabolism and pharmacokinetics",
+   "journal": "Free Radic Res",
+   "year": "2006",
+   "first": "Bhagavan HN 等",
+   "doi": "10.1080/10715760600617843"
+  },
+  "16873688": {
+   "pmid": 16873688,
+   "title": "Berberine, a natural plant product, activates AMP-activated protein kinase with beneficial metabolic effects in diabetic and insulin-resistant states",
+   "journal": "Diabetes",
+   "year": "2006",
+   "first": "Lee YS 等",
+   "doi": "10.2337/db06-0006"
+  },
+  "16930802": {
+   "pmid": 16930802,
+   "title": "L-Theanine reduces psychological and physiological stress responses",
+   "journal": "Biol Psychol",
+   "year": "2007",
+   "first": "Kimura K 等",
+   "doi": "10.1016/j.biopsycho.2006.06.006"
+  },
+  "17182482": {
+   "pmid": 17182482,
+   "title": "The neuropharmacology of L-theanine(N-ethyl-L-glutamine): a possible neuroprotective and cognitive enhancing agent",
+   "journal": "J Herb Pharmacother",
+   "year": "2006",
+   "first": "Nathan PJ 等",
+   "doi": null
+  },
+  "17344507": {
+   "pmid": 17344507,
+   "title": "Zinc supplementation decreases incidence of infections in the elderly: effect of zinc on generation of cytokines and oxidative stress",
+   "journal": "Am J Clin Nutr",
+   "year": "2007",
+   "first": "Prasad AS 等",
+   "doi": "10.1093/ajcn/85.3.837"
+  },
+  "17602868": {
+   "pmid": 17602868,
+   "title": "N-Acetylcysteine--a safe antidote for cysteine/glutathione deficiency",
+   "journal": "Curr Opin Pharmacol",
+   "year": "2007",
+   "first": "Atkuri KR 等",
+   "doi": "10.1016/j.coph.2007.04.005"
+  },
+  "17999464": {
+   "pmid": 17999464,
+   "title": "Bioavailability of curcumin: problems and promises",
+   "journal": "Mol Pharm",
+   "year": "2007",
+   "first": "Anand P 等",
+   "doi": "10.1021/mp700113r"
+  },
+  "18285556": {
+   "pmid": 18285556,
+   "title": "Berberine and its more biologically available derivative, dihydroberberine, inhibit mitochondrial respiratory complex I: a mechanism for the action of berberine to activate AMP-activated protein kinase and improve insulin action",
+   "journal": "Diabetes",
+   "year": "2008",
+   "first": "Turner N 等",
+   "doi": "10.2337/db07-1552"
+  },
+  "18385818": {
+   "pmid": 18385818,
+   "title": "Zinc in human health: effect of zinc on immune cells",
+   "journal": "Mol Med",
+   "year": "2008",
+   "first": "Prasad AS",
+   "doi": "10.2119/2008-00033.Prasad"
+  },
+  "18416885": {
+   "pmid": 18416885,
+   "title": "24-Week study on the use of collagen hydrolysate as a dietary supplement in athletes with activity-related joint pain",
+   "journal": "Curr Med Res Opin",
+   "year": "2008",
+   "first": "Clark KL 等",
+   "doi": "10.1185/030079908x291967"
+  },
+  "18442638": {
+   "pmid": 18442638,
+   "title": "Efficacy of berberine in patients with type 2 diabetes mellitus",
+   "journal": "Metabolism",
+   "year": "2008",
+   "first": "Yin J 等",
+   "doi": "10.1016/j.metabol.2008.01.013"
+  },
+  "19128041": {
+   "pmid": 19128041,
+   "title": "Effect of Prolyl-hydroxyproline (Pro-Hyp), a food-derived collagen peptide in human blood, on growth of fibroblasts from mouse skin",
+   "journal": "J Agric Food Chem",
+   "year": "2009",
+   "first": "Shigemura Y 等",
+   "doi": "10.1021/jf802785h"
+  },
+  "20460620": {
+   "pmid": 20460620,
+   "title": "Annual high-dose oral vitamin D and falls and fractures in older women: a randomized controlled trial",
+   "journal": "JAMA",
+   "year": "2010",
+   "first": "Sanders KM 等",
+   "doi": "10.1001/jama.2010.594"
+  },
+  "20838622": {
+   "pmid": 20838622,
+   "title": "Homocysteine-lowering by B vitamins slows the rate of accelerated brain atrophy in mild cognitive impairment: a randomized controlled trial",
+   "journal": "PLoS One",
+   "year": "2010",
+   "first": "Smith AD 等",
+   "doi": "10.1371/journal.pone.0012244"
+  },
+  "21637946": {
+   "pmid": 21637946,
+   "title": "Bioavailability study of berberine and the enhancing effects of TPGS on intestinal absorption in rats",
+   "journal": "AAPS PharmSciTech",
+   "year": "2011",
+   "first": "Chen W 等",
+   "doi": "10.1208/s12249-011-9632-z"
+  },
+  "21795440": {
+   "pmid": 21795440,
+   "title": "Deficient synthesis of glutathione underlies oxidative stress in aging and can be corrected by dietary cysteine and glycine supplementation",
+   "journal": "Am J Clin Nutr",
+   "year": "2011",
+   "first": "Sekhar RV 等",
+   "doi": "10.3945/ajcn.110.003483"
+  },
+  "21870106": {
+   "pmid": 21870106,
+   "title": "Repeated administration of berberine inhibits cytochromes P450 in humans",
+   "journal": "Eur J Clin Pharmacol",
+   "year": "2012",
+   "first": "Guo Y 等",
+   "doi": "10.1007/s00228-011-1108-2"
+  },
+  "22470478": {
+   "pmid": 22470478,
+   "title": "Quercetin is more effective than cromolyn in blocking human mast cell cytokine release and inhibits contact dermatitis and photosensitivity in humans",
+   "journal": "PLoS One",
+   "year": "2012",
+   "first": "Weng Z 等",
+   "doi": "10.1371/journal.pone.0033805"
+  },
+  "22529837": {
+   "pmid": 22529837,
+   "title": "The effects of glycine on subjective daytime performance in partially sleep-restricted healthy volunteers",
+   "journal": "Front Neurol",
+   "year": "2012",
+   "first": "Bannai M 等",
+   "doi": "10.3389/fneur.2012.00061"
+  },
+  "23378458": {
+   "pmid": 23378458,
+   "title": "Baker's yeast beta-glucan supplement reduces upper respiratory symptoms and improves mood state in stressed women",
+   "journal": "J Am Coll Nutr",
+   "year": "2012",
+   "first": "Talbott SM 等",
+   "doi": "10.1080/07315724.2012.10720441"
+  },
+  "23439798": {
+   "pmid": 23439798,
+   "title": "A prospective, randomized double-blind, placebo-controlled study of safety and efficacy of a high-concentration full-spectrum extract of ashwagandha root in reducing stress and anxiety in adults",
+   "journal": "Indian J Psychol Med",
+   "year": "2012",
+   "first": "Chandrasekhar K 等",
+   "doi": "10.4103/0253-7176.106022"
+  },
+  "23690582": {
+   "pmid": 23690582,
+   "title": "Preventing Alzheimer's disease-related gray matter atrophy by B-vitamin treatment",
+   "journal": "Proc Natl Acad Sci U S A",
+   "year": "2013",
+   "first": "Douaud G 等",
+   "doi": "10.1073/pnas.1301816110"
+  },
+  "23853635": {
+   "pmid": 23853635,
+   "title": "The effect of magnesium supplementation on primary insomnia in elderly: A double-blind placebo-controlled clinical trial",
+   "journal": "J Res Med Sci",
+   "year": "2012",
+   "first": "Abbasi B 等",
+   "doi": null
+  },
+  "24899309": {
+   "pmid": 24899309,
+   "title": "Pro-resolving lipid mediators are leads for resolution physiology",
+   "journal": "Nature",
+   "year": "2014",
+   "first": "Serhan CN",
+   "doi": "10.1038/nature13479"
+  },
+  "24912386": {
+   "pmid": 24912386,
+   "title": "Expert consensus document. The International Scientific Association for Probiotics and Prebiotics consensus statement on the scope and appropriate use of the term probiotic",
+   "journal": "Nat Rev Gastroenterol Hepatol",
+   "year": "2014",
+   "first": "Hill C 等",
+   "doi": "10.1038/nrgastro.2014.66"
+  },
+  "24913818": {
+   "pmid": 24913818,
+   "title": "Rapid and sustainable detoxication of airborne pollutants by broccoli sprout beverage: results of a randomized clinical trial in China",
+   "journal": "Cancer Prev Res (Phila)",
+   "year": "2014",
+   "first": "Egner PA 等",
+   "doi": "10.1158/1940-6207.CAPR-14-0103"
+  },
+  "25282031": {
+   "pmid": 25282031,
+   "title": "The effect of coenzyme Q10 on morbidity and mortality in chronic heart failure: results from Q-SYMBIO: a randomized double-blind trial",
+   "journal": "JACC Heart Fail",
+   "year": "2014",
+   "first": "Mortensen SA 等",
+   "doi": "10.1016/j.jchf.2014.06.008"
+  },
+  "25313065": {
+   "pmid": 25313065,
+   "title": "Sulforaphane treatment of autism spectrum disorder (ASD)",
+   "journal": "Proc Natl Acad Sci U S A",
+   "year": "2014",
+   "first": "Singh K 等",
+   "doi": "10.1073/pnas.1416940111"
+  },
+  "25411276": {
+   "pmid": 25411276,
+   "title": "Cholesterol-lowering effects of oat β-glucan: a meta-analysis of randomized controlled trials",
+   "journal": "Am J Clin Nutr",
+   "year": "2014",
+   "first": "Whitehead A 等",
+   "doi": "10.3945/ajcn.114.086108"
+  },
+  "25533534": {
+   "pmid": 25533534,
+   "title": "The sleep-promoting and hypothermic effects of glycine are mediated by NMDA receptors in the suprachiasmatic nucleus",
+   "journal": "Neuropsychopharmacology",
+   "year": "2015",
+   "first": "Kawai N 等",
+   "doi": "10.1038/npp.2014.326"
+  },
+  "25540137": {
+   "pmid": 25540137,
+   "title": "Magnesium in man: implications for health and disease",
+   "journal": "Physiol Rev",
+   "year": "2015",
+   "first": "de Baaij JH 等",
+   "doi": "10.1152/physrev.00012.2014"
+  },
+  "25754370": {
+   "pmid": 25754370,
+   "title": "The Achilles' heel of senescent cells: from transcriptome to senolytic drugs",
+   "journal": "Aging Cell",
+   "year": "2015",
+   "first": "Zhu Y 等",
+   "doi": "10.1111/acel.12344"
+  },
+  "26269198": {
+   "pmid": 26269198,
+   "title": "Sulforaphane inhibits multiple inflammasomes through an Nrf2-independent mechanism",
+   "journal": "J Leukoc Biol",
+   "year": "2016",
+   "first": "Greaney AJ 等",
+   "doi": "10.1189/jlb.3A0415-155RR"
+  },
+  "26396057": {
+   "pmid": 26396057,
+   "title": "Modulation of gut microbiota by berberine and metformin during the treatment of high-fat diet-induced obesity in rats",
+   "journal": "Sci Rep",
+   "year": "2015",
+   "first": "Zhang X 等",
+   "doi": "10.1038/srep14405"
+  },
+  "26524341": {
+   "pmid": 26524341,
+   "title": "Sulforaphane Bioavailability from Glucoraphanin-Rich Broccoli: Control by Active Endogenous Myrosinase",
+   "journal": "PLoS One",
+   "year": "2015",
+   "first": "Fahey JW 等",
+   "doi": "10.1371/journal.pone.0140963"
+  },
+  "27329332": {
+   "pmid": 27329332,
+   "title": "A systematic review and meta-analysis of randomized controlled trials on the effects of magnesium supplementation on insulin sensitivity and glucose control",
+   "journal": "Pharmacol Res",
+   "year": "2016",
+   "first": "Simental-Mendía LE 等",
+   "doi": "10.1016/j.phrs.2016.06.019"
+  },
+  "27400265": {
+   "pmid": 27400265,
+   "title": "Urolithin A induces mitophagy and prolongs lifespan in C. elegans and increases muscle function in rodents",
+   "journal": "Nat Med",
+   "year": "2016",
+   "first": "Ryu D 等",
+   "doi": "10.1038/nm.4132"
+  },
+  "27402922": {
+   "pmid": 27402922,
+   "title": "Effects of Magnesium Supplementation on Blood Pressure: A Meta-Analysis of Randomized Double-Blind Placebo-Controlled Trials",
+   "journal": "Hypertension",
+   "year": "2016",
+   "first": "Zhang X 等",
+   "doi": "10.1161/HYPERTENSIONAHA.116.07664"
+  },
+  "27405810": {
+   "pmid": 27405810,
+   "title": "Effects of Quercetin on Blood Pressure: A Systematic Review and Meta-Analysis of Randomized Controlled Trials",
+   "journal": "J Am Heart Assoc",
+   "year": "2016",
+   "first": "Serban MC 等",
+   "doi": "10.1161/JAHA.115.002713"
+  },
+  "27533649": {
+   "pmid": 27533649,
+   "title": "Efficacy of Turmeric Extracts and Curcumin for Alleviating the Symptoms of Joint Arthritis: A Systematic Review and Meta-Analysis of Randomized Clinical Trials",
+   "journal": "J Med Food",
+   "year": "2016",
+   "first": "Daily JW 等",
+   "doi": "10.1089/jmf.2016.3705"
+  },
+  "28074653": {
+   "pmid": 28074653,
+   "title": "The Essential Medicinal Chemistry of Curcumin",
+   "journal": "J Med Chem",
+   "year": "2017",
+   "first": "Nelson KM 等",
+   "doi": "10.1021/acs.jmedchem.6b00975"
+  },
+  "28202713": {
+   "pmid": 28202713,
+   "title": "Vitamin D supplementation to prevent acute respiratory tract infections: systematic review and meta-analysis of individual participant data",
+   "journal": "BMJ",
+   "year": "2017",
+   "first": "Martineau AR 等",
+   "doi": "10.1136/bmj.i6583"
+  },
+  "28515951": {
+   "pmid": 28515951,
+   "title": "Zinc lozenges and the common cold: a meta-analysis comparing zinc acetate and zinc gluconate, and the role of zinc dosage",
+   "journal": "JRSM Open",
+   "year": "2017",
+   "first": "Hemilä H",
+   "doi": "10.1177/2054270417694291"
+  },
+  "28615996": {
+   "pmid": 28615996,
+   "title": "International Society of Sports Nutrition position stand: safety and efficacy of creatine supplementation in exercise, sport, and medicine",
+   "journal": "J Int Soc Sports Nutr",
+   "year": "2017",
+   "first": "Kreider RB 等",
+   "doi": "10.1186/s12970-017-0173-z"
+  },
+  "29138605": {
+   "pmid": 29138605,
+   "title": "Effect of creatine supplementation during resistance training on lean tissue mass and muscular strength in older adults: a meta-analysis",
+   "journal": "Open Access J Sports Med",
+   "year": "2017",
+   "first": "Chilibeck PD 等",
+   "doi": "10.2147/OAJSM.S123529"
+  },
+  "29257353": {
+   "pmid": 29257353,
+   "title": "Probiotics for the prevention of Clostridium difficile-associated diarrhea in adults and children",
+   "journal": "Cochrane Database Syst Rev",
+   "year": "2017",
+   "first": "Goldenberg JZ 等",
+   "doi": "10.1002/14651858.CD006095.pub4"
+  },
+  "29599478": {
+   "pmid": 29599478,
+   "title": "Chronic nicotinamide riboside supplementation is well-tolerated and elevates NAD(+) in healthy middle-aged and older adults",
+   "journal": "Nat Commun",
+   "year": "2018",
+   "first": "Martens CR 等",
+   "doi": "10.1038/s41467-018-03421-7"
+  },
+  "29704637": {
+   "pmid": 29704637,
+   "title": "Effects of creatine supplementation on cognitive function of healthy individuals: A systematic review of randomized controlled trials",
+   "journal": "Exp Gerontol",
+   "year": "2018",
+   "first": "Avgerinos KI 等",
+   "doi": "10.1016/j.exger.2018.04.013"
+  },
+  "30193113": {
+   "pmid": 30193113,
+   "title": "Post-Antibiotic Gut Mucosal Microbiome Reconstitution Is Impaired by Probiotics and Improved by Autologous FMT",
+   "journal": "Cell",
+   "year": "2018",
+   "first": "Suez J 等",
+   "doi": "10.1016/j.cell.2018.08.047"
+  },
+  "30371340": {
+   "pmid": 30371340,
+   "title": "Effects of Coenzyme Q10 on Statin-Induced Myopathy: An Updated Meta-Analysis of Randomized Controlled Trials",
+   "journal": "J Am Heart Assoc",
+   "year": "2018",
+   "first": "Qu H 等",
+   "doi": "10.1161/JAHA.118.009835"
+  },
+  "30415628": {
+   "pmid": 30415628,
+   "title": "Cardiovascular Risk Reduction with Icosapent Ethyl for Hypertriglyceridemia",
+   "journal": "N Engl J Med",
+   "year": "2019",
+   "first": "Bhatt DL 等",
+   "doi": "10.1056/NEJMoa1812792"
+  },
+  "30415629": {
+   "pmid": 30415629,
+   "title": "Vitamin D Supplements and Prevention of Cancer and Cardiovascular Disease",
+   "journal": "N Engl J Med",
+   "year": "2019",
+   "first": "Manson JE 等",
+   "doi": "10.1056/NEJMoa1809944"
+  },
+  "30415637": {
+   "pmid": 30415637,
+   "title": "Marine n-3 Fatty Acids and Prevention of Cardiovascular Disease and Cancer",
+   "journal": "N Engl J Med",
+   "year": "2019",
+   "first": "Manson JE 等",
+   "doi": "10.1056/NEJMoa1811403"
+  },
+  "30854916": {
+   "pmid": 30854916,
+   "title": "A Randomized, Double-Blind, Placebo-Controlled, Crossover Study Examining the Hormonal and Vitality Effects of Ashwagandha ( Withania somnifera) in Aging, Overweight Males",
+   "journal": "Am J Mens Health",
+   "year": "2019",
+   "first": "Lopresti AL 等",
+   "doi": "10.1177/1557988319835985"
+  },
+  "31039287": {
+   "pmid": 31039287,
+   "title": "Probiotics for the prevention of pediatric antibiotic-associated diarrhea",
+   "journal": "Cochrane Database Syst Rev",
+   "year": "2019",
+   "first": "Guo Q 等",
+   "doi": "10.1002/14651858.CD004827.pub5"
+  },
+  "31412242": {
+   "pmid": 31412242,
+   "title": "Nicotinamide Riboside Augments the Aged Human Skeletal Muscle NAD(+) Metabolome and Induces Transcriptomic and Anti-inflammatory Signatures",
+   "journal": "Cell Rep",
+   "year": "2019",
+   "first": "Elhassan YS 等",
+   "doi": "10.1016/j.celrep.2019.07.043"
+  },
+  "31422671": {
+   "pmid": 31422671,
+   "title": "Omega-3 Fatty Acids for the Management of Hypertriglyceridemia: A Science Advisory From the American Heart Association",
+   "journal": "Circulation",
+   "year": "2019",
+   "first": "Skulas-Ray AC 等",
+   "doi": "10.1161/CIR.0000000000000709"
+  },
+  "31517876": {
+   "pmid": 31517876,
+   "title": "An investigation into the stress-relieving and pharmacological actions of an ashwagandha (Withania somnifera) extract: A randomized, double-blind, placebo-controlled study",
+   "journal": "Medicine (Baltimore)",
+   "year": "2019",
+   "first": "Lopresti AL 等",
+   "doi": "10.1097/MD.0000000000017186"
+  },
+  "31542391": {
+   "pmid": 31542391,
+   "title": "Senolytics decrease senescent cells in humans: Preliminary report from a clinical trial of Dasatinib plus Quercetin in individuals with diabetic kidney disease",
+   "journal": "EBioMedicine",
+   "year": "2019",
+   "first": "Hickson LJ 等",
+   "doi": "10.1016/j.ebiom.2019.08.069"
+  },
+  "31623400": {
+   "pmid": 31623400,
+   "title": "Effects of L-Theanine Administration on Stress-Related Symptoms and Cognitive Functions in Healthy Adults: A Randomized Controlled Trial",
+   "journal": "Nutrients",
+   "year": "2019",
+   "first": "Hidese S 等",
+   "doi": "10.3390/nu11102362"
+  },
+  "31991029": {
+   "pmid": 31991029,
+   "title": "Ashwagandha-induced liver injury: A case series from Iceland and the US Drug-Induced Liver Injury Network",
+   "journal": "Liver Int",
+   "year": "2020",
+   "first": "Björnsson HK 等",
+   "doi": "10.1111/liv.14393"
+  },
+  "32694802": {
+   "pmid": 32694802,
+   "title": "The mitophagy activator urolithin A is safe and induces a molecular signature of improved mitochondrial and cellular health in humans",
+   "journal": "Nat Metab",
+   "year": "2019",
+   "first": "Andreux PA 等",
+   "doi": "10.1038/s42255-019-0073-4"
+  },
+  "33742704": {
+   "pmid": 33742704,
+   "title": "Effects of hydrolyzed collagen supplementation on skin aging: a systematic review and meta-analysis",
+   "journal": "Int J Dermatol",
+   "year": "2021",
+   "first": "de Miranda RB 等",
+   "doi": "10.1111/ijd.15518"
+  },
+  "33783984": {
+   "pmid": 33783984,
+   "title": "Glycine and N-acetylcysteine (GlyNAC) supplementation in older adults improves glutathione deficiency, oxidative stress, mitochondrial dysfunction, inflammation, insulin resistance, endothelial dysfunction, genotoxicity, muscle strength, and cognition: Results of a pilot clinical trial",
+   "journal": "Clin Transl Med",
+   "year": "2021",
+   "first": "Kumar P 等",
+   "doi": "10.1002/ctm2.372"
+  },
+  "33888596": {
+   "pmid": 33888596,
+   "title": "Nicotinamide mononucleotide increases muscle insulin sensitivity in prediabetic women",
+   "journal": "Science",
+   "year": "2021",
+   "first": "Yoshino M 等",
+   "doi": "10.1126/science.abe9985"
+  },
+  "34612056": {
+   "pmid": 34612056,
+   "title": "Effect of Long-Term Marine ɷ-3 Fatty Acids Supplementation on the Risk of Atrial Fibrillation in Randomized Controlled Trials of Cardiovascular Outcomes: A Systematic Review and Meta-Analysis",
+   "journal": "Circulation",
+   "year": "2021",
+   "first": "Gencer B 等",
+   "doi": "10.1161/CIRCULATIONAHA.121.055654"
+  },
+  "35050355": {
+   "pmid": 35050355,
+   "title": "Effect of Urolithin A Supplementation on Muscle Endurance and Mitochondrial Health in Older Adults: A Randomized Clinical Trial",
+   "journal": "JAMA Netw Open",
+   "year": "2022",
+   "first": "Liu S 等",
+   "doi": "10.1001/jamanetworkopen.2021.44279"
+  },
+  "35082139": {
+   "pmid": 35082139,
+   "title": "Vitamin D and marine omega 3 fatty acid supplementation and incident autoimmune disease: VITAL randomized controlled trial",
+   "journal": "BMJ",
+   "year": "2022",
+   "first": "Hahn J 等",
+   "doi": "10.1136/bmj-2021-066452"
+  },
+  "35235774": {
+   "pmid": 35235774,
+   "title": "The NADPARK study: A randomized phase I trial of nicotinamide riboside supplementation in Parkinson's disease",
+   "journal": "Cell Metab",
+   "year": "2022",
+   "first": "Brakedal B 等",
+   "doi": "10.1016/j.cmet.2022.02.001"
+  },
+  "35584623": {
+   "pmid": 35584623,
+   "title": "Urolithin A improves muscle strength, exercise performance, and biomarkers of mitochondrial health in a randomized trial in middle-aged adults",
+   "journal": "Cell Rep Med",
+   "year": "2022",
+   "first": "Singh A 等",
+   "doi": "10.1016/j.xcrm.2022.100633"
+  },
+  "36017529": {
+   "pmid": 36017529,
+   "title": "Does Ashwagandha supplementation have a beneficial effect on the management of anxiety and stress? A systematic review and meta-analysis of randomized controlled trials",
+   "journal": "Phytother Res",
+   "year": "2022",
+   "first": "Akhgarjand C 等",
+   "doi": "10.1002/ptr.7598"
+  }
+ }
+}
