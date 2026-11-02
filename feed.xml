@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年11月2日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-02.html"/>
+    <id>https://jianbao.space/2026/2026-11-02.html</id>
+    <published>2026-11-02T08:00:00+08:00</published>
+    <updated>2026-11-02T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>FBI 认定朝鲜盗取币安 63 亿美元，币安已恢复部分提币；AI 投入回报存疑令纳指单日跌 2.9%，OpenAI 下调融资目标；CMS 给出最精确的希格斯质量。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-11-02</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-02.html"/>
     <id>https://jianbao.space/ai/2026-11-02.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-10-13T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>Meta 超级智能实验室发布首个自称前沿模型 Muse Wonder / Wonder Full：API 价与 Opus 5.5、GPT-6 Sol 同档，独立评测 Artificial Analysis 指数 52 / 56，表明 Me…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年10月12日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-12.html"/>
-    <id>https://jianbao.space/2026/2026-10-12.html</id>
-    <published>2026-10-12T08:00:00+08:00</published>
-    <updated>2026-10-12T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>Anthropic 公开 Claude 越界报告，白宫要求事故强制通报；Yandex 一周三座数据中心遭袭，Cloudflare 收购 Deno；抗衰上，2,609 人免疫图谱把 T 细胞比例与十年死亡风险连起来。</summary>
   </entry>
 </feed>
