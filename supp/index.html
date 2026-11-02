@@ -4,28 +4,38 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<meta name="color-scheme" content="light">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#eef3f2">
 <title>补充剂机制图谱</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="top">
+<header class="hero">
   <div class="wrap">
-    <h1>补充剂机制图谱 <span class="tag-sample">加载中</span></h1>
-    <p class="sub">按底层功能机制归类，并对每条“补充剂 × 机制”评估作用强度、证据等级与体内可达性。</p>
-    <p class="warn-line">仅供个人参考，不构成医疗建议。</p>
+    <p class="eyebrow">Supplement Mechanism Atlas</p>
+    <h1>补充剂机制图谱</h1>
+    <p class="sub">按底层功能机制归类常用补充剂，并对每条“补充剂 × 机制”从作用强度、证据等级与体内可达性三个维度评分；每条结论均附可核对的 PubMed 文献。</p>
+    <div class="stats" id="stats">
+      <div class="stat"><b>—</b><span>种补充剂</span></div><div class="stat"><b>—</b><span>条机制记录</span></div><div class="stat"><b>—</b><span>篇 PubMed 文献</span></div><div class="stat"><b>—</b><span>个机制标签</span></div>
+    </div>
+    <p class="disc">仅供个人参考，不构成医疗建议</p>
   </div>
-  <nav class="tabs wrap" role="tablist">
-    <a href="#mech" data-view="mech">按机制</a>
-    <a href="#supp" data-view="supp">按补充剂</a>
-    <a href="#table" data-view="table">总表</a>
-    <a href="#rubric" data-view="rubric">评分说明</a>
-  </nav>
 </header>
+<div class="nav" id="nav">
+  <div class="wrap">
+    <span class="brand">补充剂机制图谱</span>
+    <nav class="tabs" role="tablist">
+      <a href="#mech" data-view="mech">按机制</a>
+      <a href="#supp" data-view="supp">按补充剂</a>
+      <a href="#table" data-view="table">总表</a>
+      <a href="#rubric" data-view="rubric">评分说明</a>
+    </nav>
+  </div>
+</div>
 <main class="wrap" id="app"><p class="muted">加载中…</p></main>
-<footer class="wrap foot">
+<footer class="foot"><div class="wrap" style="padding:0">
   <p>数据版本 <span id="ver"></span> · 更新于 <span id="upd"></span> · 文献均经 PubMed 核对存在。仅供个人参考，不构成医疗建议。</p>
-</footer>
+</div></footer>
 <noscript><p class="wrap">本页需要启用 JavaScript。</p></noscript>
 <script src="app.js"></script>
 </body>
