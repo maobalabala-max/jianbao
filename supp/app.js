@@ -1,6 +1,7 @@
 (function(){
 "use strict";
-var D, LAB={}, GRP={}, ROWS=[], S={mech:null,supp:null,tf:{mech:"",ev:0,q:""},sort:{k:"score",d:-1}};
+var D, LAB={}, GRP={}, CAT={}, ROWS=[], S={mech:null,supp:null,pq:"",pg:"cat",tf:{mech:"",ev:0,q:"",cat:""},page:0,sort:{k:"score",d:-1}};
+var PAGE=50;
 var app=document.getElementById("app");
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
 var EVL=["无/推测","体外","动物/小型人体","多项人体RCT/荟萃"];
@@ -32,15 +33,15 @@ function viewMech(){
     h+="</div>";});
   h+="</div></section>";
   var rs=ROWS.filter(function(r){return r.mech===S.mech;}).sort(function(a,b){return b.score-a.score;});
-  h+='<section class="card"><h2>'+esc(LAB[S.mech])+' <span class="muted small">· '+esc(GRP[S.mech])+"</span></h2>";
+  h+='<section class="card"><h2>'+esc(LAB[S.mech])+' <span class="muted small">· '+esc(GRP[S.mech])+" · "+rs.length+" 条</span></h2>";
   if(!rs.length) h+='<p class="muted">本样本（20 种）中暂无归入此机制的补充剂。</p>';
   rs.forEach(function(r){
-    h+='<div class="row"><div class="nm"><a href="#supp/'+r.s.id+'">'+esc(r.s.zh)+"</a><small>"+esc(r.s.en)+"</small></div>"+
+    h+='<div class="row"><div class="nm"><a href="#supp/'+r.s.id+'">'+esc(r.s.zh)+"</a><small>"+esc(r.s.en)+" · "+esc(CAT[r.s.cat])+"</small></div>"+
       '<div class="bar" title="综合分 '+r.score+'"><i style="width:'+Math.max(r.score,2)+'%"></i></div><div class="sc">'+r.score+"</div>"+
       '<div class="sub3">'+sre(r)+" "+(r.s.primary===r.mech?'<span class="flag f-prim">主要机制</span>':"")+flags(r)+
       "<div>"+esc(r.note)+"</div>"+(r.disputed?'<div class="small" style="color:var(--dis)">争议：'+esc(r.disputed)+"</div>":"")+
-      '<div class="small muted">适用前提：'+esc(r.s.applic)+"</div>"+
-      "<details><summary>参考文献（"+r.refs.length+"）</summary>"+refHtml(r.refs)+"</details></div></div>";});
+      
+      "<details><summary>适用前提与参考文献（"+r.refs.length+"）</summary>"+'<div class="small muted">适用前提：'+esc(r.s.applic)+"</div>"+(r.s.safety.length?'<div>'+r.s.safety.map(function(w){return '<span class="flag f-warn">⚠ '+esc(w)+"</span>";}).join("")+"</div>":"")+refHtml(r.refs)+"</details></div></div>";});
   h+="</section>";
   app.innerHTML=h;
   [].forEach.call(app.querySelectorAll("[data-mech]"),function(b){b.onclick=function(){S.mech=b.dataset.mech;viewMech();};});
@@ -69,12 +70,12 @@ function pips(v){var h='<div class="pips">';for(var i=1;i<=3;i++)h+="<i"+(i<=v?'
 function viewSupp(){
   if(!S.supp) S.supp=D.supplements[0].id;
   var s=D.supplements.filter(function(x){return x.id===S.supp;})[0]||D.supplements[0];
-  var h='<section class="card"><h2>选择补充剂</h2><div class="slist">';
-  D.supplements.forEach(function(x){h+='<a class="chip'+(x.id===s.id?" on":"")+'" href="#supp/'+x.id+'">'+esc(x.zh)+"</a>";});
-  h+="</div></section>";
+  var h='<section class="card"><h2>选择补充剂 <span class="muted small">共 '+D.supplements.length+' 种</span></h2>'+
+    '<div class="filters"><input type="search" id="pq" placeholder="搜索中文/英文名" value="'+esc(S.pq)+'">'+
+    '<label>分组 <select id="pg"><option value="cat"'+(S.pg==="cat"?" selected":"")+'>按类别</option><option value="mech"'+(S.pg==="mech"?" selected":"")+'>按主要机制大类</option></select></label></div><div id="plist"></div></section>';
   h+='<section class="card"><h2>'+esc(s.zh)+' <span class="muted small">'+esc(s.en)+"</span></h2>";
   h+='<div class="sgrid"><div class="radar">'+radar(s)+'<p class="small muted" style="text-align:center;margin:0">雷达图：各机制大类中的最高综合分（0–100）</p></div><div>';
-  h+='<dl class="kv"><dt>常见形式</dt><dd>'+esc(s.forms)+"</dd><dt>主要机制</dt><dd>"+esc(LAB[s.primary])+"</dd><dt>常用剂量</dt><dd>"+esc(s.dose)+"</dd><dt>适用前提</dt><dd>"+esc(s.applic)+"</dd><dt>安全提示</dt><dd>"+
+  h+='<dl class="kv"><dt>类别</dt><dd>'+esc(CAT[s.cat])+'</dd><dt>常见形式</dt><dd>'+esc(s.forms)+"</dd><dt>主要机制</dt><dd>"+esc(LAB[s.primary])+"</dd><dt>常用剂量</dt><dd>"+esc(s.dose)+"</dd><dt>适用前提</dt><dd>"+esc(s.applic)+"</dd><dt>安全提示</dt><dd>"+
     s.safety.map(function(w){return '<span class="flag f-warn">⚠ '+esc(w)+"</span>";}).join("")+"</dd></dl>";
   if(s.suppRefs&&s.suppRefs.length) h+='<details><summary>补充文献（适用前提/安全性）</summary>'+refHtml(s.suppRefs)+"</details>";
   h+="</div></div>";
@@ -88,6 +89,22 @@ function viewSupp(){
       '<div class="small">'+esc(m.note)+"</div>"+(m.disputed?'<div class="small" style="color:var(--dis)">争议：'+esc(m.disputed)+"</div>":"")+refHtml(m.refs)+"</div>";});
   h+="</section>";
   app.innerHTML=h;
+  drawPicker(s.id);
+  document.getElementById("pq").oninput=function(e){S.pq=e.target.value;drawPicker(s.id);};
+  document.getElementById("pg").onchange=function(e){S.pg=e.target.value;drawPicker(s.id);};
+}
+function drawPicker(cur){
+  var q=S.pq.trim().toLowerCase(), groups=[], map={};
+  if(S.pg==="cat") D.categories.forEach(function(c){map[c[0]]={t:c[1],a:[]};groups.push(map[c[0]]);});
+  else D.taxonomy.forEach(function(g){map[g.group]={t:g.group,a:[]};groups.push(map[g.group]);});
+  D.supplements.forEach(function(x){
+    if(q&&(x.zh+" "+x.en).toLowerCase().indexOf(q)<0) return;
+    var k=S.pg==="cat"?x.cat:GRP[x.primary]; if(map[k]) map[k].a.push(x);});
+  var h="",n=0;
+  groups.forEach(function(g){ if(!g.a.length) return; n+=g.a.length;
+    h+='<div class="pgrp"><h4>'+esc(g.t)+' <span class="n">'+g.a.length+'</span></h4>'+g.a.map(function(x){
+      return '<a class="chip'+(x.id===cur?" on":"")+'" href="#supp/'+x.id+'" title="'+esc(x.en)+'">'+esc(x.zh)+'</a>';}).join("")+"</div>";});
+  document.getElementById("plist").innerHTML=h||'<p class="muted small">无匹配结果。</p>';
 }
 
 /* ---------- 总表 ---------- */
@@ -96,38 +113,48 @@ function viewTable(){
   var h='<section class="card"><div class="filters"><label>机制 <select id="fm"><option value="">全部</option>';
   D.taxonomy.forEach(function(g){h+='<optgroup label="'+esc(g.group)+'">';g.items.forEach(function(it){h+='<option value="'+it[0]+'"'+(f.mech===it[0]?" selected":"")+">"+esc(it[1])+"</option>";});h+="</optgroup>";});
   h+='</select></label><label>最低证据 <select id="fe">'+[0,1,2,3].map(function(v){return '<option value="'+v+'"'+(f.ev===v?" selected":"")+">≥ "+v+"（"+EVL[v]+"）</option>";}).join("")+
-    '</select></label><input type="search" id="fq" placeholder="搜索名称" value="'+esc(f.q)+'"><span class="muted small" id="cnt"></span></div><div class="tw"><table><thead><tr>';
-  var cols=[["zh","补充剂",""],["mech","机制",""],["strength","强度","num"],["evidence","证据","num"],["reach","可达","num"],["score","综合分","num"],["flags","标记",""]];
+    '</select></label><label>类别 <select id="fc"><option value="">全部</option>'+D.categories.map(function(c){return '<option value="'+c[0]+'"'+(f.cat===c[0]?" selected":"")+">"+esc(c[1])+"</option>";}).join("")+'</select></label><input type="search" id="fq" placeholder="搜索名称" value="'+esc(f.q)+'"><span class="muted small" id="cnt"></span></div><div class="tw"><table><thead><tr>';
+  var cols=[["zh","补充剂",""],["cat","类别",""],["mech","机制",""],["strength","强度","num"],["evidence","证据","num"],["reach","可达","num"],["score","综合分","num"],["flags","标记",""]];
   cols.forEach(function(c){h+='<th data-k="'+c[0]+'" class="'+c[2]+'">'+c[1]+(S.sort.k===c[0]?' <span class="ar">'+(S.sort.d>0?"▲":"▼")+"</span>":"")+"</th>";});
-  h+='</tr></thead><tbody id="tb"></tbody></table></div><p class="small muted">点击表头排序；点击补充剂名查看详情。</p></section>';
+  h+='</tr></thead><tbody id="tb"></tbody></table></div><div class="pager" id="pager"></div><p class="small muted">点击表头排序；点击补充剂名查看详情。</p></section>';
   app.innerHTML=h;
   function draw(){
     var q=f.q.trim().toLowerCase();
-    var rs=ROWS.filter(function(r){return (!f.mech||r.mech===f.mech)&&r.evidence>=f.ev&&(!q||(r.s.zh+r.s.en).toLowerCase().indexOf(q)>=0);});
+    var rs=ROWS.filter(function(r){return (!f.mech||r.mech===f.mech)&&(!f.cat||r.s.cat===f.cat)&&r.evidence>=f.ev&&(!q||(r.s.zh+r.s.en).toLowerCase().indexOf(q)>=0);});
     var k=S.sort.k,d=S.sort.d;
     rs.sort(function(a,b){var x,y;
       if(k==="zh"){x=a.s.zh;y=b.s.zh;return d*x.localeCompare(y,"zh");}
       if(k==="mech"){return d*LAB[a.mech].localeCompare(LAB[b.mech],"zh");}
+      if(k==="cat"){return d*CAT[a.s.cat].localeCompare(CAT[b.s.cat],"zh")||b.score-a.score;}
       if(k==="flags"){x=(a.disputed?1:0)+(a.needsSource?1:0);y=(b.disputed?1:0)+(b.needsSource?1:0);}
       else{x=a[k];y=b[k];}
       return d*(x-y)||b.score-a.score;});
+    var pages=Math.max(1,Math.ceil(rs.length/PAGE)); if(S.page>=pages) S.page=pages-1;
+    var all=rs; rs=rs.slice(S.page*PAGE,(S.page+1)*PAGE);
+    var pg="";
+    if(pages>1){for(var i=0;i<pages;i++) pg+='<button class="chip'+(i===S.page?" on":"")+'" data-p="'+i+'">'+(i*PAGE+1)+"–"+Math.min((i+1)*PAGE,all.length)+"</button>";}
+    document.getElementById("pager").innerHTML=pg;
+    [].forEach.call(document.querySelectorAll("#pager [data-p]"),function(b){b.onclick=function(){S.page=+b.dataset.p;draw();};});
     document.getElementById("tb").innerHTML=rs.map(function(r){
-      return '<tr><td><a href="#supp/'+r.s.id+'">'+esc(r.s.zh)+"</a></td><td>"+esc(LAB[r.mech])+(r.s.primary===r.mech?' <span class="flag f-prim">主</span>':"")+'</td><td class="num">'+r.strength+'</td><td class="num">'+r.evidence+'</td><td class="num">'+r.reach+
+      return '<tr><td><a href="#supp/'+r.s.id+'">'+esc(r.s.zh)+"</a></td><td class=\"muted\">"+esc(CAT[r.s.cat])+"</td><td>"+esc(LAB[r.mech])+(r.s.primary===r.mech?' <span class="flag f-prim">主</span>':"")+'</td><td class="num">'+r.strength+'</td><td class="num">'+r.evidence+'</td><td class="num">'+r.reach+
         '</td><td class="num"><b>'+r.score+'</b><span class="minibar"><i style="width:'+r.score+'%"></i></span></td><td>'+flags(r)+"</td></tr>";}).join("");
-    document.getElementById("cnt").textContent="共 "+rs.length+" 条";
+    document.getElementById("cnt").textContent="共 "+all.length+" 条";
   }
   draw();
-  document.getElementById("fm").onchange=function(e){f.mech=e.target.value;draw();};
-  document.getElementById("fe").onchange=function(e){f.ev=+e.target.value;draw();};
-  document.getElementById("fq").oninput=function(e){f.q=e.target.value;draw();};
+  document.getElementById("fm").onchange=function(e){f.mech=e.target.value;S.page=0;draw();};
+  document.getElementById("fe").onchange=function(e){f.ev=+e.target.value;S.page=0;draw();};
+  document.getElementById("fc").onchange=function(e){f.cat=e.target.value;S.page=0;draw();};
+  document.getElementById("fq").oninput=function(e){f.q=e.target.value;S.page=0;draw();};
   [].forEach.call(app.querySelectorAll("th"),function(th){th.onclick=function(){var k=th.dataset.k;
-    if(S.sort.k===k)S.sort.d=-S.sort.d;else{S.sort.k=k;S.sort.d=(k==="zh"||k==="mech")?1:-1;}viewTable();};});
+    if(S.sort.k===k)S.sort.d=-S.sort.d;else{S.sort.k=k;S.sort.d=(k==="zh"||k==="mech")?1:-1;}S.page=0;viewTable();};});
 }
 
 /* ---------- 评分说明 ---------- */
 function viewRubric(){
   var dis=ROWS.filter(function(r){return r.disputed;}).length,need=ROWS.filter(function(r){return r.needsSource;}).length;
+  var nRef=Object.keys(D.refs).length;
   app.innerHTML='<section class="card rub"><h2>评分说明</h2>'+
+  '<p class="small"><b>数据规模：</b>'+D.supplements.length+' 种补充剂、'+ROWS.length+' 条“补充剂 × 机制”记录、'+nRef+' 篇 PubMed 文献；最后更新 '+esc(D.updated)+'（数据版本 '+esc(D.version)+'）。</p>'+
   "<p>每一条记录是“一种补充剂 × 一种机制”。同一补充剂可有多条记录，各自独立评分。三个维度均为 0–3 分：</p>"+
   '<div class="tw"><table><thead><tr><th>分值</th><th>强度（作用是否直接、有效）</th><th>证据（该机制/相关效应的最高证据）</th><th>可达性（常规口服剂量能否在体内达到有效浓度）</th></tr></thead><tbody>'+
   "<tr><td>0</td><td>无作用或纯推测</td><td>无证据/推测</td><td>基本不可能达到</td></tr>"+
@@ -145,7 +172,7 @@ function viewRubric(){
   "<li>许多多酚类机制主要来自体外实验，且所用浓度远高于口服后血药浓度。</li>"+
   "<li>益生菌、β-葡聚糖、胶原等的效果高度依赖具体菌株/来源/制剂，评分代表“该类别中证据较好的产品”。</li>"+
   "<li>所有文献均通过 PubMed 核对 PMID 存在且标题与内容对应；文献列表并非系统综述。</li>"+
-  "<li>这是 20 种补充剂的样本版本，机制分类中部分条目（如抗糖化、渗透调节）暂无收录。</li></ul>"+
+  "<li>收录范围为常用补充剂，并非穷尽；同一补充剂的不同制剂/剂量差异可能很大。</li><li>主要机制（标“主”）指该补充剂最常被引用的作用机制，不一定是综合分最高的一条。</li></ul>"+
   '<p class="warn-line" style="font-size:.95rem"><b>仅供个人参考，不构成医疗建议。</b>服用任何补充剂前，尤其在服药、妊娠/哺乳、有慢性病或即将手术时，请咨询医生或药师。</p></section>';
 }
 
@@ -160,6 +187,8 @@ function route(){
 }
 fetch("data.json",{cache:"no-cache"}).then(function(r){return r.json();}).then(function(d){
   D=d;
+  d.categories.forEach(function(c){CAT[c[0]]=c[1];});
+  var tg=document.querySelector(".tag-sample"); if(tg) tg.textContent=d.supplements.length+" 种 · "+d.nRecords+" 条";
   d.taxonomy.forEach(function(g){g.items.forEach(function(it){LAB[it[0]]=it[1];GRP[it[0]]=g.group;});});
   d.supplements.forEach(function(s){s.mechs.forEach(function(m){var r=Object.assign({},m);r.s=s;ROWS.push(r);});});
   document.getElementById("ver").textContent=d.version;document.getElementById("upd").textContent=d.updated;

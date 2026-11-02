@@ -82,3 +82,10 @@ td .minibar i{display:block;height:100%;background:var(--acc)}
   .row .bar{grid-column:1/-1;grid-row:2}
   .top h1{font-size:1.15rem}
 }
+
+.pgrp{margin:6px 0 4px}
+.pgrp h4{margin:6px 0 4px;font-size:.8rem;color:var(--mut);font-weight:600}
+.pgrp h4 .n{font-weight:400;color:#98a2b3}
+.pager{margin-top:10px}
+#plist{max-height:340px;overflow:auto;border-top:1px solid #eef1f4;padding-top:4px}
+@media (max-width:720px){#plist{max-height:260px}}
