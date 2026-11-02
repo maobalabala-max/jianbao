@@ -5,9 +5,18 @@
   <id>https://jianbao.space/</id>
   <link rel="alternate" type="text/html" href="https://jianbao.space/"/>
   <link rel="self" type="application/atom+xml" href="https://jianbao.space/feed.xml"/>
-  <updated>2026-11-02T08:00:00+08:00</updated>
+  <updated>2026-11-03T08:00:00+08:00</updated>
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
+  <entry>
+    <title>AI 前沿情报日报｜2026-11-03</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-03.html"/>
+    <id>https://jianbao.space/ai/2026-11-03.html</id>
+    <published>2026-11-03T08:00:00+08:00</published>
+    <updated>2026-11-03T08:00:00+08:00</updated>
+    <category term="AI 前沿情报日报"/>
+    <summary>今天最重要的信号来自一份上市文件：Anthropic 在修订版招股书里写明，按内部估计，未来模型可能「很快」达到其安全政策中「AI 带来大幅加速进展」的门槛，但目前没有任何模型被认定越线。 同一份文件显示 Anthropic 第三季度收入…</summary>
+  </entry>
   <entry>
     <title>每日简报 · 2026年11月2日</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-02.html"/>
@@ -268,14 +277,5 @@
     <updated>2026-10-13T08:00:00+08:00</updated>
     <category term="每日简报"/>
     <summary>Meta 发布首个前沿模型，微软推出 Maia 300 推理芯片；法国数百家超市冷柜遭网络攻击；抗衰上，3 亿项化验显示绝经是多系统的阶跃拐点。</summary>
-  </entry>
-  <entry>
-    <title>AI 前沿情报日报｜2026-10-13</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-13.html"/>
-    <id>https://jianbao.space/ai/2026-10-13.html</id>
-    <published>2026-10-13T08:00:00+08:00</published>
-    <updated>2026-10-13T08:00:00+08:00</updated>
-    <category term="AI 前沿情报日报"/>
-    <summary>Meta 超级智能实验室发布首个自称前沿模型 Muse Wonder / Wonder Full：API 价与 Opus 5.5、GPT-6 Sol 同档，独立评测 Artificial Analysis 指数 52 / 56，表明 Me…</summary>
   </entry>
 </feed>
