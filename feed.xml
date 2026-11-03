@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年11月3日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-03.html"/>
+    <id>https://jianbao.space/2026/2026-11-03.html</id>
+    <published>2026-11-03T08:00:00+08:00</published>
+    <updated>2026-11-03T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>Anthropic 招股书承认可能接近「AI 加速 AI」门槛；Marvell 以 1150 亿美元收购 Lumentum；欧洲七国超市冷柜再遭网络攻击；单分子自旋—光子接口登上 Nature。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-11-03</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-03.html"/>
     <id>https://jianbao.space/ai/2026-11-03.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-10-14T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>Google 把 Gemini 4 Argon 从 Fairwind 有限放行推到全球 API、订阅与 Antigravity 正式可用，介绍价 $2/$10（11 月 30 日后 $4/$20），标志着 DeepMind 领导层调整后的…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年10月13日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-13.html"/>
-    <id>https://jianbao.space/2026/2026-10-13.html</id>
-    <published>2026-10-13T08:00:00+08:00</published>
-    <updated>2026-10-13T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>Meta 发布首个前沿模型，微软推出 Maia 300 推理芯片；法国数百家超市冷柜遭网络攻击；抗衰上，3 亿项化验显示绝经是多系统的阶跃拐点。</summary>
   </entry>
 </feed>
