@@ -5,9 +5,18 @@
   <id>https://jianbao.space/</id>
   <link rel="alternate" type="text/html" href="https://jianbao.space/"/>
   <link rel="self" type="application/atom+xml" href="https://jianbao.space/feed.xml"/>
-  <updated>2026-11-04T08:00:00+08:00</updated>
+  <updated>2026-11-05T08:00:00+08:00</updated>
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
+  <entry>
+    <title>AI 前沿情报日报｜2026-11-05</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-05.html"/>
+    <id>https://jianbao.space/ai/2026-11-05.html</id>
+    <published>2026-11-05T08:00:00+08:00</published>
+    <updated>2026-11-05T08:00:00+08:00</updated>
+    <category term="AI 前沿情报日报"/>
+    <summary>今天最重要的是 OpenAI 公开的 Linux 内核自动攻防实验：一个未发布的网络安全模型在一次运行中验证了 948 个可提权到 root 的漏洞，平均每个约 1279 美元 API 费用，发现数量是 7 月 GPT-5.6 Sol 的…</summary>
+  </entry>
   <entry>
     <title>每日简报 · 2026年11月4日</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-04.html"/>
@@ -268,14 +277,5 @@
     <updated>2026-10-15T08:00:00+08:00</updated>
     <category term="每日简报"/>
     <summary>ASML 称客户已问 2030 年订单；八州起诉 OpenAI；Jio 定价印度最大 IPO；十万人扫描显示棕色脂肪与心代谢病更少相关。</summary>
-  </entry>
-  <entry>
-    <title>AI 前沿情报日报｜2026-10-15</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-15.html"/>
-    <id>https://jianbao.space/ai/2026-10-15.html</id>
-    <published>2026-10-15T08:00:00+08:00</published>
-    <updated>2026-10-15T08:00:00+08:00</updated>
-    <category term="AI 前沿情报日报"/>
-    <summary>美国八个州检察长同日在州法院起诉 OpenAI，指控 ChatGPT 误导安全并危害青少年；诉状还请求法院在模型能与人类价值观对齐前，限制其开发可自我改进的模型——消费者诉讼第一次正面碰到「自改进」门槛。 Anthropic 公开：因 C…</summary>
   </entry>
 </feed>
