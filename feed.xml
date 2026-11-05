@@ -5,9 +5,18 @@
   <id>https://jianbao.space/</id>
   <link rel="alternate" type="text/html" href="https://jianbao.space/"/>
   <link rel="self" type="application/atom+xml" href="https://jianbao.space/feed.xml"/>
-  <updated>2026-11-05T08:00:00+08:00</updated>
+  <updated>2026-11-06T08:00:00+08:00</updated>
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
+  <entry>
+    <title>AI 前沿情报日报｜2026-11-06</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-06.html"/>
+    <id>https://jianbao.space/ai/2026-11-06.html</id>
+    <published>2026-11-06T08:00:00+08:00</published>
+    <updated>2026-11-06T08:00:00+08:00</updated>
+    <category term="AI 前沿情报日报"/>
+    <summary>今天最重要的是 METR 对 Anthropic 的独立评估：截至 2026 年 10 月，Anthropic 在可明确定义任务上的能力进步速度，大约是 2024 年 3 月至 2025 年 10 月历史节奏的两倍；METR 判断当前加速…</summary>
+  </entry>
   <entry>
     <title>每日简报 · 2026年11月5日</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-05.html"/>
@@ -268,14 +277,5 @@
     <updated>2026-10-16T08:00:00+08:00</updated>
     <category term="每日简报"/>
     <summary>台积电营收超指引，AI 芯片股却一周蒸发逾万亿美元；Meta 开源 816B 权重；谷歌魔法态与 AI 设计蛋白酶同日见刊；SRSF1 延长小鼠寿命。</summary>
-  </entry>
-  <entry>
-    <title>AI 前沿情报日报｜2026-10-16</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-16.html"/>
-    <id>https://jianbao.space/ai/2026-10-16.html</id>
-    <published>2026-10-16T08:00:00+08:00</published>
-    <updated>2026-10-16T08:00:00+08:00</updated>
-    <category term="AI 前沿情报日报"/>
-    <summary>Meta 放出 Muse Spark Open 权重（816B 总参 / 42B 激活），时隔半年重回开源；但第三方 Artificial Analysis 指数为 39，仍低于小米、智谱、月之暗面的头部开源模型——美国开源在追赶，尚未反…</summary>
   </entry>
 </feed>
