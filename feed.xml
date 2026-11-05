@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年11月5日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-05.html"/>
+    <id>https://jianbao.space/2026/2026-11-05.html</id>
+    <published>2026-11-05T08:00:00+08:00</published>
+    <updated>2026-11-05T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>OpenAI 用未发布模型一轮挖出 948 个 Linux 提权漏洞；内存涨价让高通手机芯片收入降 26%；上海交大 AI 自主实验室登上《自然》。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-11-05</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-05.html"/>
     <id>https://jianbao.space/ai/2026-11-05.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-10-16T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>Meta 放出 Muse Spark Open 权重（816B 总参 / 42B 激活），时隔半年重回开源；但第三方 Artificial Analysis 指数为 39，仍低于小米、智谱、月之暗面的头部开源模型——美国开源在追赶，尚未反…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年10月15日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-15.html"/>
-    <id>https://jianbao.space/2026/2026-10-15.html</id>
-    <published>2026-10-15T08:00:00+08:00</published>
-    <updated>2026-10-15T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>ASML 称客户已问 2030 年订单；八州起诉 OpenAI；Jio 定价印度最大 IPO；十万人扫描显示棕色脂肪与心代谢病更少相关。</summary>
   </entry>
 </feed>
