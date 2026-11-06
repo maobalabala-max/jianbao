@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年11月6日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-06.html"/>
+    <id>https://jianbao.space/2026/2026-11-06.html</id>
+    <published>2026-11-06T08:00:00+08:00</published>
+    <updated>2026-11-06T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>METR 称 Anthropic 研发约加快一倍；中国空间站把原子气体冷到 9.7 皮开；谷歌投 170 亿美元建怀俄明数据中心。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-11-06</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-06.html"/>
     <id>https://jianbao.space/ai/2026-11-06.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-10-19T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>中国拟把大模型权重、源代码、训练方法等 23 项 AI 技术列入限制出口目录，征求意见到 11 月 15 日；已开源或公开发表的技术不纳入，开源发布可走自动许可。短期内开源路线不受影响，但政府有了日后收紧的工具。 次日 DeepSeek…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年10月16日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-16.html"/>
-    <id>https://jianbao.space/2026/2026-10-16.html</id>
-    <published>2026-10-16T08:00:00+08:00</published>
-    <updated>2026-10-16T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>台积电营收超指引，AI 芯片股却一周蒸发逾万亿美元；Meta 开源 816B 权重；谷歌魔法态与 AI 设计蛋白酶同日见刊；SRSF1 延长小鼠寿命。</summary>
   </entry>
 </feed>
