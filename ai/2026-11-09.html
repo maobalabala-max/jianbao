@@ -5,20 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI 前沿情报日报｜2026-11-09</title>
   <!-- site-meta:start -->
-  <meta name="description" content="周末没有前沿实验室发布新模型。最重要的变化在资金和算力两端：OpenAI 新一轮融资首期只拿到 110 亿美元，估值 1.25 万亿美元，低于此前目标；微软开始收缩外租算力，不再续签甲骨文的 AI 算力租约。 英伟达董事会宣布独立调查 C…">
+  <meta name="description" content="周末最值得看的是 Anthropic 公开的 agent 记忆研究：让模型在空闲时回看历史记录、整理和纠正记忆（文中称为「做梦」），在多项内部评测里明显提升长期任务表现；Claude Opus 5 是其测试中第一个能自己跑通「犯错、验证、…">
   <link rel="canonical" href="https://jianbao.space/ai/2026-11-09.html">
   <link rel="alternate" type="application/atom+xml" title="每日简报 · 订阅" href="/feed.xml">
   <meta property="og:site_name" content="每日简报">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
   <meta property="og:title" content="AI 前沿情报日报｜2026-11-09">
-  <meta property="og:description" content="周末没有前沿实验室发布新模型。最重要的变化在资金和算力两端：OpenAI 新一轮融资首期只拿到 110 亿美元，估值 1.25 万亿美元，低于此前目标；微软开始收缩外租算力，不再续签甲骨文的 AI 算力租约。 英伟达董事会宣布独立调查 C…">
+  <meta property="og:description" content="周末最值得看的是 Anthropic 公开的 agent 记忆研究：让模型在空闲时回看历史记录、整理和纠正记忆（文中称为「做梦」），在多项内部评测里明显提升长期任务表现；Claude Opus 5 是其测试中第一个能自己跑通「犯错、验证、…">
   <meta property="og:url" content="https://jianbao.space/ai/2026-11-09.html">
   <meta property="og:image" content="https://jianbao.space/icon-512.png">
   <meta property="article:published_time" content="2026-11-09T08:00:00+08:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="AI 前沿情报日报｜2026-11-09">
-  <meta name="twitter:description" content="周末没有前沿实验室发布新模型。最重要的变化在资金和算力两端：OpenAI 新一轮融资首期只拿到 110 亿美元，估值 1.25 万亿美元，低于此前目标；微软开始收缩外租算力，不再续签甲骨文的 AI 算力租约。 英伟达董事会宣布独立调查 C…">
+  <meta name="twitter:description" content="周末最值得看的是 Anthropic 公开的 agent 记忆研究：让模型在空闲时回看历史记录、整理和纠正记忆（文中称为「做梦」），在多项内部评测里明显提升长期任务表现；Claude Opus 5 是其测试中第一个能自己跑通「犯错、验证、…">
   <!-- site-meta:end -->
   <meta name="generator" content="ai-daily-v2">
   <meta name="color-scheme" content="light dark">
@@ -28,34 +28,35 @@
   <link rel="stylesheet" href="/assets/briefing.css?v=6bc964c5">
 </head>
 <body class="ai-page">
-<nav class="bar" aria-label="导航"><div class="bar-in"><a class="brand" href="/">每日简报</a><div class="chips"><a class="chip c-ai" href="#sec-1">核心判断</a><a class="chip" href="#sec-2">重点<span>3</span></a><a class="chip" href="#sec-3">简讯</a></div><div class="links"><a href="/2026/2026-11-06.html">最新简报</a><a href="/ai/">AI 归档</a><a href="/feed.xml" class="opt">订阅</a></div></div></nav>
+<nav class="bar" aria-label="导航"><div class="bar-in"><a class="brand" href="/">每日简报</a><div class="chips"><a class="chip c-ai" href="#sec-1">核心判断</a><a class="chip" href="#sec-2">重点<span>3</span></a><a class="chip" href="#sec-3">简讯</a><a class="chip" href="#sec-4">纠错</a></div><div class="links"><a href="/2026/2026-11-06.html">最新简报</a><a href="/ai/">AI 归档</a><a href="/feed.xml" class="opt">订阅</a></div></div></nav>
 <div class="page">
-  <aside class="rail" aria-label="本页目录"><p class="rail-h">本页目录</p><p class="rail-sec"><a href="#sec-2">重点消息</a></p><ol><li><a href="#story-1">OpenAI 融资首期 110 亿美元，估值低于原目标</a></li><li><a href="#story-2">微软不再续租甲骨文算力，收缩外部算力伙伴</a></li><li><a href="#story-3">英伟达董事会调查黄仁勋是否遭外国情报渗透</a></li></ol><p class="rail-sec"><a href="#sec-3">简讯</a></p></aside>
+  <aside class="rail" aria-label="本页目录"><p class="rail-h">本页目录</p><p class="rail-sec"><a href="#sec-2">重点消息</a></p><ol><li><a href="#story-1">Anthropic 公开 agent 记忆研究：离线「做梦」整理记忆</a></li><li><a href="#story-2">微软据报退掉向甲骨文租的 AI 算力</a></li><li><a href="#story-3">英伟达董事会调查黄仁勋涉疑似间谍关系</a></li></ol><p class="rail-sec"><a href="#sec-3">简讯</a></p><p class="rail-sec"><a href="#sec-4">更新与纠错</a></p></aside>
   <main>
     <header class="mast">
       <h1><a class="home" href="/ai/">AI 前沿情报日报</a></h1>
       <p class="meta"><time datetime="2026-11-09">2026年11月9日 周一</time><span>阅读约 4 分钟</span><span>3 条重点</span></p>
     </header>
-<section id="sec-1" class="core"><h2 class="lede-h">今日核心判断</h2><div class="lede"><ol class="core"><li>周末没有前沿实验室发布新模型。最重要的变化在资金和算力两端：OpenAI 新一轮融资首期只拿到 110 亿美元，估值 1.25 万亿美元，低于此前目标；微软开始收缩外租算力，不再续签甲骨文的 AI 算力租约。</li><li>英伟达董事会宣布独立调查 CEO 黄仁勋是否成为外国情报活动目标，黄仁勋向员工承认婚外情。这给本已承压的英伟达和美国芯片出口管制讨论增加了新的不确定性。</li><li>算力竞争正在转向电力与场地：Anthropic 被报道锁定 1.7 吉瓦燃气发电机，谷歌接手 Crusoe 在怀俄明的数据中心场地。</li></ol></div></section>
+<section id="sec-1" class="core"><h2 class="lede-h">今日核心判断</h2><div class="lede"><ol class="core"><li>周末最值得看的是 Anthropic 公开的 agent 记忆研究：让模型在空闲时回看历史记录、整理和纠正记忆（文中称为「做梦」），在多项内部评测里明显提升长期任务表现；Claude Opus 5 是其测试中第一个能自己跑通「犯错、验证、写成规则」闭环的模型。</li><li>资金与算力端继续降温：OpenAI 新一轮只先到账约 110 亿美元，Ramp 数据显示企业 AI 支出八九月几乎停滞，微软据报正在退掉向甲骨文租的旧 GPU 算力。</li><li>英伟达董事会就黄仁勋与疑似中国情报人员的关系启动独立调查，黄仁勋承认婚外情；公司称无理由认为国家安全或公司机密受损。</li></ol></div></section>
 <section id="sec-2" class="sec sec-main"><header class="sechead"><h2>重点消息</h2><span class="secmeta">3 条</span></header><article class="story" id="story-1">
-  <div class="kicker"><span class="num">重点 · 1</span><span class="tag t-cross">独立交叉确认</span></div>
-  <h3>OpenAI 融资首期 110 亿美元，估值低于原目标</h3>
-  <ul class="facts"><li>彭博 11 月 6 日首发：OpenAI 新一轮融资已到账约 110 亿美元，对应估值 1.25 万亿美元；整轮预计未来几周完成，总额可能约 200 亿美元。</li><li>路透另据知情人与两位投资人证实：SoftBank 和 MGX 参与；原目标最高 300 亿美元，估值也低于最初寻求的 1.5 万亿美元。</li><li>彭博称，OpenAI 在推迟 IPO 计划后谈了一个多月，因 AI 板块公开市场大跌而缩减了规模。</li></ul><div class="ctx"><span class="lbl">为什么重要</span><p>头部实验室融资第一次明显缩水，资本市场开始对 AI 基建开支设限。【分析】</p></div><div class="ctx next"><span class="lbl">看点</span><p>剩余部分能否在几周内到位，以及 Anthropic IPO 定价。</p></div>
-  <p class="sources"><span>来源</span><a href="https://www.bloomberg.com/news/articles/2026-11-06/openai-completes-11-billion-portion-of-funding-at-1-25-trillion-value" rel="noopener">彭博</a> · <a href="https://www.streetinsider.com/Reuters/OpenAI+gets+%2411+billion+funding+at+%241.25+trillion+valuation%2C+source+says/27307823.html" rel="noopener">路透</a></p>
+  <div class="kicker"><span class="num">重点 · 1</span><span class="tag t-off">官方/一手</span></div>
+  <h3>Anthropic 公开 agent 记忆研究：离线「做梦」整理记忆</h3>
+  <ul class="facts"><li>Anthropic 11 月 6 日发文，介绍 Claude 的 agent 记忆设计：会话中由模型自己判断什么值得记下，空闲时再回看会话记录，纠正错误笔记、补写新笔记、建立知识页面并决定哪些内容在下次会话自动加载。</li><li>在持续学习评测 CL-Bench 1.0 的数据库任务中，Sonnet 4.6 只停留在提出猜想；Claude Opus 5 是首个把错误转成「规则加验证依据」的模型，Opus 5.5 与 Sonnet 5.5 也做到。给强模型硬性规定「只记录失败」反而让记忆带来的提升大幅缩水。</li><li>用约 35 万份、4.2 亿 token 的内部文档让 Opus 5 多会话协作建知识页面：从 2 轮扩到 128 轮，仅凭知识页面答题得分从 13% 升到 48%；与搜索结合为 61%，单用搜索 53%，每题省约 2 万 token。并购问答中用知识页面得分 87%，单用搜索 73%；但部分法律任务无明显增益，有一次知识页面比原文还大。</li></ul><div class="ctx"><span class="lbl">为什么重要</span><p>长期记忆和持续学习是 agent 能否长时间独立工作的关键瓶颈，这是前沿实验室少见的带分模型数据的公开拆解。【分析】</p></div><div class="ctx"><span class="lbl">疑点</span><p>均为内部评测，样本小（如 25 题），未给第三方复现材料。</p></div><div class="ctx next"><span class="lbl">看点</span><p>这套机制是否进入 Claude Code、Managed Agents 的默认产品。</p></div>
+  <p class="sources"><span>来源</span><a href="https://www.anthropic.com/research/components-of-agent-memory" rel="noopener">Anthropic</a></p>
 </article><article class="story" id="story-2">
   <div class="kicker"><span class="num">重点 · 2</span><span class="tag t-media">媒体报道</span></div>
-  <h3>微软不再续租甲骨文算力，收缩外部算力伙伴</h3>
-  <ul class="facts"><li>彭博 11 月 6 日报道、CNBC 另据两位知情人证实：微软决定不续签 2023 年与甲骨文签的 AI 算力租约，已陆续关闭租用容量；原因之一是这批服务器用的是较旧的英伟达芯片。</li><li>CNBC 称微软正评估减少合作的 neocloud（专做 GPU 算力出租的云厂商）数量，优先自建数据中心，尚未决定砍掉哪些。微软此前已与 CoreWeave、Nebius、IREN、Lambda、Nscale 等签约。</li><li>微软回应称会按客户需求定期调整投资。CoreWeave、Nebius 和 IREN 股价近一个月约腰斩。</li></ul><div class="ctx"><span class="lbl">为什么重要</span><p>最大的算力买家之一开始挑选供应商，旧一代 GPU 的租赁价值在快速下降。【分析】</p></div><div class="ctx next"><span class="lbl">看点</span><p>CoreWeave、Nebius 下周财报对微软订单的说法。</p></div>
+  <h3>微软据报退掉向甲骨文租的 AI 算力</h3>
+  <ul class="facts"><li>彭博 11 月 6 日报道，微软未续签 2023 年起向甲骨文租用 AI 算力的协议，并已陆续关停相关容量；知情人称这批算力用的是较旧的英伟达芯片，对微软用处变小。</li><li>CNBC 同日报道，微软正在收缩合作的新兴云厂商名单，更多转向自建数据中心。</li></ul><div class="ctx"><span class="lbl">为什么重要</span><p>大买家开始挑芯片代际、砍掉旧算力，租赁型算力供应商的风险在上升。【分析】</p></div><div class="ctx next"><span class="lbl">看点</span><p>其他新兴云厂商的合同是否续约。</p></div>
   <p class="sources"><span>来源</span><a href="https://www.bloomberg.com/news/articles/2026-11-06/microsoft-is-winding-down-oracle-deal-to-rent-ai-cloud-capacity" rel="noopener">彭博</a> · <a href="https://www.cnbc.com/2026/11/06/microsoft-moves-to-consolidate-its-relationships-with-neoclouds-in-ai.html" rel="noopener">CNBC</a></p>
 </article><article class="story" id="story-3">
   <div class="kicker"><span class="num">重点 · 3</span><span class="tag t-off">官方/一手</span><span class="tag t-media">媒体报道</span></div>
-  <h3>英伟达董事会调查黄仁勋是否遭外国情报渗透</h3>
-  <ul class="facts"><li>英伟达董事会 11 月 8 日声明：鉴于黄仁勋被报道为外国情报活动目标，由独立董事委员会在外部律师协助下展开独立调查；董事会目前没有理由认为美国国家安全或公司机密受损，并表示信任黄仁勋。</li><li>路透称，黄仁勋在给员工的信中承认对妻子不忠并承担全部责任，将继续领导公司。此前《纽约时报》报道他与新加坡公司 Megaspeed 前高管有亲密关系，美国当局认定此人是中国情报人员；Megaspeed 购买英伟达芯片，被怀疑帮助中国获取禁运芯片。</li></ul><div class="ctx"><span class="lbl">为什么重要</span><p>可能推动华盛顿收紧对英伟达和对华芯片流向的审查。【分析】</p></div><div class="ctx next"><span class="lbl">看点</span><p>调查范围、时间表，以及国会是否要求听证。</p></div>
-  <p class="sources"><span>来源</span><a href="https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors" rel="noopener">英伟达</a> · <a href="https://www.streetinsider.com/Reuters/Nvidia+probes+whether+CEO+Huang+was+target+of+foreign+intelligence+effort+as+he+admits+affair/27309499.html" rel="noopener">路透</a></p>
+  <h3>英伟达董事会调查黄仁勋涉疑似间谍关系</h3>
+  <ul class="facts"><li>11 月 8 日，英伟达董事会宣布由独立董事组成委员会、聘外部律师，就「黄仁勋成为外国情报行动目标」的报道展开独立调查；称暂无理由认为国家安全或公司机密受损，并对黄仁勋及管理团队表示信任。</li><li>黄仁勋同日致信员工承认婚外情。据 TechCrunch 等报道，所涉对象为新加坡芯片公司 Megaspeed 前高管，此前一份在美国政策圈流传的备忘录称其受中国国家安全部招募。</li></ul><div class="ctx"><span class="lbl">为什么重要</span><p>英伟达对华出口与合规本已敏感，这可能牵动华盛顿对其中国业务的态度。【分析】</p></div><div class="ctx next"><span class="lbl">看点</span><p>调查结论与美国政府、国会的反应。</p></div>
+  <p class="sources"><span>来源</span><a href="https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors" rel="noopener">英伟达</a> · <a href="https://techcrunch.com/2026/11/08/nvidia-says-its-investigating-ceo-jensen-huangs-relationship-with-possible-chinese-spy/" rel="noopener">TechCrunch</a></p>
 </article></section>
-<section id="sec-3" class="sec sec-brief"><header class="sechead"><h2>简讯</h2><span class="secmeta"></span></header><ul class="plainlist"><li>英国《金融时报》报道，Anthropic 9 月下旬以约 34 亿美元从 OnePWR 买下 1.7 吉瓦重型燃气发电机的订单承诺及安装能力；路透未能核实，原文付费。<a href="https://www.cnbc.com/2026/11/08/anthropic-generator-deal-ai-data-centers.html" rel="noopener">CNBC</a></li><li>谷歌收购 Crusoe 在怀俄明东南部的数据中心场地，Crusoe 已完成选址、审批和燃料电池加燃气轮机的混合供电方案，交易价格未披露。<a href="https://www.crusoe.ai/resources/newsroom/crusoe-wyoming-data-center-campus-update" rel="noopener">Crusoe</a></li><li>OpenAI 11 月 6 日发布湿实验基准 BioBasicsBench，共 100 个日常实验数据判读任务；最高推理档位下 GPT-6 Astra 得分 66.7%，GPT-5.6 Sol 为 43.8%，OpenAI 称仍会被预设结论带偏。<a href="https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science" rel="noopener">OpenAI</a></li><li>Anthropic 的 Messages API 推出消息线程公测：长会话只需发送新增消息，5 分钟内有效；50 万至 100 万 token 的请求首个 token 延迟中位数降约 35%，计费不变。<a href="https://claude.com/resources/articles/message-threads" rel="noopener">Claude</a></li><li>Meta 11 月 6 日在 Muse 应用推出 Spaces，用户描述需求即可生成可连接其他应用的个人工作区。<a href="https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/" rel="noopener">Meta</a></li><li>路透：民主党计划明年 1 月接掌国会后提出 AI 法案，涉及数据中心推高电价、前沿模型独立测试和 AI 产品致害责任。<a href="https://www.investing.com/news/stock-market-news/democrats-planning-flood-of-ai-bills-when-they-take-control-of-congress-5007213" rel="noopener">路透</a></li></ul></section>
+<section id="sec-3" class="sec sec-brief"><header class="sechead"><h2>简讯</h2><span class="secmeta"></span></header><ul class="plainlist"><li>OpenAI 发布 BioBasicsBench（100 个日常湿实验数据解读任务）：GPT-6 Astra 最高档推理得分 66.7%，GPT-5.6 Sol 为 43.8%；仍会数错菌落、被预设压过对照。<a href="https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science" rel="noopener">OpenAI</a></li><li>据 FT（CNBC 转述），Anthropic 以约 34 亿美元锁定 1.7 吉瓦燃气发电机组，供数据中心使用；路透未能独立核实。<a href="https://www.cnbc.com/2026/11/08/anthropic-generator-deal-ai-data-centers.html" rel="noopener">CNBC</a></li><li>谷歌收购 Crusoe 位于怀俄明州东南部的数据中心场址，价格未披露；彭博等称谷歌计划投入约 170 亿美元建设。<a href="https://www.crusoe.ai/resources/newsroom/crusoe-wyoming-data-center-campus-update" rel="noopener">Crusoe</a></li><li>Ramp 数据：企业模型调用支出 8–9 月仅增 1.5%（7 月环比 +42%），10 月回升 8.9%；用量仍在涨，主因降价与成本控制。<a href="https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo/" rel="noopener">TechCrunch</a></li><li>腾讯开源 Qwen3.8-27B 的投机解码草稿模型 DSpine（Apache-2.0），自称接受长度高于官方 DFlash2。Hugging <a href="https://huggingface.co/tencent/Qwen3.8-27B-DSpine-b16" rel="noopener">Face</a></li><li>OpenAI 与安全公司 Hacktron 合作测试自身系统，重点是与第三方服务的连接，并扩大其 Daybreak Red 访问。<a href="https://openai.com/index/partnering-with-hacktron" rel="noopener">OpenAI</a></li></ul></section>
+<section id="sec-4" class="sec sec-update"><header class="sechead"><h2>更新与纠错</h2><span class="secmeta"></span></header><ul class="plainlist"><li>11-02 报道的「OpenAI 融资目标降至约 200 亿美元、估值 1.25 万亿」：据彭博与路透 11-06 报道，首批约 110 亿美元已到账，估值 1.25 万亿美元，软银与 MGX 参与，余下部分预计数周内完成。<a href="https://www.streetinsider.com/Reuters/OpenAI+gets+%2411+billion+funding+at+%241.25+trillion+valuation%2C+source+says/27307823.html" rel="noopener">路透</a></li><li>10-23 报道的「微软披露 Storm-0940 用 ARTEX agent 框架批量入侵」：Censys 发现 800 多个无需密码即可从公网访问的 ARTEX 部署，部分暴露了植入程序与攻击数据；ARTEX 已宣布转为闭源。<a href="https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/" rel="noopener">TechCrunch</a></li></ul></section>
     <footer>
-      <p class="notes"><b>本期说明</b>截至 2026-11-09 08:10（Asia/Shanghai）｜窗口：自上期 2026-11-06 07:45 起（含周末）｜访问限制：彭博、金融时报原文付费，仅读到摘要与转述；DeepMind 博客、claude.com 文章页抓取超时，Qwen 与 MiniMax 页面内容为空；未穷尽全网。</p>
+      <p class="notes"><b>本期说明</b>截至 2026-11-09 07:55（Asia/Shanghai）｜窗口：自上期 2026-11-06 07:45 起（含周末）｜访问限制：Microsoft AI 与微软官方博客返回 403；多家中国实验室官网为动态页面，改用 Hugging Face 仓库核对；彭博为付费内容，部分细节来自转述；未穷尽全网。</p>
       <details><summary>证据标签怎么读</summary><ul class="legend">
         <li><span class="tag t-off">官方/一手</span> 可核对的一手材料；<span class="tag t-cross">独立交叉确认</span> 多个独立信源分别证实</li>
         <li><span class="tag t-media">媒体报道</span> 原创媒体报道；<span class="tag t-paywall">付费报道·二手转述</span> 原文付费，只读到转述</li>
