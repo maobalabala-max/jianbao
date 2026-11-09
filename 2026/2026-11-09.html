@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日简报 · 2026年11月9日</title>
+  <!-- site-meta:start -->
+  <meta name="description" content="台积电据报应英伟达要求规划 3D DRAM；OpenSSH 长密码绕过漏洞遭利用；一种矿物补充剂延长雄鼠寿命。">
+  <link rel="canonical" href="https://jianbao.space/2026/2026-11-09.html">
+  <link rel="alternate" type="application/atom+xml" title="每日简报 · 订阅" href="/feed.xml">
+  <meta property="og:site_name" content="每日简报">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="每日简报 · 2026年11月9日">
+  <meta property="og:description" content="台积电据报应英伟达要求规划 3D DRAM；OpenSSH 长密码绕过漏洞遭利用；一种矿物补充剂延长雄鼠寿命。">
+  <meta property="og:url" content="https://jianbao.space/2026/2026-11-09.html">
+  <meta property="og:image" content="https://jianbao.space/icon-512.png">
+  <meta property="article:published_time" content="2026-11-09T08:00:00+08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="每日简报 · 2026年11月9日">
+  <meta name="twitter:description" content="台积电据报应英伟达要求规划 3D DRAM；OpenSSH 长密码绕过漏洞遭利用；一种矿物补充剂延长雄鼠寿命。">
+  <!-- site-meta:end -->
+  <meta name="generator" content="briefing-v2">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/briefing.css?v=6bc964c5">
+</head>
+<body class="briefing">
+<nav class="bar" aria-label="导航"><div class="bar-in"><a class="brand" href="/">每日简报</a><div class="chips"><a href="#s-ai" class="chip c-ai">AI<span>3</span></a><a href="#s-sci" class="chip c-sci">科学<span>4</span></a><a href="#s-tech" class="chip c-tech">科技<span>6</span></a><a href="#s-lon" class="chip c-lon">抗衰<span>3</span></a></div><div class="links"><a href="/ai/2026-11-09.html">AI 日报</a><a href="/feed.xml" class="opt">订阅</a></div></div></nav>
+<div class="page">
+  <aside class="rail" aria-label="本期目录"><p class="rail-h">本期目录</p><p class="rail-sec r-ai"><a href="#s-ai">AI 与大模型</a></p><ol><li><a href="#a1">Anthropic 公开 agent 记忆设计，空闲时回看整理笔记</a></li><li><a href="#a2">微软据报退掉向甲骨文租的 AI 算力</a></li><li><a href="#a3">英伟达董事会调查黄仁勋涉疑似间谍关系</a></li></ol><p class="rail-sec r-sci"><a href="#s-sci">科学、物理与复杂性</a></p><ol><li><a href="#s1">汇总 214 项实验：人为噪声改变八成物种</a></li><li><a href="#s2">离子阱模拟规范场，阿哈罗诺夫–玻姆干涉完全抑制隧穿</a></li><li><a href="#s3">振动光壁把冷原子聚成波包，模拟黑洞视界</a></li></ol><p class="rail-sec r-tech"><a href="#s-tech">互联网与科技产业</a></p><ol><li><a href="#t1">台积电据报应英伟达要求规划生产 3D DRAM</a></li><li><a href="#t2">OpenSSH 长密码绕过漏洞披露不到 9 小时即遭利用</a></li><li><a href="#t3">Chainalysis 遭入侵，全体用户口令哈希与令牌外泄</a></li></ol><p class="rail-sec r-lon"><a href="#s-lon">抗衰老与长寿</a></p><ol><li><a href="#l1">矿物补充剂硫酸氧钒清除衰老细胞，雄鼠中位寿命延长约 7%</a></li></ol></aside>
+  <main>
+    <header class="mast">
+      <h1><a class="home" href="/">每日简报</a></h1>
+      <p class="meta"><time datetime="2026-11-09">2026年11月9日 周一</time><span>阅读约 7 分钟</span><span>10 条要闻 · 6 条简讯</span></p>
+      <p class="lede">台积电据报应英伟达要求规划 3D DRAM；OpenSSH 长密码绕过漏洞遭利用；一种矿物补充剂延长雄鼠寿命。</p>
+    </header>
+    <section class="top3" aria-label="今日三件事">
+      <h2>今日三件事</h2>
+      <ol><li><p><b>算力与内存供给在重排</b>台积电据报应英伟达要求规划 3D DRAM；微软据报不再续租甲骨文的旧代芯片算力。</p><p class="an"><span class="tag t-an">分析</span>买家开始按芯片代际挑货，供给方也在跨界补位。 <span class="jump">见 <a href="#t1">科技·1</a>、<a href="#a2">AI·2</a></span></p></li><li><p><b>一个字符引发 root 失守</b>musl 系统上 sshd 对无密码账户接受 257–1024 字节任意密码，补丁发布后不到 9 小时即见利用。</p><p class="an"><span class="tag t-an">分析</span>容器镜像大量基于 Alpine，排查面比服务器更广。 <span class="jump">见 <a href="#t2">科技·2</a></span></p></li><li><p><b>补充剂成分成了衰老细胞杀手</b>硫酸氧钒饮水 3 个月，雄鼠中位寿命 952 天，对照组 886.5 天。</p><p class="an"><span class="tag t-an">分析</span>仅 39 只雄鼠，离人体用量和安全性还很远。 <span class="jump">见 <a href="#l1">抗衰·1</a></span></p></li></ol>
+    </section>
+    <details class="digest-box">
+      <summary>全部要闻速览</summary>
+      <table class="digest"><thead><tr><th class="sec">栏目</th><th class="ttl">条目</th></tr></thead><tbody><tr><td class="sec"><a href="#a1">AI</a></td><td class="ttl"><a href="#a1">Anthropic 公开 agent 记忆设计，空闲时回看整理笔记</a></td></tr><tr><td class="sec"><a href="#a2">AI</a></td><td class="ttl"><a href="#a2">微软据报退掉向甲骨文租的 AI 算力</a></td></tr><tr><td class="sec"><a href="#a3">AI</a></td><td class="ttl"><a href="#a3">英伟达董事会调查黄仁勋涉疑似间谍关系</a></td></tr><tr><td class="sec"><a href="#s1">科学</a></td><td class="ttl"><a href="#s1">汇总 214 项实验：人为噪声改变八成物种</a></td></tr><tr><td class="sec"><a href="#s2">科学</a></td><td class="ttl"><a href="#s2">离子阱模拟规范场，阿哈罗诺夫–玻姆干涉完全抑制隧穿</a></td></tr><tr><td class="sec"><a href="#s3">科学</a></td><td class="ttl"><a href="#s3">振动光壁把冷原子聚成波包，模拟黑洞视界</a></td></tr><tr><td class="sec"><a href="#t1">科技</a></td><td class="ttl"><a href="#t1">台积电据报应英伟达要求规划生产 3D DRAM</a></td></tr><tr><td class="sec"><a href="#t2">科技</a></td><td class="ttl"><a href="#t2">OpenSSH 长密码绕过漏洞披露不到 9 小时即遭利用</a></td></tr><tr><td class="sec"><a href="#t3">科技</a></td><td class="ttl"><a href="#t3">Chainalysis 遭入侵，全体用户口令哈希与令牌外泄</a></td></tr><tr><td class="sec"><a href="#l1">抗衰</a></td><td class="ttl"><a href="#l1">矿物补充剂硫酸氧钒清除衰老细胞，雄鼠中位寿命延长约 7%</a></td></tr></tbody></table>
+    </details>
+    
+    <section id="s-ai" class="sec sec-ai">
+      <header class="sechead"><h2>AI 与大模型</h2><span class="secmeta">3 条要闻 · 约 1 分钟</span></header>
+      <p class="secnote">本栏只摘 2–3 条，完整版见 <a href="/ai/2026-11-09.html">今日 AI 日报</a>。</p>
+      <article class="story" id="a1">
+        <div class="kicker"><span class="num">AI · 1</span><span class="tag t-off">官方/一手</span><span class="org">Anthropic · 11月6日</span></div>
+        <h3>Anthropic 公开 agent 记忆设计，空闲时回看整理笔记</h3>
+        <p class="dek">Anthropic 发文介绍 Claude 的 agent 记忆：会话中由模型判断该记什么，空闲时回看记录，纠错、补写笔记并决定下次自动加载的内容。</p>
+        <p>在持续学习评测 CL-Bench 1.0 的数据库任务中，Sonnet 4.6 只停留在提出猜想；Claude Opus 5 是首个把错误转成「规则加验证依据」的模型，Opus 5.5 与 Sonnet 5.5 也做到。给强模型硬性规定「只记录失败」反而让记忆带来的提升大幅缩水。</p>
+        <div class="ctx"><span class="lbl">为什么重要</span><span class="tag t-an">分析</span><p>长期记忆和持续学习是 agent 能否长时间独立工作的关键瓶颈，这是前沿实验室少见的带分模型数据的公开拆解。</p></div><div class="ctx next"><span class="lbl">看点</span><p>这套机制是否进入 Claude Code、Managed Agents 的默认产品。</p></div>
+        <p class="sources"><span>来源</span><a href="https://www.anthropic.com/research/components-of-agent-memory">Anthropic</a></p><p class="from-ai"><a href="/ai/2026-11-09.html#story-1">AI 日报全文 →</a></p>
+      </article>
+      <article class="story" id="a2">
+        <div class="kicker"><span class="num">AI · 2</span><span class="tag t-media">媒体报道</span><span class="org">彭博 · 11月6日</span></div>
+        <h3>微软据报退掉向甲骨文租的 AI 算力</h3>
+        <p class="dek">彭博 11 月 6 日报道，微软未续签 2023 年起向甲骨文租用 AI 算力的协议，并已陆续关停相关容量；知情人称这批算力用的是较旧的英伟达芯片，对微软用处变小。</p>
+        <p>CNBC 同日报道，微软正在收缩合作的新兴云厂商名单，更多转向自建数据中心。</p>
+        <div class="ctx"><span class="lbl">为什么重要</span><span class="tag t-an">分析</span><p>大买家开始挑芯片代际、砍掉旧算力，租赁型算力供应商的风险在上升。</p></div><div class="ctx next"><span class="lbl">看点</span><p>其他新兴云厂商的合同是否续约。</p></div>
+        <p class="sources"><span>来源</span><a href="https://www.bloomberg.com/news/articles/2026-11-06/microsoft-is-winding-down-oracle-deal-to-rent-ai-cloud-capacity">彭博</a> · <a href="https://www.cnbc.com/2026/11/06/microsoft-moves-to-consolidate-its-relationships-with-neoclouds-in-ai.html">CNBC</a></p><p class="from-ai"><a href="/ai/2026-11-09.html#story-2">AI 日报全文 →</a></p>
+      </article>
+      <article class="story" id="a3">
+        <div class="kicker"><span class="num">AI · 3</span><span class="tag t-off">官方/一手</span><span class="tag t-media">媒体报道</span><span class="org">英伟达 · 11月8日</span></div>
+        <h3>英伟达董事会调查黄仁勋涉疑似间谍关系</h3>
+        <p class="dek">11 月 8 日，英伟达董事会宣布由独立董事组成委员会、聘外部律师，就「黄仁勋成为外国情报行动目标」的报道展开独立调查。</p>
+        <p>黄仁勋同日致信员工承认婚外情。据 TechCrunch 等报道，所涉对象为新加坡芯片公司 Megaspeed 前高管，此前一份在美国政策圈流传的备忘录称其受中国国家安全部招募。</p>
+        <div class="ctx"><span class="lbl">为什么重要</span><span class="tag t-an">分析</span><p>英伟达对华出口与合规本已敏感，这可能牵动华盛顿对其中国业务的态度。</p></div><div class="ctx next"><span class="lbl">看点</span><p>调查结论与美国政府、国会的反应。</p></div>
+        <p class="sources"><span>来源</span><a href="https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors">英伟达</a> · <a href="https://techcrunch.com/2026/11/08/nvidia-says-its-investigating-ceo-jensen-huangs-relationship-with-possible-chinese-spy/">TechCrunch</a></p><p class="from-ai"><a href="/ai/2026-11-09.html#story-3">AI 日报全文 →</a></p>
+      </article>
+    </section>
+    <section id="s-sci" class="sec sec-sci">
+      <header class="sechead"><h2>科学、物理与复杂性</h2><span class="secmeta">3 条要闻 · 1 条简讯 · 约 2 分钟</span></header>
+      
+      <article class="story" id="s1">
+        <div class="kicker"><span class="num">科学 · 1</span><span class="tag t-peer">同行评审</span><span class="org">Science · 11月5日</span></div>
+        <h3>汇总 214 项实验：人为噪声改变八成物种</h3>
+        <p class="dek">贝尔法斯特女王大学等团队在《Science》汇总六大洲 214 项实验、177 个水陆物种，发现人为噪声改变了约 80% 物种的生理、发育或行为。</p>
+        <p>噪声还与适合度和种群数量下降、捕食关系紊乱相关。作者主张把保护声景与保护栖息地并列。局限：属于对已有实验的综合分析，各研究噪声强度和类型差异大。</p>
+        <div class="ctx"><span class="lbl">为什么重要</span><span class="tag t-an">分析</span><p>噪声长期被当作次要污染，这项综合证据把它推到与栖息地丧失同一层级的保护议题。</p></div><div class="ctx next"><span class="lbl">看点</span><p>各国噪声管理与保护区规划是否吸纳声景指标。</p></div>
+        <p class="sources"><span>来源</span><a href="https://www.science.org/doi/abs/10.1126/science.adu9593">Science</a> · <a href="https://www.science.org/content/article/noise-pollution-causing-potentially-massive-problems-wildlife-across-globe">Science 新闻</a></p>
+      </article>
+      <article class="story" id="s2">
+        <div class="kicker"><span class="num">科学 · 2</span><span class="tag t-peer">同行评审</span><span class="org">Nature Physics · 11月7日</span></div>
+        <h3>离子阱模拟规范场，阿哈罗诺夫–玻姆干涉完全抑制隧穿</h3>
+        <p class="dek">牛津大学团队用两个锶离子搭出带物质场的 Z₂ 格点规范理论闭环：零磁通时粒子隧穿快一倍，存在磁通（vison）时隧穿被完全抑制。</p>
+        <p>离子内能级编码规范场，振动声子编码物质粒子，靠耦合方式造出合成维度。加入场线能量代价后隧穿受抑，作者称这是更大体系中禁闭的前兆。局限：仅一个回路，经典计算机可轻松求解。</p>
+        <div class="ctx"><span class="lbl">为什么重要</span><span class="tag t-an">分析</span><p>此前二维规范场模拟多去掉了物质场，这次首次看到磁通如何左右带电粒子的运动。</p></div><div class="ctx next"><span class="lbl">看点</span><p>能否扩展到经典计算难以求解的更大格点。</p></div>
+        <p class="sources"><span>来源</span><a href="https://doi.org/10.1038/s41567-026-03400-6">Nature Physics</a> · <a href="https://phys.org/news/2026-11-paths-flux-ions-simulate-aharonovbohm.html">Phys.org</a></p>
+      </article>
+      <article class="story" id="s3">
+        <div class="kicker"><span class="num">科学 · 3</span><span class="tag t-peer">同行评审</span><span class="org">Physical Review Letters · 11月6日</span></div>
+        <h3>振动光壁把冷原子聚成波包，模拟黑洞视界</h3>
+        <p class="dek">加州大学圣塔芭芭拉分校团队在 PRL 报告：用两片激光当「镜子」夹住超冷锂原子，以约每秒 100 次振动其中一片，原本弥散的原子云在几个周期内聚成紧凑波包。</p>
+        <p>不同起点的波包都汇向同一条稳定轨迹，这种单向流动在数学上类似黑洞与白洞视界附近的光。用物质波替代光，绕开了镜子需近光速运动的难题，首次直接验证了该理论预言。</p>
+        <div class="ctx"><span class="lbl">为什么重要</span><span class="tag t-an">分析</span><p>这是对快速移动腔体理论的首次直接验证，也为压缩光信号和研究真空产生粒子提供新平台。</p></div>
+        <p class="sources"><span>来源</span><a href="https://phys.org/news/2026-11-vibrating-mirrors-analog-black-hole.html">Phys.org</a> · <a href="https://arxiv.org/abs/2601.21122">arXiv</a></p>
+      </article><div class="briefs"><h4>简讯</h4><ul><li id="b-sci-1"><b>AI 智能体设计并运行机器人实验室</b> 多伦多大学团队的智能体先在虚拟实验室演练，再指挥真实机械臂完成纳米晶光学测量，生成 200 多条指令。 <span class="bsrc"><span class="tag t-pre">预印本</span> <a href="https://www.nature.com/articles/d41586-026-03587-x">Nature 新闻</a> · <a href="https://doi.org/10.48550/arXiv.2610.23826">arXiv</a></span></li></ul></div>
+    </section>
+    <section id="s-tech" class="sec sec-tech">
+      <header class="sechead"><h2>互联网与科技产业</h2><span class="secmeta">3 条要闻 · 3 条简讯 · 约 2 分钟</span></header>
+      
+      <article class="story" id="t1">
+        <div class="kicker"><span class="num">科技 · 1</span><span class="tag t-paywall">付费报道·二手转述</span><span class="tag t-single">单一来源</span><span class="org">The Information · 11月6日</span></div>
+        <h3>台积电据报应英伟达要求规划生产 3D DRAM</h3>
+        <p class="dek">据路透转述 The Information，台积电已开始规划生产垂直堆叠存储单元的 3D DRAM，起因是最大客户英伟达的要求，可能新建工厂或收购现有工厂改造。</p>
+        <p>项目据称由主管先进封装的副总徐国晋牵头，量产时间未定。台积电回应称始终专注核心业务、为客户代工芯片，未直接谈存储。若成行，将与三星、SK 海力士、美光正面竞争。</p>
+        <div class="ctx"><span class="lbl">为什么重要</span><span class="tag t-an">分析</span><p>AI 带来的内存短缺已推高手机和电脑成本，晶圆代工龙头入场将改变存储议价格局。</p></div><div class="ctx next"><span class="lbl">看点</span><p>台积电或英伟达是否正式确认，及建厂或收购动作。</p></div>
+        <p class="sources"><span>来源</span><a href="https://www.investing.com/news/stock-market-news/tsmc-considers-making-advanced-memory-chips-the-information-reports-5008786">路透（经 Investing.com）</a> · <a href="https://www.taipeitimes.com/News/biz/archives/2026/11/09/2003867384">台北时报</a></p>
+      </article>
+      <article class="story" id="t2">
+        <div class="kicker"><span class="num">科技 · 2</span><span class="tag t-off">官方/一手</span><span class="tag t-media">媒体报道</span><span class="org">Alpine Linux · 11月5日</span></div>
+        <h3>OpenSSH 长密码绕过漏洞披露不到 9 小时即遭利用</h3>
+        <p class="dek">在使用 musl 且不走 PAM 的 Linux 上，sshd 会对无密码账户接受任意 257–1024 字节的密码；OpenSSH 10.6p2 已修复，Alpine 当天发布补丁。</p>
+        <p>漏洞编号 CVE-2026-123158，评分 8.1。根因是 musl 的 crypt() 出错时返回「*」，恰好等于无密码账户的存储字段。安全公司 Previdian 称披露后不到 9 小时就见到攻击，并在蜜罐上被拿到 root。</p>
+        <div class="ctx"><span class="lbl">为什么重要</span><span class="tag t-an">分析</span><p>大量容器镜像和嵌入式设备基于 Alpine、OpenWrt 等 musl 系统，暴露面远超服务器本身。</p></div><div class="ctx next"><span class="lbl">看点</span><p>OpenWrt、Yocto 等下游与主流容器镜像的修复进度。</p></div>
+        <p class="sources"><span>来源</span><a href="https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/">Alpine Linux</a> · <a href="https://www.helpnetsecurity.com/2026/11/06/openssh-sshole-cve-2026-123158-exploitation/">Help Net Security</a></p>
+      </article>
+      <article class="story" id="t3">
+        <div class="kicker"><span class="num">科技 · 3</span><span class="tag t-off">官方/一手</span><span class="org">Chainalysis · 11月7日</span></div>
+        <h3>Chainalysis 遭入侵，全体用户口令哈希与令牌外泄</h3>
+        <p class="dek">区块链分析公司 Chainalysis 披露，攻击者用「进攻型智能体技术」侵入系统，全体用户的姓名、用户名、口令哈希和有效令牌外泄；11 月 7 日核心产品恢复上线。</p>
+        <p>公司 11 月 4 日发现部分 KYT 账户遭未授权访问，随即下线交易监控产品。恢复后所有用户须重置密码、轮换 API 密钥，并提交可信 IP 白名单。公司称暂无证据显示调查数据被访问或归因数据被篡改。</p>
+        <div class="ctx"><span class="lbl">为什么重要</span><span class="tag t-an">分析</span><p>执法和交易所依赖其做反洗钱筛查，一周停摆暴露合规基础设施的单点风险。</p></div><div class="ctx next"><span class="lbl">看点</span><p>Reactor 之外其余系统的恢复与事件调查结论。</p></div>
+        <p class="sources"><span>来源</span><a href="https://www.chainalysis.com/blog/security-incident-october-30/">Chainalysis</a> · <a href="https://www.bleepingcomputer.com/news/security/chainalysis-says-breach-exposed-credentials-for-all-customers/">BleepingComputer</a></p>
+      </article><div class="briefs"><h4>简讯</h4><ul><li id="b-tech-1"><b>41 项地方公投 40 项限建数据中心</b> 11 月 3 日美国 10 个州的地方投票中，选民在 41 项涉数据中心的提案里有 40 项站在限制一方。 <span class="bsrc"><span class="tag t-media">媒体报道</span><span class="tag t-cross">独立交叉确认</span> <a href="https://news.ballotpedia.org/2026/11/06/voters-favored-limiting-data-center-development-in-40-of-41-local-ballot-measures-on-nov-3/">Ballotpedia</a> · <a href="https://www.cnbc.com/2026/11/04/data-center-ballot-measures-2026-midterm.html">CNBC</a></span></li><li id="b-tech-2"><b>苹果据报 2027 年春让 Siri 操作第三方应用</b> 彭博称该功能先以预览形式随 iOS 27.5 或 27.6 推出，更自主的智能体式 Siri 最早也在 2027 年。 <span class="bsrc"><span class="tag t-media">媒体报道</span><span class="tag t-single">单一来源</span> <a href="https://appleinsider.com/articles/26/11/08/siri-ai-wont-get-more-control-of-apple-apps-until-spring-2027">AppleInsider</a></span></li><li id="b-tech-3"><b>Palo Alto 洽购 AI 智能体安全公司 Clutch</b> 据报价格约 5 亿美元现金加里程碑付款；Clutch 专做企业内 AI 智能体凭证与访问管理，交易尚未签署。 <span class="bsrc"><span class="tag t-media">媒体报道</span><span class="tag t-single">单一来源</span> <a href="https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m/">TechCrunch</a></span></li></ul></div>
+    </section>
+    <section id="s-lon" class="sec sec-lon">
+      <header class="sechead"><h2>抗衰老与长寿</h2><span class="secmeta">1 条要闻 · 2 条简讯 · 约 1 分钟</span></header>
+      
+      <article class="story" id="l1">
+        <div class="kicker"><span class="num">抗衰 · 1</span><span class="tag t-peer">同行评审</span><span class="tag t-mouse">动物实验</span><span class="org">Nature Aging · 11月6日</span></div>
+        <h3>矿物补充剂硫酸氧钒清除衰老细胞，雄鼠中位寿命延长约 7%</h3>
+        <p class="dek">芝加哥大学团队在《Nature Aging》报告：从 70 周龄起给雄鼠饮用含硫酸氧钒的水 3 个月，中位寿命 952 天，对照组 886.5 天。</p>
+        <p>机制是衰老细胞谷胱甘肽还原酶下调、氧化型谷胱甘肽堆积，硫酸氧钒趁机诱发蛋白错误折叠致其死亡。老年雌鼠体能与代谢也改善，但未测寿命。局限：寿命实验仅 39 只雄鼠，长期毒性未明。</p>
+        <div class="ctx"><span class="lbl">为什么重要</span><span class="tag t-an">分析</span><p>这是市售补充剂成分首次被证明有清除衰老细胞作用，但钒过量可伤肺，不宜自行服用。</p></div><div class="ctx next"><span class="lbl">看点</span><p>雌鼠寿命数据与独立实验室复现。</p></div>
+        <p class="sources"><span>来源</span><a href="https://www.nature.com/articles/s43587-026-01253-5">Nature Aging</a></p>
+      </article><div class="briefs"><h4>简讯</h4><ul><li id="b-lon-1"><b>雷帕霉素未让肾移植者更长寿</b> GeroScience 分析 11474 名肾移植者：用药者校正后中位存活年龄 64.6 岁，未用者 64.3 岁；剂量为免疫抑制量。 <span class="bsrc"><span class="tag t-peer">同行评审</span><span class="tag t-human">人群·观察性</span> <a href="https://link.springer.com/article/10.1007/s11357-026-02643-8">GeroScience</a></span></li><li id="b-lon-2"><b>1200 人试验将测降糖药能否延缓衰老</b> 得州大学圣安东尼奥健康科学中心登记 2b 期 RCT，在 60–75 岁健康人中比较达格列净、口服司美格鲁肽与安慰剂 36 个月。 <span class="bsrc"><span class="tag t-off">官方/一手</span><span class="tag t-rct">人体·RCT</span> <a href="https://clinicaltrials.gov/study/NCT07923630">ClinicalTrials.gov</a></span></li></ul></div>
+    </section>
+    
+    <footer>
+      
+      <details><summary>证据标签怎么读</summary><ul class="legend"><li><span class="tag t-off">官方/一手</span> 公司公告、政府文件、获奖公告等一手材料；<span class="tag t-cross">独立交叉确认</span> 多个独立信源分别证实</li><li><span class="tag t-peer">同行评审</span> 已发表的同行评审论文；<span class="tag t-pre">预印本</span> 未经同行评审</li><li><span class="tag t-media">媒体报道</span> 媒体报道，已读原文；<span class="tag t-paywall">付费报道·二手转述</span> 原文付费，只读到转述；<span class="tag t-single">单一来源</span> 只有一个来源</li><li><span class="tag t-rumor">推断/传闻</span> 未经证实的传闻或媒体推断</li><li><span class="tag t-mouse">动物实验</span><span class="tag t-cell">细胞实验</span><span class="tag t-human">人群·观察性</span><span class="tag t-rct">人体·RCT</span> 研究对象与设计（抗衰栏必标）</li><li><span class="tag t-an">分析</span> 编辑判断，不是事实</li></ul></details>
+      <p class="pn"><a class="pn-prev" href="/2026/2026-11-06.html">← 上一期 11月6日</a><a href="/">全部往期</a><a class="pn-next"></a></p>
+      <aside class="sub sub-slim" aria-label="订阅"><p><b>每个工作日一期。</b>用 RSS 阅读器订阅，新一期自动送达。</p><div class="sub-act"><a class="sub-rss" href="/feed.xml"><svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="3.5" cy="12.5" r="1.6" fill="currentColor"/><path d="M2 7.2a6.8 6.8 0 0 1 6.8 6.8M2 2.6A11.4 11.4 0 0 1 13.4 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>RSS / Atom 订阅</a></div></aside>
+    </footer>
+  </main>
+</div>
+<footer class="hm-foot site-foot"><div class="sf-row"><span>jianbao.space</span><nav class="sf-links" aria-label="站点"><a href="/">每日简报</a><a href="/ai/">AI 日报</a><a href="/about.html">关于</a><a href="/corrections.html">更正记录</a><a href="/feed.xml">订阅</a></nav></div><p class="sf-disc">摘要为本站原创编写，链接指向原始来源；不转载付费内容。仅供阅读参考，不构成投资建议；抗衰老栏目不构成医疗建议。</p></footer>
+</body>
+</html>

@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年11月9日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-09.html"/>
+    <id>https://jianbao.space/2026/2026-11-09.html</id>
+    <published>2026-11-09T08:00:00+08:00</published>
+    <updated>2026-11-09T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>台积电据报应英伟达要求规划 3D DRAM；OpenSSH 长密码绕过漏洞遭利用；一种矿物补充剂延长雄鼠寿命。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-11-09</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-09.html"/>
     <id>https://jianbao.space/ai/2026-11-09.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-10-20T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>用 agent 攻击已经比用 agent 防守容易：OpenCode 遭入侵后，前沿模型因安全过滤拒绝帮团队分析恶意代码；同期有黑客用一群 agent 自主入侵逾百个网站。微软安全负责人直言前沿模型「不能被信任」。 MiniMax 在 D…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年10月19日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-19.html"/>
-    <id>https://jianbao.space/2026/2026-10-19.html</id>
-    <published>2026-10-19T08:00:00+08:00</published>
-    <updated>2026-10-19T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>中国拟管制 23 项 AI 技术出口，DeepSeek 次日开源新版；CoreWeave 违约互换飙升；近半数造礁珊瑚受威胁，微塑料被发现会自发产生活性氧。</summary>
   </entry>
 </feed>
