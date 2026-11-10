@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年11月10日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-10.html"/>
+    <id>https://jianbao.space/2026/2026-11-10.html</id>
+    <published>2026-11-10T08:00:00+08:00</published>
+    <updated>2026-11-10T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>Anthropic 发布 Fable 5.2；谷歌一年推出第四款 TPU，挪威电网暂停为新数据中心预留容量；百年汤恩幼儿化石重新定年。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-11-10</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-10.html"/>
     <id>https://jianbao.space/ai/2026-11-10.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-10-21T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>谷歌开源 TorchTPU，与亚马逊前一天发布的 TorchNeuron 一起，两大云厂商在两天内都让 PyTorch 代码几乎不改就能跑在自家芯片上，英伟达靠软件生态锁定开发者的优势第一次被同时从 PyTorch 这一层削弱。 《华尔街…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年10月20日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-20.html"/>
-    <id>https://jianbao.space/2026/2026-10-20.html</id>
-    <published>2026-10-20T08:00:00+08:00</published>
-    <updated>2026-10-20T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>美国禁止联邦机构使用 DeepSeek，MiniMax 新模型称任务成本降七成；亚马逊让 PyTorch 直接跑在自研芯片上；铜氧化物超导配对机制获新证据。</summary>
   </entry>
 </feed>
