@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年11月11日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-11.html"/>
+    <id>https://jianbao.space/2026/2026-11-11.html</id>
+    <published>2026-11-11T08:00:00+08:00</published>
+    <updated>2026-11-11T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>Anthropic 启动 IPO 路演并锁定 1.7 吉瓦燃气发电；谷歌用 agent 形式化验证 Signal 协议；法国把冷柜攻击归于伊朗；新实验显示地核可能比想象的冷。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-11-11</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-11.html"/>
     <id>https://jianbao.space/ai/2026-11-11.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-10-22T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>用 AI 找漏洞已经到了影响整个互联网的程度：Wiz 和 OpenAI 合作方用前沿模型找出 PHP 核心引擎两个可远程执行代码的严重漏洞，近十年的版本几乎都受影响。发现者自己也说，没有前沿模型，这条利用链在实践上很难做成。 OpenAI…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年10月21日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-21.html"/>
-    <id>https://jianbao.space/2026/2026-10-21.html</id>
-    <published>2026-10-21T08:00:00+08:00</published>
-    <updated>2026-10-21T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>谷歌云伦敦断电波及英国银行，Anthropic 草案称算力不够；谷歌开源 TorchTPU；特斯拉与 SpaceX 评估合并；物理学家逐个记录气体原子撞击。</summary>
   </entry>
 </feed>
