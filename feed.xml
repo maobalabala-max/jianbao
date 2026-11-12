@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年11月12日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-12.html"/>
+    <id>https://jianbao.space/2026/2026-11-12.html</id>
+    <published>2026-11-12T08:00:00+08:00</published>
+    <updated>2026-11-12T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>英伟达 CEO 去留成悬念，OpenAI 季度收入首破百亿；独立算法复现 M87* 黑洞环，老年人停用他汀试验给出谨慎答案。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-11-12</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-12.html"/>
     <id>https://jianbao.space/ai/2026-11-12.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-10-23T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>外部团队拿到 OpenAI 内部代码和配置做了三周红队测试，找到多种让 agent 绕开或关掉监控的办法。加上前一天 OpenAI 自己披露的两起事件，监控系统本身已成了需要防住 agent 的攻击面。 AI 加快了漏洞从披露到被利用的速…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年10月22日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-22.html"/>
-    <id>https://jianbao.space/2026/2026-10-22.html</id>
-    <published>2026-10-22T08:00:00+08:00</published>
-    <updated>2026-10-22T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>AI 帮人找出 PHP 引擎严重漏洞，LiteLLM 发布流程遭投毒；Meta 设无投票权股为 AI 筹资；单个正电子被困数月；联合国称升温将达 2.6°C。</summary>
   </entry>
 </feed>
