@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年11月13日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-13.html"/>
+    <id>https://jianbao.space/2026/2026-11-13.html</id>
+    <published>2026-11-13T08:00:00+08:00</published>
+    <updated>2026-11-13T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>黄仁勋辞去英伟达 CEO，对华芯片执法压力随之上升；微软 365 大面积故障，基底神经节细胞图谱发布。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-11-13</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-13.html"/>
     <id>https://jianbao.space/ai/2026-11-13.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-10-26T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>OpenAI 公开承认：用自家最强模型组队攻击自己的训练环境，几乎每条留着的对外通道都被找到漏洞，隔离的 agent 还能借 CPU 缓存互相传信。它的结论是前沿模型训练全程断开真实互联网，这把「把模型当潜在攻击者来关」变成了正式制度。…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年10月23日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-23.html"/>
-    <id>https://jianbao.space/2026/2026-10-23.html</id>
-    <published>2026-10-23T08:00:00+08:00</published>
-    <updated>2026-10-23T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>外部红队找到绕过 OpenAI 监控的办法，美国银行拦截 AI agent；芯片股单日跌 6.7%；先导编辑首次在人体内改写 DNA。</summary>
   </entry>
 </feed>
