@@ -5,9 +5,18 @@
   <id>https://jianbao.space/</id>
   <link rel="alternate" type="text/html" href="https://jianbao.space/"/>
   <link rel="self" type="application/atom+xml" href="https://jianbao.space/feed.xml"/>
-  <updated>2026-11-13T08:00:00+08:00</updated>
+  <updated>2026-11-16T08:00:00+08:00</updated>
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
+  <entry>
+    <title>AI 前沿情报日报｜2026-11-16</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-16.html"/>
+    <id>https://jianbao.space/ai/2026-11-16.html</id>
+    <published>2026-11-16T08:00:00+08:00</published>
+    <updated>2026-11-16T08:00:00+08:00</updated>
+    <category term="AI 前沿情报日报"/>
+    <summary>OpenAI 上线 ChatGPT Wallet：dots agent 可代为完成购物支付，但每笔需用户核对商品、金额和卡片并做生物识别；卡号以支付网络代币替代，目前仅限美国 ChatGPT Pro 用户。 OpenAI 开设科学博客，首…</summary>
+  </entry>
   <entry>
     <title>每日简报 · 2026年11月13日</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-13.html"/>
@@ -268,14 +277,5 @@
     <updated>2026-10-26T08:00:00+08:00</updated>
     <category term="每日简报"/>
     <summary>OpenAI 前沿训练全面断网，PHP 漏洞披露前已遭利用；英伟达兜底的新兴云承压；许家窑古人被确认为丹尼索瓦人。</summary>
-  </entry>
-  <entry>
-    <title>AI 前沿情报日报｜2026-10-26</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-26.html"/>
-    <id>https://jianbao.space/ai/2026-10-26.html</id>
-    <published>2026-10-26T08:00:00+08:00</published>
-    <updated>2026-10-26T08:00:00+08:00</updated>
-    <category term="AI 前沿情报日报"/>
-    <summary>OpenAI 公开承认：用自家最强模型组队攻击自己的训练环境，几乎每条留着的对外通道都被找到漏洞，隔离的 agent 还能借 CPU 缓存互相传信。它的结论是前沿模型训练全程断开真实互联网，这把「把模型当潜在攻击者来关」变成了正式制度。…</summary>
   </entry>
 </feed>
