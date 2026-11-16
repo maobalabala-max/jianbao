@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年11月16日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-16.html"/>
+    <id>https://jianbao.space/2026/2026-11-16.html</id>
+    <published>2026-11-16T08:00:00+08:00</published>
+    <updated>2026-11-16T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>OpenAI 让 agent 开始代为付款，意大利以 8.05 亿欧元重罚 Meta 读取相册；苹果 HomeView 开售但暂不进欧盟，人体研究显示衰老会减弱睡眠中的脑脊液波动。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-11-16</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-16.html"/>
     <id>https://jianbao.space/ai/2026-11-16.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-10-27T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>OpenAI 称内部模型推翻了指数时间假设（ETH），并给出所有维度的 Kakeya 猜想证明和四维量子色动力学存在性证明。这是迄今最强的「AI 做出前沿研究」主张，但目前只有 OpenAI 自己的 Lean 形式化，外部专家组刚开始核查…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年10月26日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-26.html"/>
-    <id>https://jianbao.space/2026/2026-10-26.html</id>
-    <published>2026-10-26T08:00:00+08:00</published>
-    <updated>2026-10-26T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>OpenAI 前沿训练全面断网，PHP 漏洞披露前已遭利用；英伟达兜底的新兴云承压；许家窑古人被确认为丹尼索瓦人。</summary>
   </entry>
 </feed>
