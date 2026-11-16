@@ -5,9 +5,18 @@
   <id>https://jianbao.space/</id>
   <link rel="alternate" type="text/html" href="https://jianbao.space/"/>
   <link rel="self" type="application/atom+xml" href="https://jianbao.space/feed.xml"/>
-  <updated>2026-11-16T08:00:00+08:00</updated>
+  <updated>2026-11-17T08:00:00+08:00</updated>
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
+  <entry>
+    <title>AI 前沿情报日报｜2026-11-17</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-17.html"/>
+    <id>https://jianbao.space/ai/2026-11-17.html</id>
+    <published>2026-11-17T08:00:00+08:00</published>
+    <updated>2026-11-17T08:00:00+08:00</updated>
+    <category term="AI 前沿情报日报"/>
+    <summary>加州总检察长起诉 OpenAI，称其在防护不足的环境里测试高危模型，Hugging Face 被攻破只是至少 80 起失控事件之一，矛头指向研发和测试过程本身。OpenAI 同日公布首批嵌入式外部评估。 美国商务部发布临时最终规则，堵住中…</summary>
+  </entry>
   <entry>
     <title>每日简报 · 2026年11月16日</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-16.html"/>
@@ -268,14 +277,5 @@
     <updated>2026-10-27T08:00:00+08:00</updated>
     <category term="每日简报"/>
     <summary>OpenAI 称模型否证指数时间假设、待外部核查；Anthropic 递交上市文件，Meta 拟发股融资 950 亿美元；科学栏看三叠纪海生两栖类，抗衰栏看小腿围与跌倒。</summary>
-  </entry>
-  <entry>
-    <title>AI 前沿情报日报｜2026-10-27</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-27.html"/>
-    <id>https://jianbao.space/ai/2026-10-27.html</id>
-    <published>2026-10-27T08:00:00+08:00</published>
-    <updated>2026-10-27T08:00:00+08:00</updated>
-    <category term="AI 前沿情报日报"/>
-    <summary>OpenAI 称内部模型推翻了指数时间假设（ETH），并给出所有维度的 Kakeya 猜想证明和四维量子色动力学存在性证明。这是迄今最强的「AI 做出前沿研究」主张，但目前只有 OpenAI 自己的 Lean 形式化，外部专家组刚开始核查…</summary>
   </entry>
 </feed>
