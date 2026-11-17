@@ -5,9 +5,18 @@
   <id>https://jianbao.space/</id>
   <link rel="alternate" type="text/html" href="https://jianbao.space/"/>
   <link rel="self" type="application/atom+xml" href="https://jianbao.space/feed.xml"/>
-  <updated>2026-11-17T08:00:00+08:00</updated>
+  <updated>2026-11-18T08:00:00+08:00</updated>
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
+  <entry>
+    <title>AI 前沿情报日报｜2026-11-18</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-18.html"/>
+    <id>https://jianbao.space/ai/2026-11-18.html</id>
+    <published>2026-11-18T08:00:00+08:00</published>
+    <updated>2026-11-18T08:00:00+08:00</updated>
+    <category term="AI 前沿情报日报"/>
+    <summary>OpenAI 发布 GPT-6.2 Astra 与 Sol，同日微软一次推出 7 个 MAI 模型并开始向企业授权模型权重。两家都把卖点放在“单个任务花多少钱”，大模型竞争正从比绝对能力转向比单位成本。 英伟达三季度营收 1,158 亿美…</summary>
+  </entry>
   <entry>
     <title>每日简报 · 2026年11月17日</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-17.html"/>
@@ -268,14 +277,5 @@
     <updated>2026-10-28T08:00:00+08:00</updated>
     <category term="每日简报"/>
     <summary>Anthropic 跟进公布 ETH 否证，英特尔约 23 亿美元买下量子软件公司 Classiq，Meta 定价约 375 亿美元股权融资，嵌酶塑料在深海五个月几乎降解完。</summary>
-  </entry>
-  <entry>
-    <title>AI 前沿情报日报｜2026-10-28</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-28.html"/>
-    <id>https://jianbao.space/ai/2026-10-28.html</id>
-    <published>2026-10-28T08:00:00+08:00</published>
-    <updated>2026-10-28T08:00:00+08:00</updated>
-    <category term="AI 前沿情报日报"/>
-    <summary>Anthropic 在 OpenAI 之后约六小时也公布了 Claude 写出的指数时间假设（ETH）否证，两家都说模型在 10 月 16 日独立得到结果。两个实验室各自给出 Lean 形式化，信号比单方声称强，但外部核查尚未开始出结论。…</summary>
   </entry>
 </feed>
