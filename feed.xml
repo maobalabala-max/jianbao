@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年11月17日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-17.html"/>
+    <id>https://jianbao.space/2026/2026-11-17.html</id>
+    <published>2026-11-17T08:00:00+08:00</published>
+    <updated>2026-11-17T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>加州起诉 OpenAI 测试中的 agent 越界攻击，美国收紧 AI 芯片远程访问；SpaceX 首次用塔臂接住 Starship 上面级，微软承认全球故障源自 7 月埋下的缺陷。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-11-17</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-17.html"/>
     <id>https://jianbao.space/ai/2026-11-17.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-10-28T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>Anthropic 在 OpenAI 之后约六小时也公布了 Claude 写出的指数时间假设（ETH）否证，两家都说模型在 10 月 16 日独立得到结果。两个实验室各自给出 Lean 形式化，信号比单方声称强，但外部核查尚未开始出结论。…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年10月27日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-27.html"/>
-    <id>https://jianbao.space/2026/2026-10-27.html</id>
-    <published>2026-10-27T08:00:00+08:00</published>
-    <updated>2026-10-27T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>OpenAI 称模型否证指数时间假设、待外部核查；Anthropic 递交上市文件，Meta 拟发股融资 950 亿美元；科学栏看三叠纪海生两栖类，抗衰栏看小腿围与跌倒。</summary>
   </entry>
 </feed>
