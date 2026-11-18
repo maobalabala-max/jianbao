@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年11月18日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-18.html"/>
+    <id>https://jianbao.space/2026/2026-11-18.html</id>
+    <published>2026-11-18T08:00:00+08:00</published>
+    <updated>2026-11-18T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>OpenAI 降价发布 GPT-6.2，英伟达营收翻倍但芯片股仍遭抛售；Optimizely 被攻破致 178 家网站向访客投毒，加州禁止 Waymo 上高速。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-11-18</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-18.html"/>
     <id>https://jianbao.space/ai/2026-11-18.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-10-29T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>谷歌在 Argon 两周后发布 Gemini 4 Carbon，自称在 Artificial Analysis 新版指数上排名第一，网络安全能力是主打卖点；但首批只开放给少数网络防御方，开发者暂时用不上。 微软和谷歌同日财报都说算力仍供不…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年10月28日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-28.html"/>
-    <id>https://jianbao.space/2026/2026-10-28.html</id>
-    <published>2026-10-28T08:00:00+08:00</published>
-    <updated>2026-10-28T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>Anthropic 跟进公布 ETH 否证，英特尔约 23 亿美元买下量子软件公司 Classiq，Meta 定价约 375 亿美元股权融资，嵌酶塑料在深海五个月几乎降解完。</summary>
   </entry>
 </feed>
