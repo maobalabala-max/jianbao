@@ -5,9 +5,18 @@
   <id>https://jianbao.space/</id>
   <link rel="alternate" type="text/html" href="https://jianbao.space/"/>
   <link rel="self" type="application/atom+xml" href="https://jianbao.space/feed.xml"/>
-  <updated>2026-11-18T08:00:00+08:00</updated>
+  <updated>2026-11-19T08:00:00+08:00</updated>
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
+  <entry>
+    <title>AI 前沿情报日报｜2026-11-19</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-19.html"/>
+    <id>https://jianbao.space/ai/2026-11-19.html</id>
+    <published>2026-11-19T08:00:00+08:00</published>
+    <updated>2026-11-19T08:00:00+08:00</updated>
+    <category term="AI 前沿情报日报"/>
+    <summary>OpenAI 公开内部测算：编码 agent 不经人工干预完成 2–4 小时研究任务的成功率，从 3 月的 23% 升到 10 月的 46%；同日称模型改写的电路已用进自研芯片和 AMD 芯片。AI 参与 AI 研发与芯片设计的证据在变具…</summary>
+  </entry>
   <entry>
     <title>每日简报 · 2026年11月18日</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-18.html"/>
@@ -268,14 +277,5 @@
     <updated>2026-10-29T08:00:00+08:00</updated>
     <category term="每日简报"/>
     <summary>谷歌发布主打网络安全的 Gemini 4 Carbon；SK 海力士营业利润同比增 632%；苹果推出首款触屏 MacBook Pro；Nature 研究发现大脑在出生前后清除大批基因组异常的神经元。</summary>
-  </entry>
-  <entry>
-    <title>AI 前沿情报日报｜2026-10-29</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-10-29.html"/>
-    <id>https://jianbao.space/ai/2026-10-29.html</id>
-    <published>2026-10-29T08:00:00+08:00</published>
-    <updated>2026-10-29T08:00:00+08:00</updated>
-    <category term="AI 前沿情报日报"/>
-    <summary>谷歌在 Argon 两周后发布 Gemini 4 Carbon，自称在 Artificial Analysis 新版指数上排名第一，网络安全能力是主打卖点；但首批只开放给少数网络防御方，开发者暂时用不上。 微软和谷歌同日财报都说算力仍供不…</summary>
   </entry>
 </feed>
