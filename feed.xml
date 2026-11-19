@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年11月19日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-19.html"/>
+    <id>https://jianbao.space/2026/2026-11-19.html</id>
+    <published>2026-11-19T08:00:00+08:00</published>
+    <updated>2026-11-19T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>OpenAI 量化 AI 加速自身研发，Anthropic 以高于区间的价格上市；量子位置验证首次不靠可信硬件，口服阿尔茨海默病药现三期信号。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-11-19</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-19.html"/>
     <id>https://jianbao.space/ai/2026-11-19.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-10-30T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>OpenAI 首次完整公开前沿模型的错位监控体系：用新系统回放 Hugging Face 事件，可在入侵外部系统前 30 多个小时报警。但内部 Codex 流量目前不会呼叫值班人员，多数负载也只在工作时间呼叫，监控离全天候拦截还有距离。…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年10月29日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-29.html"/>
-    <id>https://jianbao.space/2026/2026-10-29.html</id>
-    <published>2026-10-29T08:00:00+08:00</published>
-    <updated>2026-10-29T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>谷歌发布主打网络安全的 Gemini 4 Carbon；SK 海力士营业利润同比增 632%；苹果推出首款触屏 MacBook Pro；Nature 研究发现大脑在出生前后清除大批基因组异常的神经元。</summary>
   </entry>
 </feed>
