@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年11月20日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-20.html"/>
+    <id>https://jianbao.space/2026/2026-11-20.html</id>
+    <published>2026-11-20T08:00:00+08:00</published>
+    <updated>2026-11-20T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>AI 攻击与 agent 风险开始有人买单：欧盟遭 AI 工具入侵，银行把 agent 损失推给客户；芯片代工重新划线，英特尔拿下 18A 首个外部客户。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-11-20</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-20.html"/>
     <id>https://jianbao.space/ai/2026-11-20.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-11-02T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>AI 编程工具的扩展市场已成为现实攻击面：Cursor 市场上的篡改版 Claude Code 扩展在线约 11 小时，最多 5000 名用户安装。这次没有酿成大规模入侵，主要是因为恶意代码本身有缺陷，而不是防线拦住了它。 资本对前沿实验…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年10月30日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-10-30.html"/>
-    <id>https://jianbao.space/2026/2026-10-30.html</id>
-    <published>2026-10-30T08:00:00+08:00</published>
-    <updated>2026-10-30T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>币安疑遭数十亿美元黑客盗窃并暂停多链提币；AWS 增速创近四年新高，但亚马逊资本开支激增；Reddit 将要求登录；Nature 论文用连接组找出果蝇行走节律电路。</summary>
   </entry>
 </feed>
