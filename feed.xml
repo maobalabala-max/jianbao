@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年11月23日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-23.html"/>
+    <id>https://jianbao.space/2026/2026-11-23.html</id>
+    <published>2026-11-23T08:00:00+08:00</published>
+    <updated>2026-11-23T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>AI 协作的黎曼猜想证明通过形式化检验；美国芯片新规波及 16/14 纳米消费芯片，英伟达再遭 SEC 会计调查；科学栏看韦尼克区新功能与华南直立人。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-11-23</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-23.html"/>
     <id>https://jianbao.space/ai/2026-11-23.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-11-03T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>今天最重要的信号来自一份上市文件：Anthropic 在修订版招股书里写明，按内部估计，未来模型可能「很快」达到其安全政策中「AI 带来大幅加速进展」的门槛，但目前没有任何模型被认定越线。 同一份文件显示 Anthropic 第三季度收入…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年11月2日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-02.html"/>
-    <id>https://jianbao.space/2026/2026-11-02.html</id>
-    <published>2026-11-02T08:00:00+08:00</published>
-    <updated>2026-11-02T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>FBI 认定朝鲜盗取币安 63 亿美元，币安已恢复部分提币；AI 投入回报存疑令纳指单日跌 2.9%，OpenAI 下调融资目标；CMS 给出最精确的希格斯质量。</summary>
   </entry>
 </feed>
