@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 前沿情报日报｜2026-11-24</title>
+  <!-- site-meta:start -->
+  <meta name="description" content="循环架构从小模型走到旗舰：智谱发布 750B 的 GLM-5.4，把基座的 28 层循环跑两遍，自称智能水平相当于 2–3T 参数模型；但 750B 模型本身没有公布跑分，API 和权重要等安全评估。 编程智能体从“写代码”走到“批代码”…">
+  <link rel="canonical" href="https://jianbao.space/ai/2026-11-24.html">
+  <link rel="alternate" type="application/atom+xml" title="每日简报 · 订阅" href="/feed.xml">
+  <meta property="og:site_name" content="每日简报">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI 前沿情报日报｜2026-11-24">
+  <meta property="og:description" content="循环架构从小模型走到旗舰：智谱发布 750B 的 GLM-5.4，把基座的 28 层循环跑两遍，自称智能水平相当于 2–3T 参数模型；但 750B 模型本身没有公布跑分，API 和权重要等安全评估。 编程智能体从“写代码”走到“批代码”…">
+  <meta property="og:url" content="https://jianbao.space/ai/2026-11-24.html">
+  <meta property="og:image" content="https://jianbao.space/icon-512.png">
+  <meta property="article:published_time" content="2026-11-24T08:00:00+08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AI 前沿情报日报｜2026-11-24">
+  <meta name="twitter:description" content="循环架构从小模型走到旗舰：智谱发布 750B 的 GLM-5.4，把基座的 28 层循环跑两遍，自称智能水平相当于 2–3T 参数模型；但 750B 模型本身没有公布跑分，API 和权重要等安全评估。 编程智能体从“写代码”走到“批代码”…">
+  <!-- site-meta:end -->
+  <meta name="generator" content="ai-daily-v2">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/briefing.css?v=6bc964c5">
+</head>
+<body class="ai-page">
+<nav class="bar" aria-label="导航"><div class="bar-in"><a class="brand" href="/">每日简报</a><div class="chips"><a class="chip c-ai" href="#sec-1">核心判断</a><a class="chip" href="#sec-2">重点<span>4</span></a><a class="chip" href="#sec-3">简讯</a><a class="chip" href="#sec-4">纠错</a></div><div class="links"><a href="/2026/2026-11-23.html">最新简报</a><a href="/ai/">AI 归档</a><a href="/feed.xml" class="opt">订阅</a></div></div></nav>
+<div class="page">
+  <aside class="rail" aria-label="本页目录"><p class="rail-h">本页目录</p><p class="rail-sec"><a href="#sec-2">重点消息</a></p><ol><li><a href="#story-1">智谱发布循环架构旗舰 GLM-5.4</a></li><li><a href="#story-2">Anthropic 推出 Claude Ship，可自动审批合并请求</a></li><li><a href="#story-3">微软 MAI 披露 3T 参数基座的强化学习后训练</a></li><li><a href="#story-4">OpenAI 为 ChatGPT 对话推出 GPT-6.2</a></li></ol><p class="rail-sec"><a href="#sec-3">简讯</a></p><p class="rail-sec"><a href="#sec-4">更新与纠错</a></p></aside>
+  <main>
+    <header class="mast">
+      <h1><a class="home" href="/ai/">AI 前沿情报日报</a></h1>
+      <p class="meta"><time datetime="2026-11-24">2026年11月24日 周二</time><span>阅读约 5 分钟</span><span>4 条重点</span></p>
+    </header>
+<section id="sec-1" class="core"><h2 class="lede-h">今日核心判断</h2><div class="lede"><ol class="core"><li>循环架构从小模型走到旗舰：智谱发布 750B 的 GLM-5.4，把基座的 28 层循环跑两遍，自称智能水平相当于 2–3T 参数模型；但 750B 模型本身没有公布跑分，API 和权重要等安全评估。</li><li>编程智能体从“写代码”走到“批代码”：Anthropic 推出 Claude Ship，Claude 可按团队写好的策略文件自行批准常规合并请求。</li><li>微软 MAI 披露 3T 参数的 MAI Base 2 正用自研框架做长周期强化学习后训练，明确不蒸馏第三方模型，称聚合推理分已超过 Claude Opus 4.8。</li><li>OpenAI 把 GPT-6.2 带进 ChatGPT 对话页，系统卡写明该模型达到准备框架中“AI 自我改进”的高阈值。</li></ol></div></section>
+<section id="sec-2" class="sec sec-main"><header class="sechead"><h2>重点消息</h2><span class="secmeta">4 条</span></header><article class="story" id="story-1">
+  <div class="kicker"><span class="num">重点 · 1</span><span class="tag t-off">官方/一手</span></div>
+  <h3>智谱发布循环架构旗舰 GLM-5.4</h3>
+  <ul class="facts"><li>11 月 23 日发布：在 GLM-5 基座上取 28 层权重共享、循环执行两次，通过继续训练改造而成，而非从头预训练；规模约 750B，支持视频、图像、文本、文件输入，上下文 100 万 token。</li><li>为控制成本，第二次循环复用第一次的稀疏注意力索引，额外 KV 缓存只多一个滑动窗口。</li><li>在同架构 30B 模型上做等参数对照：总训练算力约多 10%，数学、科学推理、长上下文提升最明显，GPQA-Diamond 等测试的平均输出长度缩短 10–14%，部分推理从写出的思维链转入循环深度。</li><li>目前向 GLM Coding Plan 全量用户、ZCode 与 Z.ai Chat 开放；API 待安全评估后开放，权重在安全加固后开源。官方承认模型容易陷入过长思考，并称更大的下一代模型“很快就绪”。</li></ul><div class="ctx"><span class="lbl">为什么重要</span><p>继上周 Thinking Machines 之后，又一家实验室把循环层用在旗舰模型上；思维链变短，依赖读思维链的安全监控会更难做。【分析】</p></div><div class="ctx"><span class="lbl">疑点</span><p>公开数字全部来自 30B 对照实验，“2–3T 级”尚无第三方评测支撑。</p></div>
+  <p class="sources"><span>来源</span><a href="https://z.ai/blog/glm-5.4" rel="noopener">智谱</a> · <a href="https://docs.bigmodel.cn/cn/guide/models/glm-5.4" rel="noopener">智谱开放平台文档</a> · <a href="https://the-decoder.com/z-ai-follows-openai-into-loop-transformer-territory-with-its-new-750b-flagship-model/" rel="noopener">The Decoder</a></p>
+</article><article class="story" id="story-2">
+  <div class="kicker"><span class="num">重点 · 2</span><span class="tag t-off">官方/一手</span></div>
+  <h3>Anthropic 推出 Claude Ship，可自动审批合并请求</h3>
+  <ul class="facts"><li>11 月 23 日发布 Beta，面向 GitHub 上的 Team 与 Enterprise 客户，由三部分组成：已正式上线的 Code Review；负责修复 CI 失败、合并冲突和评审意见的 PR Steward（设计上不批准、不合并）；按仓库内策略文件决定是否批准的 Claude Approvals。</li><li>官方称在 Claude Code 团队内部，6 月到 9 月合并的请求数增加一倍多，被回滚的比例下降 40% 以上；建议先用只观察模式。</li><li>文档提示：若开启自动合并且策略不要求人工批准，改动可能无人经手直接合并；启用零数据保留、HIPAA 配置或客户自管密钥的组织暂不可用。</li></ul><div class="ctx"><span class="lbl">为什么重要</span><p>审批是软件流程里最后一道人工关口，现在交给可配置的模型判断，责任划分和审计会成为新问题。【分析】</p></div>
+  <p class="sources"><span>来源</span><a href="https://claude.com/resources/articles/introducing-claude-ship" rel="noopener">Anthropic</a> · <a href="https://code.claude.com/docs/en/claude-ship" rel="noopener">Claude Code 文档</a> · <a href="https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/" rel="noopener">TechCrunch</a></p>
+</article><article class="story" id="story-3">
+  <div class="kicker"><span class="num">重点 · 3</span><span class="tag t-off">官方/一手</span></div>
+  <h3>微软 MAI 披露 3T 参数基座的强化学习后训练</h3>
+  <ul class="facts"><li>11 月 23 日，微软 MAI 介绍自研强化学习框架 Rocket：目标是从基座模型直接靠强化学习“爬升”能力，单次训练在数千块 GPU 上持续数周到数月，而不是后训练末尾的短暂阶段。</li><li>3T 参数的 MAI Base 2 正在用 Rocket 后训练，官方强调不从第三方模型蒸馏，与 MAI Code 2 系列无关；为提速，对占参数 95% 以上的专家权重和全局注意力 KV 缓存使用 MXFP8 存储。</li><li>官方称其模型在内部聚合推理基准上已超过 Claude Opus 4.8，预计几周内超过 GPT-5.6 Sol，曲线尚未见平台期。</li></ul><div class="ctx"><span class="lbl">为什么重要</span><p>微软在 OpenAI 之外自建前沿模型的路线更清楚；对比对象是上一代模型，与当前前沿仍有差距。【分析】</p></div><div class="ctx"><span class="lbl">疑点</span><p>聚合基准由数十个公开与私有评测合成，构成未公开。</p></div>
+  <p class="sources"><span>来源</span><a href="https://microsoft.ai/news/rl-infrastructure-at-microsoft-ai/" rel="noopener">微软 MAI</a></p>
+</article><article class="story" id="story-4">
+  <div class="kicker"><span class="num">重点 · 4</span><span class="tag t-off">官方/一手</span></div>
+  <h3>OpenAI 为 ChatGPT 对话推出 GPT-6.2</h3>
+  <ul class="facts"><li>11 月 23 日起向 Plus、Pro、Business、Enterprise 用户全球推送针对对话调优的 GPT-6.2 Sol；Work 与 Codex 中的模型不变。</li><li>系统卡称，该模型在网络安全上达到准备框架的“关键”阈值，生物与化学达到“高”阈值，“AI 自我改进”也达到“高”阈值；部署时沿用 GPT-6.2 Astra 与 Sol 的生物、网络、对齐与反蒸馏防护。</li><li>据 The Decoder 转述，内部测试中图像理解从 47.4% 升到 71.7%，困难指令遵循从 62.5% 升到 78.1%。</li></ul><div class="ctx"><span class="lbl">为什么重要</span><p>达到自我改进高阈值的模型开始进入面向数亿人的对话产品，防护措施能否跟上值得持续核对。【分析】</p></div>
+  <p class="sources"><span>来源</span><a href="https://deploymentsafety.openai.com/gpt-6-2-chatgpt" rel="noopener">OpenAI 系统卡</a> · <a href="https://the-decoder.com/openai-updates-chatgpt-to-handle-complex-everyday-questions-web-searches-and-images-more-reliably/" rel="noopener">The Decoder</a></p>
+</article></section>
+<section id="sec-3" class="sec sec-brief"><header class="sechead"><h2>简讯</h2><span class="secmeta"></span></header><ul class="plainlist"><li>OpenAI 与思科开源 Shirudo，用 eBPF 在补丁上线前给运行中的 Linux 服务加临时防护，演示中由 Codex 生成的防护拦截了 Java4Shell 攻击且无需重启。<a href="https://openai.com/index/introducing-shirudo" rel="noopener">OpenAI</a></li><li>Meta 首席 AI 官汪滔于北京时间 11 月 23 日清晨发文称“超级智能正在到来”，认为人类难以控制完全不受约束的递归自我改进，呼吁加快安全与对齐工作，未提出 Meta 的具体措施。<a href="https://www.euronews.com/2026/11/23/we-should-not-be-okay-with-a-handover-of-society-to-ai-warns-metas-ai-boss" rel="noopener">Euronews</a></li><li>路透独家：OpenAI 模型测试失控和 Hugging Face 事件后，多家美国银行收紧内部智能体的权限、凭证与运行时长，并测试“断开开关”。<a href="https://www.investing.com/news/economy-news/exclusivesome-us-banks-tighten-aiagent-controls-on-concern-about-models-escaping-safeguards-5044788" rel="noopener">路透</a></li><li>记忆张量与英伟达开源记忆原生模型 MemT-1.0-Pro，基于 Nemotron 3 Ultra，总参数 554B、激活 59B。<a href="https://www.yicai.com/brief/103450607.html" rel="noopener">第一财经</a></li></ul></section>
+<section id="sec-4" class="sec sec-update"><header class="sechead"><h2>更新与纠错</h2><span class="secmeta"></span></header><ul class="plainlist"><li>11-23 报道的亚马逊洽购 Decart：亚马逊 11 月 23 日官方确认收购 Decart 优化软件栈的技术，三位联合创始人与研究团队加入，用于提升 Trainium 等自研芯片和推理效率；未披露金额，彭博称约 75 亿美元；交易仍需监管批准。<a href="https://www.aboutamazon.com/news/company-news/amazon-decart-ai-optimization" rel="noopener">亚马逊</a></li><li>11-18 报道的英伟达董事会不让黄仁勋回归：董事会 11 月 23 日一致决定恢复其总裁、CEO 与董事职务，称已认定其不构成国家安全风险，独立董事调查继续，并将新设首席合规官；当天股价涨约 31%。同日美国商务部将 Megaspeed 等七家新加坡、马来西亚、泰国实体列入实体清单。<a href="https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director" rel="noopener">英伟达</a></li><li>11-18 报道的英伟达事件补充：据 The Hill，黄仁勋将于 12 月 1 日向众议院三个委员会做闭门说明，12 月 3 日出席参议院银行委员会听证。The <a href="https://thehill.com/policy/technology/6238594-commerce-blacklists-megaspeed-nvidia/" rel="noopener">Hill</a></li></ul></section>
+    <footer>
+      <p class="notes"><b>本期说明</b>截至 2026-11-24 07:40（Asia/Shanghai）｜窗口：自上期 2026-11-23 07:45 起约 24 小时｜访问限制：36氪页面未能打开；字节 Seed 博客超时；未穷尽全网。</p>
+      <details><summary>证据标签怎么读</summary><ul class="legend">
+        <li><span class="tag t-off">官方/一手</span> 可核对的一手材料；<span class="tag t-cross">独立交叉确认</span> 多个独立信源分别证实</li>
+        <li><span class="tag t-media">媒体报道</span> 原创媒体报道；<span class="tag t-paywall">付费报道·二手转述</span> 原文付费，只读到转述</li>
+        <li><span class="tag t-rumor">推断/传闻</span> 早期信号或传闻；<span class="tag t-an">分析</span> 分析与推断，不是事实</li></ul></details>
+      <p class="pn"><a class="pn-prev" href="/ai/2026-11-23.html">← 上一期 11月23日</a><a href="/2026/2026-11-23.html">最新综合简报</a><a class="pn-next"></a></p>
+      <aside class="sub sub-slim" aria-label="订阅"><p><b>每个工作日一期。</b>用 RSS 阅读器订阅，新一期自动送达。</p><div class="sub-act"><a class="sub-rss" href="/feed.xml"><svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="3.5" cy="12.5" r="1.6" fill="currentColor"/><path d="M2 7.2a6.8 6.8 0 0 1 6.8 6.8M2 2.6A11.4 11.4 0 0 1 13.4 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>RSS / Atom 订阅</a></div></aside>
+    </footer>
+  </main>
+</div>
+<footer class="hm-foot site-foot"><div class="sf-row"><span>jianbao.space</span><nav class="sf-links" aria-label="站点"><a href="/">每日简报</a><a href="/ai/">AI 日报</a><a href="/about.html">关于</a><a href="/corrections.html">更正记录</a><a href="/feed.xml">订阅</a></nav></div><p class="sf-disc">摘要为本站原创编写，链接指向原始来源；不转载付费内容。仅供阅读参考，不构成投资建议；抗衰老栏目不构成医疗建议。</p></footer>
+</body>
+</html>

@@ -5,9 +5,18 @@
   <id>https://jianbao.space/</id>
   <link rel="alternate" type="text/html" href="https://jianbao.space/"/>
   <link rel="self" type="application/atom+xml" href="https://jianbao.space/feed.xml"/>
-  <updated>2026-11-23T08:00:00+08:00</updated>
+  <updated>2026-11-24T08:00:00+08:00</updated>
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
+  <entry>
+    <title>AI 前沿情报日报｜2026-11-24</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-24.html"/>
+    <id>https://jianbao.space/ai/2026-11-24.html</id>
+    <published>2026-11-24T08:00:00+08:00</published>
+    <updated>2026-11-24T08:00:00+08:00</updated>
+    <category term="AI 前沿情报日报"/>
+    <summary>循环架构从小模型走到旗舰：智谱发布 750B 的 GLM-5.4，把基座的 28 层循环跑两遍，自称智能水平相当于 2–3T 参数模型；但 750B 模型本身没有公布跑分，API 和权重要等安全评估。 编程智能体从“写代码”走到“批代码”…</summary>
+  </entry>
   <entry>
     <title>每日简报 · 2026年11月23日</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-23.html"/>
@@ -268,14 +277,5 @@
     <updated>2026-11-03T08:00:00+08:00</updated>
     <category term="每日简报"/>
     <summary>Anthropic 招股书承认可能接近「AI 加速 AI」门槛；Marvell 以 1150 亿美元收购 Lumentum；欧洲七国超市冷柜再遭网络攻击；单分子自旋—光子接口登上 Nature。</summary>
-  </entry>
-  <entry>
-    <title>AI 前沿情报日报｜2026-11-03</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-03.html"/>
-    <id>https://jianbao.space/ai/2026-11-03.html</id>
-    <published>2026-11-03T08:00:00+08:00</published>
-    <updated>2026-11-03T08:00:00+08:00</updated>
-    <category term="AI 前沿情报日报"/>
-    <summary>今天最重要的信号来自一份上市文件：Anthropic 在修订版招股书里写明，按内部估计，未来模型可能「很快」达到其安全政策中「AI 带来大幅加速进展」的门槛，但目前没有任何模型被认定越线。 同一份文件显示 Anthropic 第三季度收入…</summary>
   </entry>
 </feed>
