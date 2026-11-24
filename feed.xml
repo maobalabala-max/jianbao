@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年11月24日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-24.html"/>
+    <id>https://jianbao.space/2026/2026-11-24.html</id>
+    <published>2026-11-24T08:00:00+08:00</published>
+    <updated>2026-11-24T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>CrowdStrike 拟以约 439 亿美元收购 Zscaler，英伟达恢复黄仁勋职务带动美股反弹；AI 栏看循环架构与自动批准代码，科学栏看连续多肽合成。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-11-24</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-24.html"/>
     <id>https://jianbao.space/ai/2026-11-24.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-11-04T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>今天最重要的技术进展是 Anthropic 公开的 FlashProve：用零知识证明让模型提供方证明「这条回答确实出自某个已承诺的模型」，且不暴露权重。这是第一次有前沿实验室给出可运行的方案来应对模型被偷换和第三方审计难题，但目前只是研…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年11月3日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-03.html"/>
-    <id>https://jianbao.space/2026/2026-11-03.html</id>
-    <published>2026-11-03T08:00:00+08:00</published>
-    <updated>2026-11-03T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>Anthropic 招股书承认可能接近「AI 加速 AI」门槛；Marvell 以 1150 亿美元收购 Lumentum；欧洲七国超市冷柜再遭网络攻击；单分子自旋—光子接口登上 Nature。</summary>
   </entry>
 </feed>
