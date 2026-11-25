@@ -5,9 +5,18 @@
   <id>https://jianbao.space/</id>
   <link rel="alternate" type="text/html" href="https://jianbao.space/"/>
   <link rel="self" type="application/atom+xml" href="https://jianbao.space/feed.xml"/>
-  <updated>2026-11-25T08:00:00+08:00</updated>
+  <updated>2026-11-26T08:00:00+08:00</updated>
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
+  <entry>
+    <title>AI 前沿情报日报｜2026-11-26</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-26.html"/>
+    <id>https://jianbao.space/ai/2026-11-26.html</id>
+    <published>2026-11-26T08:00:00+08:00</published>
+    <updated>2026-11-26T08:00:00+08:00</updated>
+    <category term="AI 前沿情报日报"/>
+    <summary>OpenAI 公开一批由未发布内部模型完成的数学手稿，声称一举解决矩阵乘法指数、斯梅尔第九问题等多个经典难题；Lean 机器验证只覆盖部分结论，人类数学界尚未核查，暂应视为待验证的强主张。 Anthropic 公布用 Claude 把核心…</summary>
+  </entry>
   <entry>
     <title>每日简报 · 2026年11月25日</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-25.html"/>
@@ -268,14 +277,5 @@
     <updated>2026-11-05T08:00:00+08:00</updated>
     <category term="每日简报"/>
     <summary>OpenAI 用未发布模型一轮挖出 948 个 Linux 提权漏洞；内存涨价让高通手机芯片收入降 26%；上海交大 AI 自主实验室登上《自然》。</summary>
-  </entry>
-  <entry>
-    <title>AI 前沿情报日报｜2026-11-05</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-05.html"/>
-    <id>https://jianbao.space/ai/2026-11-05.html</id>
-    <published>2026-11-05T08:00:00+08:00</published>
-    <updated>2026-11-05T08:00:00+08:00</updated>
-    <category term="AI 前沿情报日报"/>
-    <summary>今天最重要的是 OpenAI 公开的 Linux 内核自动攻防实验：一个未发布的网络安全模型在一次运行中验证了 948 个可提权到 root 的漏洞，平均每个约 1279 美元 API 费用，发现数量是 7 月 GPT-5.6 Sol 的…</summary>
   </entry>
 </feed>
