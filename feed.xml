@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年11月25日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-25.html"/>
+    <id>https://jianbao.space/2026/2026-11-25.html</id>
+    <published>2026-11-25T08:00:00+08:00</published>
+    <updated>2026-11-25T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>华为在美被判 10 项罪名成立，戴尔 AI 订单推动收入翻倍；AI 栏看内部模型安全争议与蛋白质设计，抗衰栏看睡眠与器官衰老。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-11-25</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-25.html"/>
     <id>https://jianbao.space/ai/2026-11-25.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-11-05T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>今天最重要的是 OpenAI 公开的 Linux 内核自动攻防实验：一个未发布的网络安全模型在一次运行中验证了 948 个可提权到 root 的漏洞，平均每个约 1279 美元 API 费用，发现数量是 7 月 GPT-5.6 Sol 的…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年11月4日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-04.html"/>
-    <id>https://jianbao.space/2026/2026-11-04.html</id>
-    <published>2026-11-04T08:00:00+08:00</published>
-    <updated>2026-11-04T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>AMD 数据中心收入同比增 97%，苹果却因内存涨价下调毛利指引；币安公布 63 亿美元被盗的入侵路径；LHCb 首次在单一实验中看到百亿分之一的稀有衰变。</summary>
   </entry>
 </feed>
