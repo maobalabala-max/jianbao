@@ -5,9 +5,18 @@
   <id>https://jianbao.space/</id>
   <link rel="alternate" type="text/html" href="https://jianbao.space/"/>
   <link rel="self" type="application/atom+xml" href="https://jianbao.space/feed.xml"/>
-  <updated>2026-11-26T08:00:00+08:00</updated>
+  <updated>2026-11-27T08:00:00+08:00</updated>
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
+  <entry>
+    <title>AI 前沿情报日报｜2026-11-27</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-27.html"/>
+    <id>https://jianbao.space/ai/2026-11-27.html</id>
+    <published>2026-11-27T08:00:00+08:00</published>
+    <updated>2026-11-27T08:00:00+08:00</updated>
+    <category term="AI 前沿情报日报"/>
+    <summary>美国的算力管控和美国实验室的反蒸馏措施，开始明显拖慢中国头部实验室：据路透，智谱约 3 万亿参数的 GLM-5.5 错过 11 月发布，可能推迟到 2027 年一季度或更晚；月之暗面预计大版本间隔会从半年拉长到一年。 英伟达据报暂停向马来…</summary>
+  </entry>
   <entry>
     <title>每日简报 · 2026年11月26日</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-26.html"/>
@@ -268,14 +277,5 @@
     <updated>2026-11-06T08:00:00+08:00</updated>
     <category term="每日简报"/>
     <summary>METR 称 Anthropic 研发约加快一倍；中国空间站把原子气体冷到 9.7 皮开；谷歌投 170 亿美元建怀俄明数据中心。</summary>
-  </entry>
-  <entry>
-    <title>AI 前沿情报日报｜2026-11-06</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-06.html"/>
-    <id>https://jianbao.space/ai/2026-11-06.html</id>
-    <published>2026-11-06T08:00:00+08:00</published>
-    <updated>2026-11-06T08:00:00+08:00</updated>
-    <category term="AI 前沿情报日报"/>
-    <summary>今天最重要的是 METR 对 Anthropic 的独立评估：截至 2026 年 10 月，Anthropic 在可明确定义任务上的能力进步速度，大约是 2024 年 3 月至 2025 年 10 月历史节奏的两倍；METR 判断当前加速…</summary>
   </entry>
 </feed>
