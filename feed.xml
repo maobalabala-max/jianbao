@@ -9,6 +9,15 @@
   <author><name>每日简报</name></author>
   <icon>https://jianbao.space/favicon-32.png</icon>
   <entry>
+    <title>每日简报 · 2026年11月27日</title>
+    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-27.html"/>
+    <id>https://jianbao.space/2026/2026-11-27.html</id>
+    <published>2026-11-27T08:00:00+08:00</published>
+    <updated>2026-11-27T08:00:00+08:00</updated>
+    <category term="每日简报"/>
+    <summary>美国算力新规开始拖慢中国大模型，英伟达暂停东南亚发货；ISSCC 录用论文中国占四成五，磷化铌纳米线挑战铜互连；抗衰栏看衰弱的社会差距与卵子老化。</summary>
+  </entry>
+  <entry>
     <title>AI 前沿情报日报｜2026-11-27</title>
     <link rel="alternate" type="text/html" href="https://jianbao.space/ai/2026-11-27.html"/>
     <id>https://jianbao.space/ai/2026-11-27.html</id>
@@ -268,14 +277,5 @@
     <updated>2026-11-09T08:00:00+08:00</updated>
     <category term="AI 前沿情报日报"/>
     <summary>周末最值得看的是 Anthropic 公开的 agent 记忆研究：让模型在空闲时回看历史记录、整理和纠正记忆（文中称为「做梦」），在多项内部评测里明显提升长期任务表现；Claude Opus 5 是其测试中第一个能自己跑通「犯错、验证、…</summary>
-  </entry>
-  <entry>
-    <title>每日简报 · 2026年11月6日</title>
-    <link rel="alternate" type="text/html" href="https://jianbao.space/2026/2026-11-06.html"/>
-    <id>https://jianbao.space/2026/2026-11-06.html</id>
-    <published>2026-11-06T08:00:00+08:00</published>
-    <updated>2026-11-06T08:00:00+08:00</updated>
-    <category term="每日简报"/>
-    <summary>METR 称 Anthropic 研发约加快一倍；中国空间站把原子气体冷到 9.7 皮开；谷歌投 170 亿美元建怀俄明数据中心。</summary>
   </entry>
 </feed>
